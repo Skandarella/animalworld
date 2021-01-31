@@ -1,0 +1,6 @@
+mobs
+default
+ethereal?
+xocean?
+farming?
+fishing?
