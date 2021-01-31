@@ -1,0 +1,23 @@
+-- raw fish
+minetest.register_craftitem(":wildlife:rawfish", {
+	description = ("Raw Fish"),
+	inventory_image = "wildlife_rawfish.png",
+	on_use = minetest.item_eat(3),
+	groups = {food_meat_raw = 1, flammable = 2},
+})
+
+-- cooked fish
+minetest.register_craftitem(":wildlife:cookedfish", {
+	description = ("Cooked Fish"),
+	inventory_image = "wildlife_cookedfish.png",
+	on_use = minetest.item_eat(5),
+	groups = {food_meat = 1, flammable = 2},
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "wildlife:cookedfish",
+	recipe = "wildlife:rawfish",
+	cooktime = 5,
+})
+
