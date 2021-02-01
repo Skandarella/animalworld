@@ -1,4 +1,4 @@
-mobs:register_mob("wildlife:bear", {
+mobs:register_mob("wwildlife:bear", {
 stepheight = 1,
 	type = "monster",
 	passive = false,
@@ -17,7 +17,7 @@ stepheight = 1,
 		{"texturebear.png"},
 	},
 	sounds = {
-		random = "wildlife_bear",
+		random = "wwildlife_bear",
 	},
 	makes_footstep_sound = true,
 	walk_velocity = 1,
@@ -45,8 +45,8 @@ stepheight = 1,
 	},
 
 	follow = {
-		"ethereal:fish_raw", "wildlife:rawfish", "mobs_fish:tropical",
-		"mobs:meat_raw", "wildlife:rabbit_raw", "xocean:fish_edible"
+		"ethereal:fish_raw", "wwildlife:rawfish", "mobs_fish:tropical",
+		"mobs:meat_raw", "wwildlife:rabbit_raw", "xocean:fish_edible"
 	},
 	view_range = 8,
 
@@ -61,10 +61,10 @@ stepheight = 1,
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "wildlife:bear",
+	name = "wwildlife:bear",
 	nodes = {"default:dirt_with_coniferous_litter"}, {"default:permafrost_with_moss"}, {"ethereal:bamboo_dirt"},
 	min_light = 0,
-	interval = 30,
+	interval = 60,
 	chance = 8000, -- 15000
 	min_height = -15,
 	max_height = 200,
@@ -72,4 +72,4 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("wildlife:bear", ("Bear"), "abear.png")
+mobs:register_egg("wwildlife:bear", ("Bear"), "abear.png")

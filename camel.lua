@@ -1,4 +1,4 @@
-mobs:register_mob("wildlife:camel", {
+mobs:register_mob("wwildlife:camel", {
 	stepheight = 1,
 	type = "animal",
 	passive = false,
@@ -19,13 +19,13 @@ mobs:register_mob("wildlife:camel", {
 	},
 	makes_footstep_sound = true,
 	sounds = {
-		random = "wildlife_camel",
-		attack = "wildlife_camel",
+		random = "wwildlife_camel",
+		attack = "wwildlife_camel",
 	},
 	walk_velocity = 2,
 	run_velocity = 5,
 	runaway = true,
-        runaway_from = {"wildlife:bear", "wildlife:crocodile", "wildlife:tiger"},
+        runaway_from = {"wwildlife:bear", "wwildlife:crocodile", "wwildlife:tiger"},
 	jump = false,
 	jump_height = 3,
 	pushable = true,
@@ -73,18 +73,18 @@ end
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "wildlife:camel",
+	name = "wwildlife:camel",
 	nodes = {"default:desert_sand", "default:sandstone"},
 	min_light = 0,
-	interval = 20,
+	interval = 60,
 	chance = 8000, -- 15000
 	min_height = 0,
 	max_height = 40,
 })
 end
 
-mobs:register_egg("wildlife:camel", ("Camel"), "acamel.png")
+mobs:register_egg("wwildlife:camel", ("Camel"), "acamel.png")
 
 
-mobs:alias_mob("wildlife:camel", "wildlife:camel") -- compatibility
+mobs:alias_mob("wwildlife:camel", "wwildlife:camel") -- compatibility
 

@@ -1,4 +1,4 @@
-mobs:register_mob("wildlife:crocodile", {
+mobs:register_mob("wwildlife:crocodile", {
 stepheight = 1,
 	type = "monster",
 	passive = false,
@@ -17,8 +17,8 @@ stepheight = 1,
 		{"texturecrocodile.png"},
 	},
 	sounds = {
-		random = "wildlife_crocodile",
-		attack = "wildlife_crocodile",
+		random = "wwildlife_crocodile",
+		attack = "wwildlife_crocodile",
 	},
 	makes_footstep_sound = true,
 	walk_velocity = 1,
@@ -49,8 +49,8 @@ stepheight = 1,
 	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing"},
 	floats = 0,
 	follow = {
-		"ethereal:fish_raw", "wildlife:rawfish", "mobs_fish:tropical",
-		"mobs:meat_raw", "wildlife:rabbit_raw", "xocean:fish_edible"
+		"ethereal:fish_raw", "wwildlife:rawfish", "mobs_fish:tropical",
+		"mobs:meat_raw", "wwildlife:rabbit_raw", "xocean:fish_edible"
 	},
 	view_range = 12,
 
@@ -65,7 +65,7 @@ stepheight = 1,
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "wildlife:crocodile",
+	name = "wwildlife:crocodile",
 	nodes = {"default:dry_dirt_with_dry_grass"}, {"default:dirt_with_rainforest_litter"},
 	min_light = 14,
 	interval = 60,
@@ -76,4 +76,4 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("wildlife:crocodile", ("Crocodile"), "acrocodile.png")
+mobs:register_egg("wwildlife:crocodile", ("Crocodile"), "acrocodile.png")

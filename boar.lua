@@ -1,4 +1,4 @@
-mobs:register_mob("wildlife:boar", {
+mobs:register_mob("wwildlife:boar", {
 	stepheight = 1,
 	type = "animal",
 	passive = false,
@@ -19,8 +19,8 @@ mobs:register_mob("wildlife:boar", {
 	},
 	makes_footstep_sound = true,
 	sounds = {
-		random = "wildlife_boar",
-		attack = "wildlife_boar",
+		random = "wwildlife_boar",
+		attack = "wwildlife_boar",
 	},
 	walk_velocity = 1,
 	run_velocity = 2,
@@ -30,7 +30,7 @@ mobs:register_mob("wildlife:boar", {
 	follow = {"default:apple", "farming:potato"},
 	view_range = 6,
 	drops = {
-		{name = "wildlife:pork_raw", chance = 1, min = 1, max = 3},
+		{name = "wwildlife:pork_raw", chance = 1, min = 1, max = 3},
 	},
 	water_damage = 0,
 	lava_damage = 5,
@@ -71,10 +71,10 @@ end
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "wildlife:boar",
+	name = "wwildlife:boar",
 	nodes = {"default:dirt_with_coniferous_litter", "default:dirt_gray"},
 	min_light = 14,
-	interval = 30,
+	interval = 60,
 	chance = 8000, -- 15000
 	min_height = 1,
 	max_height = 100,
@@ -82,31 +82,31 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("wildlife:boar", ("Boar"), "aboar.png")
+mobs:register_egg("wwildlife:boar", ("Boar"), "aboar.png")
 
 
-mobs:alias_mob("wildlife:boar", "wildlife:boa") -- compatibility
+mobs:alias_mob("wwildlife:boar", "wwildlife:boa") -- compatibility
 
 
 -- raw porkchop
-minetest.register_craftitem(":wildlife:pork_raw", {
+minetest.register_craftitem(":wwildlife:pork_raw", {
 	description = ("Raw Pork"),
-	inventory_image = "wildlife_pork_raw.png",
+	inventory_image = "wwildlife_pork_raw.png",
 	on_use = minetest.item_eat(4),
 	groups = {food_meat_raw = 1, food_pork_raw = 1, flammable = 2},
 })
 
 -- cooked porkchop
-minetest.register_craftitem(":wildlife:pork_cooked", {
+minetest.register_craftitem(":wwildlife:pork_cooked", {
 	description = ("Cooked Pork"),
-	inventory_image = "wildlife_pork_cooked.png",
+	inventory_image = "wwildlife_pork_cooked.png",
 	on_use = minetest.item_eat(8),
 	groups = {food_meat = 1, food_pork = 1, flammable = 2},
 })
 
 minetest.register_craft({
 	type = "cooking",
-	output = "wildlife:pork_cooked",
-	recipe = "wildlife:pork_raw",
+	output = "wwildlife:pork_cooked",
+	recipe = "wwildlife:pork_raw",
 	cooktime = 5,
 })

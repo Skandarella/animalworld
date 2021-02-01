@@ -1,4 +1,4 @@
-mobs:register_mob("wildlife:blackbird", {
+mobs:register_mob("wwildlife:blackbird", {
 stepheight = 3,
 	type = "animal",
 	passive = true,
@@ -17,19 +17,19 @@ stepheight = 3,
 		{"textureblackbird.png"},
 	},
 	sounds = {
-		random = "wildlife_blackbird",
+		random = "wwildlife_blackbird",
 	},
 	makes_footstep_sound = true,
 	walk_velocity = 2,
 	run_velocity = 4,
 	runaway = true,
-        runaway_from = {"wildlife:bear", "wildlife:crocodile", "wildlife:tiger", "player"},
+        runaway_from = {"wwildlife:bear", "wwildlife:crocodile", "wwildlife:tiger", "player"},
 	jump = true,
         jump_height = 6,
 	stepheight = 3,
 	drops = {
-		{name = "wildlife:chicken_raw", chance = 1, min = 1, max = 1},
-	        {name = "wildlife:chicken_feather", chance = 1, min = 1, max = 1},
+		{name = "wwildlife:chicken_raw", chance = 1, min = 1, max = 1},
+	        {name = "wwildlife:chicken_feather", chance = 1, min = 1, max = 1},
 	
 	},
 	water_damage = 0,
@@ -68,10 +68,10 @@ view_range = 4,
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "wildlife:blackbird",
+	name = "wwildlife:blackbird",
 	nodes = {"default:dirt_with_grass"}, 
 	min_light = 0,
-	interval = 10,
+	interval = 60,
 	chance = 8000, -- 15000
 	min_height = 0,
 	max_height = 200,
@@ -79,7 +79,7 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("wildlife:blackbird", ("Blackbird"), "ablackbird.png")
+mobs:register_egg("wwildlife:blackbird", ("Blackbird"), "ablackbird.png")
 
 -- egg
 minetest.register_node(":mobs:egg", {
@@ -108,9 +108,9 @@ minetest.register_node(":mobs:egg", {
 
 
 -- fried egg
-minetest.register_craftitem(":wildlife:chicken_egg_fried", {
+minetest.register_craftitem(":wwildlife:chicken_egg_fried", {
 	description = ("Bird Egg"),
-	inventory_image = "wildlife_chicken_egg_fried.png",
+	inventory_image = "wwildlife_chicken_egg_fried.png",
 	on_use = minetest.item_eat(2),
 	groups = {food_egg_fried = 1, flammable = 2},
 })
@@ -118,41 +118,41 @@ minetest.register_craftitem(":wildlife:chicken_egg_fried", {
 minetest.register_craft({
 	type  =  "cooking",
 	recipe  = "mobs:egg",
-	output = "wildlife:chicken_egg_fried",
+	output = "wwildlife:chicken_egg_fried",
 })
 
 -- raw chicken
-minetest.register_craftitem(":wildlife:chicken_raw", {
+minetest.register_craftitem(":wwildlife:chicken_raw", {
 description = ("Raw Bird Meat"),
-	inventory_image = "wildlife_chicken_raw.png",
+	inventory_image = "wwildlife_chicken_raw.png",
 	on_use = minetest.item_eat(2),
 	groups = {food_meat_raw = 1, food_chicken_raw = 1, flammable = 2},
 })
 
 -- cooked chicken
-minetest.register_craftitem(":wildlife:chicken_cooked", {
+minetest.register_craftitem(":wwildlife:chicken_cooked", {
 description = ("Cooked Bird Meat"),
-	inventory_image = "wildlife_chicken_cooked.png",
+	inventory_image = "wwildlife_chicken_cooked.png",
 	on_use = minetest.item_eat(6),
 	groups = {food_meat = 1, food_chicken = 1, flammable = 2},
 })
 
 minetest.register_craft({
 	type  =  "cooking",
-	recipe  = "wildlife:chicken_raw",
-	output = "wildlife:chicken_cooked",
+	recipe  = "wwildlife:chicken_raw",
+	output = "wwildlife:chicken_cooked",
 })
 
 -- feather
-minetest.register_craftitem(":wildlife:chicken_feather", {
+minetest.register_craftitem(":wwildlife:chicken_feather", {
 	description = ("Bird Feather"),
-	inventory_image = "wildlife_chicken_feather.png",
+	inventory_image = "wwildlife_chicken_feather.png",
 	groups = {flammable = 2},
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "wildlife:chicken_feather",
+	recipe = "wwildlife:chicken_feather",
 	burntime = 1,
 })
 
