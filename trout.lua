@@ -1,4 +1,4 @@
-mobs:register_mob("wildlife:trout", {
+mobs:register_mob("wwildlife:trout", {
 stepheight = 0.0,
 	type = "animal",
 	passive = true,
@@ -24,11 +24,11 @@ stepheight = 0.0,
 	fly_in = "default:water_source", "default:river_water_source", "default:water_flowing",
 	fall_speed = 0,
 	runaway = true,
-        runaway_from = {"wildlife:bear", "wildlife:crocodile", "wildlife:tiger", "wildlife:elephant", "wildlife:hippo", "player"},
+        runaway_from = {"wwildlife:bear", "wwildlife:crocodile", "wwildlife:tiger", "wwildlife:elephant", "wwildlife:hippo", "player"},
 	jump = false,
 	stepheight = 0.0,
 	drops = {
-		{name = "wildlife:rawfish", chance = 1, min = 1, max = 1},
+		{name = "wwildlife:rawfish", chance = 1, min = 1, max = 1},
 	},
 	water_damage = 0,
         air_damage = 1,
@@ -65,10 +65,10 @@ stepheight = 0.0,
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "wildlife:trout",
+	name = "wwildlife:trout",
 	nodes = {"default:water_source"}, {"default:river_water_source"},
 	min_light = 14,
-	interval = 10,
+	interval = 60,
 	chance = 8000, -- 15000
 	min_height = 1,
 	max_height = 500,
@@ -76,4 +76,4 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("wildlife:trout", ("Trout"), "atrout.png")
+mobs:register_egg("wwildlife:trout", ("Trout"), "atrout.png")

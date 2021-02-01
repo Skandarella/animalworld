@@ -1,4 +1,4 @@
-mobs:register_mob("wildlife:tortoise", {
+mobs:register_mob("wwildlife:tortoise", {
 stepheight = 1,
 	type = "monster",
 	passive = false,
@@ -22,7 +22,7 @@ stepheight = 1,
 	walk_velocity = 0.2,
 	run_velocity = 0.3,
 	runaway = true,
-        runaway_from = {"wildlife:bear", "wildlife:crocodile", "wildlife:tiger", "player"},
+        runaway_from = {"wwildlife:bear", "wwildlife:crocodile", "wwildlife:tiger", "player"},
 	jump = false,
 	jump_height = 6,
 	drops = {
@@ -63,7 +63,7 @@ end
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "wildlife:tortoise",
+	name = "wwildlife:tortoise",
 	nodes = {"default:sand"},
 	min_light = 0,
 	interval = 60,
@@ -75,9 +75,9 @@ mobs:spawn({
 end
 
 
-mobs:register_egg("wildlife:tortoise", ("Tortoise"), "atortoise.png", 0)
+mobs:register_egg("wwildlife:tortoise", ("Tortoise"), "atortoise.png", 0)
 
 
-mobs:alias_mob("wildlife:tortoise", "wildlife:tortoise") -- compatibility
+mobs:alias_mob("wwildlife:tortoise", "wwildlife:tortoise") -- compatibility
 
 

@@ -1,4 +1,4 @@
-mobs:register_mob("wildlife:moose", {
+mobs:register_mob("wwildlife:moose", {
 	stepheight = 1,
 	type = "animal",
 	passive = false,
@@ -19,13 +19,13 @@ mobs:register_mob("wildlife:moose", {
 	},
 	makes_footstep_sound = true,
 	sounds = {
-		random = "wildlife_moose",
-		attack = "wildlife_moose",
+		random = "wwildlife_moose",
+		attack = "wwildlife_moose",
 	},
 	walk_velocity = 1,
 	run_velocity = 3,
 	runaway = true,
-        runaway_from = {"wildlife:bear", "wildlife:crocodile", "wildlife:tiger"},
+        runaway_from = {"wwildlife:bear", "wwildlife:crocodile", "wwildlife:tiger"},
 	jump = false,
 	jump_height = 3,
 	pushable = true,
@@ -73,11 +73,11 @@ end
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "wildlife:moose",
+	name = "wwildlife:moose",
 	nodes = {"default:dirt_with_grass", "default:dirt_with_coniferous_litter"},
 	neighbors = spawn_by,
 	min_light = 0,
-	interval = 25,
+	interval = 60,
 	chance = 8000, -- 15000
 	min_height = 0,
 	max_height = 300,
@@ -85,8 +85,8 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("wildlife:moose", ("Moose"), "amoose.png")
+mobs:register_egg("wwildlife:moose", ("Moose"), "amoose.png")
 
 
-mobs:alias_mob("wildlife:moose", "wildlife:moose") -- compatibility
+mobs:alias_mob("wwildlife:moose", "wwildlife:moose") -- compatibility
 
