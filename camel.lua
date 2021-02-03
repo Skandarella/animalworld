@@ -1,4 +1,4 @@
-mobs:register_mob("wwildlife:camel", {
+mobs:register_mob("animalworld:camel", {
 	stepheight = 1,
 	type = "animal",
 	passive = false,
@@ -8,8 +8,8 @@ mobs:register_mob("wwildlife:camel", {
 	attack_npcs = false,
 	reach = 2,
 	damage = 2,
-	hp_min = 5,
-	hp_max = 30,
+	hp_min = 20,
+	hp_max = 40,
 	armor = 200,
 	collisionbox = {-0.7, -0.01, -0.7, 0.7, 0.95, 0.7},
 	visual = "mesh",
@@ -19,13 +19,13 @@ mobs:register_mob("wwildlife:camel", {
 	},
 	makes_footstep_sound = true,
 	sounds = {
-		random = "wwildlife_camel",
-		attack = "wwildlife_camel",
+		random = "animalworld_camel",
+		attack = "animalworld_camel",
 	},
 	walk_velocity = 2,
 	run_velocity = 5,
 	runaway = true,
-        runaway_from = {"wwildlife:bear", "wwildlife:crocodile", "wwildlife:tiger"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark"},
 	jump = false,
 	jump_height = 3,
 	pushable = true,
@@ -73,7 +73,7 @@ end
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "wwildlife:camel",
+	name = "animalworld:camel",
 	nodes = {"default:desert_sand", "default:sandstone"},
 	min_light = 0,
 	interval = 60,
@@ -83,8 +83,8 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("wwildlife:camel", ("Camel"), "acamel.png")
+mobs:register_egg("animalworld:camel", ("Camel"), "acamel.png")
 
 
-mobs:alias_mob("wwildlife:camel", "wwildlife:camel") -- compatibility
+mobs:alias_mob("animalworld:camel", "animalworld:camel") -- compatibility
 

@@ -1,10 +1,10 @@
-mobs:register_mob("wwildlife:hare", {
+mobs:register_mob("animalworld:hare", {
 stepheight = 1,
 	type = "animal",
 	passive = true,
 	reach = 1,
-	hp_min = 1,
-	hp_max = 5,
+	hp_min = 15,
+	hp_max = 20,
 	armor = 200,
 	collisionbox = {-0.268, -0.01, -0.268,  0.268, 0.167, 0.268},
 	visual = "mesh",
@@ -20,12 +20,12 @@ stepheight = 1,
 	walk_velocity = 3,
 	run_velocity = 6,
 	runaway = true,
-        runaway_from = {"wwildlife:bear", "wwildlife:crocodile", "wwildlife:tiger", "player"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "player"},
 	jump = true,
 	jump_height = 6,
 	drops = {
-		{name = "wwildlife:rabbit_raw", chance = 1, min = 1, max = 1},
-		{name = "wwildlife:rabbit_hide", chance = 1, min = 0, max = 1},
+		{name = "animalworld:rabbit_raw", chance = 1, min = 1, max = 1},
+		{name = "animalworld:rabbit_hide", chance = 1, min = 0, max = 1},
 	},
 	water_damage = 0,
 	lava_damage = 4,
@@ -109,57 +109,57 @@ end
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "wwildlife:hare",
+	name = "animalworld:hare",
 	nodes = {"default:dirt_with_grass"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
 	min_height = 5,
-	max_height = 500,
+	max_height = 100,
 	day_toggle = true,
 })
 end
 
 
-mobs:register_egg("wwildlife:hare", ("Hare"), "ahare.png", 0)
+mobs:register_egg("animalworld:hare", ("Hare"), "ahare.png", 0)
 
 
-mobs:alias_mob("wwildlife:hare", "wwildlife:hare") -- compatibility
+mobs:alias_mob("animalworld:hare", "animalworld:hare") -- compatibility
 
 
 -- raw rabbit
-minetest.register_craftitem(":wwildlife:rabbit_raw", {
+minetest.register_craftitem(":animalworld:rabbit_raw", {
 	description = ("Raw Hare"),
-	inventory_image = "wwildlife_rabbit_raw.png",
+	inventory_image = "animalworld_rabbit_raw.png",
 	on_use = minetest.item_eat(3),
 	groups = {food_meat_raw = 1, food_rabbit_raw = 1, flammable = 2},
 })
 
 -- cooked rabbit
-minetest.register_craftitem(":wwildlife:rabbit_cooked", {
+minetest.register_craftitem(":animalworld:rabbit_cooked", {
 	description = ("Cooked Hare"),
-	inventory_image = "wwildlife_rabbit_cooked.png",
+	inventory_image = "animalworld_rabbit_cooked.png",
 	on_use = minetest.item_eat(5),
 	groups = {food_meat = 1, food_rabbit = 1, flammable = 2},
 })
 
 minetest.register_craft({
 	type = "cooking",
-	output = "wwildlife:rabbit_cooked",
-	recipe = "wwildlife:rabbit_raw",
+	output = "animalworld:rabbit_cooked",
+	recipe = "animalworld:rabbit_raw",
 	cooktime = 5,
 })
 
 -- rabbit hide
-minetest.register_craftitem(":wwildlife:rabbit_hide", {
+minetest.register_craftitem(":animalworld:rabbit_hide", {
 	description = ("Hare Hide"),
-	inventory_image = "wwildlife_rabbit_hide.png",
+	inventory_image = "animalworld_rabbit_hide.png",
 	groups = {flammable = 2},
 })
 
 minetest.register_craft({
 	type = "fuel",
-	recipe = "wwildlife:rabbit_hide",
+	recipe = "animalworld:rabbit_hide",
 	burntime = 2,
 })
 
@@ -167,7 +167,7 @@ minetest.register_craft({
 	output = "mobs:leather",
 	type = "shapeless",
 	recipe = {
-		"wwildlife:rabbit_hide", "wwildlife:rabbit_hide",
-		"wwildlife:rabbit_hide", "wwildlife:rabbit_hide"
+		"animalworld:rabbit_hide", "animalworld:rabbit_hide",
+		"animalworld:rabbit_hide", "animalworld:rabbit_hide"
 	}
 })

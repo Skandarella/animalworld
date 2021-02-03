@@ -1,4 +1,4 @@
-mobs:register_mob("wwildlife:crocodile", {
+mobs:register_mob("animalworld:crocodile", {
 stepheight = 1,
 	type = "monster",
 	passive = false,
@@ -6,8 +6,8 @@ stepheight = 1,
 	attack_animals = true,
 	reach = 2,
         damage = 6,
-	hp_min = 5,
-	hp_max = 40,
+	hp_min = 50,
+	hp_max = 75,
 	armor = 200,
 	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.95, 0.6},
 	visual = "mesh",
@@ -17,8 +17,8 @@ stepheight = 1,
 		{"texturecrocodile.png"},
 	},
 	sounds = {
-		random = "wwildlife_crocodile",
-		attack = "wwildlife_crocodile",
+		random = "animalworld_crocodile",
+		attack = "animalworld_crocodile",
 	},
 	makes_footstep_sound = true,
 	walk_velocity = 1,
@@ -49,8 +49,8 @@ stepheight = 1,
 	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing"},
 	floats = 0,
 	follow = {
-		"ethereal:fish_raw", "wwildlife:rawfish", "mobs_fish:tropical",
-		"mobs:meat_raw", "wwildlife:rabbit_raw", "xocean:fish_edible"
+		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
+		"mobs:meat_raw", "animalworld:rabbit_raw", "xocean:fish_edible"
 	},
 	view_range = 12,
 
@@ -65,7 +65,7 @@ stepheight = 1,
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "wwildlife:crocodile",
+	name = "animalworld:crocodile",
 	nodes = {"default:dry_dirt_with_dry_grass"}, {"default:dirt_with_rainforest_litter"},
 	min_light = 14,
 	interval = 60,
@@ -76,4 +76,4 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("wwildlife:crocodile", ("Crocodile"), "acrocodile.png")
+mobs:register_egg("animalworld:crocodile", ("Crocodile"), "acrocodile.png")

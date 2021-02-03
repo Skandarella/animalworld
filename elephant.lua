@@ -1,4 +1,4 @@
-mobs:register_mob("wwildlife:elephant", {
+mobs:register_mob("animalworld:elephant", {
 stepheight = 2,
 	type = "monster",
 	passive = false,
@@ -6,8 +6,8 @@ stepheight = 2,
 	attack_animals = true,
 	reach = 3,
         damage = 8,
-	hp_min = 5,
-	hp_max = 45,
+	hp_min = 75,
+	hp_max = 100,
 	armor = 200,
 	collisionbox = {-2, -0.01, -2, 2, 2, 2},
 	visual = "mesh",
@@ -17,8 +17,8 @@ stepheight = 2,
 		{"textureelephant.png"},
 	},
 	sounds = {
-		random = "wwildlife_elephant",
-		attack = "wwildlife_elephant",
+		random = "animalworld_elephant",
+		attack = "animalworld_elephant",
 	},
 	makes_footstep_sound = true,
 	walk_velocity = 2,
@@ -62,7 +62,7 @@ stepheight = 2,
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "wwildlife:elephant",
+	name = "animalworld:elephant",
 	nodes = {"default:dry_dirt_with_dry_grass"}, {"default:dirt_with_rainforest_litter"},
 	min_light = 0,
 	interval = 60,
@@ -73,4 +73,4 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("wwildlife:elephant", ("Elephant"), "aelephant.png")
+mobs:register_egg("animalworld:elephant", ("Elephant"), "aelephant.png")

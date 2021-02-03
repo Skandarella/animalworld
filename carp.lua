@@ -1,4 +1,4 @@
-mobs:register_mob("wwildlife:carp", {
+mobs:register_mob("animalworld:carp", {
 stepheight = 0.0,
 	type = "animal",
 	passive = true,
@@ -24,11 +24,11 @@ stepheight = 0.0,
 	fly_in = "default:water_source", "default:river_water_source", "default:water_flowing",
 	fall_speed = 0,
 	runaway = true,
-        runaway_from = {"wwildlife:bear", "wwildlife:crocodile", "wwildlife:tiger", "wwildlife:elephant", "wwildlife:hippo", "player"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:elephant", "animalworld:hippo", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "player"},
 	jump = false,
 	stepheight = 0.0,
 	drops = {
-		{name = "wwildlife:rawfish", chance = 1, min = 1, max = 1},
+		{name = "animalworld:rawfish", chance = 1, min = 1, max = 1},
 	},
 	water_damage = 0,
         air_damage = 1,
@@ -66,7 +66,7 @@ stepheight = 0.0,
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "wwildlife:carp",
+	name = "animalworld:carp",
 	nodes = {"default:water_source"}, {"default:river_water_source"},
 	min_light = 14,
 	interval = 60,
@@ -77,27 +77,27 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("wwildlife:carp", ("Carp"), "acarp.png")
+mobs:register_egg("animalworld:carp", ("Carp"), "acarp.png")
 
 -- raw fish
-minetest.register_craftitem(":wwildlife:rawfish", {
+minetest.register_craftitem(":animalworld:rawfish", {
 	description = ("Raw Fish"),
-	inventory_image = "wwildlife_rawfish.png",
+	inventory_image = "animalworld_rawfish.png",
 	on_use = minetest.item_eat(3),
 	groups = {food_meat_raw = 1, flammable = 2},
 })
 
 -- cooked fish
-minetest.register_craftitem(":wwildlife:cookedfish", {
+minetest.register_craftitem(":animalworld:cookedfish", {
 	description = ("Cooked Fish"),
-	inventory_image = "wwildlife_cookedfish.png",
+	inventory_image = "animalworld_cookedfish.png",
 	on_use = minetest.item_eat(5),
 	groups = {food_meat = 1, flammable = 2},
 })
 
 minetest.register_craft({
 	type = "cooking",
-	output = "wwildlife:cookedfish",
-	recipe = "wwildlife:rawfish",
+	output = "animalworld:cookedfish",
+	recipe = "animalworld:rawfish",
 	cooktime = 5,
 })

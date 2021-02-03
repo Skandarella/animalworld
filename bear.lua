@@ -1,4 +1,4 @@
-mobs:register_mob("wwildlife:bear", {
+mobs:register_mob("animalworld:bear", {
 stepheight = 1,
 	type = "monster",
 	passive = false,
@@ -6,8 +6,8 @@ stepheight = 1,
 	attack_animals = true,
 	reach = 2,
         damage = 3,
-	hp_min = 5,
-	hp_max = 35,
+	hp_min = 15,
+	hp_max = 40,
 	armor = 200,
 	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.95, 0.6},
 	visual = "mesh",
@@ -17,7 +17,7 @@ stepheight = 1,
 		{"texturebear.png"},
 	},
 	sounds = {
-		random = "wwildlife_bear",
+		random = "animalworld_bear",
 	},
 	makes_footstep_sound = true,
 	walk_velocity = 1,
@@ -45,8 +45,8 @@ stepheight = 1,
 	},
 
 	follow = {
-		"ethereal:fish_raw", "wwildlife:rawfish", "mobs_fish:tropical",
-		"mobs:meat_raw", "wwildlife:rabbit_raw", "xocean:fish_edible"
+		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
+		"mobs:meat_raw", "animalworld:rabbit_raw", "xocean:fish_edible"
 	},
 	view_range = 8,
 
@@ -61,15 +61,15 @@ stepheight = 1,
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "wwildlife:bear",
+	name = "animalworld:bear",
 	nodes = {"default:dirt_with_coniferous_litter"}, {"default:permafrost_with_moss"}, {"ethereal:bamboo_dirt"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
 	min_height = -15,
-	max_height = 200,
+	max_height = 120,
 
 })
 end
 
-mobs:register_egg("wwildlife:bear", ("Bear"), "abear.png")
+mobs:register_egg("animalworld:bear", ("Bear"), "abear.png")

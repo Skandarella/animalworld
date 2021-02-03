@@ -1,4 +1,4 @@
-mobs:register_mob("wwildlife:boar", {
+mobs:register_mob("animalworld:boar", {
 	stepheight = 1,
 	type = "animal",
 	passive = false,
@@ -9,7 +9,7 @@ mobs:register_mob("wwildlife:boar", {
 	reach = 2,
 	damage = 2,
 	hp_min = 5,
-	hp_max = 15,
+	hp_max = 35,
 	armor = 200,
 	collisionbox = {-0.5, -0.01, -0.5, 0.5, 0.95, 0.5},
 	visual = "mesh",
@@ -19,8 +19,8 @@ mobs:register_mob("wwildlife:boar", {
 	},
 	makes_footstep_sound = true,
 	sounds = {
-		random = "wwildlife_boar",
-		attack = "wwildlife_boar",
+		random = "animalworld_boar",
+		attack = "animalworld_boar",
 	},
 	walk_velocity = 1,
 	run_velocity = 2,
@@ -30,7 +30,7 @@ mobs:register_mob("wwildlife:boar", {
 	follow = {"default:apple", "farming:potato"},
 	view_range = 6,
 	drops = {
-		{name = "wwildlife:pork_raw", chance = 1, min = 1, max = 3},
+		{name = "animalworld:pork_raw", chance = 1, min = 1, max = 3},
 	},
 	water_damage = 0,
 	lava_damage = 5,
@@ -71,42 +71,42 @@ end
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "wwildlife:boar",
+	name = "animalworld:boar",
 	nodes = {"default:dirt_with_coniferous_litter", "default:dirt_gray"},
 	min_light = 14,
 	interval = 60,
 	chance = 8000, -- 15000
 	min_height = 1,
-	max_height = 100,
+	max_height = 80,
 	day_toggle = true,
 })
 end
 
-mobs:register_egg("wwildlife:boar", ("Boar"), "aboar.png")
+mobs:register_egg("animalworld:boar", ("Boar"), "aboar.png")
 
 
-mobs:alias_mob("wwildlife:boar", "wwildlife:boa") -- compatibility
+mobs:alias_mob("animalworld:boar", "animalworld:boar") -- compatibility
 
 
 -- raw porkchop
-minetest.register_craftitem(":wwildlife:pork_raw", {
+minetest.register_craftitem(":animalworld:pork_raw", {
 	description = ("Raw Pork"),
-	inventory_image = "wwildlife_pork_raw.png",
+	inventory_image = "animalworld_pork_raw.png",
 	on_use = minetest.item_eat(4),
 	groups = {food_meat_raw = 1, food_pork_raw = 1, flammable = 2},
 })
 
 -- cooked porkchop
-minetest.register_craftitem(":wwildlife:pork_cooked", {
+minetest.register_craftitem(":animalworld:pork_cooked", {
 	description = ("Cooked Pork"),
-	inventory_image = "wwildlife_pork_cooked.png",
+	inventory_image = "animalworld_pork_cooked.png",
 	on_use = minetest.item_eat(8),
 	groups = {food_meat = 1, food_pork = 1, flammable = 2},
 })
 
 minetest.register_craft({
 	type = "cooking",
-	output = "wwildlife:pork_cooked",
-	recipe = "wwildlife:pork_raw",
+	output = "animalworld:pork_cooked",
+	recipe = "animalworld:pork_raw",
 	cooktime = 5,
 })

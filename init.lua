@@ -35,6 +35,14 @@ dofile(path .. "boar.lua") --
 dofile(path .. "kangaroo.lua") -- 
 dofile(path .. "tortoise.lua") -- 
 dofile(path .. "hippo.lua") -- 
+dofile(path .. "shark.lua") -- 
+dofile(path .. "nandu.lua") -- 
+dofile(path .. "yak.lua") --
+dofile(path .. "spider.lua") --
+dofile(path .. "spidermale.lua") --
+dofile(path .. "crab.lua") --
+dofile(path .. "reindeer.lua") --
+
 
 
 -- Load custom spawning

@@ -1,4 +1,4 @@
-mobs:register_mob("wwildlife:kangaroo", {
+mobs:register_mob("animalworld:kangaroo", {
 	stepheight = 2,
 	type = "animal",
 	passive = false,
@@ -8,8 +8,8 @@ mobs:register_mob("wwildlife:kangaroo", {
 	attack_npcs = false,
 	reach = 2,
 	damage = 2,
-	hp_min = 5,
-	hp_max = 15,
+	hp_min = 25,
+	hp_max = 35,
 	armor = 200,
 	collisionbox = {-0.5, -0.01, -0.5, 0.5, 0.95, 0.5},
 	visual = "mesh",
@@ -22,7 +22,7 @@ mobs:register_mob("wwildlife:kangaroo", {
 	walk_velocity = 5,
 	run_velocity = 5,
 	runaway = true,
-        runaway_from = {"wwildlife:bear", "wwildlife:crocodile", "wwildlife:tiger", "player"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "player"},
 	jump = true,
 	jump_height = 8,
 	pushable = true,
@@ -70,20 +70,20 @@ end
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "wwildlife:kangaroo",
+	name = "animalworld:kangaroo",
 	nodes = {"default:desert_sand", "default:dry_dirt_with_dry_grass"},
 	neighbors = spawn_by,
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
 	min_height = 5,
-	max_height = 100,
+	max_height = 45,
 	day_toggle = true,
 })
 end
 
-mobs:register_egg("wwildlife:kangaroo", ("Kangaroo"), "akangaroo.png")
+mobs:register_egg("animalworld:kangaroo", ("Kangaroo"), "akangaroo.png")
 
 
-mobs:alias_mob("wwildlife:kangaroo", "wwildlife:kangaroo") -- compatibility
+mobs:alias_mob("animalworld:kangaroo", "animalworld:kangaroo") -- compatibility
 

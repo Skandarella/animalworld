@@ -1,4 +1,4 @@
-mobs:register_mob("wwildlife:hippo", {
+mobs:register_mob("animalworld:hippo", {
 stepheight = 1,
 	type = "monster",
 	passive = false,
@@ -6,8 +6,8 @@ stepheight = 1,
 	attack_animals = true,
 	reach = 3,
         damage = 6,
-	hp_min = 5,
-	hp_max = 35,
+	hp_min = 65,
+	hp_max = 80,
 	armor = 200,
 	collisionbox = {-1.4, -0.01, -1.4, 1.4, 1.4, 1.4},
 	visual = "mesh",
@@ -17,8 +17,8 @@ stepheight = 1,
 		{"texturehippo.png"},
 	},
 	sounds = {
-		random = "wwildlife_hippo",
-		attack = "wwildlife_hippo",
+		random = "animalworld_hippo",
+		attack = "animalworld_hippo",
 	},
 	makes_footstep_sound = true,
 	walk_velocity = 1,
@@ -67,7 +67,7 @@ view_range = 6,
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "wwildlife:hippo",
+	name = "animalworld:hippo",
 	nodes = {"default:dry_dirt_with_dry_grass"}, {"default:dirt_with_rainforest_litter"},
 	min_light = 0,
 	interval = 60,
@@ -78,4 +78,4 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("wwildlife:hippo", ("Hippo"), "ahippo.png")
+mobs:register_egg("animalworld:hippo", ("Hippo"), "ahippo.png")
