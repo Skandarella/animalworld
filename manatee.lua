@@ -1,4 +1,4 @@
-mobs:register_mob("wwildlife:manatee", {
+mobs:register_mob("animalworld:manatee", {
 stepheight = 0.0,
 	type = "animal",
 	passive = true,
@@ -6,8 +6,8 @@ stepheight = 0.0,
 	attack_animals = false,
 	reach = 1,
         damage = 1,
-	hp_min = 5,
-	hp_max = 30,
+	hp_min = 50,
+	hp_max = 60,
 	armor = 200,
 	collisionbox = {-0.7, -0.01, -0.7, 0.7, 0.95, 0.7},
 	visual = "mesh",
@@ -24,7 +24,7 @@ stepheight = 0.0,
 	fly_in = "default:water_source", "default:river_water_source", "default:water_flowing",
 	fall_speed = 0,
 	runaway = true,
-        runaway_from = {"wwildlife:bear", "wwildlife:crocodile", "wwildlife:tiger"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark"},
 	jump = false,
 	stepheight = 0.0,
 	drops = {
@@ -65,7 +65,7 @@ stepheight = 0.0,
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "wwildlife:manatee",
+	name = "animalworld:manatee",
 	nodes = {"default:water_source"}, {"default:river_water_source"},
 	min_light = 14,
 	interval = 60,
@@ -76,4 +76,4 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("wwildlife:manatee", ("Manatee"), "amanatee.png")
+mobs:register_egg("animalworld:manatee", ("Manatee"), "amanatee.png")

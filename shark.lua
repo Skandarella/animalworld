@@ -1,30 +1,32 @@
-mobs:register_mob("animalworld:trout", {
+mobs:register_mob("animalworld:shark", {
 stepheight = 0.0,
-	type = "animal",
-	passive = true,
+	type = "monster",
+	passive = false,
         attack_type = "dogfight",
-	attack_animals = false,
-	reach = 1,
-        damage = 1,
-	hp_min = 5,
-	hp_max = 5,
+	attack_animals = true,
+	reach = 2,
+        damage = 7,
+	hp_min = 30,
+	hp_max = 75,
 	armor = 200,
-	collisionbox = {-0.4, -0.01, -0.4, 0.4, 0.95, 0.4},
+	collisionbox = {-0.7, -0.01, -0.7, 0.7, 0.95, 0.7},
 	visual = "mesh",
-	mesh = "Trout.b3d",
+	mesh = "Shark.b3d",
 	visual_size = {x = 1.0, y = 1.0},
 	textures = {
-		{"texturetrout.png"},
+		{"textureshark.png"},
 	},
 	sounds = {},
 	makes_footstep_sound = false,
-	walk_velocity = 3,
+	sounds = {
+		attack = "animalworld_shark",
+	},
+	walk_velocity = 2,
 	run_velocity = 4,
         fly = true,
 	fly_in = "default:water_source", "default:river_water_source", "default:water_flowing",
 	fall_speed = 0,
-	runaway = true,
-        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:elephant", "animalworld:hippo", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "player"},
+	runaway = false,
 	jump = false,
 	stepheight = 0.0,
 	drops = {
@@ -36,13 +38,13 @@ stepheight = 0.0,
 	light_damage = 0,
 	fear_height = 2,
 	animation = {
-		speed_normal = 125,
+		speed_normal = 100,
 		stand_start = 0,
-		stand_end = 100,
-		walk_start = 150,
-		walk_end = 250,
-		fly_start = 150, -- swim animation
-		fly_end = 250,
+		stand_end = 0,
+		walk_start = 0,
+		walk_end = 100,
+		fly_start = 0, -- swim animation
+		fly_end = 100,
 		punch_start = 100,
 		punch_end = 200,
 		-- 50-70 is slide/water idle
@@ -52,7 +54,7 @@ stepheight = 0.0,
 	follow = {
 		"mobs:meat_raw"
 	},
-	view_range = 10,
+	view_range = 17,
 
 	on_rightclick = function(self, clicker)
 
@@ -65,15 +67,15 @@ stepheight = 0.0,
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "animalworld:trout",
-	nodes = {"default:water_source"}, {"default:river_water_source"},
-	min_light = 14,
+	name = "animalworld:shark",
+	nodes = {"default:water_source"},
+	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
-	min_height = 1,
-	max_height = 500,
-	day_toggle = true,
+	min_height = 0,
+	max_height = 10,
+	day_toggle = false,
 })
 end
 
-mobs:register_egg("animalworld:trout", ("Trout"), "atrout.png")
+mobs:register_egg("animalworld:shark", ("Shark"), "ashark.png")

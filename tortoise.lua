@@ -1,4 +1,4 @@
-mobs:register_mob("wwildlife:tortoise", {
+mobs:register_mob("animalworld:tortoise", {
 stepheight = 1,
 	type = "monster",
 	passive = false,
@@ -6,8 +6,8 @@ stepheight = 1,
 	attack_npcs = true,
 	reach = 2,
 	damage = 0,
-	hp_min = 1,
-	hp_max = 35,
+	hp_min = 45,
+	hp_max = 80,
 	armor = 200,
 	collisionbox = {-0.268, -0.01, -0.268,  0.268, 0.167, 0.268},
 	visual = "mesh",
@@ -22,7 +22,7 @@ stepheight = 1,
 	walk_velocity = 0.2,
 	run_velocity = 0.3,
 	runaway = true,
-        runaway_from = {"wwildlife:bear", "wwildlife:crocodile", "wwildlife:tiger", "player"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "player"},
 	jump = false,
 	jump_height = 6,
 	drops = {
@@ -63,21 +63,21 @@ end
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "wwildlife:tortoise",
+	name = "animalworld:tortoise",
 	nodes = {"default:sand"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
 	min_height = 5,
-	max_height = 100,
+	max_height = 70,
 	day_toggle = true,
 })
 end
 
 
-mobs:register_egg("wwildlife:tortoise", ("Tortoise"), "atortoise.png", 0)
+mobs:register_egg("animalworld:tortoise", ("Tortoise"), "atortoise.png", 0)
 
 
-mobs:alias_mob("wwildlife:tortoise", "wwildlife:tortoise") -- compatibility
+mobs:alias_mob("animalworld:tortoise", "animalworld:tortoise") -- compatibility
 
 

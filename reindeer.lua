@@ -1,7 +1,7 @@
-mobs:register_mob("animalworld:moose", {
+mobs:register_mob("animalworld:reindeer", {
 	stepheight = 1,
 	type = "animal",
-	passive = false,
+	passive = true,
 	attack_type = "dogfight",
 	group_attack = true,
 	owner_loyal = true,
@@ -9,27 +9,26 @@ mobs:register_mob("animalworld:moose", {
 	reach = 2,
 	damage = 2,
 	hp_min = 25,
-	hp_max = 40,
+	hp_max = 30,
 	armor = 200,
 	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.95, 0.6},
 	visual = "mesh",
-	mesh = "Moose.b3d",
+	mesh = "Reindeer.b3d",
 	textures = {
-		{"texturemoose.png"},
+		{"texturereindeer.png"},
 	},
 	makes_footstep_sound = true,
 	sounds = {
-		random = "animalworld_moose",
-		attack = "animalworld_moose",
+
 	},
 	walk_velocity = 1,
 	run_velocity = 3,
 	runaway = true,
-        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "player"},
 	jump = false,
 	jump_height = 3,
 	pushable = true,
-	follow = {"default:apple", "farming:potato"},
+	follow = {"default:apple", "default:permafrost_with_moss"},
 	view_range = 10,
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
@@ -39,7 +38,7 @@ mobs:register_mob("animalworld:moose", {
 	light_damage = 0,
 	fear_height = 2,
 	animation = {
-		speed_normal = 50,
+		speed_normal = 70,
 		stand_start = 0,
 		stand_end = 100,
 		walk_start = 100,
@@ -61,32 +60,32 @@ mobs:register_mob("animalworld:moose", {
 	end,
 })
 
-local spawn_on = {"default:dirt_with_grass", "default:coniferous_litter"}
+local spawn_on = {"default:permafrost_with_moss", "default:dirt_with_snow"}
 
 if minetest.get_mapgen_setting("mg_name") ~= "v6" then
-	spawn_on = {"default:dirt_with_dry_grass", "default:dry_dirt_with_dry_grass"}
+	spawn_on = {"default:dirt_with_snow", "default:permafrost_with_moss"}
 end
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"ethereal:grass_grove"}
+	spawn_on = {"default:dirt_with_snow"}
 end
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "animalworld:moose",
-	nodes = {"default:dirt_with_grass", "default:dirt_with_coniferous_litter"},
+	name = "animalworld:reindeer",
+	nodes = {"default:dirt_with_snow", "default:permafrost_with_moss"},
 	neighbors = spawn_by,
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
-	min_height = 0,
-	max_height = 120,
+	min_height = 20,
+	max_height = 80,
 	day_toggle = true,
 })
 end
 
-mobs:register_egg("animalworld:moose", ("Moose"), "amoose.png")
+mobs:register_egg("animalworld:reindeer", ("Reindeer"), "areindeer.png")
 
 
-mobs:alias_mob("animalworld:moose", "animalworld:moose") -- compatibility
+mobs:alias_mob("animalworld:moose", "animalworld:reindeer") -- compatibility
 

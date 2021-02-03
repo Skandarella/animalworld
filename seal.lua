@@ -1,10 +1,10 @@
-mobs:register_mob("wwildlife:seal", {
+mobs:register_mob("animalworld:seal", {
 stepheight = 0.6,
 	type = "animal",
 	passive = true,
 	reach = 1,
-	hp_min = 5,
-	hp_max = 20,
+	hp_min = 20,
+	hp_max = 35,
 	armor = 200,
 	collisionbox = {-0.4, -0.01, -0.4, 0.4, 0.95, 0.4},
 	visual = "mesh",
@@ -14,15 +14,15 @@ stepheight = 0.6,
 		{"textureseal.png"},
 	},
 	sounds = {
-		random = "wwildlife_seal",
-		attack = "wwildlife_seal",
+		random = "animalworld_seal",
+		attack = "animalworld_seal",
 	},
 	makes_footstep_sound = true,
 	walk_velocity = 0.8,
 	run_velocity = 1,
 	runaway = true,
 	runaway = true,
-        runaway_from = {"wwildlife:bear", "wwildlife:crocodile", "wwildlife:tiger"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark"},
 	jump = false,
 	stepheight = 1.1,
 	drops = {
@@ -45,7 +45,7 @@ stepheight = 0.6,
 	fly_in = {"default:water_source", "default:water_flowing"},
 	floats = 0,
 	follow = {
-		"ethereal:fish_raw", "wwildlife:rawfish", "mobs_fish:tropical",
+		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
 		"mobs_fish:clownfish_set", "mobs_fish:tropical_set", "xocean:fish_edible"
 	},
 	view_range = 10,
@@ -61,7 +61,7 @@ stepheight = 0.6,
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "wwildlife:seal",
+	name = "animalworld:seal",
 	nodes = {"default:snowblock", "default_ice"},
 	min_light = 14,
 	interval = 60,
@@ -72,4 +72,4 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("wwildlife:seal", ("Seal"), "aseal.png")
+mobs:register_egg("animalworld:seal", ("Seal"), "aseal.png")
