@@ -42,6 +42,22 @@ dofile(path .. "spider.lua") --
 dofile(path .. "spidermale.lua") --
 dofile(path .. "crab.lua") --
 dofile(path .. "reindeer.lua") --
+dofile(path .. "volverine.lua") --
+dofile(path .. "owl.lua") --
+dofile(path .. "frog.lua") --
+dofile(path .. "monitor.lua") --
+dofile(path .. "gnu.lua") --
+dofile(path .. "puffin.lua") --
+dofile(path .. "anteater.lua") --
+dofile(path .. "hyena.lua") --
+dofile(path .. "rat.lua") --
+dofile(path .. "vulture.lua") --
+dofile(path .. "toucan.lua") --
+dofile(path .. "snowleopard.lua") --
+dofile(path .. "lobster.lua") --
+dofile(path .. "squid.lua") --
+dofile(path .. "kobra.lua") --
+dofile(path .. "bat.lua") --
 
 
 

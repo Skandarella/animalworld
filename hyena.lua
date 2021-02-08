@@ -1,30 +1,30 @@
-mobs:register_mob("animalworld:elephant", {
+mobs:register_mob("animalworld:hyena", {
 stepheight = 2,
 	type = "monster",
 	passive = false,
         attack_type = "dogfight",
 	attack_animals = true,
-	reach = 3,
+	reach = 2,
         damage = 8,
-	hp_min = 75,
-	hp_max = 100,
+	hp_min = 35,
+	hp_max = 45,
 	armor = 200,
-	collisionbox = {-2, -0.01, -2, 2, 2, 2},
+	collisionbox = {-0.5, -0.01, -0.5, 0.5, 0.95, 0.5},
 	visual = "mesh",
-	mesh = "Elephant.b3d",
+	mesh = "Hyena.b3d",
 	visual_size = {x = 1.0, y = 1.0},
 	textures = {
-		{"textureelephant.png"},
+		{"texturehyena.png"},
 	},
 	sounds = {
-		random = "animalworld_elephant",
-		attack = "animalworld_elephant",
+		random = "animalworld_hyena",
+		attack = "animalworld_hyena",
 	},
 	makes_footstep_sound = true,
-	walk_velocity = 2,
-	run_velocity = 4,
+	walk_velocity = 1,
+	run_velocity = 3,
 	runaway = false,
-	jump = false,
+	jump = true,
         jump_height = 6,
 	stepheight = 2,
 	drops = {
@@ -35,21 +35,21 @@ stepheight = 2,
 	light_damage = 0,
 	fear_height = 4,
 	animation = {
-		speed_normal = 80,
+		speed_normal = 75,
 		stand_start = 0,
 		stand_end = 100,
-		walk_start = 300,
-		walk_end = 450,
-		punch_start = 100,
-		punch_end = 300,
+		walk_start = 150,
+		walk_end = 250,
+		punch_start = 250,
+		punch_end = 350,
 		-- 50-70 is slide/water idle
 	},
 
 	follow = {
-		"ethereal:banana_single", "farming:corn_cob", "farming:cabbage",
-		"default:apple"
+		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
+		"mobs:meat_raw", "animalworld:rabbit_raw", "animalworld:pork_raw"
 	},
-	view_range = 6,
+	view_range = 10,
 
 	on_rightclick = function(self, clicker)
 
@@ -62,16 +62,16 @@ stepheight = 2,
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "animalworld:elephant",
-	nodes = {"default:dry_dirt_with_dry_grass"}, {"default:dirt_with_rainforest_litter"},
+	name = "animalworld:hyena",
+	nodes = {"default:dry_dirt_with_dry_grass"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
-	active_object_count = 2,
-	min_height = 0,
-	max_height = 65,
-	day_toggle = true,
+	active_object_count = 3,
+	min_height = 30,
+	max_height = 60,
+
 })
 end
 
-mobs:register_egg("animalworld:elephant", ("Elephant"), "aelephant.png")
+mobs:register_egg("animalworld:hyena", ("Hyena"), "ahyena.png")

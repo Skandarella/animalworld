@@ -25,7 +25,7 @@ stepheight = 1,
 	walk_velocity = 0.7,
 	run_velocity = 1,
 	runaway = true,
-        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:elephant", "animalworld:hippo", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "player"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:elephant", "animalworld:hippo", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "player"},
 	jump = false,
 	jump_height = 6,
 	drops = {
@@ -73,6 +73,7 @@ mobs:spawn({
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
+	active_object_count = 2,
 	min_height = 0,
 	max_height = 2,
 })

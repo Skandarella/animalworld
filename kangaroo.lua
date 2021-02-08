@@ -22,7 +22,7 @@ mobs:register_mob("animalworld:kangaroo", {
 	walk_velocity = 5,
 	run_velocity = 5,
 	runaway = true,
-        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "player"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "player"},
 	jump = true,
 	jump_height = 8,
 	pushable = true,
@@ -76,6 +76,7 @@ mobs:spawn({
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
+	active_object_count = 3,
 	min_height = 5,
 	max_height = 45,
 	day_toggle = true,
