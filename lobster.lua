@@ -1,7 +1,7 @@
-mobs:register_mob("animalworld:reindeer", {
+mobs:register_mob("animalworld:lobster", {
 	stepheight = 1,
 	type = "animal",
-	passive = true,
+	passive = false,
 	attack_type = "dogfight",
 	group_attack = true,
 	owner_loyal = true,
@@ -9,36 +9,42 @@ mobs:register_mob("animalworld:reindeer", {
 	reach = 2,
 	damage = 2,
 	hp_min = 25,
-	hp_max = 30,
+	hp_max = 50,
 	armor = 200,
 	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.95, 0.6},
 	visual = "mesh",
-	mesh = "Reindeer.b3d",
+	mesh = "Lobster.b3d",
 	textures = {
-		{"texturereindeer.png"},
+		{"texturelobster.png"},
 	},
 	makes_footstep_sound = true,
 	sounds = {
-
 	},
-	walk_velocity = 1,
-	run_velocity = 3,
+	walk_velocity = 0.5,
+	run_velocity = 1,
 	runaway = true,
-        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "player"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark"},
 	jump = false,
 	jump_height = 3,
 	pushable = true,
-	follow = {"default:apple", "default:permafrost_with_moss"},
+	follow = {"animalworld:rawfish", "mobs_fish:tropical"},
 	view_range = 10,
 	drops = {
-		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
+		{name = "animalworld:raw_athropod", chance = 1, min = 0, max = 2},
+	},
+	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing"},
+	floats = 0,
+	follow = {
+		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
+		"mobs:meat_raw", "animalworld:rabbit_raw", "xocean:fish_edible"
 	},
 	water_damage = 0,
 	lava_damage = 5,
+        air_damage = 1,
 	light_damage = 0,
 	fear_height = 2,
 	animation = {
-		speed_normal = 70,
+		speed_normal = 50,
 		stand_start = 0,
 		stand_end = 100,
 		walk_start = 100,
@@ -60,32 +66,33 @@ mobs:register_mob("animalworld:reindeer", {
 	end,
 })
 
-local spawn_on = {"default:permafrost_with_moss", "default:dirt_with_snow"}
+local spawn_on = {"default:water_source"}
 
 if minetest.get_mapgen_setting("mg_name") ~= "v6" then
-	spawn_on = {"default:dirt_with_snow", "default:permafrost_with_moss"}
+	spawn_on = {"default:water_source"}
 end
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:dirt_with_snow"}
+	spawn_on = {"default:water_source"}
 end
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "animalworld:reindeer",
-	nodes = {"default:dirt_with_snow", "default:permafrost_with_moss"},
+	name = "animalworld:lobster",
+	nodes = {"default:water_source"},
+	neighbors = spawn_by,
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
-	active_object_count = 4,
-	min_height = 20,
-	max_height = 80,
-	day_toggle = true,
+	active_object_count = 2,
+	min_height = 0,
+	max_height = 10,
+	day_toggle = false,
 })
 end
 
-mobs:register_egg("animalworld:reindeer", ("Reindeer"), "areindeer.png")
+mobs:register_egg("animalworld:lobster", ("Lobster"), "alobster.png")
 
 
-mobs:alias_mob("animalworld:moose", "animalworld:reindeer") -- compatibility
+mobs:alias_mob("animalworld:lobster", "animalworld:lobster") -- compatibility
 

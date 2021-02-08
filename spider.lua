@@ -52,16 +52,16 @@ stepheight = 4,
 })
 
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_monster then
 mobs:spawn({
 	name = "animalworld:spider",
 	nodes = {"default:stone", "default:desert_stone", "default:sandstone"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
+	active_object_count = 2,
 	min_height = -30,
 	max_height = 1,
-	day_toggle = false,
 })
 end
 

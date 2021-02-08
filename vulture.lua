@@ -1,0 +1,84 @@
+mobs:register_mob("animalworld:vulture", {
+stepheight = 3,
+	type = "animal",
+	passive = true,
+        attack_type = "dogfight",
+	attack_animals = false,
+	reach = 2,
+        damage = 1,
+	hp_min = 5,
+	hp_max = 25,
+	armor = 200,
+	collisionbox = {-0.3, -0.01, -1, 0.3, 0.3, 0.3},
+	visual = "mesh",
+	mesh = "Vulture.b3d",
+	visual_size = {x = 1.0, y = 1.0},
+	textures = {
+		{"texturevulture.png"},
+	},
+	sounds = {
+		random = "animalworld_vulture",
+	},
+	makes_footstep_sound = false,
+	walk_velocity = 5,
+	run_velocity = 6,
+	runaway = true,
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "player"},
+	fall_speed = 0,
+	jump = true,
+        jump_height = 6,
+	fly = true,
+	stepheight = 3,
+	drops = {
+		{name = "animalworld:chicken_raw", chance = 1, min = 1, max = 1},
+	        {name = "animalworld:chicken_feather", chance = 1, min = 1, max = 1},
+	
+	},
+	water_damage = 1,
+	lava_damage = 4,
+	light_damage = 0,
+	fear_height = 0,
+	animation = {
+		speed_normal = 100,
+		stand_start = 150,
+		stand_end = 250,
+		walk_start = 0,
+		walk_end = 100,
+		fly_start = 0, -- swim animation
+		fly_end = 100,
+		-- 50-70 is slide/water idle
+	},
+
+fly_in = {"air"},
+	floats = 0,
+	follow = {
+		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
+		"mobs:meat_raw", "animalworld:rabbit_raw", "animalworld:pork_raw"
+	},
+	
+view_range = 10,
+
+	on_rightclick = function(self, clicker)
+
+		-- feed or tame
+		if mobs:feed_tame(self, clicker, 4, false, true) then return end
+		if mobs:protect(self, clicker) then return end
+		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+	end,
+})
+
+if not mobs.custom_spawn_animal then
+mobs:spawn({
+	name = "animalworld:vulture",
+	nodes = {"default:dirt_with_grass"}, {"default:dry_dirt_with_dry_grass"}, {"default:desert_sand"}, {"default:stone"},
+	min_light = 0,
+	interval = 60,
+	chance = 8000, -- 15000
+	active_object_count = 3,
+	min_height = 50,
+	max_height = 300,
+	day_toggle = true,
+})
+end
+
+mobs:register_egg("animalworld:vulture", ("Vulture"), "avulture.png")
