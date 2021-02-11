@@ -7,10 +7,10 @@ mobs:register_mob("animalworld:camel", {
 	owner_loyal = true,
 	attack_npcs = false,
 	reach = 2,
-	damage = 2,
+	damage = 5,
 	hp_min = 20,
-	hp_max = 40,
-	armor = 200,
+	hp_max = 60,
+	armor = 100,
 	collisionbox = {-0.7, -0.01, -0.7, 0.7, 0.95, 0.7},
 	visual = "mesh",
 	mesh = "Camel.b3d",
@@ -29,7 +29,7 @@ mobs:register_mob("animalworld:camel", {
 	jump = false,
 	jump_height = 3,
 	pushable = true,
-	follow = {"default:dry_shrub ", "default:grass_1"},
+	follow = {"default:dry_shrub ", "default:grass_1", "ethereal:dry_shrub", "farming:seed_wheat", "farming:seed_rye", "default:junglegrass"},
 	view_range = 7,
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
@@ -68,7 +68,7 @@ if minetest.get_mapgen_setting("mg_name") ~= "v6" then
 end
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:desert_sand"}
+	spawn_on = {"default:desert_sand", "ethereal:dry_dirt"}
 end
 
 if not mobs.custom_spawn_animal then

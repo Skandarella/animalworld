@@ -7,10 +7,10 @@ mobs:register_mob("animalworld:boar", {
 	owner_loyal = true,
 	attack_npcs = true,
 	reach = 2,
-	damage = 2,
+	damage = 6,
 	hp_min = 5,
-	hp_max = 35,
-	armor = 200,
+	hp_max = 55,
+	armor = 100,
 	collisionbox = {-0.5, -0.01, -0.5, 0.5, 0.95, 0.5},
 	visual = "mesh",
 	mesh = "Boar.b3d",
@@ -27,8 +27,11 @@ mobs:register_mob("animalworld:boar", {
 	jump = true,
 	jump_height = 6,
 	pushable = true,
-	follow = {"default:apple", "farming:potato"},
+	follow = {"default:apple", "farming:potato", "ethereal:banana_bread", "farming:melon_slice", "farming:carrot", "farming:seed_rice", "farming:corn"},
 	view_range = 6,
+	replace_rate = 10,
+	replace_what = {"farming:soil", "farming:soil_wet"},
+	replace_with = "default:dirt",
 	drops = {
 		{name = "animalworld:pork_raw", chance = 1, min = 1, max = 3},
 	},
@@ -66,7 +69,7 @@ if minetest.get_mapgen_setting("mg_name") ~= "v6" then
 end
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"ethereal:mushroom_dirt", "ethereal:bamboo_dirt"}
+	spawn_on = {"ethereal:mushroom_dirt", "ethereal:bamboo_dirt", "ethereal:green_dirt", "ethereal:mushroom"}
 end
 
 if not mobs.custom_spawn_animal then

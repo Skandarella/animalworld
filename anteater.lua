@@ -7,10 +7,10 @@ mobs:register_mob("animalworld:anteater", {
 	owner_loyal = true,
 	attack_npcs = false,
 	reach = 2,
-	damage = 5,
+	damage = 10,
 	hp_min = 25,
-	hp_max = 45,
-	armor = 200,
+	hp_max = 65,
+	armor = 100,
 	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.95, 0.6},
 	visual = "mesh",
 	mesh = "Anteater.b3d",
@@ -28,7 +28,7 @@ mobs:register_mob("animalworld:anteater", {
 	jump = false,
 	jump_height = 3,
 	pushable = true,
-	follow = {"fishing:bait:worm", "bees:frame_full"},
+	follow = {"fishing:bait:worm", "bees:frame_full", "ethereal:worm"},
 	view_range = 10,
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
@@ -68,7 +68,7 @@ if minetest.get_mapgen_setting("mg_name") ~= "v6" then
 end
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"ethereal:grass_grove"}
+	spawn_on = {"ethereal:grass_grove", "ethereal:green_dirt"}
 end
 
 if not mobs.custom_spawn_animal then

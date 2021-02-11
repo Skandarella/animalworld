@@ -5,10 +5,10 @@ stepheight = 1,
         attack_type = "dogfight",
 	attack_animals = true,
 	reach = 2,
-        damage = 6,
+        damage = 12,
 	hp_min = 50,
-	hp_max = 75,
-	armor = 200,
+	hp_max = 95,
+	armor = 100,
 	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.95, 0.6},
 	visual = "mesh",
 	mesh = "Crocodile.b3d",
@@ -50,7 +50,7 @@ stepheight = 1,
 	floats = 0,
 	follow = {
 		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
-		"mobs:meat_raw", "animalworld:rabbit_raw", "xocean:fish_edible"
+		"mobs:meat_raw", "animalworld:rabbit_raw", "xocean:fish_edible", "fishing:fish_raw", "water_life:meat_raw", "fishing:carp_raw", "animalworld:chicken_raw"
 	},
 	view_range = 12,
 

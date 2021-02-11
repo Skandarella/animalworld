@@ -7,8 +7,8 @@ stepheight = 1,
 	reach = 2,
 	damage = 0,
 	hp_min = 10,
-	hp_max = 20,
-	armor = 200,
+	hp_max = 40,
+	armor = 100,
 	collisionbox = {-0.268, -0.01, -0.268,  0.268, 0.167, 0.268},
 	visual = "mesh",
 	mesh = "Crab.b3d",
@@ -49,7 +49,7 @@ stepheight = 1,
 	follow = {"animalworld:rawfish", "default:marram_grass_2"},
 	view_range = 5,
 	replace_rate = 10,
-	replace_what = {"default:marram_grass_2"},
+	replace_what = {"default:marram_grass_2", "ethereal:fish_raw", "fishing:fish_raw", "xocean:fish_edible", "water_life:meat_raw", "mobs:clownfish_raw"},
 	replace_with = "air",
 	on_rightclick = function(self, clicker)
 
@@ -63,7 +63,7 @@ stepheight = 1,
 local spawn_on = "default:sand"
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = "ethereal:prairie_dirt"
+	spawn_on = "default:sand"
 end
 
 if not mobs.custom_spawn_animal then

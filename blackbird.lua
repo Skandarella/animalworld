@@ -5,10 +5,10 @@ stepheight = 3,
         attack_type = "dogfight",
 	attack_animals = false,
 	reach = 2,
-        damage = 1,
+        damage = 2,
 	hp_min = 5,
-	hp_max = 10,
-	armor = 200,
+	hp_max = 30,
+	armor = 100,
 	collisionbox = {-0.3, -0.01, -1, 0.3, 0.3, 0.3},
 	visual = "mesh",
 	mesh = "Blackbird.b3d",
@@ -52,7 +52,7 @@ stepheight = 3,
 fly_in = {"air"},
 	floats = 0,
 	follow = {
-		"fishing:bait:worm"
+		"fishing:bait:worm", "farming:seed_wheat", "farming:seed_rice", "farming:seed_oat", "ethereal:pine_nuts", "ethereal:worm"
 	},
 	
 view_range = 4,

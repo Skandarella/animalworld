@@ -5,10 +5,10 @@ stepheight = 3,
         attack_type = "dogfight",
 	attack_animals = false,
 	reach = 2,
-        damage = 1,
+        damage = 2,
 	hp_min = 5,
-	hp_max = 15,
-	armor = 200,
+	hp_max = 35,
+	armor = 100,
 	collisionbox = {-0.3, -0.01, -1, 0.3, 0.3, 0.3},
 	visual = "mesh",
 	mesh = "Bat.b3d",
@@ -51,7 +51,7 @@ stepheight = 3,
 fly_in = {"air"},
 	floats = 0,
 	follow = {
-		"animalworld:rawfish"
+		"animalworld:rawfish", "ethereal:worm", "ethereal:fish_raw", "fishing:fish_raw", "xocean:fish_edible"
 	},
 	
 view_range = 4,
