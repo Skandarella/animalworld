@@ -5,10 +5,10 @@ stepheight = 2,
         attack_type = "dogfight",
 	attack_animals = true,
 	reach = 2,
-        damage = 6,
+        damage = 13,
 	hp_min = 45,
-	hp_max = 55,
-	armor = 200,
+	hp_max = 75,
+	armor = 100,
 	collisionbox = {-0.5, -0.01, -0.5, 0.5, 0.95, 0.5},
 	visual = "mesh",
 	mesh = "Tiger.b3d",
@@ -47,7 +47,7 @@ stepheight = 2,
 
 	follow = {
 		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
-		"mobs:meat_raw", "animalworld:rabbit_raw", "animalworld:pork_raw"
+		"mobs:meat_raw", "animalworld:rabbit_raw", "animalworld:pork_raw", "water_life:meat_raw", "animalworld:chicken_raw"
 	},
 	view_range = 15,
 
@@ -63,7 +63,7 @@ stepheight = 2,
 if not mobs.custom_spawn_animal then
 mobs:spawn({
 	name = "animalworld:tiger",
-	nodes = {"default:dirt_with_rainforest_litter"},
+	nodes = {"default:dirt_with_rainforest_litter", "ethereal:green_dirt", "ethereal:grass_grove"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000

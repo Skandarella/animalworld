@@ -5,10 +5,10 @@ stepheight = 3,
         attack_type = "dogfight",
 	attack_animals = true,
 	reach = 2,
-        damage = 6,
+        damage = 12,
 	hp_min = 15,
-	hp_max = 25,
-	armor = 200,
+	hp_max = 45,
+	armor = 100,
 	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.95, 0.6},
 	visual = "mesh",
 	mesh = "Volverine.b3d",
@@ -48,7 +48,7 @@ stepheight = 3,
 	},
 
 	follow = {
-		"animalworld:rawfish", "mobs:meat_raw", "animalworld:rabbit_raw", "animalworld:chicken_raw"
+		"animalworld:rawfish", "mobs:meat_raw", "animalworld:rabbit_raw", "animalworld:chicken_raw", "water_life:meat_raw"
 	},
 	view_range = 10,
 

@@ -5,10 +5,10 @@ stepheight = 0.0,
         attack_type = "dogfight",
 	attack_animals = true,
 	reach = 2,
-        damage = 7,
+        damage = 14,
 	hp_min = 30,
-	hp_max = 75,
-	armor = 200,
+	hp_max = 95,
+	armor = 100,
 	collisionbox = {-0.7, -0.01, -0.7, 0.7, 0.95, 0.7},
 	visual = "mesh",
 	mesh = "Shark.b3d",
@@ -52,7 +52,7 @@ stepheight = 0.0,
 	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing"},
 	floats = 0,
 	follow = {
-		"mobs:meat_raw"
+		"mobs:meat_raw", "xocean:fish_edible", "ethereal:fish_raw", "mobs:clownfish_raw", "mobs:bluefish_raw", "fishing:bait_worm", "fishing:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "water_life:meat_raw", "fishing:shark_raw", "fishing:pike_raw"
 	},
 	view_range = 17,
 

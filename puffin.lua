@@ -7,8 +7,8 @@ stepheight = 3,
 	reach = 2,
         damage = 1,
 	hp_min = 5,
-	hp_max = 15,
-	armor = 200,
+	hp_max = 35,
+	armor = 100,
 	collisionbox = {-0.3, -0.01, -1, 0.3, 0.3, 0.3},
 	visual = "mesh",
 	mesh = "Puffin.b3d",
@@ -51,7 +51,7 @@ stepheight = 3,
 fly_in = {"air", "default:water_source", "default:river_water_source"},
 	floats = 0,
 	follow = {
-		"animalworld:rawfish"
+		"animalworld:rawfish", "mobs:clownfish_raw", "mobs:bluefish_raw", "fishing:bait_worm", "fishing:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "xocean:fish_edible"
 	},
 	
 view_range = 4,

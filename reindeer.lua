@@ -9,8 +9,8 @@ mobs:register_mob("animalworld:reindeer", {
 	reach = 2,
 	damage = 2,
 	hp_min = 25,
-	hp_max = 30,
-	armor = 200,
+	hp_max = 50,
+	armor = 100,
 	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.95, 0.6},
 	visual = "mesh",
 	mesh = "Reindeer.b3d",
@@ -28,7 +28,7 @@ mobs:register_mob("animalworld:reindeer", {
 	jump = false,
 	jump_height = 3,
 	pushable = true,
-	follow = {"default:apple", "default:permafrost_with_moss"},
+	follow = {"default:apple", "default:permafrost_with_moss", "ethereal:snowygrass", "ethereal:crystalgrass"},
 	view_range = 10,
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
@@ -73,7 +73,7 @@ end
 if not mobs.custom_spawn_animal then
 mobs:spawn({
 	name = "animalworld:reindeer",
-	nodes = {"default:dirt_with_snow", "default:permafrost_with_moss"},
+	nodes = {"default:dirt_with_snow", "default:permafrost_with_moss", "ethereal:crystal_dirt"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000

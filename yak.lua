@@ -5,10 +5,10 @@ mobs:register_mob("animalworld:yak", {
 	attack_npcs = false,
 	group_attack = true,
 	reach = 2,
-	damage = 4,
+	damage = 8,
 	hp_min = 5,
-	hp_max = 35,
-	armor = 200,
+	hp_max = 55,
+	armor = 100,
 	collisionbox = {-0.4, -0.01, -0.4, 0.4, 1.2, 0.4},
 	visual = "mesh",
 	mesh = "Yak.b3d",
@@ -60,7 +60,7 @@ mobs:register_mob("animalworld:yak", {
 	},
 	follow = {
 		"farming:wheat", "default:grass_1", "farming:barley",
-		"farming:oat", "farming:rye"
+		"farming:oat", "farming:rye", "farming:carrot", "farming:beans", "farming:lettuce"
 	},
 	view_range = 8,
 	replace_rate = 10,
@@ -68,7 +68,7 @@ mobs:register_mob("animalworld:yak", {
 		{"group:grass", "air", 0},
 		{"default:dirt_with_grass", "default:dirt", -1}
 	},
---	stay_near = {{"farming:straw", "group:grass"}, 10},
+--	stay_near = {"farming:straw", "group:grass"}, 10},
 	fear_height = 2,
 	on_rightclick = function(self, clicker)
 
@@ -250,7 +250,7 @@ minetest.register_node(":animalworld:cheeseblock", {
 minetest.register_craft({
 	output = "animalworld:cheeseblock",
 	recipe = {
-		{"animalworld:cheese", "animalworld:cheese", "animalworld"},
+		{"animalworld:cheese", "animalworld:cheese", "animalworld:cheese"},
 		{"animalworld:cheese", "animalworld:cheese", "animalworld:cheese"},
 		{"animalworld:cheese", "animalworld:cheese", "animalworld:cheese"},
 	}

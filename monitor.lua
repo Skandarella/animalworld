@@ -5,10 +5,10 @@ stepheight = 1,
         attack_type = "dogfight",
 	attack_animals = true,
 	reach = 2,
-        damage = 4,
+        damage = 8,
 	hp_min = 20,
-	hp_max = 35,
-	armor = 200,
+	hp_max = 55,
+	armor = 100,
 	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.95, 0.6},
 	visual = "mesh",
 	mesh = "Monitor.b3d",
@@ -50,7 +50,7 @@ stepheight = 1,
 	floats = 0,
 	follow = {
 		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
-		"mobs:meat_raw", "animalworld:rabbit_raw", "xocean:fish_edible", "animalworld:chicken_raw"
+		"mobs:meat_raw", "animalworld:rabbit_raw", "xocean:fish_edible", "animalworld:chicken_raw", "water_life:meat_raw"
 	},
 	view_range = 8,
 
@@ -66,7 +66,7 @@ stepheight = 1,
 if not mobs.custom_spawn_monster then
 mobs:spawn({
 	name = "animalworld:monitor",
-	nodes = {"default:desert_sand"}, {"default:desert_sandstone"}, {"default:sandstone"},
+	nodes = {"default:desert_sand"}, {"default:desert_sandstone"}, {"default:sandstone"}, {"ethereal:dry_dirt"}, {"ethereal:fiery_dirt"},
 	min_light = 14,
 	interval = 60,
 	chance = 8000, -- 15000

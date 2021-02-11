@@ -6,10 +6,10 @@ mobs:register_mob("animalworld:rat", {
 	attack_npcs = false,
 	group_attack = true,
 	reach = 2,
-	damage = 1,
+	damage = 3,
 	hp_min = 5,
-	hp_max = 15,
-	armor = 200,
+	hp_max = 35,
+	armor = 100,
 	collisionbox = {-0.4, -0.01, -0.4, 0.4, 1.2, 0.4},
 	visual = "mesh",
 	mesh = "Rat.b3d",
@@ -46,23 +46,14 @@ mobs:register_mob("animalworld:rat", {
 		punch_end = 350,
 		punch_speed = 125,
 
-
 		die_start = 1, -- we dont have a specific death animation so we will
 		die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
 		die_speed = 1, -- have mob rotate when dying.
 		die_loop = false,
 		die_rotate = true,
 	},
-	follow = {
-		"farming:wheat", "default:grass_1", "farming:barley",
-		"farming:oat", "farming:rye"
-	},
+	follow = {"farming:wheat", "farming:beans", "farming:barley", "farming:oat", "farming:rye", "mobs:cheese", "farming:bread", "ethereal:banana_bread"},
 	view_range = 10,
-	replace_rate = 10,
-	replace_what = {
-		{"mobs:cheeseblock", "air", 0},
-		{"mobs:cheese", "default:dirt", -1}
-	},
 
 })
 

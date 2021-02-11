@@ -6,8 +6,8 @@ stepheight = 3,
 	attack_npcs = false,
 	damage = 1,
 	hp_min = 5,
-	hp_max = 15,
-	armor = 200,
+	hp_max = 25,
+	armor = 100,
 	collisionbox = {-0.268, -0.01, -0.268,  0.268, 0.167, 0.268},
 	visual = "mesh",
 	mesh = "Frog.b3d",
@@ -43,7 +43,7 @@ sounds = {
 	},
 	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing"},
 	floats = 0,
-	follow = {"fishing:bait:worm"},
+	follow = {"fishing:bait:worm", "ethereal:worm"},
 	view_range = 6,
 	on_rightclick = function(self, clicker)
 
@@ -57,7 +57,7 @@ sounds = {
 local spawn_on = "default:sand"
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = "ethereal:prairie_dirt"
+	spawn_on = "ethereal:prairie_dirt", "default:dirt_with_grass", "ethereal:green_dirt"
 end
 
 if not mobs.custom_spawn_animal then

@@ -7,10 +7,10 @@ mobs:register_mob("animalworld:moose", {
 	owner_loyal = true,
 	attack_npcs = false,
 	reach = 2,
-	damage = 2,
+	damage = 7,
 	hp_min = 25,
-	hp_max = 40,
-	armor = 200,
+	hp_max = 60,
+	armor = 100,
 	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.95, 0.6},
 	visual = "mesh",
 	mesh = "Moose.b3d",
@@ -29,7 +29,7 @@ mobs:register_mob("animalworld:moose", {
 	jump = false,
 	jump_height = 3,
 	pushable = true,
-	follow = {"default:apple", "farming:potato"},
+	follow = {"default:apple", "farming:potato", "farming:melon_slice", "farming:cucumber", "farming:cabbage", "farming:lettuce", "farming:bread"},
 	view_range = 10,
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
@@ -69,7 +69,7 @@ if minetest.get_mapgen_setting("mg_name") ~= "v6" then
 end
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"ethereal:grass_grove"}
+	spawn_on = {"ethereal:grass_grove", "default:dirt_with_grass", "default:dirt_with_coniferous_litter"}
 end
 
 if not mobs.custom_spawn_animal then

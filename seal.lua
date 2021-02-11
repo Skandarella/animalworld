@@ -4,8 +4,8 @@ stepheight = 0.6,
 	passive = true,
 	reach = 1,
 	hp_min = 20,
-	hp_max = 35,
-	armor = 200,
+	hp_max = 55,
+	armor = 100,
 	collisionbox = {-0.4, -0.01, -0.4, 0.4, 0.95, 0.4},
 	visual = "mesh",
 	mesh = "Seal.b3d",
@@ -46,7 +46,7 @@ stepheight = 0.6,
 	floats = 0,
 	follow = {
 		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
-		"mobs_fish:clownfish_set", "mobs_fish:tropical_set", "xocean:fish_edible"
+		"mobs_fish:clownfish_set", "mobs_fish:tropical_set", "xocean:fish_edible", "mobs:bluefish_raw"
 	},
 	view_range = 10,
 

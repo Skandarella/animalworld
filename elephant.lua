@@ -5,10 +5,10 @@ stepheight = 2,
         attack_type = "dogfight",
 	attack_animals = true,
 	reach = 3,
-        damage = 8,
+        damage = 16,
 	hp_min = 75,
-	hp_max = 100,
-	armor = 200,
+	hp_max = 120,
+	armor = 100,
 	collisionbox = {-2, -0.01, -2, 2, 2, 2},
 	visual = "mesh",
 	mesh = "Elephant.b3d",
@@ -34,6 +34,7 @@ stepheight = 2,
 	lava_damage = 4,
 	light_damage = 0,
 	fear_height = 4,
+        pathfinding = true,
 	animation = {
 		speed_normal = 80,
 		stand_start = 0,
@@ -47,10 +48,12 @@ stepheight = 2,
 
 	follow = {
 		"ethereal:banana_single", "farming:corn_cob", "farming:cabbage",
-		"default:apple"
+		"default:apple", "farming:cabbage", "farming:carrot", "farming:cucumber", "farming:grapes", "farming:pineapple", "ethereal:orange", "ethereal:coconut", "ethereal:coconut_slice"
 	},
 	view_range = 6,
-
+	replace_rate = 10,
+	replace_what = {"farming:soil", "farming:soil_wet"},
+	replace_with = "default:dirt",
 	on_rightclick = function(self, clicker)
 
 		-- feed or tame

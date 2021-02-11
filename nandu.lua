@@ -7,10 +7,10 @@ stepheight = 1,
 	owner_loyal = true,
 	attack_npcs = false,
 	reach = 2,
-	damage = 2,
+	damage = 5,
 	hp_min = 20,
-	hp_max = 30,
-	armor = 200,
+	hp_max = 50,
+	armor = 100,
 	collisionbox = {-0.5, -0.01, -0.3, 0.5, 0.1, 0.5},
 	visual = "mesh",
 	mesh = "Nandu.b3d",
@@ -90,7 +90,7 @@ stepheight = 1,
 local spawn_on = {"default:dirt_with_grass"}
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"ethereal:bamboo_dirt", "ethereal:prairie_dirt"}
+	spawn_on = {"ethereal:bamboo_dirt", "ethereal:prairie_dirt", "default:dirt_with_grass"}
 end
 
 

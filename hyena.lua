@@ -5,10 +5,10 @@ stepheight = 2,
         attack_type = "dogfight",
 	attack_animals = true,
 	reach = 2,
-        damage = 8,
+        damage = 16,
 	hp_min = 35,
-	hp_max = 45,
-	armor = 200,
+	hp_max = 65,
+	armor = 100,
 	collisionbox = {-0.5, -0.01, -0.5, 0.5, 0.95, 0.5},
 	visual = "mesh",
 	mesh = "Hyena.b3d",
@@ -47,7 +47,7 @@ stepheight = 2,
 
 	follow = {
 		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
-		"mobs:meat_raw", "animalworld:rabbit_raw", "animalworld:pork_raw"
+		"mobs:meat_raw", "animalworld:rabbit_raw", "animalworld:pork_raw", "water_life:meat_raw", "xocean:fish_edible", "animalworld:chicken_raw"
 	},
 	view_range = 10,
 

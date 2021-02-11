@@ -7,8 +7,8 @@ stepheight = 6,
 	reach = 2,
         damage = 1,
 	hp_min = 5,
-	hp_max = 10,
-	armor = 200,
+	hp_max = 30,
+	armor = 100,
 	collisionbox = {-0.3, -0.01, -1, 0.3, 0.3, 0.3},
 	visual = "mesh",
 	mesh = "Toucan.b3d",
@@ -53,7 +53,7 @@ stepheight = 6,
 fly_in = {"air"},
 	floats = 0,
 	follow = {
-		"fishing:bait:worm"
+		"fishing:bait:worm", "ethereal:worm", "farming:melon_slice", "farming:pineapple", "ethereal:banana", "ethereal:orange", "farming:grapes"
 	},
 	
 view_range = 4,

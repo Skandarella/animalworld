@@ -9,8 +9,8 @@ mobs:register_mob("animalworld:kangaroo", {
 	reach = 2,
 	damage = 2,
 	hp_min = 25,
-	hp_max = 35,
-	armor = 200,
+	hp_max = 55,
+	armor = 100,
 	collisionbox = {-0.5, -0.01, -0.5, 0.5, 0.95, 0.5},
 	visual = "mesh",
 	mesh = "Kangaroo.b3d",
@@ -26,7 +26,7 @@ mobs:register_mob("animalworld:kangaroo", {
 	jump = true,
 	jump_height = 8,
 	pushable = true,
-	follow = {"default:grass_3", "default:dry_grass_3"},
+	follow = {"default:grass_3", "default:dry_grass_3", "ethereal:dry_shrub", "farming:lettuce", "farming:seed_wheat", "default:junglegrass"},
 	view_range = 10,
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
@@ -65,7 +65,7 @@ if minetest.get_mapgen_setting("mg_name") ~= "v6" then
 end
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"ethereal:grass_grove"}
+	spawn_on = {"ethereal:grass_grove", "default:desert_sand", "ethereal:dry_dirt"}
 end
 
 if not mobs.custom_spawn_animal then

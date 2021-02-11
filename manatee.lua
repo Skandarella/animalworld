@@ -7,8 +7,8 @@ stepheight = 0.0,
 	reach = 1,
         damage = 1,
 	hp_min = 50,
-	hp_max = 60,
-	armor = 200,
+	hp_max = 80,
+	armor = 100,
 	collisionbox = {-0.7, -0.01, -0.7, 0.7, 0.95, 0.7},
 	visual = "mesh",
 	mesh = "Manatee.b3d",
@@ -50,7 +50,7 @@ stepheight = 0.0,
 	floats = 0,
 	follow = {
 		"default:kelp", "seaweed", "xocean:kelp",
-		"default:grass", "farming:cucumber", "farming:cabbage"
+		"default:grass", "farming:cucumber", "farming:cabbage", "xocean:seagrass", "farming:lettuce", "default:junglegrass"
 	},
 	view_range = 10,
 

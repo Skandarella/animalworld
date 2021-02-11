@@ -5,10 +5,10 @@ stepheight = 5,
         attack_type = "dogfight",
 	attack_animals = true,
 	reach = 2,
-        damage = 4,
+        damage = 9,
 	hp_min = 45,
-	hp_max = 55,
-	armor = 200,
+	hp_max = 75,
+	armor = 100,
 	collisionbox = {-0.5, -0.01, -0.5, 0.5, 0.95, 0.5},
 	visual = "mesh",
 	mesh = "Snowleopard.b3d",
@@ -48,7 +48,7 @@ stepheight = 5,
 
 	follow = {
 		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
-		"mobs:meat_raw", "animalworld:rabbit_raw", "animalworld:pork_raw"
+		"mobs:meat_raw", "animalworld:rabbit_raw", "animalworld:pork_raw", "ethereal:fish_raw", "water_life:meat_raw", "animalworld:chicken_raw"
 	},
 	view_range = 15,
 

@@ -7,8 +7,8 @@ stepheight = 0.0,
 	reach = 1,
         damage = 1,
 	hp_min = 5,
-	hp_max = 5,
-	armor = 200,
+	hp_max = 25,
+	armor = 100,
 	collisionbox = {-0.4, -0.01, -0.4, 0.4, 0.95, 0.4},
 	visual = "mesh",
 	mesh = "Trout.b3d",
@@ -50,7 +50,7 @@ stepheight = 0.0,
 	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing"},
 	floats = 0,
 	follow = {
-		"mobs:meat_raw"
+		"mobs:meat_raw", "ethereal:worm", "fishing:bait_worm", "water_life:meat_raw", "xocean:fish_edible"
 	},
 	view_range = 10,
 

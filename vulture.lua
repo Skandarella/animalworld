@@ -7,8 +7,8 @@ stepheight = 3,
 	reach = 2,
         damage = 1,
 	hp_min = 5,
-	hp_max = 25,
-	armor = 200,
+	hp_max = 45,
+	armor = 100,
 	collisionbox = {-0.3, -0.01, -1, 0.3, 0.3, 0.3},
 	visual = "mesh",
 	mesh = "Vulture.b3d",
@@ -53,7 +53,7 @@ fly_in = {"air"},
 	floats = 0,
 	follow = {
 		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
-		"mobs:meat_raw", "animalworld:rabbit_raw", "animalworld:pork_raw"
+		"mobs:meat_raw", "animalworld:rabbit_raw", "animalworld:pork_raw", "water_life:meat_raw"
 	},
 	
 view_range = 10,

@@ -4,8 +4,8 @@ stepheight = 1,
 	passive = true,
 	reach = 1,
 	hp_min = 15,
-	hp_max = 20,
-	armor = 200,
+	hp_max = 40,
+	armor = 100,
 	collisionbox = {-0.268, -0.01, -0.268,  0.268, 0.167, 0.268},
 	visual = "mesh",
 	mesh = "Hare.b3d",
@@ -40,10 +40,10 @@ stepheight = 1,
 		punch_start = 100,
 		punch_end = 200,
 	},
-	follow = {"farming:carrot", "farming_plus:carrot_item", "default:grass_1"},
+	follow = {"farming:carrot", "farming_plus:carrot_item", "default:grass_1", "farming:carrot_7", "farming:carrot_8", "farming_plus:carrot", "farming:lettuce", "farming:cabbage", "ethereal:snowygrass"},
 	view_range = 8,
 	replace_rate = 10,
-	replace_what = {"farming:carrot_7", "farming:carrot_8", "farming_plus:carrot"},
+	replace_what = {"farming:carrot_7", "farming:carrot_8", "farming_plus:carrot", "farming:lettuce", "farming:cabbage", "ethereal:snowygrass", "flowers:geranium", "flowers:rose"},
 	replace_with = "air",
 	on_rightclick = function(self, clicker)
 
@@ -104,7 +104,7 @@ stepheight = 1,
 local spawn_on = "default:dirt_with_grass"
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = "ethereal:prairie_dirt"
+	spawn_on = "ethereal:prairie_dirt", "default:dirt_with_grass"
 end
 
 if not mobs.custom_spawn_animal then

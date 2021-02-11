@@ -5,10 +5,10 @@ stepheight = 1,
         attack_type = "dogfight",
 	attack_animals = true,
 	reach = 3,
-        damage = 6,
+        damage = 12,
 	hp_min = 65,
-	hp_max = 80,
-	armor = 200,
+	hp_max = 100,
+	armor = 100,
 	collisionbox = {-1.4, -0.01, -1.4, 1.4, 1.4, 1.4},
 	visual = "mesh",
 	mesh = "Hippo2.b3d",
@@ -51,7 +51,7 @@ fly_in = {"default:water_source", "default:river_water_source", "default:water_f
 	floats = 0,
 	follow = {
 		"ethereal:banana_single", "farming:corn_cob", "farming:cabbage",
-		"default:apple"
+		"default:apple", "water_life:meat_raw", "xocean:fish_edible", "ethereal:fish_raw", "ethereal:banana", "farming:cabbage", "farming:lettuce", "farming:melon_slice"
 	},
 	
 view_range = 6,
