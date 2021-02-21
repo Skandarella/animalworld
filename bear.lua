@@ -59,10 +59,14 @@ stepheight = 1,
 	end,
 })
 
+if minetest.get_modpath("ethereal") then
+	spawn_on = {"default:dirt_with_coniferous_litter", "default:permafrost_with_moss", "ethereal:bamboo_dirt", "ethereal:gray_dirt"}
+end
+
 if not mobs.custom_spawn_animal then
 mobs:spawn({
 	name = "animalworld:bear",
-	nodes = {"default:dirt_with_coniferous_litter"}, {"default:permafrost_with_moss"}, {"ethereal:bamboo_dirt"},
+	nodes = {"default:dirt_with_coniferous_litter"}, {"default:permafrost_with_moss"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000

@@ -40,12 +40,13 @@ mobs:register_mob("animalworld:boar", {
 	light_damage = 0,
 	fear_height = 2,
 	animation = {
-		speed_normal = 100,
+		speed_normal = 80,
+		stand_speed = 50,
 		stand_start = 0,
 		stand_end = 100,
-		walk_start = 300,
-		walk_end = 450,
-		punch_start = 100,
+		walk_start = 100,
+		walk_end = 200,
+		punch_start = 200,
 		punch_end = 300,
 
 		die_start = 1, -- we dont have a specific death animation so we will
@@ -69,7 +70,7 @@ if minetest.get_mapgen_setting("mg_name") ~= "v6" then
 end
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"ethereal:mushroom_dirt", "ethereal:bamboo_dirt", "ethereal:green_dirt", "ethereal:mushroom"}
+	spawn_on = {"ethereal:mushroom_dirt", "ethereal:bamboo_dirt", "ethereal:green_dirt", "ethereal:mushroom_dirt", "default:dirt_with_coniferous_litter", "default:dirt_gray"}
 end
 
 if not mobs.custom_spawn_animal then

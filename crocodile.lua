@@ -46,7 +46,7 @@ stepheight = 1,
 		punch_end = 200,
 		-- 50-70 is slide/water idle
 	},
-	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing"},
+	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing"},
 	floats = 0,
 	follow = {
 		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
@@ -62,6 +62,10 @@ stepheight = 1,
 		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
 	end,
 })
+
+if minetest.get_modpath("ethereal") then
+	spawn_on = {"ethereal:grove_dirt", "default:dry_dirt_with_dry_grass", "default:dirt_with_rainforest_litter"}
+end
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({

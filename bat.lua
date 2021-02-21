@@ -23,7 +23,7 @@ stepheight = 3,
 	walk_velocity = 5,
 	run_velocity = 6,
 	runaway = true,
-        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "player"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "player"},
 	fall_speed = 0,
 	jump = true,
         jump_height = 6,
@@ -65,10 +65,14 @@ view_range = 4,
 	end,
 })
 
+if minetest.get_modpath("ethereal") then
+	spawn_on = {"default:dirt_with_grass", "default:dry_dirt_with_dry_grass", "default:dirt_with_rainforest_litter", "default:dirt_with_coniferous_litter", "ethereal:gray_dirt", "ethereal:mushroom_dirt", "ethereal:grove_dirt"}
+end
+
 if not mobs.custom_spawn_animal then
 mobs:spawn({
 	name = "animalworld:bat",
-	nodes = {"default:dirt_with_grass"}, {"default:dry_dirt_with_dry_grass"}, {"default:dirt_with_rainforest_litter"}, {"default:dirt_with_coniferous_litter"},
+	nodes = {"default:dirt_with_grass", "default:dry_dirt_with_dry_grass", "default:dirt_with_rainforest_litter", "default:dirt_with_coniferous_litter"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
