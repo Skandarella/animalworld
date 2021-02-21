@@ -58,6 +58,7 @@ dofile(path .. "lobster.lua") --
 dofile(path .. "squid.lua") --
 dofile(path .. "kobra.lua") --
 dofile(path .. "bat.lua") --
+dofile(path .. "hunger.lua") --
 
 
 
