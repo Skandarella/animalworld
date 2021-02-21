@@ -61,6 +61,10 @@ stepheight = 3,
 	end,
 })
 
+if minetest.get_modpath("ethereal") then
+	spawn_on = {"default:dirt_with_snow"}, {"default:permafrost_with_moss"}, {"default:snowblock"}
+end
+
 if not mobs.custom_spawn_monster then
 mobs:spawn({
 	name = "animalworld:volverine",

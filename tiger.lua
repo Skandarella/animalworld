@@ -60,6 +60,10 @@ stepheight = 2,
 	end,
 })
 
+if minetest.get_modpath("ethereal") then
+	spawn_on = {"default:dirt_with_rainforest_litter", "ethereal:green_dirt", "ethereal:grass_grove"}
+end
+
 if not mobs.custom_spawn_animal then
 mobs:spawn({
 	name = "animalworld:tiger",

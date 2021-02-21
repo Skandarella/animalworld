@@ -22,7 +22,7 @@ stepheight = 0.6,
 	run_velocity = 1,
 	runaway = true,
 	runaway = true,
-        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor"},
 	jump = false,
 	stepheight = 1.1,
 	drops = {
@@ -42,7 +42,7 @@ stepheight = 0.6,
 		fly_end = 850,
 		-- 50-70 is slide/water idle
 	},
-	fly_in = {"default:water_source", "default:water_flowing"},
+	fly_in = {"default:water_source", "default:water_flowing", "default:river_water_flowing", "default:river_water"},
 	floats = 0,
 	follow = {
 		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
@@ -58,6 +58,10 @@ stepheight = 0.6,
 		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
 	end,
 })
+
+if minetest.get_modpath("ethereal") then
+	spawn_on = {"default:snowblock", "default_ice"}
+end
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({

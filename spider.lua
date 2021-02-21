@@ -47,6 +47,8 @@ stepheight = 4,
 		walk_end = 200,
 		punch_start = 200,
 		punch_end = 300,
+		shoot_start = 200,
+		shoot_end = 300,
 		-- 50-70 is slide/water idle
 	},
 })
