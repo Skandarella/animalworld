@@ -22,7 +22,7 @@ stepheight = 3,
 	walk_velocity = 5,
 	run_velocity = 6,
 	runaway = true,
-        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "player"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "player"},
 	fall_speed = 0,
 	jump = true,
         jump_height = 6,
@@ -64,6 +64,10 @@ view_range = 4,
 		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
 	end,
 })
+
+if minetest.get_modpath("ethereal") then
+	spawn_on = {"default:snowblock"}, {"default:ice"}, {"ethereal:crystal_dirt"}
+end
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({

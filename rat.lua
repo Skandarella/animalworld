@@ -57,6 +57,9 @@ mobs:register_mob("animalworld:rat", {
 
 })
 
+if minetest.get_modpath("ethereal") then
+	spawn_on = {"default:stone", "default:mossycobble", "ethereal:dry_dirt"}
+end
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({

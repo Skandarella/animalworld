@@ -67,6 +67,10 @@ view_range = 6,
 	end,
 })
 
+if minetest.get_modpath("ethereal") then
+	spawn_on = {"default:dirt_with_coniferous_litter"}, {"default:pine_needles"}, {"ethereal:mushroom_dirt"}
+end
+
 if not mobs.custom_spawn_monster then
 mobs:spawn({
 	name = "animalworld:owl",

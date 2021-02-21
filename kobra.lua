@@ -51,6 +51,8 @@ stepheight = 2,
 		walk_end = 350,
 		punch_start = 150,
 		punch_end = 200,
+		shoot_start = 150,
+		shoot_end = 200,
 		-- 50-70 is slide/water idle
 	},
 
@@ -58,6 +60,9 @@ stepheight = 2,
 	floats = 0,
 })
 
+if minetest.get_modpath("ethereal") then
+	spawn_on = {"default:desert_sandstone", "default:desert_stone", "default:sandstone", "default:dirt_with_rainforest_litter", "ethereal:grove_dirt"}
+end
 
 if not mobs.custom_spawn_monster then
 mobs:spawn({

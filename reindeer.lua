@@ -24,7 +24,7 @@ mobs:register_mob("animalworld:reindeer", {
 	walk_velocity = 1,
 	run_velocity = 3,
 	runaway = true,
-        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "player"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "player"},
 	jump = false,
 	jump_height = 3,
 	pushable = true,
@@ -67,7 +67,7 @@ if minetest.get_mapgen_setting("mg_name") ~= "v6" then
 end
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:dirt_with_snow"}
+	spawn_on = {"default:dirt_with_snow", "default:permafrost_with_moss", "ethereal:crystal_dirt"}
 end
 
 if not mobs.custom_spawn_animal then

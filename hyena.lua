@@ -60,6 +60,10 @@ stepheight = 2,
 	end,
 })
 
+if minetest.get_modpath("ethereal") then
+	spawn_on = {"default:dry_dirt_with_dry_grass"}, {"ethereal:dry_dirt"}
+end
+
 if not mobs.custom_spawn_animal then
 mobs:spawn({
 	name = "animalworld:hyena",
