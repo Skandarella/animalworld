@@ -76,7 +76,6 @@ if not mobs.custom_spawn_animal then
 mobs:spawn({
 	name = "animalworld:moose",
 	nodes = {"default:dirt_with_grass", "default:dirt_with_coniferous_litter"},
-	neighbors = spawn_by,
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000

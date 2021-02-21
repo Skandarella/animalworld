@@ -72,7 +72,6 @@ if not mobs.custom_spawn_animal then
 mobs:spawn({
 	name = "animalworld:kangaroo",
 	nodes = {"default:desert_sand", "default:dry_dirt_with_dry_grass"},
-	neighbors = spawn_by,
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000

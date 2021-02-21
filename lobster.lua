@@ -81,7 +81,6 @@ if not mobs.custom_spawn_animal then
 mobs:spawn({
 	name = "animalworld:lobster",
 	nodes = {"default:water_source"},
-	neighbors = spawn_by,
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
