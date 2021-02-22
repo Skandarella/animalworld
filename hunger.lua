@@ -1,4 +1,7 @@
 if minetest.get_modpath("hunger_ng") ~= nil then
+hunger_ng.add_hunger_data('animalworld:egg', {
+		satiates = 1.0,
+	})
 	hunger_ng.add_hunger_data('animalworld:chicken_egg_fried', {
 		satiates = 2.0,
 	})
