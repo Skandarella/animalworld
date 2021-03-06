@@ -11,7 +11,7 @@ mobs:register_mob("animalworld:reindeer", {
 	hp_min = 25,
 	hp_max = 50,
 	armor = 100,
-	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.95, 0.6},
+	collisionbox = {-0.5, -0.01, -0.5, 0.3, 0.95, 0.3},
 	visual = "mesh",
 	mesh = "Reindeer.b3d",
 	textures = {
@@ -24,7 +24,7 @@ mobs:register_mob("animalworld:reindeer", {
 	walk_velocity = 1,
 	run_velocity = 3,
 	runaway = true,
-        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "player"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion", "player"},
 	jump = false,
 	jump_height = 3,
 	pushable = true,
@@ -74,11 +74,12 @@ if not mobs.custom_spawn_animal then
 mobs:spawn({
 	name = "animalworld:reindeer",
 	nodes = {"default:dirt_with_snow", "default:permafrost_with_moss", "ethereal:crystal_dirt"},
+	neighbors = {"default:pine_tree"},
 	min_light = 0,
-	interval = 60,
-	chance = 8000, -- 15000
+	interval = 30,
+	chance = 2, -- 15000
 	active_object_count = 4,
-	min_height = 20,
+	min_height = 16,
 	max_height = 80,
 	day_toggle = true,
 })

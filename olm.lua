@@ -1,4 +1,4 @@
-mobs:register_mob("animalworld:carp", {
+mobs:register_mob("animalworld:olm", {
 stepheight = 0.0,
 	type = "animal",
 	passive = true,
@@ -6,20 +6,21 @@ stepheight = 0.0,
 	attack_animals = false,
 	reach = 1,
         damage = 1,
-	hp_min = 5,
+	hp_min = 10,
 	hp_max = 25,
 	armor = 100,
-	collisionbox = {-0.4, -0.01, -0.4, 0.4, 0.5, 0.4},
+	collisionbox = {-0.4, -0.01, -0.3, 0.4, 0.2, 0.3},
 	visual = "mesh",
-	mesh = "Carp.b3d",
+	mesh = "Olm.b3d",
 	visual_size = {x = 1.0, y = 1.0},
 	textures = {
-		{"texturecarp.png"},
+		{"textureolm.png"},
 	},
 	sounds = {},
 	makes_footstep_sound = false,
-	walk_velocity = 2,
-	run_velocity = 3,
+	walk_velocity = 1,
+        walk_chance = 10,
+	run_velocity = 2,
 	fly = true,
 	fly_in = "default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing",
 	fall_speed = 0,
@@ -28,7 +29,6 @@ stepheight = 0.0,
 	jump = false,
 	stepheight = 0.0,
 	drops = {
-		{name = "animalworld:rawfish", chance = 1, min = 1, max = 1},
 	},
 	water_damage = 0,
         air_damage = 1,
@@ -36,24 +36,24 @@ stepheight = 0.0,
 	light_damage = 0,
 	fear_height = 2,
 	animation = {
-		speed_normal = 100,
+		speed_normal = 50,
 		stand_start = 0,
 		stand_end = 100,
+		walk_speed = 100,
 		walk_start = 150,
 		walk_end = 250,
+		fly_speed = 100,
 		fly_start = 150, -- swim animation
 		fly_end = 250,
-		punch_start = 100,
-		punch_end = 200,
+
 		-- 50-70 is slide/water idle
 	},
 	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing"},
 	floats = 0,
 	follow = {
-		"ethereal:worm", "seaweed", "fishing:bait_worm",
-		"default:grass", "farming:cucumber", "farming:cabbage", "animalworld:ant", "animalworld:termite", "animalworld:fishfood"
+		"ethereal:worm", "seaweed", "fishing:bait_worm", "animalworld:ant", "animalworld:termite", "animalworld:fishfood"
 	},
-	view_range = 10,
+	view_range = 1,
 
 	on_rightclick = function(self, clicker)
 
@@ -66,39 +66,19 @@ stepheight = 0.0,
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "animalworld:carp",
-	nodes = {"default:water_source"}, {"default:river_water_source"},
-	min_light = 14,
-	interval = 60,
-	chance = 8000, -- 15000
-	active_object_count = 3,
-	min_height = 0,
-	max_height = 30,
-	day_toggle = true,
+	name = "animalworld:olm",
+	nodes = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing"},
+	neighbors = {"default:stone"},
+	min_light = 0,
+	interval = 30,
+	chance = 1, -- 15000
+	active_object_count = 2,
+	min_height = -500,
+	max_height = -25,
 })
 end
 
-mobs:register_egg("animalworld:carp", ("Carp"), "acarp.png")
+mobs:register_egg("animalworld:olm", ("Olm"), "aolm.png")
 
--- raw fish
-minetest.register_craftitem(":animalworld:rawfish", {
-	description = ("Raw Fish"),
-	inventory_image = "animalworld_rawfish.png",
-	on_use = minetest.item_eat(3),
-	groups = {food_meat_raw = 1, flammable = 2},
-})
 
--- cooked fish
-minetest.register_craftitem(":animalworld:cookedfish", {
-	description = ("Cooked Fish"),
-	inventory_image = "animalworld_cookedfish.png",
-	on_use = minetest.item_eat(5),
-	groups = {food_meat = 1, flammable = 2},
-})
 
-minetest.register_craft({
-	type = "cooking",
-	output = "animalworld:cookedfish",
-	recipe = "animalworld:rawfish",
-	cooktime = 5,
-})

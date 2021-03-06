@@ -2,7 +2,7 @@
 -- Load support for intllib.
 local path = minetest.get_modpath(minetest.get_current_modname()) .. "/"
 
-local S = minetest.get_translator and minetest.get_translator("wildlife") or
+local S = minetest.get_translator and minetest.get_translator("animalworld") or
 		dofile(path .. "intllib.lua")
 
 mobs.intllib = S
@@ -58,7 +58,24 @@ dofile(path .. "lobster.lua") --
 dofile(path .. "squid.lua") --
 dofile(path .. "kobra.lua") --
 dofile(path .. "bat.lua") --
+dofile(path .. "ant.lua") --
+dofile(path .. "termite.lua") --
+dofile(path .. "wasp.lua") --
+dofile(path .. "snail.lua") --
+dofile(path .. "locust.lua") --
+dofile(path .. "dragonfly.lua") --
+dofile(path .. "nymph.lua") --
+dofile(path .. "divingbeetle.lua") --
+dofile(path .. "olm.lua") --
+dofile(path .. "goldenmole.lua") --
+dofile(path .. "scorpion.lua") --
+dofile(path .. "goby.lua") --
+dofile(path .. "treelobster.lua") --
+dofile(path .. "notoptera.lua") --
+dofile(path .. "seahorse.lua") --
 dofile(path .. "hunger.lua") --
+
+
 
 
 

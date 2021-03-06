@@ -11,7 +11,7 @@ mobs:register_mob("animalworld:moose", {
 	hp_min = 25,
 	hp_max = 60,
 	armor = 100,
-	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.95, 0.6},
+	collisionbox = {-0.7, -0.01, -0.6, 0.9, 1.7, 0.6},
 	visual = "mesh",
 	mesh = "Moose.b3d",
 	textures = {
@@ -25,7 +25,7 @@ mobs:register_mob("animalworld:moose", {
 	walk_velocity = 1,
 	run_velocity = 3,
 	runaway = true,
-        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion"},
 	jump = false,
 	jump_height = 3,
 	pushable = true,

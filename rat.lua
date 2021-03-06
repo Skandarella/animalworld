@@ -10,7 +10,7 @@ mobs:register_mob("animalworld:rat", {
 	hp_min = 5,
 	hp_max = 35,
 	armor = 100,
-	collisionbox = {-0.4, -0.01, -0.4, 0.4, 1.2, 0.4},
+	collisionbox = {-0.4, -0.01, -0.4, 0.4, 0.6, 0.4},
 	visual = "mesh",
 	mesh = "Rat.b3d",
 	textures = {
@@ -64,8 +64,8 @@ end
 if not mobs.custom_spawn_animal then
 mobs:spawn({
 	name = "animalworld:rat",
-	nodes = {"default:stone", "default:mossycobble"},
-	min_light = 14,
+	nodes = {"default:stone", "default:mossycobble", "default:dirt"},
+	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
 	active_object_count = 2,

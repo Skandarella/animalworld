@@ -9,7 +9,7 @@ mobs:register_mob("animalworld:yak", {
 	hp_min = 5,
 	hp_max = 55,
 	armor = 100,
-	collisionbox = {-0.4, -0.01, -0.4, 0.4, 1.2, 0.4},
+	collisionbox = {-0.6, -0.01, -0.4, 0.6, 1.2, 0.4},
 	visual = "mesh",
 	mesh = "Yak.b3d",
 	textures = {

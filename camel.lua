@@ -11,7 +11,7 @@ mobs:register_mob("animalworld:camel", {
 	hp_min = 20,
 	hp_max = 60,
 	armor = 100,
-	collisionbox = {-0.7, -0.01, -0.7, 0.7, 0.95, 0.7},
+	collisionbox = {-1, -0.01, -0.6, 1, 2, 0.6},
 	visual = "mesh",
 	mesh = "Camel.b3d",
 	textures = {
@@ -25,7 +25,7 @@ mobs:register_mob("animalworld:camel", {
 	walk_velocity = 2,
 	run_velocity = 5,
 	runaway = true,
-        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion"},
 	jump = false,
 	jump_height = 3,
 	pushable = true,

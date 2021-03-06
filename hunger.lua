@@ -53,4 +53,22 @@ hunger_ng.add_hunger_data('animalworld:egg', {
 	hunger_ng.add_hunger_data('animalworld:cheese', {
 		satiates = 2.0,
 	})
+	hunger_ng.add_hunger_data('animalworld:anteggs_raw', {
+		satiates = 1.0,
+	})
+	hunger_ng.add_hunger_data('animalworld:anteggs_cooked', {
+		satiates = 2.0,
+	})
+	hunger_ng.add_hunger_data('animalworld:termitequeen', {
+		satiates = 1.0,
+	})
+	hunger_ng.add_hunger_data('animalworld:escargots', {
+		satiates = 5.0,
+	})
+	hunger_ng.add_hunger_data('animalworld:locust_roasted', {
+		satiates = 1.0,
+	})
+	hunger_ng.add_hunger_data('animalworld:bugice', {
+		satiates = 1.0,
+	})
 end

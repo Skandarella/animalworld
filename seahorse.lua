@@ -1,25 +1,26 @@
-mobs:register_mob("animalworld:carp", {
+mobs:register_mob("animalworld:seahorse", {
 stepheight = 0.0,
 	type = "animal",
 	passive = true,
         attack_type = "dogfight",
 	attack_animals = false,
 	reach = 1,
-        damage = 1,
+        damage = 0,
 	hp_min = 5,
-	hp_max = 25,
+	hp_max = 5,
 	armor = 100,
-	collisionbox = {-0.4, -0.01, -0.4, 0.4, 0.5, 0.4},
+	collisionbox = {-0.1, 0, -0.1, 0.1, 0.6, 0.1},
 	visual = "mesh",
-	mesh = "Carp.b3d",
+	mesh = "Seahorse.b3d",
 	visual_size = {x = 1.0, y = 1.0},
 	textures = {
-		{"texturecarp.png"},
+		{"textureseahorse.png"},
+		{"textureseahorse2.png"},
 	},
 	sounds = {},
 	makes_footstep_sound = false,
-	walk_velocity = 2,
-	run_velocity = 3,
+	walk_velocity = 0.25,
+	run_velocity = 0.5,
 	fly = true,
 	fly_in = "default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing",
 	fall_speed = 0,
@@ -28,7 +29,6 @@ stepheight = 0.0,
 	jump = false,
 	stepheight = 0.0,
 	drops = {
-		{name = "animalworld:rawfish", chance = 1, min = 1, max = 1},
 	},
 	water_damage = 0,
         air_damage = 1,
@@ -36,24 +36,26 @@ stepheight = 0.0,
 	light_damage = 0,
 	fear_height = 2,
 	animation = {
-		speed_normal = 100,
+		speed_normal = 50,
 		stand_start = 0,
 		stand_end = 100,
-		walk_start = 150,
-		walk_end = 250,
-		fly_start = 150, -- swim animation
-		fly_end = 250,
-		punch_start = 100,
-		punch_end = 200,
+		stand2_start = 0,
+		stand2_end = 1,
+		walk_start = 100,
+		walk_end = 200,
+                walk_speed = 30,
+                fly_speed = 30,
+		fly_start = 100, -- swim animation
+		fly_end = 200,
+
 		-- 50-70 is slide/water idle
 	},
 	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing"},
 	floats = 0,
 	follow = {
-		"ethereal:worm", "seaweed", "fishing:bait_worm",
-		"default:grass", "farming:cucumber", "farming:cabbage", "animalworld:ant", "animalworld:termite", "animalworld:fishfood"
+		 "animalworld:fishfood"
 	},
-	view_range = 10,
+	view_range = 5,
 
 	on_rightclick = function(self, clicker)
 
@@ -66,39 +68,16 @@ stepheight = 0.0,
 
 if not mobs.custom_spawn_animal then
 mobs:spawn({
-	name = "animalworld:carp",
-	nodes = {"default:water_source"}, {"default:river_water_source"},
-	min_light = 14,
-	interval = 60,
-	chance = 8000, -- 15000
-	active_object_count = 3,
-	min_height = 0,
-	max_height = 30,
-	day_toggle = true,
+	name = "animalworld:seahorse",
+	nodes = {"default:water_source"},
+	neighbors = {"default:sand_with_kelp"},
+	min_light = 0,
+	interval = 30,
+	chance = 2, -- 15000
+	active_object_count = 4,
+	min_height = -15,
+	max_height = 0,
 })
 end
 
-mobs:register_egg("animalworld:carp", ("Carp"), "acarp.png")
-
--- raw fish
-minetest.register_craftitem(":animalworld:rawfish", {
-	description = ("Raw Fish"),
-	inventory_image = "animalworld_rawfish.png",
-	on_use = minetest.item_eat(3),
-	groups = {food_meat_raw = 1, flammable = 2},
-})
-
--- cooked fish
-minetest.register_craftitem(":animalworld:cookedfish", {
-	description = ("Cooked Fish"),
-	inventory_image = "animalworld_cookedfish.png",
-	on_use = minetest.item_eat(5),
-	groups = {food_meat = 1, flammable = 2},
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = "animalworld:cookedfish",
-	recipe = "animalworld:rawfish",
-	cooktime = 5,
-})
+mobs:register_egg("animalworld:seahorse", ("Seahorse"), "aseahorse.png")

@@ -9,7 +9,7 @@ stepheight = 0.0,
 	hp_min = 5,
 	hp_max = 25,
 	armor = 100,
-	collisionbox = {-0.4, -0.01, -0.4, 0.4, 0.95, 0.4},
+	collisionbox = {-0.4, -0.01, -0.4, 0.4, 0.4, 0.4},
 	visual = "mesh",
 	mesh = "Trout.b3d",
 	visual_size = {x = 1.0, y = 1.0},
@@ -24,7 +24,7 @@ stepheight = 0.0,
 	fly_in = "default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing",
 	fall_speed = 0,
 	runaway = true,
-        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "player"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion", "player"},
 	jump = false,
 	stepheight = 0.0,
 	drops = {
@@ -50,7 +50,7 @@ stepheight = 0.0,
 	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing"},
 	floats = 0,
 	follow = {
-		"mobs:meat_raw", "ethereal:worm", "fishing:bait_worm", "water_life:meat_raw", "xocean:fish_edible"
+		"mobs:meat_raw", "animalworld:ant", "ethereal:worm", "fishing:bait_worm", "water_life:meat_raw", "xocean:fish_edible", "animalworld:fishfood"
 	},
 	view_range = 10,
 

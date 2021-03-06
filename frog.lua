@@ -8,7 +8,7 @@ stepheight = 3,
 	hp_min = 5,
 	hp_max = 25,
 	armor = 100,
-	collisionbox = {-0.268, -0.01, -0.268,  0.268, 0.167, 0.268},
+	collisionbox = {-0.268, -0.01, -0.268,  0.268, 0.25, 0.268},
 	visual = "mesh",
 	mesh = "Frog.b3d",
 	drawtype = "front",
@@ -22,7 +22,7 @@ sounds = {
 	walk_velocity = 2,
 	run_velocity = 3,
 	runaway = true,
-        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "player"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion", "player"},
 	jump = true,
 	jump_height = 6,
 	drops = {
@@ -43,7 +43,7 @@ sounds = {
 	},
 	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing"},
 	floats = 0,
-	follow = {"fishing:bait:worm", "ethereal:worm"},
+	follow = {"fishing:bait:worm", "ethereal:worm", "animalworld:ant", "animalworld:termite"},
 	view_range = 6,
 	on_rightclick = function(self, clicker)
 

@@ -11,7 +11,7 @@ mobs:register_mob("animalworld:lobster", {
 	hp_min = 25,
 	hp_max = 70,
 	armor = 100,
-	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.95, 0.6},
+	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.5, 0.6},
 	visual = "mesh",
 	mesh = "Lobster.b3d",
 	textures = {
@@ -23,7 +23,7 @@ mobs:register_mob("animalworld:lobster", {
 	walk_velocity = 0.5,
 	run_velocity = 1,
 	runaway = true,
-        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "player"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion", "player"},
 	jump = false,
 	jump_height = 3,
 	pushable = true,
