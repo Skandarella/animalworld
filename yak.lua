@@ -30,6 +30,7 @@ mobs:register_mob("animalworld:yak", {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 3},
 		{name = "mobs:leather", chance = 1, min = 0, max = 2},
            	{name = "wool:brown", chance = 1, min = 0, max = 2},
+		{name = "animalworld:yakcorpse", chance = 9, min = 1, max = 1},
 	},
 	water_damage = 0,
 	lava_damage = 5,

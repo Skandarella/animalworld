@@ -73,6 +73,7 @@ dofile(path .. "goby.lua") --
 dofile(path .. "treelobster.lua") --
 dofile(path .. "notoptera.lua") --
 dofile(path .. "seahorse.lua") --
+dofile(path .. "trophies.lua") --
 dofile(path .. "hunger.lua") --
 
 

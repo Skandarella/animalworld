@@ -34,6 +34,7 @@ mobs:register_mob("animalworld:moose", {
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 	        {name = "mobs:leather", chance = 1, min = 0, max = 2},
+		{name = "animalworld:moosecorpse", chance = 9, min = 1, max = 1},
 	},
 	water_damage = 0,
 	lava_damage = 5,
@@ -62,7 +63,7 @@ mobs:register_mob("animalworld:moose", {
 	end,
 })
 
-local spawn_on = {"default:dirt_with_grass", "default:coniferous_litter"}
+
 
 if minetest.get_mapgen_setting("mg_name") ~= "v6" then
 	spawn_on = {"default:dirt_with_dry_grass", "default:dry_dirt_with_dry_grass"}

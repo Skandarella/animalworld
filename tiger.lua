@@ -29,6 +29,7 @@ stepheight = 2,
 	stepheight = 2,
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
+		{name = "animalworld:tigercorpse", chance = 9, min = 1, max = 1},
 	},
 	water_damage = 0,
 	lava_damage = 4,

@@ -34,6 +34,7 @@ mobs:register_mob("animalworld:boar", {
 	replace_with = "default:dirt",
 	drops = {
 		{name = "animalworld:pork_raw", chance = 1, min = 1, max = 3},
+		{name = "animalworld:boarcorpse", chance = 9, min = 1, max = 1},
 	},
 	water_damage = 0,
 	lava_damage = 5,

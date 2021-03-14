@@ -33,7 +33,7 @@ mobs:register_mob("animalworld:goldenmole", {
 	water_damage = 5,
 	lava_damage = 5,
 	light_damage = 0,
-	fear_height = 1,
+	fear_height = 2,
 	animation = {
 		stand_start = 100,
 		stand_end = 300,
