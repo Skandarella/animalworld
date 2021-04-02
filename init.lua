@@ -8,15 +8,6 @@ local S = minetest.get_translator and minetest.get_translator("animalworld") or
 mobs.intllib = S
 
 
--- Check for custom mob spawn file
-local input = io.open(path .. "spawn.lua", "r")
-
-if input then
-	mobs.custom_spawn_animal = true
-	input:close()
-	input = nil
-end
-
 
 -- Animals
 dofile(path .. "seal.lua") -- 
@@ -80,10 +71,6 @@ dofile(path .. "hunger.lua") --
 
 
 
--- Load custom spawning
-if mobs.custom_spawn_animal then
-	dofile(path .. "spawn.lua")
-end
 
 
 
