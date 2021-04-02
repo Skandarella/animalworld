@@ -56,7 +56,7 @@ mobs:register_mob("animalworld:goldenmole", {
 
 
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:goldenmole",
 	nodes = {"default:desert_sand"},

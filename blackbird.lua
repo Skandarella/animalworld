@@ -30,7 +30,7 @@ stepheight = 3,
 	drops = {
 		{name = "animalworld:chicken_raw", chance = 1, min = 1, max = 1},
 	        {name = "animalworld:chicken_feather", chance = 1, min = 1, max = 1},
-		{name = "animalworld:blackbirdcorpse", chance = 9, min = 1, max = 1},
+		{name = "animalworld:blackbirdcorpse", chance = 7, min = 1, max = 1},
 	
 	},
 	water_damage = 1,
@@ -67,7 +67,7 @@ view_range = 4,
 	end,
 })
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:blackbird",
 	nodes = {"default:dirt_with_grass"}, 

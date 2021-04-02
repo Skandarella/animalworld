@@ -33,7 +33,7 @@ mobs:register_mob("animalworld:anteater", {
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 	        {name = "mobs:leather", chance = 1, min = 0, max = 2},
-	        {name = "animalworld:anteatercorpse", chance = 9, min = 1, max = 1},
+	        {name = "animalworld:anteatercorpse", chance = 7, min = 1, max = 1},
 	},
 	water_damage = 0,
 	lava_damage = 5,
@@ -72,7 +72,7 @@ if minetest.get_modpath("ethereal") then
 	spawn_on = {"ethereal:grass_grove", "ethereal:green_dirt", "default:dirt_with_rainforest_litter"}
 end
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:anteater",
 	nodes = {"default:dirt_with_rainforest_litter"},

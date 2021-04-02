@@ -34,7 +34,7 @@ mobs:register_mob("animalworld:boar", {
 	replace_with = "default:dirt",
 	drops = {
 		{name = "animalworld:pork_raw", chance = 1, min = 1, max = 3},
-		{name = "animalworld:boarcorpse", chance = 9, min = 1, max = 1},
+		{name = "animalworld:boarcorpse", chance = 7, min = 1, max = 1},
 	},
 	water_damage = 0,
 	lava_damage = 5,
@@ -74,7 +74,7 @@ if minetest.get_modpath("ethereal") then
 	spawn_on = {"ethereal:mushroom_dirt", "ethereal:bamboo_dirt", "ethereal:green_dirt", "ethereal:mushroom_dirt", "default:dirt_with_coniferous_litter", "default:dirt_gray"}
 end
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:boar",
 	nodes = {"default:dirt_with_coniferous_litter", "default:dirt_gray"},

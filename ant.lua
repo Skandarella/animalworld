@@ -49,7 +49,7 @@ mobs:register_mob("animalworld:ant", {
 })
 
 
-if not mobs.custom_spawn_monster then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:ant",
 	nodes = {"default:dirt_with_coniferous_litter"},

@@ -69,7 +69,7 @@ if minetest.get_modpath("ethereal") then
 	spawn_on = {"default:dirt_with_grass", "default:dry_dirt_with_dry_grass", "default:dirt_with_rainforest_litter", "default:dirt_with_coniferous_litter", "ethereal:gray_dirt", "ethereal:mushroom_dirt", "ethereal:grove_dirt"}
 end
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:bat",
 	nodes = {"default:dirt_with_grass", "default:dry_dirt_with_dry_grass", "default:dirt_with_rainforest_litter", "default:dirt_with_coniferous_litter"},

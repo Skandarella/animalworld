@@ -64,7 +64,7 @@ view_range = 5,
 })
 
 
-if not mobs.custom_spawn_monster then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:dragonfly",
 	nodes = {"air"},

@@ -29,7 +29,7 @@ stepheight = 1,
 	stepheight = 1,
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
-		{name = "animalworld:hippocorpse", chance = 9, min = 1, max = 1},
+		{name = "animalworld:hippocorpse", chance = 7, min = 1, max = 1},
 	},
 	water_damage = 0,
 	lava_damage = 4,
@@ -73,7 +73,7 @@ if minetest.get_modpath("ethereal") then
 	spawn_on = {"default:dry_dirt_with_dry_grass"}, {"default:dirt_with_rainforest_litter"}, {"ethereal:grove_dirt"}, {"ethereal:prairie_dirt"}
 end
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:hippo",
 	nodes = {"default:dry_dirt_with_dry_grass"}, {"default:dirt_with_rainforest_litter"},
