@@ -31,7 +31,7 @@ stepheight = 0.0,
 	stepheight = 0.0,
 	drops = {
 		{name = "animalworld:rawfish", chance = 1, min = 1, max = 1},
-		{name = "animalworld:sharkcorpse", chance = 9, min = 1, max = 1},
+		{name = "animalworld:sharkcorpse", chance = 7, min = 1, max = 1},
 	},
 	water_damage = 0,
         air_damage = 1,
@@ -66,7 +66,7 @@ stepheight = 0.0,
 	end,
 })
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:shark",
 	nodes = {"default:water_source"},

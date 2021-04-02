@@ -66,7 +66,7 @@ stepheight = 0.0,
 	end,
 })
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:seahorse",
 	nodes = {"default:water_source"},

@@ -60,7 +60,7 @@ mobs:register_mob("animalworld:treelobster", {
 	end,
 })
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:treelobster",
 	nodes = {"default:dirt_with_rainforest_litter"},

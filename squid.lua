@@ -64,7 +64,7 @@ follow = {
 	end,
 })
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:squid",
 	nodes = {"default:water_source"},

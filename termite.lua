@@ -49,7 +49,7 @@ mobs:register_mob("animalworld:termite", {
 })
 
 
-if not mobs.custom_spawn_monster then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:termite",
 	nodes = {"default:dry_dirt_with_dry_grass"},

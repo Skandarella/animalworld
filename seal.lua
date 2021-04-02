@@ -27,7 +27,7 @@ stepheight = 0.6,
 	stepheight = 1.1,
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
-		{name = "animalworld:sealcorpse", chance = 9, min = 1, max = 1},
+		{name = "animalworld:sealcorpse", chance = 7, min = 1, max = 1},
 	},
 	water_damage = 0,
 	lava_damage = 4,
@@ -64,7 +64,7 @@ if minetest.get_modpath("ethereal") then
 	spawn_on = {"default:snowblock", "default_ice"}
 end
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:seal",
 	nodes = {"default:snowblock", "default_ice"},

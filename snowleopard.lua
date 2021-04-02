@@ -29,7 +29,7 @@ stepheight = 5,
 	stepheight = 5,
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
-		{name = "animalworld:snowleopardcorpse", chance = 9, min = 1, max = 1},
+		{name = "animalworld:snowleopardcorpse", chance = 7, min = 1, max = 1},
 	},
 	water_damage = 0,
 	lava_damage = 4,
@@ -62,7 +62,7 @@ stepheight = 5,
 	end,
 })
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:snowleopard",
 	nodes = {"default:snowblock"}, {"default:dirt_with_snow"}, {"default:permafrost"}, {"default:stone"},

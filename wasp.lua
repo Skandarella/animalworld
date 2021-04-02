@@ -54,7 +54,7 @@ mobs:register_mob("animalworld:wasp", {
 })
 
 
-if not mobs.custom_spawn_monster then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:wasp",
 	nodes = {"animalworld:waspnest"},

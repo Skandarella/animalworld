@@ -31,7 +31,7 @@ mobs:register_mob("animalworld:snail", {
 		"default:grass", "farming:cucumber", "farming:cabbage", "xocean:seagrass", "farming:lettuce", "default:junglegrass"},
 	view_range = 5,
 	drops = {
-		{name = "animalworld:snail", chance = 1, min = 1, max = 1},
+		{name = "animalworld:snail", chance = 3, min = 1, max = 1},
 	},
 	water_damage = 0,
 	lava_damage = 5,
@@ -60,7 +60,7 @@ mobs:register_mob("animalworld:snail", {
 })
 
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:snail",
 	nodes = {"default:dirt_with_grass"},

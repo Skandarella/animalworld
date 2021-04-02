@@ -61,7 +61,7 @@ if minetest.get_modpath("ethereal") then
 	spawn_on = "ethereal:prairie_dirt"
 end
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:tortoise",
 	nodes = {"default:sand"},
