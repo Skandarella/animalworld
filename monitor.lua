@@ -29,7 +29,7 @@ stepheight = 1,
 	stepheight = 1,
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
-		{name = "animalworld:monitorcorpse", chance = 9, min = 1, max = 1},
+		{name = "animalworld:monitorcorpse", chance = 7, min = 1, max = 1},
 	},
 	water_damage = 0,
 	lava_damage = 4,
@@ -68,7 +68,7 @@ if minetest.get_modpath("ethereal") then
 	spawn_on = {"default:desert_sand"}, {"default:desert_sandstone"}, {"default:sandstone"}, {"ethereal:dry_dirt"}, {"ethereal:fiery_dirt"}
 end
 
-if not mobs.custom_spawn_monster then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:monitor",
 	nodes = {"default:desert_sand"}, {"default:desert_sandstone"}, {"default:sandstone"}, {"ethereal:dry_dirt"}, {"ethereal:fiery_dirt"},

@@ -61,7 +61,7 @@ mobs:register_mob("animalworld:notoptera", {
 	end,
 })
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:notoptera",
 	nodes = {"default:permafrost", "default:permafrost_with_moss"},

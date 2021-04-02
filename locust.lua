@@ -66,7 +66,7 @@ view_range = 4,
 	end,
 })
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:locust",
 	nodes = {"default:dry_dirt_with_dry_grass", "ethereal:prairie_dirt"}, 

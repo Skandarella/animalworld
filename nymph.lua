@@ -62,7 +62,7 @@ mobs:register_mob("animalworld:nymph", {
 })
 
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:nymph",
 	nodes = {"default:water_source", "default:river_water_source"},

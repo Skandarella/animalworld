@@ -94,7 +94,7 @@ if minetest.get_modpath("ethereal") then
 end
 
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:nandu",
 	nodes = {"default:dirt_with_grass"}, 

@@ -69,7 +69,7 @@ if minetest.get_modpath("ethereal") then
 	spawn_on = {"default:snowblock"}, {"default:ice"}, {"ethereal:crystal_dirt"}
 end
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:puffin",
 	nodes = {"default:snowblock"}, {"default:ice"},

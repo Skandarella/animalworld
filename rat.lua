@@ -61,13 +61,13 @@ if minetest.get_modpath("ethereal") then
 	spawn_on = {"default:stone", "default:mossycobble", "ethereal:dry_dirt"}
 end
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:rat",
 	nodes = {"default:stone", "default:mossycobble", "default:dirt"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 2,
 	min_height = -100,
 	max_height = 0,

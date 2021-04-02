@@ -31,7 +31,7 @@ stepheight = 3,
 	drops = {
 		{name = "animalworld:chicken_raw", chance = 1, min = 1, max = 1},
 	        {name = "animalworld:chicken_feather", chance = 1, min = 1, max = 1},
-		{name = "animalworld:owlcorpse", chance = 9, min = 1, max = 1},
+		{name = "animalworld:owlcorpse", chance = 7, min = 1, max = 1},
 	
 	},
 	water_damage = 1,
@@ -72,7 +72,7 @@ if minetest.get_modpath("ethereal") then
 	spawn_on = {"default:dirt_with_coniferous_litter"}, {"default:pine_needles"}, {"ethereal:mushroom_dirt"}
 end
 
-if not mobs.custom_spawn_monster then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:owl",
 	nodes = {"default:dirt_with_coniferous_litter"}, {"default:pine_needles"},

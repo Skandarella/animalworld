@@ -32,7 +32,7 @@ mobs:register_mob("animalworld:reindeer", {
 	view_range = 10,
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
-		{name = "animalworld:reindeercorpse", chance = 9, min = 1, max = 1},
+		{name = "animalworld:reindeercorpse", chance = 7, min = 1, max = 1},
 	},
 	water_damage = 0,
 	lava_damage = 5,
@@ -71,7 +71,7 @@ if minetest.get_modpath("ethereal") then
 	spawn_on = {"default:dirt_with_snow", "default:permafrost_with_moss", "ethereal:crystal_dirt"}
 end
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:reindeer",
 	nodes = {"default:dirt_with_snow", "default:permafrost_with_moss", "ethereal:crystal_dirt"},

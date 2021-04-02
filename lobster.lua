@@ -77,7 +77,7 @@ if minetest.get_modpath("ethereal") then
 	spawn_on = {"default:water_source"}
 end
 
-if not mobs.custom_spawn_animal then
+if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:lobster",
 	nodes = {"default:water_source"},
