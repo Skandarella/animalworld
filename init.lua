@@ -72,6 +72,15 @@ dofile(path .. "treelobster.lua") --
 dofile(path .. "notoptera.lua") --
 dofile(path .. "seahorse.lua") --
 dofile(path .. "trophies.lua") --
+dofile(path .. "tundravegetation.lua") --
+dofile(path .. "polarbear.lua") --
+dofile(path .. "muskox.lua") --
+dofile(path .. "fox.lua") --
+dofile(path .. "beluga.lua") --
+dofile(path .. "leopardseal.lua") --
+dofile(path .. "stellerseagle.lua") --
+dofile(path .. "otter.lua") --
+dofile(path .. "monkey.lua") --
 dofile(path .. "hunger.lua") --
 
 

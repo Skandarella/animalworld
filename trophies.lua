@@ -3547,3 +3547,312 @@ minetest.register_craftitem("animalworld:wolverinecorpse", {
 	description = ("Wolverine Corpse"),
 	inventory_image = "animalworld_wolverinecorpse.png",
 })
+
+ -- polar bear
+
+minetest.register_node("animalworld:polarbearbeartrophy", {
+    description = "Polar Bear Trophy",
+    visual_scale = 1.0,
+    mesh = "Polarbeartrophy.b3d",
+    tiles = {"texturepolarbeartrophy.png"},
+    inventory_image = "apolarbeartrophy.png",
+    paramtype = "light",
+    paramtype2 = "facedir",
+    groups = {choppy = 3},
+    drawtype = "mesh",
+    collision_box = {
+        type = "fixed",
+        fixed = {
+            {-0.4, -0.5, -0.8, 0.4, 0.4, 0.5},
+            --[[{-0.4, -0.5, -0.8, 0.4, 0.4, 0.5},
+            {-0.4, -0.5, -0.8, 0.4, 0.4, 0.5}]]
+        }
+    },
+    selection_box = {
+        type = "fixed",
+        fixed = {
+            {-0.4, -0.5, -0.8, 0.4, 0.4, 0.5}
+        }
+    },
+    sounds = default.node_sound_wood_defaults()
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "animalworld:polarbeartrophy",
+	burntime = 2,
+})
+
+minetest.register_craft({
+	output = "animalworld:polarbeartrophy",
+	type = "shapeless",
+	recipe = 
+		{"animalworld:polarbearcorpse", "default:axe_stone", "group:wood"}
+
+	
+})
+
+
+minetest.register_node("animalworld:polarbearpelt", {
+    description = "Polar Bear Pelt",
+    visual_scale = 1.0,
+    mesh = "Bearpelt.b3d",
+    tiles = {"texturepolarbearpelt.png"},
+    inventory_image = "apolarbearpelt.png",
+    paramtype = "light",
+    paramtype2 = "facedir",
+    groups = {choppy = 3},
+    drawtype = "mesh",
+    collision_box = {
+        type = "fixed",
+        fixed = {
+            {-1, -0.5, -1.2, 1, -0.5, 1.2},
+            --[[{-1, -0.5, -1.2, 1, -0.5, 1.2},
+            {-1, -0.5, -1.2, 1, -0.5, 1.2}]]
+        }
+    },
+    selection_box = {
+        type = "fixed",
+        fixed = {
+            {-1, -0.5, -1.2, 1, -0.5, 1.2}
+        }
+    },
+    sounds = default.node_sound_wood_defaults()
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "animalworld:polarbearpelt",
+	burntime = 2,
+})
+
+minetest.register_node("animalworld:polarbearpelthanging", {
+    description = "Polar Bear Pelt hanging",
+    visual_scale = 1.0,
+    mesh = "Bearpelthanging.b3d",
+    tiles = {"texturepolarbearpelt.png"},
+    inventory_image = "apolarbearpelt.png",
+    paramtype = "light",
+    paramtype2 = "facedir",
+    groups = {choppy = 3},
+    drawtype = "mesh",
+    collision_box = {
+        type = "fixed",
+        fixed = {
+            {-0.8, -0.9, 0.4, 0.8, 0.8, 0.5},
+            --[[{-0.8, -0.9, 0.4, 0.8, 0.8, 0.5},
+            {-0.8, -0.9, 0.4, 0.8, 0.8, 0.5}]]
+        }
+    },
+    selection_box = {
+        type = "fixed",
+        fixed = {
+            {-0.8, -0.9, 0.4, 0.8, 0.8, 0.5}
+        }
+    },
+    sounds = default.node_sound_wood_defaults()
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "animalworld:polarbearpelthanging",
+	burntime = 2,
+})
+
+minetest.register_craftitem("animalworld:polarbearcorpse", {
+	description = ("Polar Bear Corpse"),
+	inventory_image = "animalworld_polarbearcorpse.png",
+})
+
+
+minetest.register_craft({
+	output = "animalworld:polarbearpelt",
+	type = "shapeless",
+	recipe = 
+		{"animalworld:polarbearcorpse", "default:sword_stone"}
+
+	
+})
+
+minetest.register_craft({
+	output = "animalworld:polarbearpelthanging",
+	type = "shapeless",
+	recipe = 
+		{"animalworld:polarbearcorpse", "default:sword_stone", "default:sign_wall_wood"}
+
+	
+})
+
+ -- Muskox
+
+minetest.register_node("animalworld:muskoxtrophy", {
+    description = "Muskox Trophy",
+    visual_scale = 1.0,
+    mesh = "Muskoxtrophy.b3d",
+    tiles = {"texturemuskoxtrophy.png"},
+    inventory_image = "amuskoxtrophy.png",
+    paramtype = "light",
+    paramtype2 = "facedir",
+    groups = {choppy = 3},
+    drawtype = "mesh",
+    collision_box = {
+        type = "fixed",
+        fixed = {
+            {-0.5, -0.5, -0.7, 0.5, 0.8, 0.5},
+            --[[{-0.5, -0.5, -0.7, 0.5, 0.8, 0.5},
+            {-0.5, -0.5, -0.7, 0.5, 0.8, 0.5}]]
+        }
+    },
+    selection_box = {
+        type = "fixed",
+        fixed = {
+            {-0.5, -0.5, -0.7, 0.5, 0.8, 0.5}
+        }
+    },
+    sounds = default.node_sound_wood_defaults()
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "animalworld:muskoxtrophy",
+	burntime = 2,
+})
+
+minetest.register_node("animalworld:muskoxpelt", {
+    description = "Muskox Pelt",
+    visual_scale = 1.0,
+    mesh = "Bearpelt.b3d",
+    tiles = {"texturemuskoxpelt.png"},
+    inventory_image = "amuskoxpelt.png",
+    paramtype = "light",
+    paramtype2 = "facedir",
+    groups = {choppy = 3},
+    drawtype = "mesh",
+    collision_box = {
+        type = "fixed",
+        fixed = {
+            {-1, -0.5, -1.2, 1, -0.5, 1.2},
+            --[[{-1, -0.5, -1.2, 1, -0.5, 1.2},
+            {-1, -0.5, -1.2, 1, -0.5, 1.2}]]
+        }
+    },
+    selection_box = {
+        type = "fixed",
+        fixed = {
+            {-1, -0.5, -1.2, 1, -0.5, 1.2}
+        }
+    },
+    sounds = default.node_sound_wood_defaults()
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "animalworld:muskoxpelt",
+	burntime = 2,
+})
+
+minetest.register_node("animalworld:muskoxpelthanging", {
+    description = "Muskox Pelt hanging",
+    visual_scale = 1.0,
+    mesh = "Bearpelthanging.b3d",
+    tiles = {"texturemuskoxpelt.png"},
+    inventory_image = "amuskoxpelt.png",
+    paramtype = "light",
+    paramtype2 = "facedir",
+    groups = {choppy = 3},
+    drawtype = "mesh",
+    collision_box = {
+        type = "fixed",
+        fixed = {
+            {-0.8, -0.9, 0.4, 0.8, 0.8, 0.5},
+            --[[{-0.8, -0.9, 0.4, 0.8, 0.8, 0.5},
+            {-0.8, -0.9, 0.4, 0.8, 0.8, 0.5}]]
+        }
+    },
+    selection_box = {
+        type = "fixed",
+        fixed = {
+            {-0.8, -0.9, 0.4, 0.8, 0.8, 0.5}
+        }
+    },
+    sounds = default.node_sound_wood_defaults()
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "animalworld:muskoxpelthanging",
+	burntime = 2,
+})
+
+minetest.register_craftitem("animalworld:muskoxcorpse", {
+	description = ("Muskox Corpse"),
+	inventory_image = "animalworld_muskoxcorpse.png",
+})
+
+minetest.register_craft({
+	output = "animalworld:muskoxtrophy",
+	type = "shapeless",
+	recipe = 
+		{"animalworld:muskoxcorpse", "default:axe_stone", "group:wood"}
+
+	
+})
+
+minetest.register_craft({
+	output = "animalworld:muskoxpelt",
+	type = "shapeless",
+	recipe = 
+		{"animalworld:muskoxcorpse", "default:sword_stone"}
+
+	
+})
+
+minetest.register_craft({
+	output = "animalworld:muskoxpelthanging",
+	type = "shapeless",
+	recipe = 
+		{"animalworld:muskoxcorpse", "default:sword_stone", "default:sign_wall_wood"}
+
+	
+})
+
+minetest.register_node("animalworld:muskoxstool", {
+    description = "Muskox Stool",
+    visual_scale = 1.0,
+    mesh = "Stool.b3d",
+    tiles = {"texturemuskoxstool.png"},
+    inventory_image = "amuskoxstool.png",
+    paramtype = "light",
+    paramtype2 = "facedir",
+    groups = {choppy = 3},
+    drawtype = "mesh",
+    collision_box = {
+        type = "fixed",
+        fixed = {
+            {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+            --[[{-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+            {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}]]
+        }
+    },
+    selection_box = {
+        type = "fixed",
+        fixed = {
+            {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}
+        }
+    },
+    sounds = default.node_sound_wood_defaults()
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "animalworld:muskoxstool",
+	burntime = 2,
+})
+
+minetest.register_craft({
+	output = "animalworld:muskoxstool",
+	type = "shapeless",
+	recipe = 
+		{"animalworld:muskoxcorpse", "default:axe_stone", "group:wood", "default:stick"}
+
+})

@@ -33,7 +33,7 @@ mobs:register_mob("animalworld:snail", {
 	drops = {
 		{name = "animalworld:snail", chance = 3, min = 1, max = 1},
 	},
-	water_damage = 0,
+	water_damage = 1,
 	lava_damage = 5,
 	light_damage = 0,
 	fear_height = 3,

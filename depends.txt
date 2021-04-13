@@ -5,3 +5,4 @@ xocean?
 farming?
 fishing?
 hunger_ng?
+nativevillages?

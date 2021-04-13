@@ -1,46 +1,47 @@
-mobs:register_mob("animalworld:seal", {
-stepheight = 0.6,
+mobs:register_mob("animalworld:otter", {
 	type = "animal",
 	passive = true,
 	reach = 1,
 	hp_min = 20,
 	hp_max = 55,
 	armor = 100,
-	collisionbox = {-0.4, -0.01, -0.4, 0.8, 0.6, 0.4},
+	collisionbox = {-0.4, -0.01, -0.4, 0.4, 0.4, 0.4},
 	visual = "mesh",
-	mesh = "Seal.b3d",
+	mesh = "Otter.b3d",
 	visual_size = {x = 1.0, y = 1.0},
 	textures = {
-		{"textureseal.png"},
+		{"textureotter.png"},
 	},
 	sounds = {
-		random = "animalworld_seal",
-		attack = "animalworld_seal",
+		random = "animalworld_otter",
+		attack = "animalworld_otter2",
+                damage = "animalworld_otter3",
 	},
 	makes_footstep_sound = true,
-	walk_velocity = 0.8,
-	run_velocity = 1,
+	walk_velocity = 1.5,
+	run_velocity = 2,
 	runaway = true,
 	runaway = true,
         runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion", "animalworld:polarbear", "animalworld:leopardseal", "animalworld:stellerseagle"},
 	jump = false,
-	stepheight = 1.1,
+	stepheight = 1,
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
-		{name = "animalworld:sealcorpse", chance = 7, min = 1, max = 1},
+		{name = "mobs:leather", chance = 7, min = 1, max = 1},
 	},
 	water_damage = 0,
 	lava_damage = 4,
 	light_damage = 0,
 	fear_height = 2,
 	animation = {
-		speed_normal = 125,
+		speed_normal = 100,
+                stand_speed = 70,
 		stand_start = 0,
-		stand_end = 400,
-		walk_start = 400,
-		walk_end = 600,
-		fly_start = 650, -- swim animation
-		fly_end = 850,
+		stand_end = 100,
+		walk_start = 100,
+		walk_end = 200,
+		fly_start = 250, -- swim animation
+		fly_end = 350,
 		-- 50-70 is slide/water idle
 	},
 	fly_in = {"default:water_source", "default:water_flowing", "default:river_water_flowing", "default:river_water"},
@@ -60,22 +61,20 @@ stepheight = 0.6,
 	end,
 })
 
-if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:snowblock", "default_ice"}
-end
 
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
-	name = "animalworld:seal",
-	nodes = {"default:snowblock", "default_ice"},
-	min_light = 14,
+	name = "animalworld:otter",
+	nodes = {"default:water_source", "default:river_water_source"},
+	neighbors = {"flowers:waterlily_waving"},
+	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
-	active_object_count = 4,
-	min_height = 0,
+	chance = 2, -- 15000
+	active_object_count = 2,
+	min_height = -5,
 	max_height = 10,
 	day_toggle = true,
 })
 end
 
-mobs:register_egg("animalworld:seal", ("Seal"), "aseal.png")
+mobs:register_egg("animalworld:otter", ("Otter"), "aotter.png")

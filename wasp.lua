@@ -30,7 +30,6 @@ mobs:register_mob("animalworld:wasp", {
         fly = true,
         fly_in = {"air"},
 	floats = 0,
-        fall_speed = 0,
 	runaway = false,
 	jump = true,
         jump_height = 6,
@@ -40,7 +39,7 @@ mobs:register_mob("animalworld:wasp", {
 	water_damage = 1,
 	lava_damage = 4,
 	light_damage = 0,
-	fear_height = 3,
+	fear_height = 0,
 	animation = {
 		speed_normal = 400,
 		stand_start = 0,

@@ -71,4 +71,10 @@ hunger_ng.add_hunger_data('animalworld:egg', {
 	hunger_ng.add_hunger_data('animalworld:bugice', {
 		satiates = 1.0,
 	})
+	hunger_ng.add_hunger_data('animalworld:whalemeat_raw', {
+		satiates = 5.0,
+	})
+	hunger_ng.add_hunger_data('animalworld:whalemeat_cooked', {
+		satiates = 15.0,
+	})
 end

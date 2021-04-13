@@ -46,7 +46,7 @@ stepheight = 1,
 	},
 
 	follow = {
-		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
+		"ethereal:fish_raw", "animalworld:whalemeat_raw", "animalworld:rawfish", "mobs_fish:tropical",
 		"mobs:meat_raw", "animalworld:rabbit_raw", "xocean:fish_edible", "farming:melon_slice", "farming:melon_slice", "water_life:meat_raw", "water_life:meat_raw", "fishing:fish_raw", "animalworld:chicken_raw"
 	},
 	view_range = 8,
