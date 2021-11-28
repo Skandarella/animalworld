@@ -13,9 +13,7 @@ stepheight = 3,
 	visual = "mesh",
 	mesh = "Blackbird.b3d",
 	visual_size = {x = 1.0, y = 1.0},
-	textures = {
-		{"textureblackbird.png"},
-	},
+	textures = multiply_texture("textureblackbird.png", 11),
 	sounds = {
 		random = "animalworld_blackbird",
 	},
@@ -31,7 +29,7 @@ stepheight = 3,
 		{name = "animalworld:chicken_raw", chance = 1, min = 1, max = 1},
 	        {name = "animalworld:chicken_feather", chance = 1, min = 1, max = 1},
 		{name = "animalworld:blackbirdcorpse", chance = 7, min = 1, max = 1},
-	
+
 	},
 	water_damage = 1,
 	lava_damage = 4,
@@ -55,7 +53,7 @@ fly_in = {"air"},
 	follow = {
 		"fishing:bait:worm", "farming:seed_wheat", "farming:seed_rice", "farming:seed_oat", "ethereal:pine_nuts", "ethereal:worm"
 	},
-	
+
 view_range = 4,
 
 	on_rightclick = function(self, clicker)
@@ -70,7 +68,7 @@ view_range = 4,
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:blackbird",
-	nodes = {"default:dirt_with_grass"}, 
+	nodes = {"default:dirt_with_grass"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000

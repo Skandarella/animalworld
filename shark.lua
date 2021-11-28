@@ -13,9 +13,7 @@ stepheight = 0.0,
 	visual = "mesh",
 	mesh = "Shark.b3d",
 	visual_size = {x = 1.0, y = 1.0},
-	textures = {
-		{"textureshark.png"},
-	},
+	textures = multiply_texture("textureshark.png", 13),
 	sounds = {},
 	makes_footstep_sound = false,
 	sounds = {

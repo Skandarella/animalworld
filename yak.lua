@@ -12,10 +12,10 @@ mobs:register_mob("animalworld:yak", {
 	collisionbox = {-0.6, -0.01, -0.4, 0.6, 1.2, 0.4},
 	visual = "mesh",
 	mesh = "Yak.b3d",
-	textures = {
+	textures = multiply_texture({
 		{"textureyak.png"},
 		{"textureyak.png"},
-	},
+	}, 13),
 	makes_footstep_sound = true,
 	sounds = {
 		random = "animalworld_yak",

@@ -14,9 +14,7 @@ stepheight = 3,
 	visual = "mesh",
 	mesh = "Owl.b3d",
 	visual_size = {x = 1.0, y = 1.0},
-	textures = {
-		{"textureowl.png"},
-	},
+	textures = multiply_texture("textureowl.png", 14),
 	sounds = {
 		random = "animalworld_owl",
 	},
@@ -32,7 +30,7 @@ stepheight = 3,
 		{name = "animalworld:chicken_raw", chance = 1, min = 1, max = 1},
 	        {name = "animalworld:chicken_feather", chance = 1, min = 1, max = 1},
 		{name = "animalworld:owlcorpse", chance = 7, min = 1, max = 1},
-	
+
 	},
 	water_damage = 1,
 	lava_damage = 4,
@@ -54,9 +52,9 @@ stepheight = 3,
 fly_in = {"air"},
 	floats = 0,
 	follow = {
-		"animalworld:rabbit_raw", "mobs:meat_raw", "animalworld:chicken_raw", "water_life:meat_raw" 
+		"animalworld:rabbit_raw", "mobs:meat_raw", "animalworld:chicken_raw", "water_life:meat_raw"
 	},
-	
+
 view_range = 6,
 
 	on_rightclick = function(self, clicker)

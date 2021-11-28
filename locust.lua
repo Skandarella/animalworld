@@ -13,9 +13,7 @@ stepheight = 3,
 	visual = "mesh",
 	mesh = "Locust.b3d",
 	visual_size = {x = 1.0, y = 1.0},
-	textures = {
-		{"texturelocust.png"},
-	},
+	textures = multiply_texture("texturelocust.png", 18),
 	sounds = {
 		random = "animalworld_locust",
 		distance = 16,
@@ -31,7 +29,7 @@ stepheight = 3,
 	stepheight = 3,
 	drops = {
 		{name = "animalworld:locust", chance = 1, min = 1, max = 1},
-	
+
 	},
 	water_damage = 1,
 	lava_damage = 4,
@@ -54,7 +52,7 @@ fly_in = {"air"},
 	floats = 0,
 	follow = {"default:dry_shrub ", "default:grass_1", "ethereal:dry_shrub", "farming:seed_wheat", "farming:seed_rye", "default:junglegrass", "ethereal:banana_single", "farming:corn_cob", "farming:cabbage",
 		"default:apple", "farming:cabbage", "farming:carrot", "farming:cucumber", "farming:grapes", "farming:pineapple", "ethereal:orange", "ethereal:coconut", "ethereal:coconut_slice"},
-	
+
 view_range = 4,
 
 	on_rightclick = function(self, clicker)
@@ -69,7 +67,7 @@ view_range = 4,
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:locust",
-	nodes = {"default:dry_dirt_with_dry_grass", "ethereal:prairie_dirt"}, 
+	nodes = {"default:dry_dirt_with_dry_grass", "ethereal:prairie_dirt"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000

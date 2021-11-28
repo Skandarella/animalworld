@@ -14,9 +14,7 @@ mobs:register_mob("animalworld:muskox", {
 	collisionbox = {-0.5, -0.01, -0.5, 0.5, 0.95, 0.5},
 	visual = "mesh",
 	mesh = "Muskox.b3d",
-	textures = {
-		{"texturemuskox.png"},
-	},
+	textures = multiply_texture("texturemuskox.png", 16),
 	makes_footstep_sound = true,
 	sounds = {
 		random = "animalworld_muskox",

@@ -12,12 +12,10 @@ stepheight = 3,
 	visual = "mesh",
 	mesh = "Frog.b3d",
 	drawtype = "front",
-	textures = {
-		{"texturefrog.png"},
-
+	textures = multiply_texture("texturefrog.png", 17),
+	sounds = {
+		random = "animalworld_frog",
 	},
-sounds = {
-		random = "animalworld_frog",},
 	makes_footstep_sound = true,
 	walk_velocity = 2,
 	run_velocity = 3,
@@ -63,7 +61,7 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:frog",
-	nodes = {"default:dirt_with_grass"}, {"default:dirt_with_rainforest_litter"}, 
+	nodes = {"default:dirt_with_grass"}, {"default:dirt_with_rainforest_litter"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000

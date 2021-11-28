@@ -13,9 +13,7 @@ mobs:register_mob("animalworld:notoptera", {
 	collisionbox = {-0.3, -0.01, -0.2, 0.3, 0.3, 0.2},
 	visual = "mesh",
 	mesh = "Notoptera.b3d",
-	textures = {
-		{"texturenotoptera.png"},
-	},
+	textures = multiply_texture("texturenotoptera.png", 23),
 	makes_footstep_sound = true,
 	sounds = {
 	},
@@ -91,7 +89,7 @@ minetest.register_craftitem(":animalworld:bugice", {
 minetest.register_craft({
 	output = "animalworld:bugice",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:notoptera", "default:snow"}
 })
 

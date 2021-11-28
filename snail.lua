@@ -14,9 +14,7 @@ mobs:register_mob("animalworld:snail", {
 	collisionbox = {-0.2, -0.01, -0.2, 0.2, 0.3, 0.2},
 	visual = "mesh",
 	mesh = "Snail.b3d",
-	textures = {
-		{"texturesnail.png"},
-	},
+	textures = multiply_texture("texturesnail.png", 10),
 	makes_footstep_sound = true,
 	sounds = {
 	},
@@ -90,7 +88,7 @@ minetest.register_craftitem(":animalworld:escargots", {
 minetest.register_craft({
 	output = "animalworld:escargots",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:snail", "farming:garlic_clove", "animalworld:butter", "farming:bread"}
 })
 

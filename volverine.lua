@@ -13,9 +13,7 @@ stepheight = 3,
 	visual = "mesh",
 	mesh = "Volverine.b3d",
 	visual_size = {x = 1.0, y = 1.0},
-	textures = {
-		{"texturevolverine.png"},
-	},
+	textures = multiply_texture("texturevolverine.png", 14),
 	sounds = {
 		random = "animalworld_volverine",
 	},

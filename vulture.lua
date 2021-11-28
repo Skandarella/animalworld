@@ -13,9 +13,7 @@ stepheight = 3,
 	visual = "mesh",
 	mesh = "Vulture.b3d",
 	visual_size = {x = 1.0, y = 1.0},
-	textures = {
-		{"texturevulture.png"},
-	},
+	textures = multiply_texture("texturevulture.png", 13),
 	sounds = {
 		random = "animalworld_vulture",
 	},
@@ -33,7 +31,7 @@ stepheight = 3,
 		{name = "animalworld:chicken_raw", chance = 1, min = 1, max = 1},
 	        {name = "animalworld:chicken_feather", chance = 1, min = 1, max = 1},
 		{name = "animalworld:vulturecorpse", chance = 7, min = 1, max = 1},
-	
+
 	},
 	water_damage = 1,
 	lava_damage = 4,
@@ -56,7 +54,7 @@ fly_in = {"air"},
 		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
 		"mobs:meat_raw", "animalworld:rabbit_raw", "animalworld:pork_raw", "water_life:meat_raw"
 	},
-	
+
 view_range = 10,
 
 	on_rightclick = function(self, clicker)

@@ -14,9 +14,7 @@ mobs:register_mob("animalworld:camel", {
 	collisionbox = {-1, -0.01, -0.6, 1, 2, 0.6},
 	visual = "mesh",
 	mesh = "Camel.b3d",
-	textures = {
-		{"texturecamel.png"},
-	},
+	textures = multiply_texture("texturecamel.png", 16),
 	makes_footstep_sound = true,
 	sounds = {
 		random = "animalworld_camel",

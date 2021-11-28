@@ -12,9 +12,7 @@ mobs:register_mob("animalworld:termite", {
 	visual = "mesh",
 	mesh = "Termite.b3d",
 	visual_size = {x = 1, y = 1},
-	textures = {
-		{"texturetermite.png"},
-	},
+	textures = multiply_texture("texturetermite.png", 13),
 	sounds = {
 		random = "animalworld_termite",
 		attack = "animalworld_termite",
@@ -119,7 +117,7 @@ minetest.register_node("animalworld:termitemould", {
             {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}
         }
     },
-	drop = "animalworld:termiteconcrete", 
+	drop = "animalworld:termiteconcrete",
 	sounds = default.node_sound_dirt_defaults(),
 })
 
@@ -150,10 +148,10 @@ minetest.register_node("animalworld:termiteconcreteblue", {
 minetest.register_craft({
 	output = "animalworld:termiteconcreteblue 6",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:termiteconcrete", "flowers:geranium"}
 
-	
+
 })
 
 minetest.register_node("animalworld:termiteconcretegreen", {
@@ -168,10 +166,10 @@ minetest.register_node("animalworld:termiteconcretegreen", {
 minetest.register_craft({
 	output = "animalworld:termiteconcretegreen 6",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:termiteconcrete", "flowers:chrysanthemum_green"}
 
-	
+
 })
 
 minetest.register_node("animalworld:termiteconcreteyellow", {
@@ -186,10 +184,10 @@ minetest.register_node("animalworld:termiteconcreteyellow", {
 minetest.register_craft({
 	output = "animalworld:termiteconcreteyellow 6",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:termiteconcrete", "flowers:dandelion_yellow"}
 
-	
+
 })
 
 minetest.register_node("animalworld:termiteconcretered", {
@@ -204,10 +202,10 @@ minetest.register_node("animalworld:termiteconcretered", {
 minetest.register_craft({
 	output = "animalworld:termiteconcretered 6",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:termiteconcrete", "flowers:rose"}
 
-	
+
 })
 
 minetest.register_node("animalworld:termiteconcreteorange", {
@@ -222,10 +220,10 @@ minetest.register_node("animalworld:termiteconcreteorange", {
 minetest.register_craft({
 	output = "animalworld:termiteconcreteorange 6",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:termiteconcrete", "flowers:tulip"}
 
-	
+
 })
 
 minetest.register_node("animalworld:termiteconcreteviolet", {
@@ -240,10 +238,10 @@ minetest.register_node("animalworld:termiteconcreteviolet", {
 minetest.register_craft({
 	output = "animalworld:termiteconcreteviolet 6",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:termiteconcrete", "flowers:viola"}
 
-	
+
 })
 
 minetest.register_node("animalworld:termiteconcretewhite", {
@@ -258,8 +256,8 @@ minetest.register_node("animalworld:termiteconcretewhite", {
 minetest.register_craft({
 	output = "animalworld:termiteconcretewhite 6",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:termiteconcrete", "flowers:dandelion_white"}
 
-	
+
 })

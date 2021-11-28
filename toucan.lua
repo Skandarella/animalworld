@@ -13,9 +13,7 @@ stepheight = 6,
 	visual = "mesh",
 	mesh = "Toucan.b3d",
 	visual_size = {x = 1.0, y = 1.0},
-	textures = {
-		{"texturetoucan.png"},
-	},
+	textures = multiply_texture("texturetoucan.png", 12),
 	sounds = {
 		random = "animalworld_toucan",
 	},
@@ -32,7 +30,7 @@ stepheight = 6,
 	drops = {
 		{name = "animalworld:chicken_raw", chance = 1, min = 1, max = 1},
 	        {name = "animalworld:chicken_feather", chance = 1, min = 1, max = 1},
-	
+
 	},
 	water_damage = 1,
 	lava_damage = 4,
@@ -55,7 +53,7 @@ fly_in = {"air"},
 	follow = {
 		"fishing:bait:worm", "ethereal:worm", "farming:melon_slice", "farming:pineapple", "ethereal:banana", "ethereal:orange", "farming:grapes"
 	},
-	
+
 view_range = 4,
 
 	on_rightclick = function(self, clicker)

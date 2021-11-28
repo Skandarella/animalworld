@@ -13,9 +13,7 @@ stepheight = 3,
 	visual = "mesh",
 	mesh = "Puffin.b3d",
 	visual_size = {x = 1.0, y = 1.0},
-	textures = {
-		{"texturepuffin.png"},
-	},
+	textures = multiply_texture("texturepuffin.png", 16),
 	sounds = {
 	},
 	makes_footstep_sound = false,
@@ -31,7 +29,7 @@ stepheight = 3,
 	drops = {
 		{name = "animalworld:chicken_raw", chance = 1, min = 1, max = 1},
 	        {name = "animalworld:chicken_feather", chance = 1, min = 1, max = 1},
-	
+
 	},
 	water_damage = 0,
 	lava_damage = 4,
@@ -53,7 +51,7 @@ fly_in = {"air", "default:water_source", "default:river_water_source"},
 	follow = {
 		"animalworld:rawfish", "mobs:clownfish_raw", "mobs:bluefish_raw", "fishing:bait_worm", "fishing:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "xocean:fish_edible"
 	},
-	
+
 view_range = 4,
 
 	on_rightclick = function(self, clicker)

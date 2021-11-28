@@ -20,9 +20,7 @@ stepheight = 2,
 	visual = "mesh",
 	mesh = "Kobra.b3d",
 	visual_size = {x = 0.3, y = 0.3},
-	textures = {
-		{"texturekobra.png"},
-	},
+	textures = multiply_texture("texturekobra.png", 15),
 	sounds = {
 		random = "animalworld_kobra",
 		attack = "animalworld_kobra",
@@ -67,7 +65,7 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:kobra",
-	nodes = {"default:desert_sandstone", "default:desert_stone", "default:sandstone", "default:dirt_with_rainforest_litter"}, 
+	nodes = {"default:desert_sandstone", "default:desert_stone", "default:sandstone", "default:dirt_with_rainforest_litter"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000

@@ -13,10 +13,7 @@ stepheight = 1,
 	visual = "mesh",
 	mesh = "Tortoise.b3d",
 	drawtype = "front",
-	textures = {
-		{"texturetortoise.png"},
-
-	},
+	textures = multiply_texture("texturetortoise.png", 18),
 	sounds = {},
 	makes_footstep_sound = false,
 	walk_velocity = 0.2,

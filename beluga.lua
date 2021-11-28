@@ -14,10 +14,7 @@ mobs:register_mob("animalworld:beluga", {
 	collisionbox = {-0.8, -0.01, -0.8, 0.8, 1.2, 0.8},
 	visual = "mesh",
 	mesh = "Beluga.b3d",
-	textures = {
-		{"texturebeluga.png"},
-
-	},
+	textures = multiply_texture("texturebeluga.png", 10),
 	makes_footstep_sound = true,
 	sounds = {
                 random = "animalworld_beluga",

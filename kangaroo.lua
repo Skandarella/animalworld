@@ -1,3 +1,4 @@
+
 mobs:register_mob("animalworld:kangaroo", {
 	stepheight = 2,
 	type = "animal",
@@ -14,9 +15,7 @@ mobs:register_mob("animalworld:kangaroo", {
 	collisionbox = {-0.5, -0.01, -0.5, 0.5, 0.95, 0.5},
 	visual = "mesh",
 	mesh = "Kangaroo.b3d",
-	textures = {
-		{"texturekangaroo.png"},
-	},
+	textures = multiply_texture("texturekangaroo.png", 18),
 	makes_footstep_sound = true,
 	sounds = {},
 	walk_velocity = 5,

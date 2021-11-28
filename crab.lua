@@ -13,10 +13,7 @@ stepheight = 1,
 	visual = "mesh",
 	mesh = "Crab.b3d",
 	drawtype = "front",
-	textures = {
-		{"texturecrab.png"},
-
-	},
+	textures = multiply_texture("texturecrab.png", 23),
 	sounds = {
 		random = "animalworld_crab",
 		attack = "animalworld_crab",

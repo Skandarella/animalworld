@@ -14,9 +14,7 @@ mobs:register_mob("animalworld:lobster", {
 	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.5, 0.6},
 	visual = "mesh",
 	mesh = "Lobster.b3d",
-	textures = {
-		{"texturelobster.png"},
-	},
+	textures = multiply_texture("texturelobster.png", 27),
 	makes_footstep_sound = true,
 	sounds = {
 	},
@@ -27,7 +25,7 @@ mobs:register_mob("animalworld:lobster", {
 	jump = false,
 	jump_height = 3,
 	pushable = true,
-	follow = {"animalworld:rawfish", "mobs_fish:tropical", "mobs:clownfish_raw", 
+	follow = {"animalworld:rawfish", "mobs_fish:tropical", "mobs:clownfish_raw",
 "mobs:bluefish_raw", "fishing:bait_worm", "fishing:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "water_life:meat_raw", "fishing:shark_raw", "fishing:pike_raw"},
 	view_range = 10,
 	drops = {

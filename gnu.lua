@@ -14,9 +14,7 @@ mobs:register_mob("animalworld:gnu", {
 	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.95, 0.6},
 	visual = "mesh",
 	mesh = "Gnu.b3d",
-	textures = {
-		{"texturegnu.png"},
-	},
+	textures = multiply_texture("texturegnu.png", 14),
 	makes_footstep_sound = true,
 	sounds = {
 		random = "animalworld_gnu",
