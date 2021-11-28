@@ -13,10 +13,7 @@ mobs:register_mob("animalworld:rat", {
 	collisionbox = {-0.4, -0.01, -0.4, 0.4, 0.6, 0.4},
 	visual = "mesh",
 	mesh = "Rat.b3d",
-	textures = {
-		{"texturerat.png"},
-		{"texturerat.png"},
-	},
+	textures = multiply_texture("texturerat.png", 15),
 	makes_footstep_sound = true,
 	sounds = {
 		random = "animalworld_rat",

@@ -13,10 +13,10 @@ stepheight = 0.0,
 	visual = "mesh",
 	mesh = "Seahorse.b3d",
 	visual_size = {x = 1.0, y = 1.0},
-	textures = {
+	textures = multiply_texture({
 		{"textureseahorse.png"},
 		{"textureseahorse2.png"},
-	},
+	}, 13),
 	sounds = {},
 	makes_footstep_sound = false,
 	walk_velocity = 0.25,

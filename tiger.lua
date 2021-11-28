@@ -13,9 +13,7 @@ stepheight = 2,
 	visual = "mesh",
 	mesh = "Tiger.b3d",
 	visual_size = {x = 1.0, y = 1.0},
-	textures = {
-		{"texturetiger.png"},
-	},
+	textures = multiply_texture("texturetiger.png", 17),
 	sounds = {
 		random = "animalworld_tiger",
 		attack = "animalworld_tiger",

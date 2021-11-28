@@ -105,30 +105,30 @@ minetest.register_craftitem("animalworld:anteatercorpse", {
 })
 
 minetest.register_craft({
-	output = "animalworld:anteaterpillow", 
+	output = "animalworld:anteaterpillow",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:anteatercorpse", "default:sword_stone", "group:wool"}
 
-	
+
 })
 
 minetest.register_craft({
-	output = "animalworld:anteaterpillowleft", 
+	output = "animalworld:anteaterpillowleft",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:anteatercorpse", "default:axe_stone", "group:wool"}
 
-	
+
 })
 
 minetest.register_craft({
-	output = "animalworld:anteaterpillowright", 
+	output = "animalworld:anteaterpillowright",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:anteatercorpse", "default:pick_stone", "group:wool"}
 
-	
+
 })
 
  -- bear
@@ -240,28 +240,28 @@ minetest.register_craftitem("animalworld:bearcorpse", {
 minetest.register_craft({
 	output = "animalworld:beartrophy",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:bearcorpse", "default:axe_stone", "group:wood"}
 
-	
+
 })
 
 minetest.register_craft({
 	output = "animalworld:bearpelt",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:bearcorpse", "default:sword_stone"}
 
-	
+
 })
 
 minetest.register_craft({
 	output = "animalworld:bearpelthanging",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:bearcorpse", "default:sword_stone", "default:sign_wall_wood"}
 
-	
+
 })
 
 minetest.register_node("animalworld:bearstool", {
@@ -300,7 +300,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:bearstool",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:bearcorpse", "default:axe_stone", "group:wood", "default:stick"}
 
 })
@@ -412,30 +412,30 @@ minetest.register_craftitem("animalworld:blackbirdcorpse", {
 })
 
 minetest.register_craft({
-	output = "animalworld:blackbirdpillow", 
+	output = "animalworld:blackbirdpillow",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:blackbirdcorpse", "default:sword_stone", "group:wool"}
 
-	
+
 })
 
 minetest.register_craft({
-	output = "animalworld:blackbirdpillowleft", 
+	output = "animalworld:blackbirdpillowleft",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:blackbirdcorpse", "default:axe_stone", "group:wool"}
 
-	
+
 })
 
 minetest.register_craft({
-	output = "animalworld:blackbirdpillowright", 
+	output = "animalworld:blackbirdpillowright",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:blackbirdcorpse", "default:pick_stone", "group:wool"}
 
-	
+
 })
 
 minetest.register_node("animalworld:blackbirdcurtain", {
@@ -474,10 +474,10 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:blackbirdcurtain",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:blackbirdcorpse", "default:sword_stone", "group:wood", "group:wool", "farming:string", "default:stick"}
 
-	
+
 })
 
 
@@ -590,28 +590,28 @@ minetest.register_craftitem("animalworld:boarcorpse", {
 minetest.register_craft({
 	output = "animalworld:boartrophy",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:boarcorpse", "default:axe_stone", "group:wood"}
 
-	
+
 })
 
 minetest.register_craft({
 	output = "animalworld:boarpelt",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:boarcorpse", "default:sword_stone"}
 
-	
+
 })
 
 minetest.register_craft({
 	output = "animalworld:boarpelthanging",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:boarcorpse", "default:sword_stone", "default:sign_wall_wood"}
 
-	
+
 })
 
  -- camel
@@ -721,30 +721,30 @@ minetest.register_craftitem("animalworld:camelcorpse", {
 })
 
 minetest.register_craft({
-	output = "animalworld:camelpillow", 
+	output = "animalworld:camelpillow",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:camelcorpse", "default:sword_stone", "group:wool"}
 
-	
+
 })
 
 minetest.register_craft({
-	output = "animalworld:camelpillowleft", 
+	output = "animalworld:camelpillowleft",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:camelcorpse", "default:axe_stone", "group:wool"}
 
-	
+
 })
 
 minetest.register_craft({
-	output = "animalworld:camelpillowright", 
+	output = "animalworld:camelpillowright",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:camelcorpse", "default:pick_stone", "group:wool"}
 
-	
+
 })
 
 
@@ -818,19 +818,19 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:camelpelt",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:camelcorpse", "default:sword_stone"}
 
-	
+
 })
 
 minetest.register_craft({
 	output = "animalworld:camelpelthanging",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:camelcorpse", "default:sword_stone", "default:sign_wall_wood"}
 
-	
+
 })
 
 minetest.register_node("animalworld:camelcurtain", {
@@ -869,10 +869,10 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:camelcurtain",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:camelcorpse", "default:sword_stone", "group:wood", "group:wool", "farming:string", "default:stick"}
 
-	
+
 })
 
  -- Crocodile
@@ -919,10 +919,10 @@ minetest.register_craftitem("animalworld:crocodilecorpse", {
 minetest.register_craft({
 	output = "animalworld:crocodiletrophy",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:crocodilecorpse", "default:axe_stone", "group:wood"}
 
-	
+
 })
 
 minetest.register_node("animalworld:crocodilestool", {
@@ -961,7 +961,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:crocodilestool",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:crocodilecorpse", "default:axe_stone", "group:wood", "default:stick"}
 
 })minetest.register_node("animalworld:crocodilestool", {
@@ -1000,7 +1000,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:crocodilestool",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:crocodilecorpse", "default:axe_stone", "group:wood", "default:stick"}
 
 })
@@ -1041,10 +1041,10 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:crocodilecurtain",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:crocodilecorpse", "default:sword_stone", "group:wood", "group:wool", "farming:string", "default:stick"}
 
-	
+
 })
 
 minetest.register_node("animalworld:crocodileskin", {
@@ -1157,10 +1157,10 @@ minetest.register_craftitem("animalworld:elephantcorpse", {
 minetest.register_craft({
 	output = "animalworld:elephanttrophy",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:elephantcorpse", "default:axe_stone", "group:wood"}
 
-	
+
 })
 
 minetest.register_node("animalworld:ivorytable", {
@@ -1256,28 +1256,28 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:ivorytable",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:elephantcorpse", "default:axe_stone"}
 
-	
+
 })
 
 minetest.register_craft({
 	output = "animalworld:ivorychair",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:elephantcorpse", "default:sword_stone"}
 
-	
+
 })
 
 minetest.register_craft({
 	output = "animalworld:ivoryvase",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:elephantcorpse", "default:shovel_stone"}
 
-	
+
 })
 
 minetest.register_node("animalworld:elephantstool", {
@@ -1316,7 +1316,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:elephantstool",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:elephantcorpse", "default:axe_stone", "group:wood", "default:stick"}
 
 })
@@ -1399,16 +1399,16 @@ minetest.register_craftitem("animalworld:gnucorpse", {
 minetest.register_craft({
 	output = "animalworld:gnupelt",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:gnucorpse", "default:sword_stone"}
 
-	
+
 })
 
 minetest.register_craft({
 	output = "animalworld:gnupelthanging",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:gnucorpse", "default:sword_stone", "default:sign_wall_wood"}
 
 })
@@ -1449,10 +1449,10 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:gnutrophy",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:gnucorpse", "default:axe_stone", "group:wood"}
 
-	
+
 })
 
 minetest.register_node("animalworld:gnustool", {
@@ -1491,7 +1491,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:gnustool",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:gnucorpse", "default:axe_stone", "group:wood", "default:stick"}
 
 })
@@ -1532,10 +1532,10 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:gnucurtain",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:gnucorpse", "default:sword_stone", "group:wood", "group:wool", "farming:string", "default:stick"}
 
-	
+
 })
 
  -- Hippo
@@ -1576,7 +1576,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:hippostool",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:hippocorpse", "default:axe_stone", "group:wood", "default:stick"}
 
 })
@@ -1622,10 +1622,10 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:hippocurtain",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:hippocorpse", "default:sword_stone", "group:wood", "group:wool", "farming:string", "default:stick"}
 
-	
+
 })
 
  -- Hyena
@@ -1666,10 +1666,10 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:hyenatrophy",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:hyenacorpse", "default:axe_stone", "group:wood"}
 
-	
+
 })
 
 minetest.register_craftitem("animalworld:hyenacorpse", {
@@ -1778,30 +1778,30 @@ minetest.register_craft({
 
 
 minetest.register_craft({
-	output = "animalworld:hyenapillow", 
+	output = "animalworld:hyenapillow",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:hyenacorpse", "default:sword_stone", "group:wool"}
 
-	
+
 })
 
 minetest.register_craft({
-	output = "animalworld:hyenapillowleft", 
+	output = "animalworld:hyenapillowleft",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:hyenacorpse", "default:axe_stone", "group:wool"}
 
-	
+
 })
 
 minetest.register_craft({
-	output = "animalworld:hyenapillowright", 
+	output = "animalworld:hyenapillowright",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:hyenacorpse", "default:pick_stone", "group:wool"}
 
-	
+
 })
 
  -- Kangaroo
@@ -1913,30 +1913,30 @@ minetest.register_craft({
 
 
 minetest.register_craft({
-	output = "animalworld:kangaroopillow", 
+	output = "animalworld:kangaroopillow",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:kangaroocorpse", "default:sword_stone", "group:wool"}
 
-	
+
 })
 
 minetest.register_craft({
-	output = "animalworld:kangarooapillowleft", 
+	output = "animalworld:kangarooapillowleft",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:kangaroocorpse", "default:axe_stone", "group:wool"}
 
-	
+
 })
 
 minetest.register_craft({
-	output = "animalworld:kangaroopillowright", 
+	output = "animalworld:kangaroopillowright",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:kangaroocorpse", "default:pick_stone", "group:wool"}
 
-	
+
 })
 
 minetest.register_node("animalworld:kangaroocurtain", {
@@ -1975,10 +1975,10 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:kangaroocurtain",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:kangaroocorpse", "default:sword_stone", "group:wood", "group:wool", "farming:string", "default:stick"}
 
-	
+
 })
 
  -- Monitor Lizard
@@ -2024,10 +2024,10 @@ minetest.register_craftitem("animalworld:monitorcorpse", {
 minetest.register_craft({
 	output = "animalworld:monitortrophy",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:monitorcorpse", "default:axe_stone", "group:wood"}
 
-	
+
 })
 
 minetest.register_node("animalworld:monitorstool", {
@@ -2066,7 +2066,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:monitorstool",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:monitorcorpse", "default:axe_stone", "group:wood", "default:stick"}
 
 })
@@ -2107,10 +2107,10 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:monitorcurtain",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:monitorcorpse", "default:sword_stone", "group:wood", "group:wool", "farming:string", "default:stick"}
 
-	
+
 })
 
  -- Moose
@@ -2222,28 +2222,28 @@ minetest.register_craftitem("animalworld:moosecorpse", {
 minetest.register_craft({
 	output = "animalworld:moosetrophy",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:moosecorpse", "default:axe_stone", "group:wood"}
 
-	
+
 })
 
 minetest.register_craft({
 	output = "animalworld:moosepelt",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:moosecorpse", "default:sword_stone"}
 
-	
+
 })
 
 minetest.register_craft({
 	output = "animalworld:moosepelthanging",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:moosecorpse", "default:sword_stone", "default:sign_wall_wood"}
 
-	
+
 })
 
  -- Owl
@@ -2289,10 +2289,10 @@ minetest.register_craftitem("animalworld:owlcorpse", {
 minetest.register_craft({
 	output = "animalworld:owltrophy",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:owlcorpse", "default:axe_stone", "group:wood"}
 
-	
+
 })
 
  -- Reindeer
@@ -2404,28 +2404,28 @@ minetest.register_craftitem("animalworld:reindeercorpse", {
 minetest.register_craft({
 	output = "animalworld:reindeertrophy",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:reindeercorpse", "default:axe_stone", "group:wood"}
 
-	
+
 })
 
 minetest.register_craft({
 	output = "animalworld:reindeerpelt",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:reindeercorpse", "default:sword_stone"}
 
-	
+
 })
 
 minetest.register_craft({
 	output = "animalworld:reindeerpelthanging",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:reindeercorpse", "default:sword_stone", "default:sign_wall_wood"}
 
-	
+
 })
 
  -- Seal
@@ -2535,30 +2535,30 @@ minetest.register_craftitem("animalworld:sealcorpse", {
 })
 
 minetest.register_craft({
-	output = "animalworld:sealpillow", 
+	output = "animalworld:sealpillow",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:sealcorpse", "default:sword_stone", "group:wool"}
 
-	
+
 })
 
 minetest.register_craft({
-	output = "animalworld:sealpillowleft", 
+	output = "animalworld:sealpillowleft",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:sealcorpse", "default:axe_stone", "group:wool"}
 
-	
+
 })
 
 minetest.register_craft({
-	output = "animalworld:sealpillowright", 
+	output = "animalworld:sealpillowright",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:sealcorpse", "default:pick_stone", "group:wool"}
 
-	
+
 })
 
 minetest.register_node("animalworld:sealstool", {
@@ -2597,7 +2597,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:sealstool",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:sealcorpse", "default:axe_stone", "group:wood", "default:stick"}
 
 })
@@ -2638,10 +2638,10 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:sealcurtain",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:sealcorpse", "default:sword_stone", "group:wood", "group:wool", "farming:string", "default:stick"}
 
-	
+
 })
 
  -- Shark
@@ -2687,10 +2687,10 @@ minetest.register_craftitem("animalworld:sharkcorpse", {
 minetest.register_craft({
 	output = "animalworld:sharktrophy",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:sharkcorpse", "default:axe_stone", "group:wood"}
 
-	
+
 })
 
  -- Vulture
@@ -2800,12 +2800,12 @@ minetest.register_craftitem("animalworld:vulturecorpse", {
 })
 
 minetest.register_craft({
-	output = "animalworld:vulturepillow", 
+	output = "animalworld:vulturepillow",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:vulturecorpse", "default:sword_stone", "group:wool"}
 
-	
+
 })
 
  -- Yak
@@ -2917,28 +2917,28 @@ minetest.register_craftitem("animalworld:yakcorpse", {
 minetest.register_craft({
 	output = "animalworld:yaktrophy",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:yakcorpse", "default:axe_stone", "group:wood"}
 
-	
+
 })
 
 minetest.register_craft({
 	output = "animalworld:yakpelt",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:yakcorpse", "default:sword_stone"}
 
-	
+
 })
 
 minetest.register_craft({
 	output = "animalworld:yakpelthanging",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:yakcorpse", "default:sword_stone", "default:sign_wall_wood"}
 
-	
+
 })
 
 
@@ -2978,7 +2978,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:yakstool",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:yakcorpse", "default:axe_stone", "group:wood", "default:stick"}
 
 })
@@ -3019,10 +3019,10 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:yakcurtain",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:yakcorpse", "default:sword_stone", "group:wood", "group:wool", "farming:string", "default:stick"}
 
-	
+
 })
 
  -- Snow Leopard
@@ -3160,30 +3160,30 @@ minetest.register_craft({
 
 
 minetest.register_craft({
-	output = "animalworld:snowleopardpillow", 
+	output = "animalworld:snowleopardpillow",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:snowleopardcorpse", "default:sword_stone", "group:wool"}
 
-	
+
 })
 
 minetest.register_craft({
-	output = "animalworld:snowleopardpillowleft", 
+	output = "animalworld:snowleopardpillowleft",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:snowleopardcorpse", "default:axe_stone", "group:wool"}
 
-	
+
 })
 
 minetest.register_craft({
-	output = "animalworld:snowleopardpillowright", 
+	output = "animalworld:snowleopardpillowright",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:snowleopardcorpse", "default:pick_stone", "group:wool"}
 
-	
+
 })
 
 minetest.register_craftitem("animalworld:snowleopardcorpse", {
@@ -3326,30 +3326,30 @@ minetest.register_craft({
 
 
 minetest.register_craft({
-	output = "animalworld:tigerpillow", 
+	output = "animalworld:tigerpillow",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:tigercorpse", "default:sword_stone", "group:wool"}
 
-	
+
 })
 
 minetest.register_craft({
-	output = "animalworld:tigerpillowleft", 
+	output = "animalworld:tigerpillowleft",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:tigercorpse", "default:axe_stone", "group:wool"}
 
-	
+
 })
 
 minetest.register_craft({
-	output = "animalworld:tigerpillowright", 
+	output = "animalworld:tigerpillowright",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:tigercorpse", "default:pick_stone", "group:wool"}
 
-	
+
 })
 
 minetest.register_craftitem("animalworld:tigercorpse", {
@@ -3393,7 +3393,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:tigerstool",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:tigercorpse", "default:axe_stone", "group:wood", "default:stick"}
 
 })
@@ -3434,10 +3434,10 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:tigercurtain",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:tigercorpse", "default:sword_stone", "group:wood", "group:wool", "farming:string", "default:stick"}
 
-	
+
 })
 
 minetest.register_node("animalworld:tigerpelt", {
@@ -3586,10 +3586,10 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:polarbeartrophy",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:polarbearcorpse", "default:axe_stone", "group:wood"}
 
-	
+
 })
 
 
@@ -3668,19 +3668,19 @@ minetest.register_craftitem("animalworld:polarbearcorpse", {
 minetest.register_craft({
 	output = "animalworld:polarbearpelt",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:polarbearcorpse", "default:sword_stone"}
 
-	
+
 })
 
 minetest.register_craft({
 	output = "animalworld:polarbearpelthanging",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:polarbearcorpse", "default:sword_stone", "default:sign_wall_wood"}
 
-	
+
 })
 
  -- Muskox
@@ -3792,28 +3792,28 @@ minetest.register_craftitem("animalworld:muskoxcorpse", {
 minetest.register_craft({
 	output = "animalworld:muskoxtrophy",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:muskoxcorpse", "default:axe_stone", "group:wood"}
 
-	
+
 })
 
 minetest.register_craft({
 	output = "animalworld:muskoxpelt",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:muskoxcorpse", "default:sword_stone"}
 
-	
+
 })
 
 minetest.register_craft({
 	output = "animalworld:muskoxpelthanging",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:muskoxcorpse", "default:sword_stone", "default:sign_wall_wood"}
 
-	
+
 })
 
 minetest.register_node("animalworld:muskoxstool", {
@@ -3852,7 +3852,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalworld:muskoxstool",
 	type = "shapeless",
-	recipe = 
+	recipe =
 		{"animalworld:muskoxcorpse", "default:axe_stone", "group:wood", "default:stick"}
 
 })

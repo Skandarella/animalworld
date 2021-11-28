@@ -13,9 +13,7 @@ mobs:register_mob("animalworld:treelobster", {
 	collisionbox = {-0.3, -0.01, -0.2, 0.3, 0.3, 0.2},
 	visual = "mesh",
 	mesh = "Treelobster.b3d",
-	textures = {
-		{"texturetreelobster.png"},
-	},
+	textures = multiply_texture("texturetreelobster.png", 18),
 	makes_footstep_sound = true,
 	sounds = {
 	},

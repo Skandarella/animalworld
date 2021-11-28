@@ -14,14 +14,8 @@ stepheight = 1,
 	collisionbox = {-0.4, -0.01, -0.3, 0.4, 0.8, 0.4},
 	visual = "mesh",
 	mesh = "Nandu.b3d",
-	textures = {
-		{"texturenandu.png"}, -- white
-		{"texturenandu.png"},
-		{"texturenandu.png"},
-	},
-	child_texture = {
-		{"texturenandu.png"},
-	},
+	textures = multiply_texture("texturenandu.png", 16),
+	child_texture = multiply_texture("texturenandu.png", 16),
 	makes_footstep_sound = true,
 	walk_velocity = 0.7,
 	run_velocity = 3,
@@ -97,7 +91,7 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:nandu",
-	nodes = {"default:dirt_with_grass"}, 
+	nodes = {"default:dirt_with_grass"},
 	min_light = 14,
 	interval = 60,
 	chance = 8000, -- 15000

@@ -12,9 +12,7 @@ mobs:register_mob("animalworld:divingbeetle", {
 	collisionbox = {-0.3, -0.01, -0.3, 0.3, 0.3, 0.3},
 	visual = "mesh",
 	mesh = "Divingbeetle.b3d",
-	textures = {
-		{"texturedivingbeetle.png"},
-	},
+	textures = multiply_texture("texturedivingbeetle.png", 15),
 	makes_footstep_sound = false,
 	sounds = {
 	},

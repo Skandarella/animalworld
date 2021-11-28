@@ -11,11 +11,9 @@ stepheight = 1,
 	armor = 100,
 	collisionbox = {-1.4, -0.01, -1.4, 1.4, 1.4, 1.4},
 	visual = "mesh",
-	mesh = "HippoNEW.b3d",
+	mesh = "HippoNEW.b3d",  -- Hippo2 has 8 meshes, HippoNEW has 14
 	visual_size = {x = 1.0, y = 1.0},
-	textures = {
-		{"texturehippoNEW.png"},
-	},
+	textures = multiply_texture("texturehippoNEW.png", 14),
 	sounds = {
 		random = "animalworld_hippo",
 		attack = "animalworld_hippo",
@@ -57,7 +55,7 @@ fly_in = {"default:water_source", "default:river_water_source", "default:water_f
 		"ethereal:banana_single", "farming:corn_cob", "farming:cabbage",
 		"default:apple", "water_life:meat_raw", "xocean:fish_edible", "ethereal:fish_raw", "ethereal:banana", "farming:cabbage", "farming:lettuce", "farming:melon_slice"
 	},
-	
+
 view_range = 6,
 
 	on_rightclick = function(self, clicker)

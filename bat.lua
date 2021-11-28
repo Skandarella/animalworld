@@ -13,9 +13,7 @@ stepheight = 3,
 	visual = "mesh",
 	mesh = "Bat.b3d",
 	visual_size = {x = 1.0, y = 1.0},
-	textures = {
-		{"texturebat.png"},
-	},
+	textures = multiply_texture("texturebat.png", 11),
 	sounds = {
 		random = "animalworld_bat",
 	},
@@ -31,7 +29,7 @@ stepheight = 3,
 	stepheight = 3,
 	drops = {
         {name = "mobs:leather", chance = 1, min = 0, max = 2},
-	
+
 	},
 	water_damage = 1,
 	lava_damage = 4,
@@ -53,7 +51,7 @@ fly_in = {"air"},
 	follow = {
 		"animalworld:rawfish", "ethereal:worm", "ethereal:fish_raw", "fishing:fish_raw", "xocean:fish_edible"
 	},
-	
+
 view_range = 4,
 
 	on_rightclick = function(self, clicker)

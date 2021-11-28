@@ -14,11 +14,11 @@ mobs:register_mob("animalworld:fox", {
 	collisionbox = {-0.5, -0.01, -0.5, 0.5, 0.95, 0.5},
 	visual = "mesh",
 	mesh = "Fox.b3d",
-	textures = {
+	textures = multiply_texture({
 		{"texturefox.png"},
 		{"texturefox2.png"},
 		{"texturefox3.png"},
-	},
+	}, 15),
 	makes_footstep_sound = true,
 	sounds = {
 	        random = "animalworld_fox3",

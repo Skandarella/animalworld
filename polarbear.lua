@@ -12,9 +12,7 @@ mobs:register_mob("animalworld:polarbear", {
 	visual = "mesh",
 	mesh = "Polarbear.b3d",
 	visual_size = {x = 1.0, y = 1.0},
-	textures = {
-		{"texturepolarbear.png"},
-	},
+	textures = multiply_texture("texturepolarbear.png", 15),
 	sounds = {
 		random = "animalworld_bear",
 	},

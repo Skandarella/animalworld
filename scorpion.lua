@@ -12,9 +12,7 @@ mobs:register_mob("animalworld:scorpion", {
 	visual = "mesh",
 	mesh = "Scorpion.b3d",
 	visual_size = {x = 1, y = 1},
-	textures = {
-		{"texturescorpion.png"},
-	},
+	textures = multiply_texture("texturescorpion.png", 30),
 	sounds = {
 	},
 	makes_footstep_sound = true,

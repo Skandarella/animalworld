@@ -13,9 +13,7 @@ mobs:register_mob("animalworld:goldenmole", {
 	collisionbox = {-0.3, -0.01, -0.3, 0.3, 0.3, 0.3},
 	visual = "mesh",
 	mesh = "Goldenmole.b3d",
-	textures = {
-		{"texturegoldenmole.png"},
-	},
+	textures = multiply_texture("texturegoldenmole.png", 12),
 	makes_footstep_sound = true,
 	sounds = {
 		random = "animalworld_goldenmole",

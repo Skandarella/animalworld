@@ -12,9 +12,7 @@ mobs:register_mob("animalworld:ant", {
 	visual = "mesh",
 	mesh = "Ant.b3d",
 	visual_size = {x = 1, y = 1},
-	textures = {
-		{"textureant.png"},
-	},
+	textures = multiply_texture("textureant.png", 17),
 	sounds = {
 		random = "animalworld_ant",
 		attack = "animalworld_ant",

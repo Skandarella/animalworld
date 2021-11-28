@@ -9,9 +9,7 @@ mobs:register_mob("animalworld:otter", {
 	visual = "mesh",
 	mesh = "Otter.b3d",
 	visual_size = {x = 1.0, y = 1.0},
-	textures = {
-		{"textureotter.png"},
-	},
+	textures = multiply_texture("textureotter.png", 17),
 	sounds = {
 		random = "animalworld_otter",
 		attack = "animalworld_otter2",

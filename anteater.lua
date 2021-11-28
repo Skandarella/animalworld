@@ -14,9 +14,7 @@ mobs:register_mob("animalworld:anteater", {
 	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.95, 0.6},
 	visual = "mesh",
 	mesh = "Anteater.b3d",
-	textures = {
-		{"textureanteater.png"},
-	},
+	textures = multiply_texture("textureanteater.png", 14),
 	makes_footstep_sound = true,
 	sounds = {
 

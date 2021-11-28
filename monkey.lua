@@ -1,3 +1,4 @@
+
 mobs:register_mob("animalworld:monkey", {
 	stepheight = 3,
 	type = "animal",
@@ -20,13 +21,13 @@ mobs:register_mob("animalworld:monkey", {
 	collisionbox = {-0.5, -0.01, -0.5, 0.5, 0.95, 0.5},
 	visual = "mesh",
 	mesh = "Monkey.b3d",
-	textures = {
+	textures = multiply_texture({
 		{"texturemonkey.png"},
 		{"texturemonkey2.png"},
 		{"texturemonkey3.png"},
 		{"texturemonkey4.png"},
 		{"texturemonkey5.png"},
-	},
+	}, 20),
 	makes_footstep_sound = true,
 	sounds = {
 		random = "animalworld_monkey",

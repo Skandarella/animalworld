@@ -16,9 +16,7 @@ stepheight = 4,
 	visual = "mesh",
 	mesh = "Spider.b3d",
 	visual_size = {x = 0.3, y = 0.3},
-	textures = {
-		{"texturespider.png"},
-	},
+	textures = multiply_texture("texturespider.png", 35),
 	sounds = {
 		random = "animalworld_spider",
 		attack = "animalworld_spider",

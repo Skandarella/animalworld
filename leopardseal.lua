@@ -13,9 +13,7 @@ stepheight = 0.6,
 	visual = "mesh",
 	mesh = "Leopardseal.b3d",
 	visual_size = {x = 1.0, y = 1.0},
-	textures = {
-		{"textureleopardseal.png"},
-	},
+	textures = multiply_texture("textureleopardseal.png", 11),
 	sounds = {
 		random = "animalworld_leopardseal",
 		attack = "animalworld_leopardseal2",

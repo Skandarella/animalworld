@@ -13,9 +13,7 @@ stepheight = 1,
 	visual = "mesh",
 	mesh = "Crocodile.b3d",
 	visual_size = {x = 1.0, y = 1.0},
-	textures = {
-		{"texturecrocodile.png"},
-	},
+	textures = multiply_texture("texturecrocodile.png", 15),
 	sounds = {
 		random = "animalworld_crocodile",
 		attack = "animalworld_crocodile",

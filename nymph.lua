@@ -14,9 +14,7 @@ mobs:register_mob("animalworld:nymph", {
 	collisionbox = {-0.3, -0.01, -0.3, 0.3, 0.3, 0.3},
 	visual = "mesh",
 	mesh = "Nymph.b3d",
-	textures = {
-		{"texturenymph.png"},
-	},
+	textures = multiply_texture("texturenymph.png", 15),
 	makes_footstep_sound = false,
 	sounds = {
 	},

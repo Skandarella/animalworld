@@ -14,9 +14,7 @@ mobs:register_mob("animalworld:reindeer", {
 	collisionbox = {-0.5, -0.01, -0.5, 0.3, 0.95, 0.3},
 	visual = "mesh",
 	mesh = "Reindeer.b3d",
-	textures = {
-		{"texturereindeer.png"},
-	},
+	textures = multiply_texture("texturereindeer.png", 16),
 	makes_footstep_sound = true,
 	sounds = {
 

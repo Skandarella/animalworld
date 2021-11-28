@@ -14,9 +14,7 @@ stepheight = 3,
 	visual = "mesh",
 	mesh = "Dragonfly.b3d",
 	visual_size = {x = 1.0, y = 1.0},
-	textures = {
-		{"texturedragonfly.png"},
-	},
+	textures = multiply_texture("texturedragonfly.png", 14),
 	sounds = {
 		random = "animalworld_dragonfly",
 	},
@@ -30,7 +28,7 @@ stepheight = 3,
 	stepheight = 3,
 	fly = true,
 	drops = {
-	
+
 	},
 	water_damage = 4,
 	lava_damage = 4,
@@ -49,9 +47,9 @@ stepheight = 3,
 fly_in = {"air"},
 	floats = 0,
 	follow = {
-		"animalworld:termitequeen", "animalworld:ant", "animalworld:termite" 
+		"animalworld:termitequeen", "animalworld:ant", "animalworld:termite"
 	},
-	
+
 view_range = 5,
 
 	on_rightclick = function(self, clicker)
