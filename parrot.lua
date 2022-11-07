@@ -1,34 +1,36 @@
-mobs:register_mob("animalworld:toucan", {
-stepheight = 6,
+mobs:register_mob("animalworld:parrot", {
+stepheight = 3,
 	type = "animal",
-	passive = true,
+	passive = false,
         attack_type = "dogfight",
 	attack_animals = false,
+	owner_loyal = true,
 	reach = 2,
-        damage = 1,
-	hp_min = 5,
-	hp_max = 30,
+        damage = 2,
+	hp_min = 15,
+	hp_max = 40,
 	armor = 100,
 	collisionbox = {-0.3, -0.01, -0.3, 0.3, 0.5, 0.3},
 	visual = "mesh",
-	mesh = "Toucan.b3d",
+	mesh = "Parrot.b3d",
 	visual_size = {x = 1.0, y = 1.0},
 	textures = {
-		{"texturetoucan.png"},
+		{"textureparrot.png"},
 	},
 	sounds = {
-		random = "animalworld_toucan",
+		attack = "animalworld_parrot3",
+		random = "animalworld_parrot",
+		damage = "animalworld_parrot2",
+		death = "animalworld_parrot4",
 	},
 	makes_footstep_sound = true,
 	walk_velocity = 2,
 	run_velocity = 4,
-	fall_speed = -1,
-	fall_damage = 0,
 	runaway = true,
         runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion", "animalworld:polarbear", "animalworld:leopardseal", "animalworld:stellerseagle", "animalworld:wolf", "animalworld:panda", "animalworld:stingray"},
 	jump = true,
-        jump_height = 8,
-	stepheight = 6,
+        jump_height = 6,
+	stepheight = 3,
 	drops = {
 		{name = "animalworld:chicken_raw", chance = 1, min = 1, max = 1},
 	        {name = "animalworld:chicken_feather", chance = 1, min = 1, max = 1},
@@ -43,20 +45,24 @@ stepheight = 6,
 		stand_speed = 50,
 		stand_start = 0,
 		stand_end = 100,
-		walk_start = 100,
-		walk_end = 200,
-		fly_start = 250, -- swim animation
-		fly_end = 350,
+		stand1_start = 100,
+		stand1_end = 200,
+		walk_start = 300,
+		walk_end = 400,
+		fly_start = 450, -- swim animation
+		fly_end = 550,
+		punch_start = 200,
+		punch_end = 300,
 		-- 50-70 is slide/water idle
 	},
 
 fly_in = {"air"},
 	floats = 0,
 	follow = {
-		"fishing:bait:worm", "ethereal:worm", "farming:melon_slice", "farming:pineapple", "ethereal:banana", "ethereal:orange", "farming:grapes"
+		"farming:melon_slice", "farming:pineapple", "ethereal:banana", "ethereal:orange", "farming:grapes", "default:apple", "farming:potato", "ethereal:banana_bread", "farming:carrot", "farming:seed_rice", "farming:corn", "farming:wheat", "farming:beans", "farming:barley", "farming:oat", "farming:rye", "mobs:cheese", "farming:bread", "ethereal:banana_bread", "ethereal:banana", "farming:cabbage", "farming:lettuce", "farming:melon_slice", "naturalbiomes:coconut", "naturalbiomes:banana" 
 	},
 	
-view_range = 4,
+view_range = 5,
 
 	on_rightclick = function(self, clicker)
 
@@ -67,24 +73,17 @@ view_range = 4,
 	end,
 })
 
-
-if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:dirt_with_rainforest_litter", "ethereal:grove_dirt"}
-end
-
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
-	name = "animalworld:toucan",
-	nodes = {"default:dirt_with_rainforest_litter"},
+	name = "animalworld:parrot",
+	nodes = {"naturalbiomes:bambooforest_litter"}, 
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
-	active_object_count = 2,
-	min_height = 15,
-	max_height = 50,
+	min_height = 1,
+	max_height = 60,
 	day_toggle = true,
 })
 end
 
-mobs:register_egg("animalworld:toucan", ("Toucan"), "atoucan.png")
-
+mobs:register_egg("animalworld:parrot", ("Parrot"), "aparrot.png")

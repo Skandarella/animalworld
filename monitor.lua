@@ -71,7 +71,7 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:monitor",
-	nodes = {"default:desert_sand"}, {"default:desert_sandstone"}, {"default:sandstone"}, {"ethereal:dry_dirt"}, {"ethereal:fiery_dirt"},
+	nodes = {"default:desert_sand", "default:desert_sandstone", "naturalbiomes:outback_litter"},
 	min_light = 14,
 	interval = 60,
 	chance = 8000, -- 15000

@@ -1,4 +1,4 @@
-mobs:register_mob("animalworld:blackbird", {
+mobs:register_mob("animalworld:cockatoo", {
 stepheight = 3,
 	type = "animal",
 	passive = true,
@@ -6,18 +6,20 @@ stepheight = 3,
 	attack_animals = false,
 	reach = 2,
         damage = 2,
-	hp_min = 5,
-	hp_max = 30,
+	hp_min = 10,
+	hp_max = 35,
 	armor = 100,
 	collisionbox = {-0.3, -0.01, -0.3, 0.3, 0.5, 0.3},
 	visual = "mesh",
-	mesh = "Blackbird.b3d",
+	mesh = "Cockatoo.b3d",
 	visual_size = {x = 1.0, y = 1.0},
 	textures = {
-		{"textureblackbird.png"},
+		{"texturecockatoo.png"},
 	},
 	sounds = {
-		random = "animalworld_blackbird",
+		attack = "animalworld_cockatoo3",
+		random = "animalworld_cockatoo",
+		damage = "animalworld_cockatoo2",
 	},
 	makes_footstep_sound = true,
 	walk_velocity = 2,
@@ -30,7 +32,6 @@ stepheight = 3,
 	drops = {
 		{name = "animalworld:chicken_raw", chance = 1, min = 1, max = 1},
 	        {name = "animalworld:chicken_feather", chance = 1, min = 1, max = 1},
-		{name = "animalworld:blackbirdcorpse", chance = 7, min = 1, max = 1},
 	
 	},
 	water_damage = 1,
@@ -39,12 +40,14 @@ stepheight = 3,
 	fear_height = 10,
 	animation = {
 		speed_normal = 100,
-		stand_start = 100,
-		stand_end = 200,
-		walk_start = 0,
-		walk_end = 100,
-		fly_start = 250, -- swim animation
-		fly_end = 350,
+		stand_start = 0,
+		stand_end = 100,
+		stand1_start = 100,
+		stand1_end = 200,
+		walk_start = 200,
+		walk_end = 300,
+		fly_start = 350, -- swim animation
+		fly_end = 450,
 		punch_start = 100,
 		punch_end = 200,
 		-- 50-70 is slide/water idle
@@ -53,7 +56,7 @@ stepheight = 3,
 fly_in = {"air"},
 	floats = 0,
 	follow = {
-		"fishing:bait:worm", "farming:seed_wheat", "farming:seed_rice", "farming:seed_oat", "ethereal:pine_nuts", "ethereal:worm"
+		"farming:melon_slice", "farming:pineapple", "ethereal:banana", "ethereal:orange", "farming:grapes", "default:apple", "farming:potato", "ethereal:banana_bread", "farming:carrot", "farming:seed_rice", "farming:corn", "farming:wheat", "farming:beans", "farming:barley", "farming:oat", "farming:rye", "mobs:cheese", "farming:bread", "ethereal:banana_bread", "ethereal:banana", "farming:cabbage", "farming:lettuce", "farming:melon_slice", "naturalbiomes:coconut", "naturalbiomes:banana"
 	},
 	
 view_range = 4,
@@ -69,16 +72,16 @@ view_range = 4,
 
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
-	name = "animalworld:blackbird",
-	nodes = {"default:dirt_with_grass"}, 
+	name = "animalworld:cockatoo",
+	nodes = {"naturalbiomes:outback_litter"}, 
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
 	active_object_count = 2,
-	min_height = 0,
-	max_height = 100,
+	min_height = 5,
+	max_height = 31000,
 	day_toggle = true,
 })
 end
 
-mobs:register_egg("animalworld:blackbird", ("Blackbird"), "ablackbird.png")
+mobs:register_egg("animalworld:cockatoo", ("Cockatoo"), "acockatoo.png")

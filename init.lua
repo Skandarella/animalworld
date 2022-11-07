@@ -81,6 +81,24 @@ dofile(path .. "leopardseal.lua") --
 dofile(path .. "stellerseagle.lua") --
 dofile(path .. "otter.lua") --
 dofile(path .. "monkey.lua") --
+dofile(path .. "zebra.lua") --
+dofile(path .. "indianrhino.lua") --
+dofile(path .. "giraffe.lua") --
+dofile(path .. "koala.lua") --
+dofile(path .. "clamydosaurus.lua") --
+dofile(path .. "echidna.lua") --
+dofile(path .. "mosquito.lua") --
+dofile(path .. "beaver.lua") --
+dofile(path .. "goose.lua") --
+dofile(path .. "ibex.lua") --
+dofile(path .. "marmot.lua") --
+dofile(path .. "wolf.lua") --
+dofile(path .. "panda.lua") --
+dofile(path .. "hermitcrab.lua") --
+dofile(path .. "cockatoo.lua") --
+dofile(path .. "parrot.lua") --
+dofile(path .. "parrotflying.lua") --
+dofile(path .. "stingray.lua") --
 dofile(path .. "hunger.lua") --
 
 

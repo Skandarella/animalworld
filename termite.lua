@@ -103,7 +103,7 @@ minetest.register_node("animalworld:termitemould", {
     inventory_image = "atermitemould.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {cracky = 3, stone = 2},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",

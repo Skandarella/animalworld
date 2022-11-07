@@ -30,7 +30,7 @@ mobs:register_mob("animalworld:fox", {
 	jump = true,
 	jump_height = 6,
         runaway = true,
-        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion", "animalworld:polarbear", "animalworld:leopardseal", "animalworld:stellerseagle", "player"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion", "animalworld:polarbear", "animalworld:leopardseal", "animalworld:stellerseagle", "player", "animalworld:wolf", "animalworld:panda", "animalworld:stingray"},
 	pushable = true,
 	follow = {"default:apple", "farming:potato", "ethereal:banana_bread", "farming:melon_slice", "farming:carrot", "farming:seed_rice", "farming:corn", "ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
 		"mobs:meat_raw", "animalworld:rabbit_raw", "xocean:fish_edible", "fishing:fish_raw", "water_life:meat_raw", "fishing:carp_raw", "animalworld:chicken_raw"},
@@ -72,7 +72,7 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:fox",
         nodes = {"default:permafrost", "default:permafrost_with_moss", "default:permafrost_with_stones"},
-	neighbors = {"animalworld:animalworld_tundrashrub1"},
+	neighbors = {"animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2"},
 	min_light = 0,
 	interval = 60,
 	chance = 2, -- 15000

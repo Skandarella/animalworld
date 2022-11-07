@@ -1,5 +1,5 @@
-mobs:register_mob("animalworld:reindeer", {
-	stepheight = 1,
+mobs:register_mob("animalworld:zebra", {
+	stepheight = 2,
 	type = "animal",
 	passive = true,
 	attack_type = "dogfight",
@@ -8,44 +8,49 @@ mobs:register_mob("animalworld:reindeer", {
 	attack_npcs = false,
 	reach = 2,
 	damage = 2,
-	hp_min = 25,
-	hp_max = 50,
+	hp_min = 30,
+	hp_max = 60,
 	armor = 100,
-	collisionbox = {-0.5, -0.01, -0.5, 0.3, 0.95, 0.3},
+	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.95, 0.6},
 	visual = "mesh",
-	mesh = "Reindeer.b3d",
+	mesh = "Zebra2.b3d",
 	textures = {
-		{"texturereindeer.png"},
+		{"texturezebra.png"},
 	},
 	makes_footstep_sound = true,
 	sounds = {
+		random = "animalworld_zebra2",
+		damage = "animalworld_zebra",
 
 	},
 	walk_velocity = 1,
-	run_velocity = 3,
+	run_velocity = 4,
 	runaway = true,
         runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion", "animalworld:polarbear", "animalworld:leopardseal", "animalworld:stellerseagle", "player", "animalworld:wolf", "animalworld:panda", "animalworld:stingray"},
 	jump = false,
 	jump_height = 3,
 	pushable = true,
-	follow = {"default:apple", "default:permafrost_with_moss", "ethereal:snowygrass", "ethereal:crystalgrass"},
+	follow = {"default:apple", "default:dry_dirt_with_dry_grass", "farming:seed_wheat", "default:junglegrass", "farming:seed_oat", "naturalbiomes:savannagrass", "naturalbiomes:savannagrassmall", "naturalbiomes:savanna_flowergrass", "default:grass_3", "default:dry_grass_3", "ethereal:dry_shrub"},
 	view_range = 10,
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
-		{name = "animalworld:reindeercorpse", chance = 7, min = 1, max = 1},
+	        {name = "mobs:leather", chance = 1, min = 0, max = 2},
 	},
 	water_damage = 0,
 	lava_damage = 5,
 	light_damage = 0,
-	fear_height = 2,
+	fear_height = 3,
 	animation = {
-		speed_normal = 70,
+		speed_normal = 30,
 		stand_start = 0,
-		stand_end = 100,
+		stand_end = 50,
+		stand1_start = 50,
+		stand1_end = 100,
+walk_speed = 70,
 		walk_start = 100,
 		walk_end = 200,
-		punch_start = 200,
-		punch_end = 300,
+		run_start = 100,
+		run_end = 200,
 
 		die_start = 1, -- we dont have a specific death animation so we will
 		die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
@@ -61,33 +66,32 @@ mobs:register_mob("animalworld:reindeer", {
 	end,
 })
 
-local spawn_on = {"default:permafrost_with_moss", "default:dirt_with_snow"}
+local spawn_on = {"naturalbiomes:savannalitter"}
 
 if minetest.get_mapgen_setting("mg_name") ~= "v6" then
-	spawn_on = {"default:dirt_with_snow", "default:permafrost_with_moss"}
+	spawn_on = {"default:dry_dirt_with_dry_grass"}
 end
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:dirt_with_snow", "default:permafrost_with_moss", "ethereal:crystal_dirt"}
+	spawn_on = {"default:dry_dirt_with_dry_grass", "ethereal:prairie_dirt"}
 end
 
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
-	name = "animalworld:reindeer",
-	nodes = {"default:dirt_with_snow", "default:permafrost_with_moss", "ethereal:crystal_dirt"},
-	neighbors = {"default:pine_tree"},
+	name = "animalworld:zebra",
+	nodes = {"naturalbiomes:savannalitter"},
 	min_light = 0,
-	interval = 30,
-	chance = 2, -- 15000
-	active_object_count = 4,
-	min_height = 16,
-	max_height = 80,
+	interval = 60,
+	chance = 8000, -- 15000
+	active_object_count = 3,
+	min_height = 6,
+	max_height = 50,
 	day_toggle = true,
 })
 end
 
-mobs:register_egg("animalworld:reindeer", ("Reindeer"), "areindeer.png")
+mobs:register_egg("animalworld:zebra", ("Zebra"), "azebra.png")
 
 
-mobs:alias_mob("animalworld:moose", "animalworld:reindeer") -- compatibility
+mobs:alias_mob("animalworld:zebra", "animalworld:zebra") -- compatibility
 

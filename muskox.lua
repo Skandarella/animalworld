@@ -72,7 +72,7 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:muskox",
         nodes = {"default:permafrost", "default:permafrost_with_moss", "default:permafrost_with_stones"},
-	neighbors = {"animalworld:animalworld_tundrashrub1"},
+	neighbors = {"animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2"},
 	min_light = 0,
 	interval = 60,
 	chance = 2, -- 15000

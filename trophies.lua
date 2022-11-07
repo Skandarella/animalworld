@@ -3059,6 +3059,16 @@ minetest.register_craft({
 	recipe = "animalworld:snowleopardtrophy",
 	burntime = 2,
 })
+
+minetest.register_craft({
+	output = "animalworld:snowleopardtrophy",
+	type = "shapeless",
+	recipe = 
+		{"animalworld:snowleopardcorpse", "default:axe_stone", "group:wood"}
+
+	
+})
+
 minetest.register_node("animalworld:snowleopardpillow", {
     description = "Snow Leopard Pillow",
     visual_scale = 1.0,
@@ -3186,6 +3196,8 @@ minetest.register_craft({
 	
 })
 
+
+
 minetest.register_craftitem("animalworld:snowleopardcorpse", {
 	description = ("Snowleopard Corpse"),
 	inventory_image = "animalworld_snowleopardcorpse.png",
@@ -3225,6 +3237,16 @@ minetest.register_craft({
 	recipe = "animalworld:tigertrophy",
 	burntime = 2,
 })
+
+minetest.register_craft({
+	output = "animalworld:tigertrophy",
+	type = "shapeless",
+	recipe = 
+		{"animalworld:tigercorpse", "default:axe_stone", "group:wood"}
+
+	
+})
+
 minetest.register_node("animalworld:tigerpillow", {
     description = "Tiger Pillow",
     visual_scale = 1.0,
@@ -3506,6 +3528,25 @@ minetest.register_craft({
 	burntime = 2,
 })
 
+minetest.register_craft({
+	output = "animalworld:tigerpelt",
+	type = "shapeless",
+	recipe = 
+		{"animalworld:tigercorpse", "default:sword_stone"}
+
+	
+})
+
+minetest.register_craft({
+	output = "animalworld:tigerpelthanging",
+	type = "shapeless",
+	recipe = 
+		{"animalworld:tigercorpse", "default:sword_stone", "default:sign_wall_wood"}
+
+	
+})
+
+
 
  -- Wolverine
 
@@ -3548,9 +3589,18 @@ minetest.register_craftitem("animalworld:wolverinecorpse", {
 	inventory_image = "animalworld_wolverinecorpse.png",
 })
 
+minetest.register_craft({
+	output = "animalworld:wolverinetrophy",
+	type = "shapeless",
+	recipe = 
+		{"animalworld:wolverinecorpse", "default:axe_stone", "group:wood"}
+
+	
+})
+
  -- polar bear
 
-minetest.register_node("animalworld:polarbearbeartrophy", {
+minetest.register_node("animalworld:polarbeartrophy", {
     description = "Polar Bear Trophy",
     visual_scale = 1.0,
     mesh = "Polarbeartrophy.b3d",
@@ -3588,8 +3638,6 @@ minetest.register_craft({
 	type = "shapeless",
 	recipe = 
 		{"animalworld:polarbearcorpse", "default:axe_stone", "group:wood"}
-
-	
 })
 
 

@@ -52,7 +52,7 @@ stepheight = 4,
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:spidermale",
-	nodes = {"default:dry_dirt_with_dry_grass"}, {"default:dirt_with_rainforest_litter"},
+	nodes = {"default:dry_dirt_with_dry_grass"}, {"default:dirt_with_rainforest_litter"}; {"naturalbiomes:savannalitter"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000

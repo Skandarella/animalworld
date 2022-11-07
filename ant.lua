@@ -116,7 +116,7 @@ minetest.register_node("animalworld:anthill", {
     inventory_image = "aanthil.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {crumbly = 3,  sand = 2},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
