@@ -99,6 +99,9 @@ dofile(path .. "cockatoo.lua") --
 dofile(path .. "parrot.lua") --
 dofile(path .. "parrotflying.lua") --
 dofile(path .. "stingray.lua") --
+dofile(path .. "blackgrouse.lua") --
+dofile(path .. "viper.lua") --
+dofile(path .. "wildboar.lua") --
 dofile(path .. "hunger.lua") --
 
 

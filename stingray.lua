@@ -79,4 +79,4 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("animalworld:stingray", ("Sting Ray"), "astingray.png")
+mobs:register_egg("animalworld:stingray", ("Stingray"), "astingray.png")

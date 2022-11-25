@@ -44,8 +44,12 @@ mobs:register_mob("animalworld:moose", {
 		speed_normal = 50,
 		stand_start = 0,
 		stand_end = 100,
+                stand1_start = 300,
+		stand1_end = 400,
 		walk_start = 100,
 		walk_end = 200,
+		jump_start = 400,
+		jump_end = 500,
 		punch_start = 200,
 		punch_end = 300,
 

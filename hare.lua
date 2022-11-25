@@ -110,7 +110,7 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:hare",
-	nodes = {"default:dirt_with_grass", "naturalbiomes:mediterran_litter"},
+	nodes = {"default:dirt_with_grass", "naturalbiomes:mediterran_litter", "naturalbiomes:heath_litter"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000

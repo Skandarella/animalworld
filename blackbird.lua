@@ -70,7 +70,7 @@ view_range = 4,
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:blackbird",
-	nodes = {"default:dirt_with_grass"}, 
+	nodes = {"default:dirt_with_grass", "naturalbiomes:heath_litter"}, 
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000

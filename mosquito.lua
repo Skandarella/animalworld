@@ -56,7 +56,7 @@ mobs:register_mob("animalworld:mosquito", {
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:mosquito",
-	nodes = {"naturalbiomes:alderswamp_reed", "naturalbiomes:alderswamp_reed2", "naturalbiomes:alderswamp_reed3"},
+	nodes = {"naturalbiomes:alderswamp_reed", "naturalbiomes:alderswamp_reed2", "naturalbiomes:alderswamp_reed3", "naturalbiomes:swampgrass"},
 	neighbors = {"air"},
 	min_light = 0,
 	interval = 30,

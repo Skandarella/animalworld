@@ -77,7 +77,7 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:wolf",
-	nodes = {"default:dirt_with_coniferous_litter", "naturalbiomes:alpine_litter"},
+	nodes = {"default:dirt_with_coniferous_litter", "naturalbiomes:alpine_litter", "naturalbiomes:heath_litter"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
