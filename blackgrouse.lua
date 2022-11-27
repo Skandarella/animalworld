@@ -1,4 +1,4 @@
-mobs:register_mob("animalworld:blackgoruse", {
+mobs:register_mob("animalworld:blackgrouse", {
 stepheight = 2,
 	type = "animal",
 	passive = true,

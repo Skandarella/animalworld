@@ -40,7 +40,7 @@ mobs:register_mob("animalworld:monkey", {
 	jump = true,
 	jump_height = 8,
 	pushable = true,
-	follow = {"default:apple", "farming:potato", "ethereal:banana_bread", "farming:carrot", "farming:seed_rice", "farming:corn", "farming:wheat", "farming:beans", "farming:barley", "farming:oat", "farming:rye", "mobs:cheese", "farming:bread", "ethereal:banana_bread", "ethereal:banana", "farming:cabbage", "farming:lettuce", "farming:melon_slice", "animalworld:termitequeen", "animalworld:locust_roasted"},
+	follow = {"default:apple", "farming:potato", "ethereal:banana_bread", "farming:carrot", "farming:seed_rice", "farming:corn", "farming:wheat", "farming:beans", "farming:barley", "farming:oat", "farming:rye", "mobs:cheese", "farming:bread", "ethereal:banana_bread", "ethereal:banana", "farming:cabbage", "farming:lettuce", "farming:melon_slice", "animalworld:termitequeen", "animalworld:locust_roasted", "livingdesert:date_palm_fruits", "livingdesert:figcactus_fruit"},
 	view_range = 15,
 	replace_rate = 10,
 	replace_what = {"farming:soil", "farming:soil_wet"},

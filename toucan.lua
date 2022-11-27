@@ -53,7 +53,7 @@ stepheight = 6,
 fly_in = {"air"},
 	floats = 0,
 	follow = {
-		"fishing:bait:worm", "ethereal:worm", "farming:melon_slice", "farming:pineapple", "ethereal:banana", "ethereal:orange", "farming:grapes"
+		"fishing:bait:worm", "ethereal:worm", "farming:melon_slice", "farming:pineapple", "ethereal:banana", "ethereal:orange", "farming:grapes", "livingdesert:date_palm_fruits", "livingdesert:figcactus_fruit"
 	},
 	
 view_range = 4,

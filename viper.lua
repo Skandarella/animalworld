@@ -63,13 +63,14 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:viper",
-	nodes = {"naturalbiomes:heath_litter3"}, 
+	nodes = {"naturalbiomes:heath_litter"}, 
 	min_light = 0,
 	interval = 60,
-	active_object_count = 2,
 	chance = 8000, -- 15000
+	active_object_count = 2,
 	min_height = 0,
 	max_height = 50,
+	day_toggle = true,
 })
 end
 
