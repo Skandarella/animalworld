@@ -20,7 +20,7 @@ stepheight = 1,
 		{"texturenandu.png"},
 	},
 	child_texture = {
-		{"texturenandu.png"},
+		{"texturenandubaby.png"},
 	},
 	makes_footstep_sound = true,
 	walk_velocity = 0.7,

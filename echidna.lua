@@ -17,6 +17,9 @@ mobs:register_mob("animalworld:echidna", {
 	textures = {
 		{"textureechidna.png"},
 	},
+child_texture = {
+		{"textureechidnababy.png"},
+	},
 	makes_footstep_sound = true,
 	sounds = {
 

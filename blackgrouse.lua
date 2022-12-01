@@ -58,7 +58,7 @@ stepheight = 2,
 
 	},
 	follow = {
-		"naturalbiomes:bamboo_sapling", "livingfloatlands:coldsteppe_pine3_sapling", "livingfloatlands:coldsteppe_pine2_sapling", "livingfloatlands:coldsteppe_pine_sapling", "naturalbiomes:alppine1_sapling", "naturalbiomes:alpine_cowberrybush_sapling", "naturalbiomes:alppine2_sapling", "livingfloatlands:giantforest_paleoredwood_sapling", "naturalbiomes:juniper_sapling", "default:pine_sapling"
+		"naturalbiomes:bamboo_sapling", "livingfloatlands:coldsteppe_pine3_sapling", "livingfloatlands:coldsteppe_pine2_sapling", "livingfloatlands:coldsteppe_pine_sapling", "naturalbiomes:alppine1_sapling", "naturalbiomes:alpine_cowberrybush_sapling", "naturalbiomes:alppine2_sapling", "livingfloatlands:giantforest_paleoredwood_sapling", "naturalbiomes:juniper_sapling", "default:pine_sapling", "livingdesert:pine_sapling3", "livingdesert:pine_sapling2", "livingdesert:pine_sapling"
 	},
 	view_range = 10,
 

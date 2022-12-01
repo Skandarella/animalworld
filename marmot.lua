@@ -29,7 +29,7 @@ mobs:register_mob("animalworld:marmot", {
 	jump = false,
 	jump_height = 6,
 	pushable = true,
-	follow = {"default:grass_3", "default:dry_grass_3", "ethereal:dry_shrub", "farming:lettuce", "farming:seed_wheat", "default:junglegrass", "naturalbiomes:alpine_grass1", "naturalbiomes:alpine_grass2", "naturalbiomes:alpine_grass3", "naturalbiomes:alpine_dandelion"},
+	follow = {"default:grass_3", "default:dry_grass_3", "ethereal:dry_shrub", "farming:lettuce", "farming:seed_wheat", "default:junglegrass", "naturalbiomes:alpine_grass1", "naturalbiomes:alpine_grass2", "naturalbiomes:alpine_grass3", "naturalbiomes:alpine_dandelion", "livingdesert:coldsteppe_grass1", "livingdesert:coldsteppe_grass2"},
 	view_range = 10,
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
@@ -79,7 +79,7 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:marmot",
-	nodes = {"naturalbiomes:alpine_litter"},
+	nodes = {"naturalbiomes:alpine_litter", "livingdesert:coldsteppe_ground2"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000

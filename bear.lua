@@ -67,7 +67,7 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:bear",
-	nodes = {"default:dirt_with_coniferous_litter"}, {"default:permafrost_with_moss"},
+	nodes = {"default:dirt_with_coniferous_litter"}, {"default:permafrost_with_moss"}, {"livingdesert:coldsteppe_ground3"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000

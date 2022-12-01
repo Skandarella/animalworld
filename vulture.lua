@@ -71,7 +71,7 @@ view_range = 10,
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:vulture",
-	nodes = {"default:dirt_with_grass"}, {"default:dry_dirt_with_dry_grass"}, {"default:desert_sand"}, {"default:stone"},
+	nodes = {"default:dirt_with_grass"}, {"default:dry_dirt_with_dry_grass"}, {"default:desert_sand"}, {"default:stone"}, {"livingdesert:coldsteppe_ground4"}, {"livingdesert:coldsteppe_ground3"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000

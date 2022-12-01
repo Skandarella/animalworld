@@ -28,7 +28,7 @@ mobs:register_mob("animalworld:reindeer", {
 	jump = false,
 	jump_height = 3,
 	pushable = true,
-	follow = {"default:apple", "default:permafrost_with_moss", "ethereal:snowygrass", "ethereal:crystalgrass"},
+	follow = {"default:apple", "default:permafrost_with_moss", "ethereal:snowygrass", "ethereal:crystalgrass", "livingdesert:coldsteppe_grass1"},
 	view_range = 10,
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
@@ -74,7 +74,7 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:reindeer",
-	nodes = {"default:dirt_with_snow", "default:permafrost_with_moss", "ethereal:crystal_dirt"},
+	nodes = {"default:dirt_with_snow", "default:permafrost_with_moss", "ethereal:crystal_dirt", "livingdesert:coldsteppe_ground3", "livingdesert:coldsteppe_ground4"},
 	neighbors = {"default:pine_tree"},
 	min_light = 0,
 	interval = 30,

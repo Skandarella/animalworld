@@ -19,6 +19,9 @@ mobs:register_mob("animalworld:wildboar", {
 		{"texturewildboar2.png"},
 		{"texturewildboar3.png"},
 	},
+	child_texture = {
+		{"texturewildboarbaby.png"},
+	},
 	makes_footstep_sound = true,
 	sounds = {
 		random = "animalworld_boar",

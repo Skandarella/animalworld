@@ -61,8 +61,7 @@ mobs:register_mob("animalworld:yak", {
 	},
 	follow = {
 		"farming:wheat", "default:grass_1", "farming:barley",
-		"farming:oat", "farming:rye", "farming:carrot", "farming:beans", "farming:lettuce"
-	},
+		"farming:oat", "farming:rye", "farming:carrot", "farming:beans", "farming:lettuce", "livingdesert:coldsteppe_grass1", "livingdesert:coldsteppe_grass2", "livingdesert:coldsteppe_grass3"},
 	view_range = 8,
 	replace_rate = 10,
 	replace_what = {
@@ -139,7 +138,7 @@ mobs:register_mob("animalworld:yak", {
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:yak",
-	nodes = {"default:dirt_with_grass", "ethereal:green_dirt", "default:dirt_with_snow", "default:permafrost"},
+	nodes = {"default:dirt_with_grass", "ethereal:green_dirt", "default:dirt_with_snow", "default:permafrost", "livingdesert:coldsteppe_ground2"},
 	min_light = 14,
 	interval = 60,
 	chance = 8000, -- 15000
