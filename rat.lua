@@ -52,7 +52,7 @@ mobs:register_mob("animalworld:rat", {
 		die_loop = false,
 		die_rotate = true,
 	},
-	follow = {"farming:wheat", "farming:beans", "farming:barley", "farming:oat", "farming:rye", "mobs:cheese", "farming:bread", "ethereal:banana_bread"},
+	follow = {"farming:wheat", "farming:beans", "farming:barley", "farming:oat", "farming:rye", "mobs:cheese", "farming:bread", "ethereal:banana_bread", "animalworld:cockroach"},
 	view_range = 10,
 
 })

@@ -1,57 +1,60 @@
-mobs:register_mob("animalworld:lobster", {
-	stepheight = 1,
+mobs:register_mob("animalworld:tapir", {
+	stepheight = 2,
 	type = "animal",
-	passive = false,
+	passive = true,
 	attack_type = "dogfight",
 	group_attack = true,
 	owner_loyal = true,
 	attack_npcs = false,
 	reach = 2,
-	damage = 5,
-	hp_min = 25,
-	hp_max = 70,
+	damage = 2,
+	hp_min = 20,
+	hp_max = 50,
 	armor = 100,
-	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.5, 0.6},
+	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.95, 0.6},
 	visual = "mesh",
-	mesh = "Lobster.b3d",
+	mesh = "Tapir.b3d",
 	textures = {
-		{"texturelobster.png"},
+		{"texturetapir.png"},
+	},
+child_texture = {
+		{"texturetapirbaby.png"},
 	},
 	makes_footstep_sound = true,
 	sounds = {
+		random = "animalworld_tapir",
+		damage = "animalworld_tapir",
+
 	},
-	walk_velocity = 0.5,
-	run_velocity = 1,
+	walk_velocity = 1,
+	run_velocity = 3,
 	runaway = true,
         runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion", "animalworld:polarbear", "animalworld:leopardseal", "animalworld:stellerseagle", "player", "animalworld:wolf", "animalworld:panda", "animalworld:stingray"},
-	jump = false,
+	jump = true,
 	jump_height = 3,
 	pushable = true,
-	follow = {"animalworld:rawfish", "mobs_fish:tropical", "mobs:clownfish_raw", 
-"mobs:bluefish_raw", "fishing:bait_worm", "fishing:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "water_life:meat_raw", "fishing:shark_raw", "fishing:pike_raw"},
+	follow = {"default:apple", "default:dry_dirt_with_dry_grass", "farming:seed_wheat", "default:junglegrass", "farming:seed_oat", "naturalbiomes:savannagrass", "naturalbiomes:savannagrassmall", "naturalbiomes:savanna_flowergrass", "default:grass_3", "default:dry_grass_3", "ethereal:dry_shrub"},
 	view_range = 10,
 	drops = {
-		{name = "animalworld:raw_athropod", chance = 1, min = 0, max = 2},
-	},
-	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing"},
-	floats = 0,
-	follow = {
-		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
-		"mobs:meat_raw", "animalworld:rabbit_raw", "xocean:fish_edible", "animalworld:cockroach"
+		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
+	        {name = "mobs:leather", chance = 1, min = 0, max = 2},
 	},
 	water_damage = 0,
 	lava_damage = 5,
-        air_damage = 1,
 	light_damage = 0,
-	fear_height = 2,
+	fear_height = 3,
 	animation = {
-		speed_normal = 50,
+		speed_normal = 30,
 		stand_start = 0,
 		stand_end = 100,
-		walk_start = 100,
-		walk_end = 200,
-		punch_start = 200,
-		punch_end = 300,
+		stand1_start = 100,
+		stand1_end = 200,
+walk_speed = 70,
+		walk_start = 200,
+		walk_end = 300,
+jump_speed = 70,
+		jump_start = 300,
+		jump_end = 400,
 
 		die_start = 1, -- we dont have a specific death animation so we will
 		die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
@@ -67,32 +70,31 @@ mobs:register_mob("animalworld:lobster", {
 	end,
 })
 
-local spawn_on = {"default:water_source"}
 
 if minetest.get_mapgen_setting("mg_name") ~= "v6" then
-	spawn_on = {"default:water_source"}
+	spawn_on = {"default:dry_dirt_with_dry_grass"}
 end
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:water_source"}
+	spawn_on = {"default:dry_dirt_with_dry_grass", "ethereal:prairie_dirt"}
 end
 
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
-	name = "animalworld:lobster",
-	nodes = {"default:water_source"},
+	name = "animalworld:tapir",
+	nodes = {"livingjungle:jungleground", "livingjungle:leafyjungleground"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
 	active_object_count = 2,
-	min_height = 0,
-	max_height = 10,
-	day_toggle = false,
+	min_height = 1,
+	max_height = 31000,
+	day_toggle = true,
 })
 end
 
-mobs:register_egg("animalworld:lobster", ("Lobster"), "alobster.png")
+mobs:register_egg("animalworld:tapir", ("Tapir"), "atapir.png")
 
 
-mobs:alias_mob("animalworld:lobster", "animalworld:lobster") -- compatibility
+mobs:alias_mob("animalworld:tapir", "animalworld:tapir") -- compatibility
 

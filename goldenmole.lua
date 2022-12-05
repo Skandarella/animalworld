@@ -49,7 +49,7 @@ mobs:register_mob("animalworld:goldenmole", {
 		die_loop = false,
 		die_rotate = true,
 	},
-	follow = {"fishing:bait:worm", "bees:frame_full", "ethereal:worm", "animalworld:ant", "animalworld:termite"},
+	follow = {"fishing:bait:worm", "bees:frame_full", "ethereal:worm", "animalworld:ant", "animalworld:termite", "animalworld:cockroach"},
 	view_range = 10,
 
 })

@@ -82,7 +82,7 @@ mobs:register_mob("animalworld:monkey", {
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:monkey",
-	nodes = {"default:dry_dirt_with_dry_grass", "default:dirt_with_rainforest_litter", "default:jungleleaves", "naturalbiomes:bambooforest_litter"},
+	nodes = {"default:dry_dirt_with_dry_grass", "default:dirt_with_rainforest_litter", "default:jungleleaves", "naturalbiomes:bambooforest_litter", "livingjungle:jungleground", "livingjungle:leafyjungleground"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000

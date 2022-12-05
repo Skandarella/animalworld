@@ -77,4 +77,7 @@ hunger_ng.add_hunger_data('animalworld:egg', {
 	hunger_ng.add_hunger_data('animalworld:whalemeat_cooked', {
 		satiates = 15.0,
 	})
+        hunger_ng.add_hunger_data('animalworld:roastroach', {
+		satiates = 1.0,
+	})
 end

@@ -69,7 +69,7 @@ if minetest.get_mapgen_setting("mg_name") ~= "v6" then
 end
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"ethereal:grass_grove", "ethereal:green_dirt", "default:dirt_with_rainforest_litter"}
+	spawn_on = {"ethereal:grass_grove", "ethereal:green_dirt", "default:dirt_with_rainforest_litter", "livingjungle:jungleground", "livingjungle:leafyjungleground"}
 end
 
 if not mobs.custom_spawn_animalworld then

@@ -71,7 +71,7 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:crocodile",
-	nodes = {"default:dry_dirt_with_dry_grass", "default:dirt_with_rainforest_litter", "naturalbiomes:outback_litter"},
+	nodes = {"default:dry_dirt_with_dry_grass", "default:dirt_with_rainforest_litter", "naturalbiomes:outback_litter", "livingjungle:jungleground", "livingjungle:leafyjungleground"},
 	min_light = 14,
 	interval = 60,
 	chance = 8000, -- 15000

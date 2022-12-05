@@ -102,6 +102,11 @@ dofile(path .. "stingray.lua") --
 dofile(path .. "blackgrouse.lua") --
 dofile(path .. "viper.lua") --
 dofile(path .. "wildboar.lua") --
+dofile(path .. "tapir.lua") --
+dofile(path .. "iguana.lua") --
+dofile(path .. "oryx.lua") --
+dofile(path .. "roadrunner.lua") --
+dofile(path .. "cockroach.lua") --
 dofile(path .. "hunger.lua") --
 
 

@@ -1,4 +1,4 @@
-mobs:register_mob("animalworld:blackbird", {
+mobs:register_mob("animalworld:roadrunner", {
 stepheight = 3,
 	type = "animal",
 	passive = true,
@@ -11,26 +11,26 @@ stepheight = 3,
 	armor = 100,
 	collisionbox = {-0.3, -0.01, -0.3, 0.3, 0.5, 0.3},
 	visual = "mesh",
-	mesh = "Blackbird.b3d",
+	mesh = "Roadrunner.b3d",
 	visual_size = {x = 1.0, y = 1.0},
 	textures = {
-		{"textureblackbird.png"},
+		{"textureroadrunner.png"},
 	},
 	sounds = {
-		random = "animalworld_blackbird",
+		random = "animalworld_roadrunner",
 	},
 	makes_footstep_sound = true,
-	walk_velocity = 2,
-	run_velocity = 4,
+	walk_velocity = 3,
+	run_velocity = 5,
+	fall_speed = -1,
+	fall_damage = 0,
 	runaway = true,
         runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion", "animalworld:polarbear", "animalworld:leopardseal", "animalworld:stellerseagle", "player", "animalworld:wolf", "animalworld:panda", "animalworld:stingray"},
 	jump = true,
-        jump_height = 6,
-	stepheight = 3,
+        jump_height = 3,
 	drops = {
 		{name = "animalworld:chicken_raw", chance = 1, min = 1, max = 1},
 	        {name = "animalworld:chicken_feather", chance = 1, min = 1, max = 1},
-		{name = "animalworld:blackbirdcorpse", chance = 7, min = 1, max = 1},
 	
 	},
 	water_damage = 1,
@@ -39,24 +39,26 @@ stepheight = 3,
 	fear_height = 4,
 	animation = {
 		speed_normal = 100,
-		stand_start = 100,
-		stand_end = 200,
-		walk_start = 0,
-		walk_end = 100,
-		fly_start = 250, -- swim animation
-		fly_end = 350,
-		punch_start = 100,
-		punch_end = 200,
+		stand_start = 0,
+		stand_end = 100,
+		stand1_start = 100,
+		stand1_end = 200,
+		walk_start = 220,
+		walk_end = 320,
+		fly_start = 340, -- swim animation
+		fly_end = 420,
+		jump_start = 450,
+		jump_end = 550,
 		-- 50-70 is slide/water idle
 	},
 
 fly_in = {"air"},
 	floats = 0,
 	follow = {
-		"fishing:bait:worm", "farming:seed_wheat", "farming:seed_rice", "farming:seed_oat", "ethereal:pine_nuts", "ethereal:worm"
+		"fishing:bait:worm", "farming:seed_wheat", "farming:seed_rice", "farming:seed_oat", "ethereal:pine_nuts", "ethereal:worm", "fishing:bait:worm", "bees:frame_full", "animalworld:ant", "animalworld:termite", "livingdesert:figcactus_fruit", "animalworld:cockroach"
 	},
 	
-view_range = 4,
+view_range = 7,
 
 	on_rightclick = function(self, clicker)
 
@@ -69,16 +71,17 @@ view_range = 4,
 
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
-	name = "animalworld:blackbird",
-	nodes = {"default:dirt_with_grass", "naturalbiomes:heath_litter"}, 
+	name = "animalworld:roadrunner",
+	nodes = {"default:sand"}, 
+	neighbors = {"livingdesert:yucca", "default:dry_shrub", "livingdesert:euphoriba_trunk"},
 	min_light = 0,
-	interval = 60,
-	chance = 8000, -- 15000
-	active_object_count = 2,
+	interval = 30,
+	chance = 2, -- 15000
+	active_object_count = 1,
 	min_height = 0,
 	max_height = 100,
 	day_toggle = true,
 })
 end
 
-mobs:register_egg("animalworld:blackbird", ("Blackbird"), "ablackbird.png")
+mobs:register_egg("animalworld:roadrunner", ("Roadrunner"), "aroadrunner.png")

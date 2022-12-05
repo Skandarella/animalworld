@@ -75,7 +75,7 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:toucan",
-	nodes = {"default:dirt_with_rainforest_litter"},
+	nodes = {"default:dirt_with_rainforest_litter", "livingjungle:jungleground", "livingjungle:leafyjungleground"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000

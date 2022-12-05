@@ -51,7 +51,7 @@ stepheight = 1,
 	floats = 0,
 	follow = {
 		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
-		"mobs:meat_raw", "animalworld:rabbit_raw", "xocean:fish_edible", "animalworld:chicken_raw", "water_life:meat_raw"
+		"mobs:meat_raw", "animalworld:rabbit_raw", "xocean:fish_edible", "animalworld:chicken_raw", "water_life:meat_raw", "animalworld:cockroach"
 	},
 	view_range = 8,
 

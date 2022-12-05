@@ -51,7 +51,7 @@ stepheight = 0.0,
 	floats = 0,
 	follow = {
 		"ethereal:worm", "seaweed", "fishing:bait_worm",
-		"default:grass", "farming:cucumber", "farming:cabbage", "animalworld:ant", "animalworld:termite", "animalworld:fishfood"
+		"default:grass", "farming:cucumber", "farming:cabbage", "animalworld:ant", "animalworld:termite", "animalworld:fishfood", "animalworld:cockroach"
 	},
 	view_range = 10,
 
