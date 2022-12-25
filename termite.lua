@@ -119,7 +119,7 @@ minetest.register_node("animalworld:termitemould", {
             {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}
         }
     },
-	drop = "animalworld:termiteconcrete", 
+	drop = "animalworld:termiteconcrete 16", 
 	sounds = default.node_sound_dirt_defaults(),
 })
 
@@ -148,10 +148,10 @@ minetest.register_node("animalworld:termiteconcreteblue", {
 
 
 minetest.register_craft({
-	output = "animalworld:termiteconcreteblue 6",
+	output = "animalworld:termiteconcreteblue 16",
 	type = "shapeless",
 	recipe = 
-		{"animalworld:termiteconcrete", "flowers:geranium"}
+		{"animalworld:termiteconcrete", "dye:blue", "default:sand", "bucket:bucket_water"}
 
 	
 })
@@ -166,10 +166,10 @@ minetest.register_node("animalworld:termiteconcretegreen", {
 
 
 minetest.register_craft({
-	output = "animalworld:termiteconcretegreen 6",
+	output = "animalworld:termiteconcretegreen 16",
 	type = "shapeless",
 	recipe = 
-		{"animalworld:termiteconcrete", "flowers:chrysanthemum_green"}
+		{"animalworld:termiteconcrete", "dye:green", "default:sand", "bucket:bucket_water"}
 
 	
 })
@@ -184,10 +184,10 @@ minetest.register_node("animalworld:termiteconcreteyellow", {
 
 
 minetest.register_craft({
-	output = "animalworld:termiteconcreteyellow 6",
+	output = "animalworld:termiteconcreteyellow 16",
 	type = "shapeless",
 	recipe = 
-		{"animalworld:termiteconcrete", "flowers:dandelion_yellow"}
+		{"animalworld:termiteconcrete", "dye:yellow", "default:sand", "bucket:bucket_water"}
 
 	
 })
@@ -202,10 +202,10 @@ minetest.register_node("animalworld:termiteconcretered", {
 
 
 minetest.register_craft({
-	output = "animalworld:termiteconcretered 6",
+	output = "animalworld:termiteconcretered 16",
 	type = "shapeless",
 	recipe = 
-		{"animalworld:termiteconcrete", "flowers:rose"}
+		{"animalworld:termiteconcrete", "dye:red", "default:sand", "bucket:bucket_water"}
 
 	
 })
@@ -220,10 +220,10 @@ minetest.register_node("animalworld:termiteconcreteorange", {
 
 
 minetest.register_craft({
-	output = "animalworld:termiteconcreteorange 6",
+	output = "animalworld:termiteconcreteorange 16",
 	type = "shapeless",
 	recipe = 
-		{"animalworld:termiteconcrete", "flowers:tulip"}
+		{"animalworld:termiteconcrete", "dye:orange", "default:sand", "bucket:bucket_water"}
 
 	
 })
@@ -238,10 +238,10 @@ minetest.register_node("animalworld:termiteconcreteviolet", {
 
 
 minetest.register_craft({
-	output = "animalworld:termiteconcreteviolet 6",
+	output = "animalworld:termiteconcreteviolet 16",
 	type = "shapeless",
 	recipe = 
-		{"animalworld:termiteconcrete", "flowers:viola"}
+		{"animalworld:termiteconcrete", "dye:violet", "default:sand", "bucket:bucket_water"}
 
 	
 })
@@ -256,10 +256,129 @@ minetest.register_node("animalworld:termiteconcretewhite", {
 
 
 minetest.register_craft({
-	output = "animalworld:termiteconcretewhite 6",
+	output = "animalworld:termiteconcretewhite 16",
 	type = "shapeless",
 	recipe = 
-		{"animalworld:termiteconcrete", "flowers:dandelion_white"}
+		{"animalworld:termiteconcrete", "dye:white", "default:sand", "bucket:bucket_water"}
+
+	
+})
+
+minetest.register_node("animalworld:termiteconcreteblack", {
+	description = ("Termite Concrete black"),
+	tiles = {"termiteconcreteblack.png"},
+	is_ground_content = false,
+	groups = {cracky = 3, stone = 2},
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_craft({
+	output = "animalworld:termiteconcreteblack 16",
+	type = "shapeless",
+	recipe = 
+		{"animalworld:termiteconcrete", "dye:black", "default:sand", "bucket:bucket_water"}
+
+	
+})
+
+minetest.register_node("animalworld:termiteconcretegrey", {
+	description = ("Termite Concrete Grey"),
+	tiles = {"termiteconcretegrey.png"},
+	is_ground_content = false,
+	groups = {cracky = 3, stone = 2},
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_craft({
+	output = "animalworld:termiteconcretegrey 16",
+	type = "shapeless",
+	recipe = 
+		{"animalworld:termiteconcrete", "dye:grey", "default:sand", "bucket:bucket_water"}
+
+	
+})
+
+minetest.register_node("animalworld:termiteconcretedarkgreen", {
+	description = ("Termite Concrete Dark Green"),
+	tiles = {"termiteconcretedarkgreen.png"},
+	is_ground_content = false,
+	groups = {cracky = 3, stone = 2},
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_craft({
+	output = "animalworld:termiteconcretedarkgreen 16",
+	type = "shapeless",
+	recipe = 
+		{"animalworld:termiteconcrete", "dye:darkgreen", "default:sand", "bucket:bucket_water"}
+
+	
+})
+
+minetest.register_node("animalworld:termiteconcretebrown", {
+	description = ("Termite Concrete Brown"),
+	tiles = {"termiteconcretebrown.png"},
+	is_ground_content = false,
+	groups = {cracky = 3, stone = 2},
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_craft({
+	output = "animalworld:termiteconcretebrown 16",
+	type = "shapeless",
+	recipe = 
+		{"animalworld:termiteconcrete", "dye:brown", "default:sand", "bucket:bucket_water"}
+
+	
+})
+
+minetest.register_node("animalworld:termiteconcretepink", {
+	description = ("Termite Concrete Pink"),
+	tiles = {"termiteconcretepink.png"},
+	is_ground_content = false,
+	groups = {cracky = 3, stone = 2},
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_craft({
+	output = "animalworld:termiteconcretepink 16",
+	type = "shapeless",
+	recipe = 
+		{"animalworld:termiteconcrete", "dye:pink", "default:sand", "bucket:bucket_water"}
+
+	
+})
+
+minetest.register_node("animalworld:termiteconcretemagenta", {
+	description = ("Termite Concrete Magenta"),
+	tiles = {"termiteconcretemagenta.png"},
+	is_ground_content = false,
+	groups = {cracky = 3, stone = 2},
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_craft({
+	output = "animalworld:termiteconcretemagenta 16",
+	type = "shapeless",
+	recipe = 
+		{"animalworld:termiteconcrete", "dye:magenta", "default:sand", "bucket:bucket_water"}
+
+	
+})
+
+minetest.register_node("animalworld:termiteconcretecyan", {
+	description = ("Termite Concrete Cyan"),
+	tiles = {"termiteconcretecyan.png"},
+	is_ground_content = false,
+	groups = {cracky = 3, stone = 2},
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_craft({
+	output = "animalworld:termiteconcretecyan 16",
+	type = "shapeless",
+	recipe = 
+		{"animalworld:termiteconcrete", "dye:cyan", "default:sand", "bucket:bucket_water"}
 
 	
 })

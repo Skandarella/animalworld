@@ -27,7 +27,7 @@ mobs:register_mob("animalworld:giraffe", {
 	run_velocity = 2,
         walk_chance = 30,
 	runaway = false,
-	jump = true,
+	jump = false,
         jump_height = 6,
 	stepheight = 1,
 	drops = {

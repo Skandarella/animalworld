@@ -41,6 +41,7 @@ mobs:register_mob("animalworld:boar", {
 	fear_height = 2,
 	animation = {
 		speed_normal = 100,
+		stand_speed = 50,
 		stand_start = 0,
 		stand_end = 100,
 		walk_start = 100,

@@ -22,10 +22,10 @@ stepheight = 0.0,
         walk_chance = 10,
 	run_velocity = 2,
 	fly = true,
-	fly_in = "default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing",
+	fly_in = "default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing", "livingcaves:water_source", "livingcaves:water_flowing",
 	fall_speed = 0,
 	runaway = true,
-        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:divingbeetle", "animalworld:scorpion", "animalworld:polarbear", "animalworld:leopardseal", "animalworld:stellerseagle", "player", "animalworld:wolf", "animalworld:panda", "animalworld:stingray"},
+        runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:divingbeetle", "animalworld:scorpion", "animalworld:polarbear", "animalworld:leopardseal", "animalworld:stellerseagle", "player", "animalworld:wolf", "animalworld:panda", "animalworld:stingray", "marinaramobs:jellyfish", "marinaramobs:octopus", "livingcavesmobs:biter", "livingcavesmobs:flesheatingbacteria"},
 	jump = false,
 	stepheight = 0.0,
 	drops = {
@@ -48,7 +48,7 @@ stepheight = 0.0,
 
 		-- 50-70 is slide/water idle
 	},
-	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing"},
+	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing", "livingcaves:water_source", "livingcaves:water_flowing",},
 	floats = 0,
 	follow = {
 		"ethereal:worm", "seaweed", "fishing:bait_worm", "animalworld:ant", "animalworld:termite", "animalworld:fishfood"
@@ -67,7 +67,7 @@ stepheight = 0.0,
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:olm",
-	nodes = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing"},
+	nodes = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing", "livingcaves:water_source", "livingcaves:water_flowing",},
 	neighbors = {"default:stone"},
 	min_light = 0,
 	interval = 30,

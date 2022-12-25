@@ -30,6 +30,7 @@ mobs:register_mob("animalworld:divingbeetle", {
 	},
 	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing"},
 	floats = 0,
+	fly = true,
 	follow = {
 	},
 	water_damage = 0,

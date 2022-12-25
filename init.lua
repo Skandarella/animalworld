@@ -107,6 +107,7 @@ dofile(path .. "iguana.lua") --
 dofile(path .. "oryx.lua") --
 dofile(path .. "roadrunner.lua") --
 dofile(path .. "cockroach.lua") --
+dofile(path .. "concretecrafting.lua") --
 dofile(path .. "hunger.lua") --
 
 

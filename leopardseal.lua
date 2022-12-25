@@ -1,5 +1,5 @@
 mobs:register_mob("animalworld:leopardseal", {
-stepheight = 0.6,
+stepheight = 1,
 	type = "monster",
 	passive = false,
         attack_type = "dogfight",
@@ -25,7 +25,6 @@ stepheight = 0.6,
 	run_velocity = 3,
 	runaway = false,
 	jump = false,
-	stepheight = 1.1,
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 	},

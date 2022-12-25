@@ -50,6 +50,7 @@ mobs:register_mob("animalworld:wildboar", {
 		stand_speed = 50,
 		stand_start = 0,
 		stand_end = 100,
+		stand1_speed = 50,
 		stand1_start = 100,
 		stand1_end = 200,
 		walk_start = 200,
