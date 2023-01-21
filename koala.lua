@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:koala", {
 	stepheight = 1,
 	type = "animal",
@@ -32,6 +34,7 @@ mobs:register_mob("animalworld:koala", {
 	pushable = true,
 	follow = {"naturalbiomes:outback_leaves"},
 	view_range = 6,
+        stay_near = {{"naturalbiomes:outback_leaves", "naturalbiomes:outback_trunk", "naturalbiomes:outback_bush_leaves"}, 5},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 	},
@@ -51,10 +54,9 @@ mobs:register_mob("animalworld:koala", {
 		punch_speed = 100,
 		punch_start = 300,
 		punch_end = 400,
-
-		die_start = 1, -- we dont have a specific death animation so we will
-		die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
-		die_speed = 1, -- have mob rotate when dying.
+		die_start = 300,
+		die_end = 400,
+		die_speed = 50,
 		die_loop = false,
 		die_rotate = true,
 	},
@@ -62,7 +64,7 @@ mobs:register_mob("animalworld:koala", {
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 15, 25, 0, false, nil) then return end
 	end,
 })
 
@@ -80,9 +82,10 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:koala",
 	nodes = {"naturalbiomes:outback_litter"},
-	min_light = 14,
+	neighbors = {"naturalbiomes:outback_trunk", "naturalbiomes:outback_bush_leaves", "naturalbiomes:outback_leaves"},
+	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 3,
 	min_height = 1,
 	max_height = 500,

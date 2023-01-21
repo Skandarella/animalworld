@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:divingbeetle", {
 	stepheight = 1,
 	type = "monster",
@@ -38,6 +40,7 @@ mobs:register_mob("animalworld:divingbeetle", {
         air_damage = 1,
 	light_damage = 0,
 	fear_height = 2,
+        stay_near = {{"marinara:sand_with_alage", "marinara:sand_with_seagrass", "default:sand_with_kelp", "marinara:sand_with_kelp", "marinara:reed_root", "flowers:waterlily_waving", "naturalbiomes:waterlily", "default:clay"}, 4},
 	animation = {
 		speed_normal = 100,
                 stand_speed = 50,
@@ -45,10 +48,9 @@ mobs:register_mob("animalworld:divingbeetle", {
 		stand_end = 300,
 		walk_start = 0,
 		walk_end = 100,
-
-		die_start = 1, -- we dont have a specific death animation so we will
-		die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
-		die_speed = 1, -- have mob rotate when dying.
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
 		die_loop = false,
 		die_rotate = true,
 	},
@@ -56,7 +58,7 @@ mobs:register_mob("animalworld:divingbeetle", {
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 5, 25, 0, false, nil) then return end
 	end,
 })
 
@@ -69,13 +71,13 @@ mobs:spawn({
 	min_light = 0,
 	interval = 30,
 	active_object_count = 2,
-	chance = 1, -- 15000
+	chance = 500, -- 15000
 	min_height = -10,
 	max_height = 30,
 })
 end
 
-mobs:register_egg("animalworld:divingbeetle", ("Diving Beetle"), "adivingbeetle.png")
+mobs:register_egg("animalworld:divingbeetle", S("Diving Beetle"), "adivingbeetle.png")
 
 
 mobs:alias_mob("animalworld:divingbeetle", "animalworld:divingbeetle") -- compatibility

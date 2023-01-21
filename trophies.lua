@@ -1,7 +1,9 @@
+local S = minetest.get_translator("animalworld")
+
  -- Anteater
 
 minetest.register_node("animalworld:anteaterpillow", {
-    description = "Anteater Pillow",
+    description = S"Anteater Pillow",
     visual_scale = 1.0,
     mesh = "Pillow.b3d",
     tiles = {"textureanteaterpillow.png"},
@@ -34,7 +36,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:anteaterpillowleft", {
-    description = "Anteater Pillow Left",
+    description = S"Anteater Pillow Left",
     visual_scale = 1.0,
     mesh = "Pillowleft.b3d",
     tiles = {"textureanteaterpillow.png"},
@@ -67,7 +69,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:anteaterpillowright", {
-    description = "Anteater Pillow Right",
+    description = S"Anteater Pillow Right",
     visual_scale = 1.0,
     mesh = "Pillowright.b3d",
     tiles = {"textureanteaterpillow.png"},
@@ -100,7 +102,7 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:anteatercorpse", {
-	description = ("Anteater Corpse"),
+	description = S("Anteater Corpse"),
 	inventory_image = "animalworld_anteatercorpse.png",
 })
 
@@ -134,7 +136,7 @@ minetest.register_craft({
  -- bear
 
 minetest.register_node("animalworld:beartrophy", {
-    description = "Bear Trophy",
+    description = S"Bear Trophy",
     visual_scale = 1.0,
     mesh = "Beartrophy.b3d",
     tiles = {"texturebeartrophy.png"},
@@ -167,7 +169,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:bearpelt", {
-    description = "Bear Pelt",
+    description = S"Bear Pelt",
     visual_scale = 1.0,
     mesh = "Bearpelt.b3d",
     tiles = {"texturebearpelt.png"},
@@ -200,7 +202,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:bearpelthanging", {
-    description = "Bear Pelt hanging",
+    description = S"Bear Pelt hanging",
     visual_scale = 1.0,
     mesh = "Bearpelthanging.b3d",
     tiles = {"texturebearpelt.png"},
@@ -233,7 +235,7 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:bearcorpse", {
-	description = ("Bear Corpse"),
+	description = S("Bear Corpse"),
 	inventory_image = "animalworld_bearcorpse.png",
 })
 
@@ -265,7 +267,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:bearstool", {
-    description = "Bear Stool",
+    description = S"Bear Stool",
     visual_scale = 1.0,
     mesh = "Stool.b3d",
     tiles = {"texturebearstool.png"},
@@ -308,7 +310,7 @@ minetest.register_craft({
  -- blackbird
 
 minetest.register_node("animalworld:blackbirdpillow", {
-    description = "Blackbird Pillow",
+    description = S"Blackbird Pillow",
     visual_scale = 1.0,
     mesh = "Pillow.b3d",
     tiles = {"textureblackbirdpillow.png"},
@@ -341,7 +343,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:blackbirdpillowleft", {
-    description = "Blackbird Pillow Left",
+    description = S"Blackbird Pillow Left",
     visual_scale = 1.0,
     mesh = "Pillowleft.b3d",
     tiles = {"textureblackbirdpillow.png"},
@@ -374,7 +376,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:blackbirdpillowright", {
-    description = "Blackbird Pillow Right",
+    description = S"Blackbird Pillow Right",
     visual_scale = 1.0,
     mesh = "Pillowright.b3d",
     tiles = {"textureblackbirdpillow.png"},
@@ -407,7 +409,7 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:blackbirdcorpse", {
-	description = ("Blackbird Corpse"),
+	description = S("Blackbird Corpse"),
 	inventory_image = "animalworld_blackbirdcorpse.png",
 })
 
@@ -439,7 +441,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:blackbirdcurtain", {
-    description = "Blackbird Curtain",
+    description = S"Blackbird Curtain",
     visual_scale = 1.0,
     mesh = "Curtain.b3d",
     tiles = {"textureblackbirdcurtain.png"},
@@ -484,7 +486,7 @@ minetest.register_craft({
  -- boar
 
 minetest.register_node("animalworld:boartrophy", {
-    description = "Boar Trophy",
+    description = S"Boar Trophy",
     visual_scale = 1.0,
     mesh = "Boartrophy.b3d",
     tiles = {"textureboartrophy.png"},
@@ -517,7 +519,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:boarpelt", {
-    description = "Boar Pelt",
+    description = S"Boar Pelt",
     visual_scale = 1,
     mesh = "Boarpelt.b3d",
     tiles = {"textureboarpelt.png"},
@@ -550,7 +552,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:boarpelthanging", {
-    description = "Boar Pelt hanging",
+    description = S"Boar Pelt hanging",
     visual_scale = 1,
     mesh = "Boarpelthanging.b3d",
     tiles = {"textureboarpelt.png"},
@@ -583,7 +585,7 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:boarcorpse", {
-	description = ("Boar Corpse"),
+	description = S("Boar Corpse"),
 	inventory_image = "animalworld_boarcorpse.png",
 })
 
@@ -617,7 +619,7 @@ minetest.register_craft({
  -- camel
 
 minetest.register_node("animalworld:camelpillow", {
-    description = "Camel Pillow",
+    description = S"Camel Pillow",
     visual_scale = 1.0,
     mesh = "Pillow.b3d",
     tiles = {"texturecamelpillow.png"},
@@ -650,7 +652,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:camelpillowleft", {
-    description = "Camel Pillow Left",
+    description = S"Camel Pillow Left",
     visual_scale = 1.0,
     mesh = "Pillowleft.b3d",
     tiles = {"texturecamelpillow.png"},
@@ -683,7 +685,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:camelpillowright", {
-    description = "Camel Pillow Right",
+    description = S"Camel Pillow Right",
     visual_scale = 1.0,
     mesh = "Pillowright.b3d",
     tiles = {"texturecamelpillow.png"},
@@ -716,7 +718,7 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:camelcorpse", {
-	description = ("Camel Corpse"),
+	description = S("Camel Corpse"),
 	inventory_image = "animalworld_camelcorpse.png",
 })
 
@@ -749,7 +751,7 @@ minetest.register_craft({
 
 
 minetest.register_node("animalworld:camelpelt", {
-    description = "Camel Pelt",
+    description = S"Camel Pelt",
     visual_scale = 1.0,
     mesh = "Bearpelt.b3d",
     tiles = {"texturecamelpelt.png"},
@@ -782,7 +784,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:camelpelthanging", {
-    description = "Camel Pelt hanging",
+    description = S"Camel Pelt hanging",
     visual_scale = 1.0,
     mesh = "Bearpelthanging.b3d",
     tiles = {"texturecamelpelt.png"},
@@ -834,7 +836,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:camelcurtain", {
-    description = "Camel Curtain",
+    description = S"Camel Curtain",
     visual_scale = 1.0,
     mesh = "Curtain.b3d",
     tiles = {"texturecamelcurtain.png"},
@@ -879,7 +881,7 @@ minetest.register_craft({
 
 
 minetest.register_node("animalworld:crocodiletrophy", {
-    description = "Crocodile Trophy",
+    description = S"Crocodile Trophy",
     visual_scale = 1.0,
     mesh = "Crocodiletrophy.b3d",
     tiles = {"texturecrocodiletrophy.png"},
@@ -912,7 +914,7 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:crocodilecorpse", {
-	description = ("Crocodile Corpse"),
+	description = S("Crocodile Corpse"),
 	inventory_image = "animalworld_crocodilecorpse.png",
 })
 
@@ -926,7 +928,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:crocodilestool", {
-    description = "Crocodile Stool",
+    description = S"Crocodile Stool",
     visual_scale = 1.0,
     mesh = "Stool.b3d",
     tiles = {"texturecrocodilestool.png"},
@@ -965,7 +967,7 @@ minetest.register_craft({
 		{"animalworld:crocodilecorpse", "default:axe_stone", "group:wood", "default:stick"}
 
 })minetest.register_node("animalworld:crocodilestool", {
-    description = "Crocodile Stool",
+    description = S"Crocodile Stool",
     visual_scale = 1.0,
     mesh = "Stool.b3d",
     tiles = {"texturecrocodilestool.png"},
@@ -1006,7 +1008,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:crocodilecurtain", {
-    description = "Crocodile Curtain",
+    description = S"Crocodile Curtain",
     visual_scale = 1.0,
     mesh = "Curtain.b3d",
     tiles = {"texturecrocodilecurtain.png"},
@@ -1048,7 +1050,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:crocodileskin", {
-    description = "Crocodile Skin",
+    description = S"Crocodile Skin",
     visual_scale = 1.0,
     mesh = "Reptileskin.b3d",
     tiles = {"texturecrocodileskin.png"},
@@ -1081,7 +1083,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:crocodileskinhanging", {
-    description = "Crocodile Skin hanging",
+    description = S"Crocodile Skin hanging",
     visual_scale = 1.0,
     mesh = "Reptileskinhanging.b3d",
     tiles = {"texturecrocodileskin.png"},
@@ -1117,7 +1119,7 @@ minetest.register_craft({
  -- elephant
 
 minetest.register_node("animalworld:elephanttrophy", {
-    description = "Elephant Trophy",
+    description = S"Elephant Trophy",
     visual_scale = 1.0,
     mesh = "Elephanttrophy.b3d",
     tiles = {"textureelephanttrophy.png"},
@@ -1150,7 +1152,7 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:elephantcorpse", {
-	description = ("Elephant Corpse"),
+	description = S("Elephant Corpse"),
 	inventory_image = "animalworld_elephantcorpse.png",
 })
 
@@ -1164,7 +1166,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:ivorytable", {
-    description = "Ivory Table",
+    description = S"Ivory Table",
     visual_scale = 1,
     mesh = "Ivorytable.b3d",
     tiles = {"textureivorytable.png"},
@@ -1185,7 +1187,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:ivorychair", {
-    description = "Ivory Chair",
+    description = S"Ivory Chair",
     visual_scale = 1,
     mesh = "Ivorychair.b3d",
     tiles = {"textureivorychair.png"},
@@ -1220,7 +1222,7 @@ minetest.register_craft({
 
 
 minetest.register_node("animalworld:ivoryvase", {
-    description = "Ivory Vase",
+    description = S"Ivory Vase",
     visual_scale = 1,
     mesh = "Ivoryvase.b3d",
     tiles = {"textureivoryvase.png"},
@@ -1281,7 +1283,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:elephantstool", {
-    description = "Elephant Stool",
+    description = S"Elephant Stool",
     visual_scale = 1.0,
     mesh = "Stool.b3d",
     tiles = {"textureelephantstool.png"},
@@ -1325,7 +1327,7 @@ minetest.register_craft({
 
 
 minetest.register_node("animalworld:gnupelt", {
-    description = "Gnu Pelt",
+    description = S"Gnu Pelt",
     visual_scale = 1.0,
     mesh = "Bearpelt.b3d",
     tiles = {"texturegnupelt.png"},
@@ -1358,7 +1360,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:gnupelthanging", {
-    description = "Gnu Pelt hanging",
+    description = S"Gnu Pelt hanging",
     visual_scale = 1.0,
     mesh = "Bearpelthanging.b3d",
     tiles = {"texturegnupelt.png"},
@@ -1391,7 +1393,7 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:gnucorpse", {
-	description = ("Gnu Corpse"),
+	description = S("Gnu Corpse"),
 	inventory_image = "animalworld_gnucorpse.png",
 })
 
@@ -1414,7 +1416,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:gnutrophy", {
-    description = "Gnu Trophy",
+    description = S"Gnu Trophy",
     visual_scale = 1.0,
     mesh = "Gnutrophy.b3d",
     tiles = {"texturegnutrophy.png"},
@@ -1456,7 +1458,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:gnustool", {
-    description = "Gnu Stool",
+    description = S"Gnu Stool",
     visual_scale = 1.0,
     mesh = "Stool.b3d",
     tiles = {"texturegnustool.png"},
@@ -1497,7 +1499,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:gnucurtain", {
-    description = "Gnu Curtain",
+    description = S"Gnu Curtain",
     visual_scale = 1.0,
     mesh = "Curtain.b3d",
     tiles = {"texturegnucurtain.png"},
@@ -1541,7 +1543,7 @@ minetest.register_craft({
  -- Hippo
 
 minetest.register_node("animalworld:hippostool", {
-    description = "Hippo Stool",
+    description = S"Hippo Stool",
     visual_scale = 1.0,
     mesh = "Stool.b3d",
     tiles = {"texturehippostool.png"},
@@ -1582,12 +1584,12 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:hippocorpse", {
-	description = ("Hippo Corpse"),
+	description = S("Hippo Corpse"),
 	inventory_image = "animalworld_hippocorpse.png",
 })
 
 minetest.register_node("animalworld:hippocurtain", {
-    description = "Hippo Curtain",
+    description = S"Hippo Curtain",
     visual_scale = 1.0,
     mesh = "Curtain.b3d",
     tiles = {"texturehippocurtain.png"},
@@ -1631,7 +1633,7 @@ minetest.register_craft({
  -- Hyena
 
 minetest.register_node("animalworld:hyenatrophy", {
-    description = "Hyena Trophy",
+    description = S"Hyena Trophy",
     visual_scale = 1.0,
     mesh = "Hyenatrophy.b3d",
     tiles = {"texturehyenatrophy.png"},
@@ -1673,12 +1675,12 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:hyenacorpse", {
-	description = ("Hyena Corpse"),
+	description = S("Hyena Corpse"),
 	inventory_image = "animalworld_hyenacorpse.png",
 })
 
 minetest.register_node("animalworld:hyenapillow", {
-    description = "Hyena Pillow",
+    description = S"Hyena Pillow",
     visual_scale = 1.0,
     mesh = "Pillow.b3d",
     tiles = {"texturehyenapillow.png"},
@@ -1711,7 +1713,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:hyenapillowleft", {
-    description = "Hyea Pillow Left",
+    description = S"Hyea Pillow Left",
     visual_scale = 1.0,
     mesh = "Pillowleft.b3d",
     tiles = {"texturehyenapillow.png"},
@@ -1744,7 +1746,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:hyenapillowright", {
-    description = "Hyena Pillow Right",
+    description = S"Hyena Pillow Right",
     visual_scale = 1.0,
     mesh = "Pillowright.b3d",
     tiles = {"texturehyenapillow.png"},
@@ -1808,12 +1810,12 @@ minetest.register_craft({
 
 
 minetest.register_craftitem("animalworld:kangaroocorpse", {
-	description = ("Kangaroo Corpse"),
+	description = S("Kangaroo Corpse"),
 	inventory_image = "animalworld_kangaroocorpse.png",
 })
 
 minetest.register_node("animalworld:kangaroopillow", {
-    description = "Kangaroo Pillow",
+    description = S"Kangaroo Pillow",
     visual_scale = 1.0,
     mesh = "Pillow.b3d",
     tiles = {"texturekangaroopillow.png"},
@@ -1846,7 +1848,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:kangaroopillowleft", {
-    description = "Kangaroo Pillow Left",
+    description = S"Kangaroo Pillow Left",
     visual_scale = 1.0,
     mesh = "Pillowleft.b3d",
     tiles = {"texturekangaroopillow.png"},
@@ -1879,7 +1881,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:kangaroopillowright", {
-    description = "Kangaroo Pillow Right",
+    description = S"Kangaroo Pillow Right",
     visual_scale = 1.0,
     mesh = "Pillowright.b3d",
     tiles = {"texturekangaroopillow.png"},
@@ -1940,7 +1942,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:kangaroocurtain", {
-    description = "Kangaroo Curtain",
+    description = S"Kangaroo Curtain",
     visual_scale = 1.0,
     mesh = "Curtain.b3d",
     tiles = {"texturekangaroocurtain.png"},
@@ -1984,7 +1986,7 @@ minetest.register_craft({
  -- Monitor Lizard
 
 minetest.register_node("animalworld:monitortrophy", {
-    description = "Monitor Lizard Trophy",
+    description = S"Monitor Lizard Trophy",
     visual_scale = 1.0,
     mesh = "Monitortrophy.b3d",
     tiles = {"texturemonitortrophy.png"},
@@ -2017,7 +2019,7 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:monitorcorpse", {
-	description = ("Monitor Lizard Corpse"),
+	description = S("Monitor Lizard Corpse"),
 	inventory_image = "animalworld_monitorcorpse.png",
 })
 
@@ -2031,7 +2033,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:monitorstool", {
-    description = "Monitor Lizard Stool",
+    description = S"Monitor Lizard Stool",
     visual_scale = 1.0,
     mesh = "Stool.b3d",
     tiles = {"texturemonitorstool.png"},
@@ -2072,7 +2074,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:monitorcurtain", {
-    description = "Monitor Curtain",
+    description = S"Monitor Curtain",
     visual_scale = 1.0,
     mesh = "Curtain.b3d",
     tiles = {"texturemonitorcurtain.png"},
@@ -2116,7 +2118,7 @@ minetest.register_craft({
  -- Moose
 
 minetest.register_node("animalworld:moosetrophy", {
-    description = "Moose Trophy",
+    description = S"Moose Trophy",
     visual_scale = 1.0,
     mesh = "Moosetrophy.b3d",
     tiles = {"texturemoosetrophy.png"},
@@ -2149,7 +2151,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:moosepelt", {
-    description = "Moose Pelt",
+    description = S"Moose Pelt",
     visual_scale = 1.0,
     mesh = "Bearpelt.b3d",
     tiles = {"texturemoosepelt.png"},
@@ -2182,7 +2184,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:moosepelthanging", {
-    description = "Moose Pelt hanging",
+    description = S"Moose Pelt hanging",
     visual_scale = 1.0,
     mesh = "Bearpelthanging.b3d",
     tiles = {"texturemoosepelt.png"},
@@ -2215,7 +2217,7 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:moosecorpse", {
-	description = ("Moose Corpse"),
+	description = S("Moose Corpse"),
 	inventory_image = "animalworld_moosecorpse.png",
 })
 
@@ -2249,7 +2251,7 @@ minetest.register_craft({
  -- Owl
 
 minetest.register_node("animalworld:owltrophy", {
-    description = "Owl Trophy",
+    description = S"Owl Trophy",
     visual_scale = 1.0,
     mesh = "Owltrophy.b3d",
     tiles = {"textureowltrophy.png"},
@@ -2282,7 +2284,7 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:owlcorpse", {
-	description = ("Owl Corpse"),
+	description = S("Owl Corpse"),
 	inventory_image = "animalworld_owlcorpse.png",
 })
 
@@ -2298,7 +2300,7 @@ minetest.register_craft({
  -- Reindeer
 
 minetest.register_node("animalworld:reindeertrophy", {
-    description = "Reindeer Trophy",
+    description = S"Reindeer Trophy",
     visual_scale = 1.0,
     mesh = "Reindeertrophy.b3d",
     tiles = {"texturereindeertrophy.png"},
@@ -2331,7 +2333,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:reindeerpelt", {
-    description = "Reindeer Pelt",
+    description = S"Reindeer Pelt",
     visual_scale = 1,
     mesh = "Boarpelt.b3d",
     tiles = {"texturereindeerpelt.png"},
@@ -2364,7 +2366,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:reindeerpelthanging", {
-    description = "Reindeer Pelt hanging",
+    description = S"Reindeer Pelt hanging",
     visual_scale = 1,
     mesh = "Boarpelthanging.b3d",
     tiles = {"texturereindeerpelt.png"},
@@ -2397,7 +2399,7 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:reindeercorpse", {
-	description = ("Reindeer Corpse"),
+	description = S("Reindeer Corpse"),
 	inventory_image = "animalworld_reindeercorpse.png",
 })
 
@@ -2431,7 +2433,7 @@ minetest.register_craft({
  -- Seal
 
 minetest.register_node("animalworld:sealpillow", {
-    description = "Seal Pillow",
+    description = S"Seal Pillow",
     visual_scale = 1.0,
     mesh = "Pillow.b3d",
     tiles = {"texturesealpillow.png"},
@@ -2464,7 +2466,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:sealpillowleft", {
-    description = "Seal Pillow Left",
+    description = S"Seal Pillow Left",
     visual_scale = 1.0,
     mesh = "Pillowleft.b3d",
     tiles = {"texturesealpillow.png"},
@@ -2497,7 +2499,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:sealpillowright", {
-    description = "Seal Pillow Right",
+    description = S"Seal Pillow Right",
     visual_scale = 1.0,
     mesh = "Pillowright.b3d",
     tiles = {"texturesealpillow.png"},
@@ -2530,7 +2532,7 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:sealcorpse", {
-	description = ("Seal Corpse"),
+	description = S("Seal Corpse"),
 	inventory_image = "animalworld_sealcorpse.png",
 })
 
@@ -2562,7 +2564,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:sealstool", {
-    description = "Seal Stool",
+    description = S"Seal Stool",
     visual_scale = 1.0,
     mesh = "Stool.b3d",
     tiles = {"texturesealstool.png"},
@@ -2603,7 +2605,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:sealcurtain", {
-    description = "Seal Curtain",
+    description = S"Seal Curtain",
     visual_scale = 1.0,
     mesh = "Curtain.b3d",
     tiles = {"texturesealcurtain.png"},
@@ -2647,7 +2649,7 @@ minetest.register_craft({
  -- Shark
 
 minetest.register_node("animalworld:sharktrophy", {
-    description = "Shark Trophy",
+    description = S"Shark Trophy",
     visual_scale = 1.0,
     mesh = "Sharktrophy.b3d",
     tiles = {"texturesharktrophy.png"},
@@ -2680,7 +2682,7 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:sharkcorpse", {
-	description = ("Shark Corpse"),
+	description = S("Shark Corpse"),
 	inventory_image = "animalworld_sharkcorpse.png",
 })
 
@@ -2696,7 +2698,7 @@ minetest.register_craft({
  -- Vulture
 
 minetest.register_node("animalworld:vulturepillow", {
-    description = "Vulture Pillow",
+    description = S"Vulture Pillow",
     visual_scale = 1.0,
     mesh = "Pillow.b3d",
     tiles = {"texturevulturepillow.png"},
@@ -2729,7 +2731,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:vulturepillowleft", {
-    description = "Vulture Pillow Left",
+    description = S"Vulture Pillow Left",
     visual_scale = 1.0,
     mesh = "Pillowleft.b3d",
     tiles = {"texturevulturepillow.png"},
@@ -2762,7 +2764,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:vulturepillowright", {
-    description = "Vulture Pillow Right",
+    description = S"Vulture Pillow Right",
     visual_scale = 1.0,
     mesh = "Pillowright.b3d",
     tiles = {"texturevulturepillow.png"},
@@ -2795,7 +2797,7 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:vulturecorpse", {
-	description = ("Vulture Corpse"),
+	description = S("Vulture Corpse"),
 	inventory_image = "animalworld_vulturecorpse.png",
 })
 
@@ -2811,7 +2813,7 @@ minetest.register_craft({
  -- Yak
 
 minetest.register_node("animalworld:yaktrophy", {
-    description = "Yak Trophy",
+    description = S"Yak Trophy",
     visual_scale = 1.0,
     mesh = "Yaktrophy.b3d",
     tiles = {"textureyaktrophy.png"},
@@ -2844,7 +2846,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:yakpelt", {
-    description = "Yak Pelt",
+    description = S"Yak Pelt",
     visual_scale = 1.0,
     mesh = "Bearpelt.b3d",
     tiles = {"textureyakpelt.png"},
@@ -2877,7 +2879,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:yakpelthanging", {
-    description = "Yak Pelt hanging",
+    description = S"Yak Pelt hanging",
     visual_scale = 1.0,
     mesh = "Bearpelthanging.b3d",
     tiles = {"textureyakpelt.png"},
@@ -2910,7 +2912,7 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:yakcorpse", {
-	description = ("Yak Corpse"),
+	description = S("Yak Corpse"),
 	inventory_image = "animalworld_yakcorpse.png",
 })
 
@@ -2943,7 +2945,7 @@ minetest.register_craft({
 
 
 minetest.register_node("animalworld:yakstool", {
-    description = "Yak Stool",
+    description = S"Yak Stool",
     visual_scale = 1.0,
     mesh = "Stool.b3d",
     tiles = {"textureyakstool.png"},
@@ -2984,7 +2986,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:yakcurtain", {
-    description = "Yak Curtain",
+    description = S"Yak Curtain",
     visual_scale = 1.0,
     mesh = "Curtain.b3d",
     tiles = {"textureyakcurtain.png"},
@@ -3028,7 +3030,7 @@ minetest.register_craft({
  -- Snow Leopard
 
 minetest.register_node("animalworld:snowleopardtrophy", {
-    description = "Snow Leopard Trophy",
+    description = S"Snow Leopard Trophy",
     visual_scale = 1.0,
     mesh = "Snowleopardtrophy.b3d",
     tiles = {"texturesnowleopardtrophy.png"},
@@ -3070,7 +3072,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:snowleopardpillow", {
-    description = "Snow Leopard Pillow",
+    description = S"Snow Leopard Pillow",
     visual_scale = 1.0,
     mesh = "Pillow.b3d",
     tiles = {"texturesnowleopardpillow.png"},
@@ -3103,7 +3105,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:snowleopardpillowleft", {
-    description = "Snow Leopard Pillow Left",
+    description = S"Snow Leopard Pillow Left",
     visual_scale = 1.0,
     mesh = "Pillowleft.b3d",
     tiles = {"texturesnowleopardpillow.png"},
@@ -3136,7 +3138,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:snowleopardpillowright", {
-    description = "Snow Leopard Pillow Right",
+    description = S"Snow Leopard Pillow Right",
     visual_scale = 1.0,
     mesh = "Pillowright.b3d",
     tiles = {"texturesnowleopardpillow.png"},
@@ -3199,14 +3201,14 @@ minetest.register_craft({
 
 
 minetest.register_craftitem("animalworld:snowleopardcorpse", {
-	description = ("Snowleopard Corpse"),
+	description = S("Snowleopard Corpse"),
 	inventory_image = "animalworld_snowleopardcorpse.png",
 })
 
  -- Tiger
 
 minetest.register_node("animalworld:tigertrophy", {
-    description = "Tiger Trophy",
+    description = S"Tiger Trophy",
     visual_scale = 1.0,
     mesh = "Tigertrophy.b3d",
     tiles = {"texturetigertrophy.png"},
@@ -3248,7 +3250,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:tigerpillow", {
-    description = "Tiger Pillow",
+    description = S"Tiger Pillow",
     visual_scale = 1.0,
     mesh = "Pillow.b3d",
     tiles = {"texturetigerpillow.png"},
@@ -3281,7 +3283,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:tigerpillowleft", {
-    description = "Tiger Pillow Left",
+    description = S"Tiger Pillow Left",
     visual_scale = 1.0,
     mesh = "Pillowleft.b3d",
     tiles = {"texturetigerpillow.png"},
@@ -3314,7 +3316,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:tigerpillowright", {
-    description = "Tiger Pillow Right",
+    description = S"Tiger Pillow Right",
     visual_scale = 1.0,
     mesh = "Pillowright.b3d",
     tiles = {"texturetigerpillow.png"},
@@ -3375,12 +3377,12 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:tigercorpse", {
-	description = ("Tiger Corpse"),
+	description = S("Tiger Corpse"),
 	inventory_image = "animalworld_tigercorpse.png",
 })
 
 minetest.register_node("animalworld:tigerstool", {
-    description = "Tiger Stool",
+    description = S"Tiger Stool",
     visual_scale = 1.0,
     mesh = "Stool.b3d",
     tiles = {"texturetigerstool.png"},
@@ -3421,7 +3423,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:tigercurtain", {
-    description = "Tiger Curtain",
+    description = S"Tiger Curtain",
     visual_scale = 1.0,
     mesh = "Curtain.b3d",
     tiles = {"texturetigercurtain.png"},
@@ -3463,7 +3465,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:tigerpelt", {
-    description = "Tiger Pelt",
+    description = S"Tiger Pelt",
     visual_scale = 1.0,
     mesh = "Tigerpelt.b3d",
     tiles = {"texturetigerpelt.png"},
@@ -3496,7 +3498,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:tigerpelthanging", {
-    description = "Tiger Pelt hanging",
+    description = S"Tiger Pelt hanging",
     visual_scale = 1.0,
     mesh = "Tigerpelthanging.b3d",
     tiles = {"texturetigerpelt.png"},
@@ -3551,7 +3553,7 @@ minetest.register_craft({
  -- Wolverine
 
 minetest.register_node("animalworld:wolverinetrophy", {
-    description = "Wolverine Trophy",
+    description = S"Wolverine Trophy",
     visual_scale = 1.0,
     mesh = "Wolverinetrophy.b3d",
     tiles = {"texturewolverinetrophy.png"},
@@ -3585,7 +3587,7 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:wolverinecorpse", {
-	description = ("Wolverine Corpse"),
+	description = S("Wolverine Corpse"),
 	inventory_image = "animalworld_wolverinecorpse.png",
 })
 
@@ -3601,7 +3603,7 @@ minetest.register_craft({
  -- polar bear
 
 minetest.register_node("animalworld:polarbeartrophy", {
-    description = "Polar Bear Trophy",
+    description = S"Polar Bear Trophy",
     visual_scale = 1.0,
     mesh = "Polarbeartrophy.b3d",
     tiles = {"texturepolarbeartrophy.png"},
@@ -3642,7 +3644,7 @@ minetest.register_craft({
 
 
 minetest.register_node("animalworld:polarbearpelt", {
-    description = "Polar Bear Pelt",
+    description = S"Polar Bear Pelt",
     visual_scale = 1.0,
     mesh = "Bearpelt.b3d",
     tiles = {"texturepolarbearpelt.png"},
@@ -3675,7 +3677,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:polarbearpelthanging", {
-    description = "Polar Bear Pelt hanging",
+    description = S"Polar Bear Pelt hanging",
     visual_scale = 1.0,
     mesh = "Bearpelthanging.b3d",
     tiles = {"texturepolarbearpelt.png"},
@@ -3708,7 +3710,7 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:polarbearcorpse", {
-	description = ("Polar Bear Corpse"),
+	description = S("Polar Bear Corpse"),
 	inventory_image = "animalworld_polarbearcorpse.png",
 })
 
@@ -3734,7 +3736,7 @@ minetest.register_craft({
  -- Muskox
 
 minetest.register_node("animalworld:muskoxtrophy", {
-    description = "Muskox Trophy",
+    description = S"Muskox Trophy",
     visual_scale = 1.0,
     mesh = "Muskoxtrophy.b3d",
     tiles = {"texturemuskoxtrophy.png"},
@@ -3767,7 +3769,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:muskoxpelt", {
-    description = "Muskox Pelt",
+    description = S"Muskox Pelt",
     visual_scale = 1.0,
     mesh = "Bearpelt.b3d",
     tiles = {"texturemuskoxpelt.png"},
@@ -3800,7 +3802,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:muskoxpelthanging", {
-    description = "Muskox Pelt hanging",
+    description = S"Muskox Pelt hanging",
     visual_scale = 1.0,
     mesh = "Bearpelthanging.b3d",
     tiles = {"texturemuskoxpelt.png"},
@@ -3833,7 +3835,7 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:muskoxcorpse", {
-	description = ("Muskox Corpse"),
+	description = S("Muskox Corpse"),
 	inventory_image = "animalworld_muskoxcorpse.png",
 })
 
@@ -3865,7 +3867,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:muskoxstool", {
-    description = "Muskox Stool",
+    description = S"Muskox Stool",
     visual_scale = 1.0,
     mesh = "Stool.b3d",
     tiles = {"texturemuskoxstool.png"},

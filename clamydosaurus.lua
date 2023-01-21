@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:clamydosaurus", {
 stepheight = 3,
 	type = "animal",
@@ -26,6 +28,7 @@ sounds = {
 	jump = true,
 	jump_height = 6,
         stepheight = 5,
+        stay_near = {{"naturalbiomes:outback_rock", "naturalbiomes:outback_trunk", "naturalbiomes:outback_bush_leaves", "livingdesert:cactus", "livingdesert:cactus3", "livingdesert:cactus2", "livingdesert:cactus4"}, 5},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 	        {name = "mobs:leather", chance = 1, min = 0, max = 2},
@@ -45,16 +48,21 @@ sounds = {
 		walk_end = 350,
 		fly_start = 250, -- swim animation
 		fly_end = 350,
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing"},
 	floats = 0,
-	follow = {"fishing:bait:worm", "ethereal:worm", "animalworld:ant", "animalworld:termite", "animalworld:cockroach"},
+	follow = {"animalworld:cockroach", "bees:frame_full", "animalworld:fishfood", "animalworld:ant", "animalworld:termite", "animalworld:bugice", "animalworld:termitequeen", "animalworld:notoptera", "animalworld:anteggs_raw"},
 	view_range = 6,
 	on_rightclick = function(self, clicker)
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 15, 25, 0, false, nil) then return end
 	end,
 })
 
@@ -69,9 +77,10 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:clamydosaurus",
 	nodes = {"naturalbiomes:outback_litter"}, 
+	neighbors = {"naturalbiomes:outback_rock", "naturalbiomes:outback_trunk", "naturalbiomes:outback_bush_leaves"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 2,
 	min_height = 2,
 	max_height = 50,
@@ -79,7 +88,7 @@ mobs:spawn({
 end
 
 
-mobs:register_egg("animalworld:clamydosaurus", ("Clamydosaurus"), "aclamydosaurus.png", 0)
+mobs:register_egg("animalworld:clamydosaurus", S("Clamydosaurus"), "aclamydosaurus.png", 0)
 
 
 mobs:alias_mob("animalworld:clamydosaurus", "animalworld:clamdydosaurus") -- compatibility

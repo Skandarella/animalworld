@@ -1,5 +1,7 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:hippo", {
-stepheight = 1,
+stepheight = 2,
 	type = "monster",
 	passive = false,
         attack_type = "dogfight",
@@ -9,7 +11,7 @@ stepheight = 1,
 	hp_min = 65,
 	hp_max = 100,
 	armor = 100,
-	collisionbox = {-0.8, -0.01, -0.8, 0.8, 0.8, 0.8},
+	collisionbox = {-0.8, -0.01, -0.8, 0.8, 1.2, 0.8},
 	visual = "mesh",
 	mesh = "HippoNEW.b3d",
 	visual_size = {x = 1.0, y = 1.0},
@@ -26,7 +28,9 @@ stepheight = 1,
 	runaway = false,
 	jump = true,
         jump_height = 0.5,
-	stepheight = 1,
+	stepheight = 2,
+        knock_back = false,
+        stay_near = {{"default:dry_grass_1", "default:dry_grass_2", "default:dry_grass_3", "default:dry_grass_4"}, 6},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 		{name = "animalworld:hippocorpse", chance = 7, min = 1, max = 1},
@@ -34,7 +38,7 @@ stepheight = 1,
 	water_damage = 0,
 	lava_damage = 4,
 	light_damage = 0,
-	fear_height = 4,
+	fear_height = 3,
 	animation = {
 		speed_normal = 50,
 		stand_start = 0,
@@ -48,14 +52,18 @@ stepheight = 1,
                 punch_speed = 100,
 		punch_start = 200,
 		punch_end = 300,
-		-- 50-70 is slide/water idle
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 
 fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing"},
 	floats = 0,
 	follow = {
 		"ethereal:banana_single", "farming:corn_cob", "farming:cabbage",
-		"default:apple", "water_life:meat_raw", "xocean:fish_edible", "ethereal:fish_raw", "ethereal:banana", "farming:cabbage", "farming:lettuce", "farming:melon_slice"
+		"default:apple", "water_life:meat_raw", "xocean:fish_edible", "ethereal:fish_raw", "ethereal:banana", "farming:cabbage", "farming:lettuce", "farming:melon_slice", "group:grass", "group:normal_grass"
 	},
 	
 view_range = 6,
@@ -65,7 +73,7 @@ view_range = 6,
 		-- feed or tame
 		if mobs:feed_tame(self, clicker, 4, false, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 0, 25, false, nil) then return end
 	end,
 })
 
@@ -76,10 +84,11 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:hippo",
-	nodes = {"default:dry_dirt_with_dry_grass"}, {"default:dirt_with_rainforest_litter"},
+	nodes = {"default:dry_dirt_with_dry_grass"},
+	neighbors = {"group:grass", "group:normal_grass"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 2,
 	min_height = 0,
 	max_height = 5,
@@ -87,4 +96,4 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("animalworld:hippo", ("Hippo"), "ahippo.png")
+mobs:register_egg("animalworld:hippo", S("Hippo"), "ahippo.png")

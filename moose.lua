@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:moose", {
 	stepheight = 1,
 	type = "animal",
@@ -8,10 +10,11 @@ mobs:register_mob("animalworld:moose", {
 	attack_npcs = false,
 	reach = 2,
 	damage = 7,
+        knock_back = false,
 	hp_min = 25,
 	hp_max = 60,
 	armor = 100,
-	collisionbox = {-0.7, -0.01, -0.6, 0.9, 1.7, 0.6},
+	collisionbox = {-0.5, -0.01, -0.5, 0.5, 1.7, 0.5},
 	visual = "mesh",
 	mesh = "Moose.b3d",
 	textures = {
@@ -29,7 +32,8 @@ mobs:register_mob("animalworld:moose", {
 	jump = false,
 	jump_height = 3,
 	pushable = true,
-	follow = {"default:apple", "farming:potato", "farming:melon_slice", "farming:cucumber", "farming:cabbage", "farming:lettuce", "farming:bread"},
+        stay_near = {{"default:tree", "default:fern_1", "default:fern_2", "marinara:reed_bundle", "naturalbiomes:reed_bundle", "default:leaves"}, 6},
+	follow = {"default:apple", "farming:potato", "farming:melon_slice", "farming:cucumber", "farming:cabbage", "farming:lettuce", "farming:bread", "default:dry_grass_1", "default:dry_grass_2", "default:dry_grass_3", "default:grass_1", "default:grass_2", "default:grass_3", "default:grass_4", "default:grass_5", "default:marram_grass_1", "default:marram_grass_2", "default:marram_grass_3", "default:coldsteppe_grass_1", "default:coldsteppe_grass_2", "default:coldsteppe_grass_3", "default:coldsteppe_grass_4", "default:coldsteppe_grass_5", "default:coldsteppe_grass_6", "naturalbiomes:savanna_grass1", "naturalbiomes:savanna_grass2", "naturalbiomes:savanna_grass3", "naturalbiomes:outback_grass1", "naturalbiomes:outback_grass2", "naturalbiomes:outback_grass3", "naturalbiomes:outback_grass4", "naturalbiomes:outback_grass5", "naturalbiomes:outback_grass6", "naturalbiomes:med_grass1", "naturalbiomes:med_grass2", "naturalbiomes:heath_grass1", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:alpine_grass1", "naturalbiomes:alpine_grass2", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:", "naturalbiomes:", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", "naturalbiomes:bushland_grass4", "naturalbiomes:bushland_grass5", "naturalbiomes:bushland_grass6", "naturalbiomes:bushland_grass7", "group:grass", "group:normal_grass"},
 	view_range = 10,
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
@@ -52,10 +56,9 @@ mobs:register_mob("animalworld:moose", {
 		jump_end = 500,
 		punch_start = 200,
 		punch_end = 300,
-
-		die_start = 1, -- we dont have a specific death animation so we will
-		die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
-		die_speed = 1, -- have mob rotate when dying.
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
 		die_loop = false,
 		die_rotate = true,
 	},
@@ -63,7 +66,7 @@ mobs:register_mob("animalworld:moose", {
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 0, 25, false, nil) then return end
 	end,
 })
 
@@ -81,16 +84,17 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:moose",
 	nodes = {"default:dirt_with_grass", "default:dirt_with_coniferous_litter"},
+	neighbors = {"group:grass", "group:normal_grass", "default:fern_1", "default:fern_2"}, 
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	min_height = 0,
 	max_height = 120,
 	day_toggle = true,
 })
 end
 
-mobs:register_egg("animalworld:moose", ("Moose"), "amoose.png")
+mobs:register_egg("animalworld:moose", S("Moose"), "amoose.png")
 
 
 mobs:alias_mob("animalworld:moose", "animalworld:moose") -- compatibility

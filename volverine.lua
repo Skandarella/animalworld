@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:volverine", {
 stepheight = 3,
 	type = "monster",
@@ -9,7 +11,7 @@ stepheight = 3,
 	hp_min = 15,
 	hp_max = 45,
 	armor = 100,
-	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.95, 0.6},
+	collisionbox = {-0.4, -0.01, -0.4, 0.4, 0.5, 0.4},
 	visual = "mesh",
 	mesh = "Volverine.b3d",
 	visual_size = {x = 1.0, y = 1.0},
@@ -26,6 +28,7 @@ stepheight = 3,
 	jump = true,
         jump_height = 6,
 	stepheight = 3,
+        stay_near = {{"default:pine_needles", "animalworld:animalworld_tundrashrub5", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4"}, 6},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 		{name = "mobs:leather", chance = 1, min = 0, max = 2},
@@ -45,11 +48,15 @@ stepheight = 3,
 		punch_speed = 100,
 		punch_start = 200,
 		punch_end = 300,
-		-- 50-70 is slide/water idle
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 
 	follow = {
-		"animalworld:rawfish", "mobs:meat_raw", "animalworld:rabbit_raw", "animalworld:chicken_raw", "water_life:meat_raw"
+		"animalworld:rawfish", "mobs:meat_raw", "animalworld:rabbit_raw", "animalworld:chicken_raw", "water_life:meat_raw", "mobs:meatblock_raw", "animalworld:chicken_raw", "livingfloatlands:ornithischiaraw", "livingfloatlands:largemammalraw", "livingfloatlands:theropodraw", "livingfloatlands:sauropodraw", "animalworld:raw_athropod", "animalworld:whalemeat_raw", "animalworld:rabbit_raw", "nativevillages:chicken_raw", "mobs:meat_raw", "animalworld:pork_raw", "people:mutton:raw"
 	},
 	view_range = 10,
 
@@ -58,7 +65,7 @@ stepheight = 3,
 		-- feed or tame
 		if mobs:feed_tame(self, clicker, 4, false, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 25, 0, false, nil) then return end
 	end,
 })
 
@@ -69,10 +76,11 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:volverine",
-	nodes = {"default:dirt_with_snow"}, {"default:permafrost_with_moss"}, {"default:snowblock"},
+	nodes = {"default:dirt_with_snow"}, {"default:permafrost_with_moss"}, {"default:snowblock"}, {"default:snow"},
+	neighbors = {"default:pine_needles", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 500, -- 15000
 	min_height = 20,
 	max_height = 60,
 	day_toggle = false,
@@ -80,4 +88,4 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("animalworld:volverine", ("Wolverine"), "avolverine.png")
+mobs:register_egg("animalworld:volverine", S("Wolverine"), "avolverine.png")

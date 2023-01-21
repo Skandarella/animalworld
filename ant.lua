@@ -1,3 +1,4 @@
+local S = minetest.get_translator("animalworld")
 
 mobs:register_mob("animalworld:ant", {
 	type = "monster",
@@ -20,7 +21,7 @@ mobs:register_mob("animalworld:ant", {
 		attack = "animalworld_ant",
 	},
 	makes_footstep_sound = true,
-	stay_near = {"animalworld:anthill", 5},
+	stay_near = {"animalworld:anthill", 3},
 	view_range = 3,
 	walk_velocity = 0.5,
         walk_chance = 70,
@@ -29,6 +30,7 @@ mobs:register_mob("animalworld:ant", {
 	jump = false,
         jump_height = 0,
 	stepheight = 3,
+        stay_near = {{"animalworld:anthill"}, 4},
 	drops = {
 		{name = "animalworld:ant", chance = 1, min = 1, max = 1},
 	},
@@ -44,7 +46,11 @@ mobs:register_mob("animalworld:ant", {
 		walk_end = 100,
 		punch_start = 100,
 		punch_end = 200,
-		-- 50-70 is slide/water idle
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 })
 
@@ -64,13 +70,13 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("animalworld:ant", ("Ant"), "aant.png")
+mobs:register_egg("animalworld:ant", S("Ant"), "aant.png")
 
 mobs:alias_mob("animalworld:ant", "animalworld:ant")
 
 
 minetest.register_craftitem(":animalworld:anteggs_raw", {
-	description = ("Raw Ant Eggs"),
+	description = S("Raw Ant Eggs"),
 	inventory_image = "animalworld_anteggs_raw.png",
 	on_use = minetest.item_eat(2),
 	groups = {food_meat_raw = 1, flammable = 2},
@@ -78,7 +84,7 @@ minetest.register_craftitem(":animalworld:anteggs_raw", {
 
 
 minetest.register_craftitem(":animalworld:anteggs_cooked", {
-	description = ("Cooked Ant Eggs"),
+	description = S("Cooked Ant Eggs"),
 	inventory_image = "animalworld_anteggs_cooked.png",
 	on_use = minetest.item_eat(6),
 	groups = {food_meat = 1, flammable = 2},
@@ -109,13 +115,14 @@ minetest.register_craft({
 	})
 
 minetest.register_node("animalworld:anthill", {
-    description = "Anthill",
+    description = S"Anthill",
     visual_scale = 0.5,
     mesh = "Anthil.b3d",
     tiles = {"textureanthil.png"},
     inventory_image = "aanthil.png",
     paramtype = "light",
     paramtype2 = "facedir",
+    walkable = false,
     groups = {crumbly = 3,  sand = 2},
     drawtype = "mesh",
     collision_box = {

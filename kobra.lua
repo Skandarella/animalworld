@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:kobra", {
 stepheight = 2,
 	type = "monster",
@@ -35,6 +37,7 @@ stepheight = 2,
 	jump = false,
         jump_height = 0,
 	stepheight = 2,
+        stay_near = {{"default:jungletree", "default:junglegrass", "naturalbiomes:bamboo_leaves", "naturalbiomes:bambooforest_groundgrass", "livingjungle::grass2", "livingjungle::grass1", "livingjungle:alocasia", "livingjungle:flamingoflower"}, 5},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 	        {name = "mobs:leather", chance = 1, min = 0, max = 2},
@@ -53,7 +56,11 @@ stepheight = 2,
 		punch_end = 200,
 		shoot_start = 150,
 		shoot_end = 200,
-		-- 50-70 is slide/water idle
+		die_start = 100,
+		die_end = 200,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 
 	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing"},
@@ -68,16 +75,17 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:kobra",
 	nodes = {"default:desert_sandstone", "default:desert_stone", "default:sandstone", "default:dirt_with_rainforest_litter", "naturalbiomes:bambooforest_litter"}, 
+	neighbors = {"default:junglegrass", "livingdesert:date_palm_leaves", "livingdesert:yucca", "default:dry_shrub", "livingdesert:coldsteppe_grass1", "livingdesert:cactus", "livingdesert:cactus3", "livingdesert:cactus2", "livingdesert:cactus4", "naturalbiomes:bambooforest_groundgrass", "naturalbiomes:bambooforest_groundgrass2"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 1000, -- 15000
 	min_height = -30,
 	max_height = 10,
 })
 end
 
 
-mobs:register_egg("animalworld:kobra", ("Cobra"), "akobra.png")
+mobs:register_egg("animalworld:kobra", S("Cobra"), "akobra.png")
 
 
 mobs:alias_mob("animalworld:kobra", "animalworld:kobra") -- compatiblity

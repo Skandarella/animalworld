@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:bear", {
 stepheight = 1,
 	type = "monster",
@@ -25,7 +27,7 @@ stepheight = 1,
 	runaway = false,
 	jump = false,
         jump_height = 6,
-	stepheight = 1,
+        stay_near = {{"people:feeder", "default:fern_1", "default:fern_2", "marinara:reed_bundle", "naturalbiomes:reed_bundle", "farming:straw"}, 6},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 		{name = "animalworld:bearcorpse", chance = 7, min = 1, max = 1},
@@ -42,7 +44,11 @@ stepheight = 1,
 		walk_end = 200,
 		punch_start = 200,
 		punch_end = 300,
-		-- 50-70 is slide/water idle
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 
 	follow = {
@@ -56,7 +62,7 @@ stepheight = 1,
 		-- feed or tame
 		if mobs:feed_tame(self, clicker, 4, false, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 0, 25, false, nil) then return end
 	end,
 })
 
@@ -68,13 +74,14 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:bear",
 	nodes = {"default:dirt_with_coniferous_litter"}, {"default:permafrost_with_moss"}, {"livingdesert:coldsteppe_ground3"},
+	neighbors = {"livingdesert:pine_leaves", "livingdesert:pine_leaves2", "livingdesert:pine_leaves3", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4", "default:fern_1", "default:fern_2"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 1000, -- 15000
 	min_height = -15,
 	max_height = 120,
 
 })
 end
 
-mobs:register_egg("animalworld:bear", ("Bear"), "abear.png")
+mobs:register_egg("animalworld:bear", S("Bear"), "abear.png")

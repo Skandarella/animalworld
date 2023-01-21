@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:blackgrouse", {
 stepheight = 2,
 	type = "animal",
@@ -44,6 +46,7 @@ stepheight = 2,
 	lava_damage = 5,
 	light_damage = 0,
 	fear_height = 3,
+        stay_near = {{"naturalbiomes:heath_grass", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:heatherflower", "naturalbiomes:heatherflower2", "naturalbiomes:heatherflower3"}, 5},
 	animation = {
 		speed_normal = 75,
 		stand_speed = 40,
@@ -57,7 +60,11 @@ stepheight = 2,
 		jump_end = 500,
 		walk_start = 300,
 		walk_end = 400,
-
+		die_start = 400,
+		die_end = 500,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 	follow = {
 		"naturalbiomes:bamboo_sapling", "livingfloatlands:coldsteppe_pine3_sapling", "livingfloatlands:coldsteppe_pine2_sapling", "livingfloatlands:coldsteppe_pine_sapling", "naturalbiomes:alppine1_sapling", "naturalbiomes:alpine_cowberrybush_sapling", "naturalbiomes:alppine2_sapling", "livingfloatlands:giantforest_paleoredwood_sapling", "naturalbiomes:juniper_sapling", "default:pine_sapling", "livingdesert:pine_sapling3", "livingdesert:pine_sapling2", "livingdesert:pine_sapling"
@@ -68,7 +75,7 @@ stepheight = 2,
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 30, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 15, 25, 0, false, nil) then return end
 	end,
 
 	do_custom = function(self, dtime)
@@ -100,9 +107,10 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:blackgrouse",
 	nodes = {"naturalbiomes:heath_litter"}, 
+	neighbors = {"naturalbiomes:heath_grass", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:heatherflower", "naturalbiomes:heatherflower2", "naturalbiomes:heatherflower3"}, 
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 2,
 	min_height = 5,
 	max_height = 60,
@@ -111,4 +119,4 @@ mobs:spawn({
 end
 
 
-mobs:register_egg("animalworld:blackgrouse", ("Black Grouse"), "ablackgrouse.png")
+mobs:register_egg("animalworld:blackgrouse", S("Black Grouse"), "ablackgrouse.png")

@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:notoptera", {
 	stepheight = 2,
 	type = "animal",
@@ -27,6 +29,7 @@ mobs:register_mob("animalworld:notoptera", {
 	jump = true,
 	jump_height = 6,
 	pushable = true,
+        stay_near = {{"default:pine_needles", "animalworld:animalworld_tundrashrub5", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4"}, 4},
 	follow = {"default:junglegrass", "default:dry_shrub", "default:blueberry_bush_leaves", "default:grass", "farming:cabbage_6", "farming:lettuce_5", "farming:beetroot_5", "flowers:dandelion_yellow"},
 	view_range = 5,
 	drops = {
@@ -46,10 +49,9 @@ mobs:register_mob("animalworld:notoptera", {
 		stan2d_end = 200,
 		walk_start = 200,
 		walk_end = 300,
-
-		die_start = 1, -- we dont have a specific death animation so we will
-		die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
-		die_speed = 1, -- have mob rotate when dying.
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
 		die_loop = false,
 		die_rotate = true,
 	},
@@ -57,7 +59,7 @@ mobs:register_mob("animalworld:notoptera", {
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 25, 0, 0, false, nil) then return end
 	end,
 })
 
@@ -65,9 +67,10 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:notoptera",
 	nodes = {"default:permafrost", "default:permafrost_with_moss"},
+	neighbors = {"animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4"},
 	min_light = 0,
 	interval = 30,
-	chance = 100, -- 15000
+	chance = 1000, -- 15000
 	active_object_count = 4,
 	min_height = 5,
 	max_height = 60,
@@ -75,13 +78,13 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("animalworld:notoptera", ("Notoptera"), "anotoptera.png")
+mobs:register_egg("animalworld:notoptera", S("Notoptera"), "anotoptera.png")
 
 
 mobs:alias_mob("animalworld:notoptera", "animalworld:notoptera") -- compatibility
 
 minetest.register_craftitem(":animalworld:bugice", {
-	description = ("Bug on Ice"),
+	description = S("Bug on Ice"),
 	inventory_image = "animalworld_bugice.png",
 	on_use = minetest.item_eat(2),
 	groups = {food_meat_raw = 1, flammable = 2},

@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 
 mobs:register_mob("animalworld:wasp", {
 	type = "monster",
@@ -22,7 +24,7 @@ mobs:register_mob("animalworld:wasp", {
 		death = "animalworld_wasp3",
 	},
 	makes_footstep_sound = false,
-	stay_near = {"animalworld:waspnest", 5},
+	stay_near = {"animalworld:waspnest", 3},
 	view_range = 7,
 	walk_velocity = 1,
         walk_chance = 70,
@@ -31,6 +33,7 @@ mobs:register_mob("animalworld:wasp", {
         fly_in = {"air"},
 	floats = 0,
 	runaway = false,
+	stay_near = {"animalworld:waspnest", 3},
 	jump = true,
         jump_height = 6,
 	stepheight = 3,
@@ -48,7 +51,11 @@ mobs:register_mob("animalworld:wasp", {
 		walk_end = 100,
 		punch_start = 100,
 		punch_end = 200,
-		-- 50-70 is slide/water idle
+		die_start = 100,
+		die_end = 200,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 })
 
@@ -68,7 +75,7 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("animalworld:wasp", ("Wasp"), "awasp.png")
+mobs:register_egg("animalworld:wasp", S("Wasp"), "awasp.png")
 
 mobs:alias_mob("animalworld:wasp", "animalworld:wasp")
 
@@ -92,7 +99,7 @@ mobs:alias_mob("animalworld:wasp", "animalworld:wasp")
 	})
 
 minetest.register_node("animalworld:waspnest", {
-    description = "Wasp Nest",
+    description = S"Wasp Nest",
     visual_scale = 0.5,
     mesh = "Waspnest.b3d",
     tiles = {"texturewaspnest.png"},

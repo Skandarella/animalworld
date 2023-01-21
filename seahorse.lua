@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:seahorse", {
 stepheight = 0.0,
 	type = "animal",
@@ -27,6 +29,7 @@ stepheight = 0.0,
 	runaway = true,
         runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:divingbeetle", "animalworld:scorpion", "animalworld:polarbear", "animalworld:leopardseal", "animalworld:stellerseagle", "player", "animalworld:wolf", "animalworld:panda", "animalworld:stingray", "marinaramobs:jellyfish", "marinaramobs:octopus", "livingcavesmobs:biter", "livingcavesmobs:flesheatingbacteria"},
 	jump = false,
+        stay_near = {{"default:sand_with_kelp", "marinara:sand_with_kelp", "default:softcoral_yellow", "marinara:sand_with_seagrass2", "default_clay"}, 5},
 	stepheight = 0.0,
 	drops = {
 	},
@@ -41,14 +44,14 @@ stepheight = 0.0,
 		stand_end = 100,
 		stand2_start = 0,
 		stand2_end = 1,
-		walk_start = 100,
-		walk_end = 200,
-                walk_speed = 30,
                 fly_speed = 30,
 		fly_start = 100, -- swim animation
 		fly_end = 200,
-
-		-- 50-70 is slide/water idle
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing"},
 	floats = 0,
@@ -62,7 +65,7 @@ stepheight = 0.0,
 		-- feed or tame
 		if mobs:feed_tame(self, clicker, 4, false, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 25, 0, false, nil) then return end
 	end,
 })
 
@@ -73,11 +76,11 @@ mobs:spawn({
 	neighbors = {"default:sand_with_kelp"},
 	min_light = 0,
 	interval = 30,
-	chance = 2, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 4,
 	min_height = -15,
 	max_height = 0,
 })
 end
 
-mobs:register_egg("animalworld:seahorse", ("Seahorse"), "aseahorse.png")
+mobs:register_egg("animalworld:seahorse", S("Seahorse"), "aseahorse.png")

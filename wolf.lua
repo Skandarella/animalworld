@@ -1,3 +1,6 @@
+local S = minetest.get_translator("animalworld")
+local random = math.random
+
 mobs:register_mob("animalworld:wolf", {
 stepheight = 2,
 	type = "monster",
@@ -33,6 +36,7 @@ stepheight = 2,
 	jump = true,
         jump_height = 6,
 	stepheight = 2,
+        stay_near = {{"default:fern_1", "default:fern_2", "naturalbiomes:alpine_grass1", "naturalbiomes:alpine_grass2", "naturalbiomes:alpine_grass3", "naturalbiomes:alpine_dandelion", "naturalbiomes:alpine_edelweiss"}, 6},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 	        {name = "mobs:leather", chance = 1, min = 0, max = 2},
@@ -52,12 +56,16 @@ stepheight = 2,
 		punch_speed = 100,
 		punch_start = 300,
 		punch_end = 400,
-		-- 50-70 is slide/water idle
+		die_start = 300,
+		die_end = 400,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 
 	follow = {
 		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
-		"mobs:meat_raw", "animalworld:rabbit_raw", "animalworld:pork_raw", "water_life:meat_raw", "xocean:fish_edible", "animalworld:chicken_raw"
+		"mobs:meat_raw", "animalworld:rabbit_raw", "animalworld:pork_raw", "water_life:meat_raw", "xocean:fish_edible", "animalworld:chicken_raw", "mobs:meatblock_raw", "animalworld:chicken_raw", "livingfloatlands:ornithischiaraw", "livingfloatlands:largemammalraw", "livingfloatlands:theropodraw", "livingfloatlands:sauropodraw", "animalworld:raw_athropod", "animalworld:whalemeat_raw", "animalworld:rabbit_raw", "nativevillages:chicken_raw", "mobs:meat_raw", "animalworld:pork_raw", "people:mutton:raw"
 	},
 	view_range = 10,
 
@@ -66,7 +74,7 @@ stepheight = 2,
 		-- feed or tame
 		if mobs:feed_tame(self, clicker, 4, false, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 25, 0, false, nil) then return end
 	end,
 })
 
@@ -78,14 +86,45 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:wolf",
 	nodes = {"default:dirt_with_coniferous_litter", "naturalbiomes:alpine_litter", "naturalbiomes:heath_litter"},
+	neighbors = {"default:pine_needles", "naturalbiomes:pine_leaves", "heath_juniper_leaves", "naturalbiomes:alppine1_leaves", "naturalbiomes:alppine2_leaves"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 500, -- 15000
 	active_object_count = 4,
 	min_height = 30,
 	max_height = 31000,
 	day_toggle = false,
-})
+
+		on_spawn = function(self, pos)
+
+			local nods = minetest.find_nodes_in_area_under_air(
+				{x = pos.x - 4, y = pos.y - 3, z = pos.z - 4},
+				{x = pos.x + 4, y = pos.y + 3, z = pos.z + 4},
+				{"default:dirt_with_coniferous_litter", "naturalbiomes:alpine_litter", "naturalbiomes:heath_litter"})
+
+			if nods and #nods > 0 then
+
+				-- min herd of 4
+				local iter = math.min(#nods, 4)
+
+-- print("--- wolf at", minetest.pos_to_string(pos), iter)
+
+				for n = 1, iter do
+
+					local pos2 = nods[random(#nods)]
+					local kid = random(4) == 1 and true or nil
+
+					pos2.y = pos2.y + 2
+
+					if minetest.get_node(pos2).name == "air" then
+
+						mobs:add_mob(pos2, {
+							name = "animalworld:wolf", child = kid})
+					end
+				end
+			end
+		end
+	})
 end
 
 mobs:register_egg("animalworld:wolf", ("Wolf"), "awolf.png")

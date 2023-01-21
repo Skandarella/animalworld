@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:parrotflying", {
 stepheight = 3,
 	type = "animal",
@@ -45,13 +47,15 @@ stepheight = 3,
 		speed_normal = 150,
 		stand_start = 200,
 		stand_end = 300,
-		walk_start = 450,
-		walk_end = 550,
 		fly_start = 450, -- swim animation
 		fly_end = 550,
 		punch_start = 200,
 		punch_end = 300,
-		-- 50-70 is slide/water idle
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 
 fly_in = {"air"},
@@ -67,14 +71,14 @@ view_range = 5,
 		-- feed or tame
 		if mobs:feed_tame(self, clicker, 4, false, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 25, 0, false, nil) then return end
 	end,
 })
 
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:parrotflying",
-	nodes = {"naturalbiomes:bambooforest_litter"}, 
+	nodes = {}, 
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000
@@ -84,4 +88,4 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("animalworld:parrotflying", ("Flying Parrot"), "aparrotfly.png")
+mobs:register_egg("animalworld:parrotflying", S("Flying Parrot"), "aparrotfly.png")

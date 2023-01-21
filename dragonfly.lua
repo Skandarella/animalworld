@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:dragonfly", {
 stepheight = 3,
 	type = "animal",
@@ -29,6 +31,7 @@ stepheight = 3,
         jump_height = 6,
 	stepheight = 3,
 	fly = true,
+        stay_near = {{"naturalbiomes:alderswamp_reed3", "naturalbiomes:alderswamp_reed2", "naturalbiomes:alderswamp_reed", "naturalbiomes:alderswamp_yellowflower", "naturalbiomes:waterlily", "marinara:reed_root"}, 4},
 	drops = {
 	
 	},
@@ -40,10 +43,13 @@ stepheight = 3,
 		speed_normal = 150,
 		stand_start = 0,
 		stand_end = 100,
-		walk_start = 100,
-		walk_end = 200,
 		fly_start = 100, -- swim animation
 		fly_end = 200,
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 
 fly_in = {"air"},
@@ -59,7 +65,7 @@ view_range = 5,
 		-- feed or tame
 		if mobs:feed_tame(self, clicker, 4, false, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 25, 0, false, nil) then return end
 	end,
 })
 
@@ -72,11 +78,11 @@ mobs:spawn({
 	min_light = 0,
 	interval = 30,
 	active_object_count = 2,
-	chance = 1, -- 15000
+	chance = 2000, -- 15000
 	min_height = 0,
 	max_height = 40,
         day_toggle = true
 })
 end
 
-mobs:register_egg("animalworld:dragonfly", ("Dragonfly"), "adragonfly.png")
+mobs:register_egg("animalworld:dragonfly", S("Dragonfly"), "adragonfly.png")

@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:stellerseagle", {
 stepheight = 3,
 	type = "monster",
@@ -46,7 +48,11 @@ stepheight = 3,
 		fly_end = 250,
 		punch_start = 250,
 		punch_end = 350,
-		-- 50-70 is slide/water idle
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 
 fly_in = {"air"},
@@ -63,7 +69,7 @@ view_range = 16,
 		-- feed or tame
 		if mobs:feed_tame(self, clicker, 4, false, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 25, 0, false, nil) then return end
 	end,
 })
 
@@ -71,9 +77,10 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:stellerseagle",
 	nodes = {"default:permafrost", "default:permafrost_with_moss", "default:permafrost_with_stones"},
+	neighbors = {"default:pine_tree", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4"},
 	min_light = 0,
 	interval = 60,
-	chance = 2, -- 15000
+	chance = 800, -- 15000
 	active_object_count = 2,
 	min_height = 30,
 	max_height = 100,
@@ -81,4 +88,4 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("animalworld:stellerseagle", ("Stellers Sea Eagle"), "astellerseagle.png")
+mobs:register_egg("animalworld:stellerseagle", S("Stellers Sea Eagle"), "astellerseagle.png")

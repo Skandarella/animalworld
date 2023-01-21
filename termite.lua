@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+local random = math.random
 
 mobs:register_mob("animalworld:termite", {
 	type = "monster",
@@ -20,12 +22,12 @@ mobs:register_mob("animalworld:termite", {
 		attack = "animalworld_termite",
 	},
 	makes_footstep_sound = true,
-	stay_near = {"animalworld:termitemould", 5},
 	view_range = 3,
 	walk_velocity = 0.5,
         walk_chance = 70,
 	run_velocity = 0.7,
 	runaway = false,
+	stay_near = {"animalworld:termitemould", 3},
 	jump = false,
         jump_height = 0,
 	stepheight = 3,
@@ -44,7 +46,11 @@ mobs:register_mob("animalworld:termite", {
 		walk_end = 100,
 		punch_start = 100,
 		punch_end = 200,
-		-- 50-70 is slide/water idle
+		die_start = 100,
+		die_end = 200,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 })
 
@@ -60,7 +66,7 @@ mobs:spawn({
 	active_object_count = 7,
 	min_height = 0,
 	max_height = 50,
-})
+	})
 end
 
 mobs:register_egg("animalworld:termite", ("Termite"), "atermite.png")
@@ -69,7 +75,7 @@ mobs:alias_mob("animalworld:termite", "animalworld:Termite")
 
 
 minetest.register_craftitem(":animalworld:termitequeen", {
-	description = ("Termite Queen"),
+	description = S("Termite Queen"),
 	inventory_image = "animalworld_termitequeen.png",
 	on_use = minetest.item_eat(2),
 	groups = {food_meat_raw = 1, flammable = 2},
@@ -96,13 +102,14 @@ minetest.register_craftitem(":animalworld:termitequeen", {
 	})
 
 minetest.register_node("animalworld:termitemould", {
-    description = "Termite Mound",
+    description = S"Termite Mound",
     visual_scale = 1,
     mesh = "Termitemould.b3d",
     tiles = {"texturetermitemould.png"},
     inventory_image = "atermitemould.png",
     paramtype = "light",
     paramtype2 = "facedir",
+    walkable = false,
     groups = {cracky = 3, stone = 2},
     drawtype = "mesh",
     collision_box = {
@@ -124,7 +131,7 @@ minetest.register_node("animalworld:termitemould", {
 })
 
 minetest.register_node("animalworld:termiteconcrete", {
-	description = ("Termite Concrete"),
+	description = S("Termite Concrete"),
 	tiles = {"termiteconcrete.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
@@ -139,7 +146,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:termiteconcreteblue", {
-	description = ("Termite Concrete Blue"),
+	description = S("Termite Concrete Blue"),
 	tiles = {"termiteconcreteblue.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
@@ -157,7 +164,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:termiteconcretegreen", {
-	description = ("Termite Concrete Green"),
+	description = S("Termite Concrete Green"),
 	tiles = {"termiteconcretegreen.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
@@ -175,7 +182,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:termiteconcreteyellow", {
-	description = ("Termite Concrete Yellow"),
+	description = S("Termite Concrete Yellow"),
 	tiles = {"termiteconcreteyellow.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
@@ -193,7 +200,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:termiteconcretered", {
-	description = ("Termite Concrete Red"),
+	description = S("Termite Concrete Red"),
 	tiles = {"termiteconcretered.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
@@ -211,7 +218,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:termiteconcreteorange", {
-	description = ("Termite Concrete Orange"),
+	description = S("Termite Concrete Orange"),
 	tiles = {"termiteconcreteorange.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
@@ -229,7 +236,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:termiteconcreteviolet", {
-	description = ("Termite Concrete Violet"),
+	description = S("Termite Concrete Violet"),
 	tiles = {"termiteconcreteviolet.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
@@ -247,7 +254,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:termiteconcretewhite", {
-	description = ("Termite Concrete White"),
+	description = S("Termite Concrete White"),
 	tiles = {"termiteconcretewhite.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
@@ -265,7 +272,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:termiteconcreteblack", {
-	description = ("Termite Concrete black"),
+	description = S("Termite Concrete Black"),
 	tiles = {"termiteconcreteblack.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
@@ -282,7 +289,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:termiteconcretegrey", {
-	description = ("Termite Concrete Grey"),
+	description = S("Termite Concrete Grey"),
 	tiles = {"termiteconcretegrey.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
@@ -299,7 +306,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:termiteconcretedarkgreen", {
-	description = ("Termite Concrete Dark Green"),
+	description = S("Termite Concrete Dark Green"),
 	tiles = {"termiteconcretedarkgreen.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
@@ -316,7 +323,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:termiteconcretebrown", {
-	description = ("Termite Concrete Brown"),
+	description = S("Termite Concrete Brown"),
 	tiles = {"termiteconcretebrown.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
@@ -333,7 +340,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:termiteconcretepink", {
-	description = ("Termite Concrete Pink"),
+	description = S("Termite Concrete Pink"),
 	tiles = {"termiteconcretepink.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
@@ -350,7 +357,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:termiteconcretemagenta", {
-	description = ("Termite Concrete Magenta"),
+	description = S("Termite Concrete Magenta"),
 	tiles = {"termiteconcretemagenta.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
@@ -367,7 +374,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("animalworld:termiteconcretecyan", {
-	description = ("Termite Concrete Cyan"),
+	description = S("Termite Concrete Cyan"),
 	tiles = {"termiteconcretecyan.png"},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},

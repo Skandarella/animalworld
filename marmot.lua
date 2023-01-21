@@ -1,3 +1,6 @@
+local S = minetest.get_translator("animalworld")
+local random = math.random
+
 mobs:register_mob("animalworld:marmot", {
 	stepheight = 2,
 	type = "animal",
@@ -38,7 +41,8 @@ mobs:register_mob("animalworld:marmot", {
 	water_damage = 0,
 	lava_damage = 5,
 	light_damage = 0,
-	fear_height = 4,
+	fear_height = 3,
+        stay_near = {{"naturalbiomes:alpine_grass1", "naturalbiomes:alpine_grass2", "naturalbiomes:alpine_grass3", "naturalbiomes:alpine_dandelion", "naturalbiomes:alpine_edelweiss", "livingdesert:coldsteppe_grass1", "livingdesert:coldsteppe_grass2", "livingdesert:coldsteppe_grass3"}, 5},
 	animation = {
 		speed_normal = 90,
 		stand_start = 0,
@@ -51,10 +55,9 @@ mobs:register_mob("animalworld:marmot", {
 		walk_end = 300,
 		punch_start = 200,
 		punch_end = 300,
-
-		die_start = 1, -- we dont have a specific death animation so we will
-		die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
-		die_speed = 1, -- have mob rotate when dying.
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
 		die_loop = false,
 		die_rotate = true,
 	},
@@ -62,7 +65,7 @@ mobs:register_mob("animalworld:marmot", {
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 25, 0, false, nil) then return end
 	end,
 })
 
@@ -80,17 +83,48 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:marmot",
 	nodes = {"naturalbiomes:alpine_litter", "livingdesert:coldsteppe_ground2"},
+	neighbors = {"naturalbiomes:alpine_grass1", "naturalbiomes:alpine_grass2", "naturalbiomes:alpine_grass3", "naturalbiomes:alpine_dandelion", "naturalbiomes:alpine_edelweiss", "livingdesert:coldsteppe_grass1", "livingdesert:coldsteppe_grass2", "livingdesert:coldsteppe_grass3"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 4,
 	min_height = 30,
 	max_height = 31000,
 	day_toggle = true,
-})
+
+		on_spawn = function(self, pos)
+
+			local nods = minetest.find_nodes_in_area_under_air(
+				{x = pos.x - 4, y = pos.y - 3, z = pos.z - 4},
+				{x = pos.x + 4, y = pos.y + 3, z = pos.z + 4},
+				{"naturalbiomes:alpine_litter", "livingdesert:coldsteppe_ground2"})
+
+			if nods and #nods > 0 then
+
+				-- min herd of 4
+				local iter = math.min(#nods, 4)
+
+-- print("--- marmot at", minetest.pos_to_string(pos), iter)
+
+				for n = 1, iter do
+
+					local pos2 = nods[random(#nods)]
+					local kid = random(4) == 1 and true or nil
+
+					pos2.y = pos2.y + 2
+
+					if minetest.get_node(pos2).name == "air" then
+
+						mobs:add_mob(pos2, {
+							name = "animalworld:marmot", child = kid})
+					end
+				end
+			end
+		end
+	})
 end
 
-mobs:register_egg("animalworld:marmot", ("Marmot"), "amarmot.png")
+mobs:register_egg("animalworld:marmot", S("Marmot"), "amarmot.png")
 
 
 mobs:alias_mob("animalworld:marmot", "animalworld:marmot") -- compatibility

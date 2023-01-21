@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:scorpion", {
 	type = "monster",
 	passive = false,
@@ -22,6 +24,7 @@ mobs:register_mob("animalworld:scorpion", {
 	walk_velocity = 0.5,
 	run_velocity = 2,
 	runaway = false,
+        stay_near = {{"livingdesert:date_palm_leaves", "livingdesert:yucca", "default:dry_shrub", "livingdesert:figcactus_trunk", "livingdesert:coldsteppe_grass1", "livingdesert:cactus", "livingdesert:cactus3", "livingdesert:cactus2", "livingdesert:cactus4"}, 4},
 	jump = true,
         jump_height = 0,
 	stepheight = 3,
@@ -42,7 +45,11 @@ mobs:register_mob("animalworld:scorpion", {
 		punch_speed = 100,
 		punch_start = 200,
 		punch_end = 300,
-		-- 50-70 is slide/water idle
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 })
 
@@ -51,9 +58,10 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:scorpion",
 	nodes = {"default:desert_sand", "default:desert_sandstone", "default:sandstone", "ethereal:dry_dirt", "ethereal:fiery_dirt", "naturalbiomes:bambooforest_litter", "livingdesert:coldsteppe_ground"},
+	neighbors = {"livingdesert:date_palm_leaves", "livingdesert:yucca", "default:dry_shrub", "livingdesert:figcactus_trunk", "livingdesert:cactus", "livingdesert:cactus3", "livingdesert:cactus2", "livingdesert:cactus4", "livingdesert:saxaul_trunk", "naturalbiomes:bambooforest_groundgrass", "naturalbiomes:bambooforest_groundgrass2"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 500, -- 15000
 	active_object_count = 2,
 	min_height = -20,
 	max_height = 50,
@@ -61,4 +69,4 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("animalworld:scorpion", ("Scorpion"), "ascorpion.png")
+mobs:register_egg("animalworld:scorpion", S("Scorpion"), "ascorpion.png")

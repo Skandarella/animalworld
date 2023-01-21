@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:snail", {
 	stepheight = 3,
 	type = "animal",
@@ -23,7 +25,7 @@ mobs:register_mob("animalworld:snail", {
 	walk_velocity = 0.2,
 	run_velocity = 0.4,
 	runaway = false,
-
+        stay_near = {{"farming:cabbage6", "farming:carrot8", "farming:raspberry_4", "farming:cucumber_4", "farming:lettuce_5", "farming:beetroot_5", "flowers:dandelion_yellow"}, 6},
 	jump = false,
 	jump_height = 3,
 	pushable = true,
@@ -43,11 +45,9 @@ mobs:register_mob("animalworld:snail", {
 		stand_end = 100,
 		walk_start = 100,
 		walk_end = 200,
-
-
-		die_start = 1, -- we dont have a specific death animation so we will
-		die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
-		die_speed = 1, -- have mob rotate when dying.
+		die_start = 100,
+		die_end = 200,
+		die_speed = 50,
 		die_loop = false,
 		die_rotate = true,
 	},
@@ -55,7 +55,7 @@ mobs:register_mob("animalworld:snail", {
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 30, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 25, 0, 0, false, nil) then return end
 	end,
 })
 
@@ -64,23 +64,23 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:snail",
 	nodes = {"default:dirt_with_grass"},
-	neighbors = {"farming:cucumber", "farming:cabbage_6", "farming:lettuce_5", "farming:beetroot_5", "flowers:dandelion_yellow"},
+	neighbors = {"farming:cucumber", "farming:cabbage_6", "farming:lettuce_5", "farming:beetroot_5", "flowers:dandelion_yellow", "farming:strawberry_7", "farming:parsley_3"},
 	min_light = 0,
 	interval = 30,
-	chance = 1, -- 15000
+	chance = 800, -- 15000
 	active_object_count = 3,
 	min_height = 6,
 	max_height = 40,
 })
 end
 
-mobs:register_egg("animalworld:snail", ("Snail"), "asnail.png")
+mobs:register_egg("animalworld:snail", S("Snail"), "asnail.png")
 
 
 mobs:alias_mob("animalworld:snail", "animalworld:snail") -- compatibility
 
 minetest.register_craftitem(":animalworld:escargots", {
-	description = ("Escargots"),
+	description = S("Escargots"),
 	inventory_image = "animalworld_escargots.png",
 	on_use = minetest.item_eat(2),
 	groups = {food_meat_raw = 1, flammable = 2},

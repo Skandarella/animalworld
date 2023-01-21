@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:parrot", {
 stepheight = 3,
 	type = "animal",
@@ -33,6 +35,7 @@ stepheight = 3,
 	fall_speed = -1,
 	fall_damage = 0,
 	stepheight = 3,
+        stay_near = {{"naturalbiomes:bamboo_leaves", "naturalbiomes:bambooforest_groundgrass"}, 5},
 	drops = {
 		{name = "animalworld:chicken_raw", chance = 1, min = 1, max = 1},
 	        {name = "animalworld:chicken_feather", chance = 1, min = 1, max = 1},
@@ -55,7 +58,11 @@ stepheight = 3,
 		fly_end = 570,
 		punch_start = 200,
 		punch_end = 300,
-		-- 50-70 is slide/water idle
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 
 fly_in = {"air"},
@@ -71,7 +78,7 @@ view_range = 5,
 		-- feed or tame
 		if mobs:feed_tame(self, clicker, 4, false, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 25, 0, false, nil) then return end
 	end,
 })
 
@@ -79,13 +86,14 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:parrot",
 	nodes = {"naturalbiomes:bambooforest_litter"}, 
+	neighbors = {"naturalbiomes:bamboo_trunk"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	min_height = 1,
 	max_height = 60,
 	day_toggle = true,
 })
 end
 
-mobs:register_egg("animalworld:parrot", ("Parrot"), "aparrot.png")
+mobs:register_egg("animalworld:parrot", S("Parrot"), "aparrot.png")

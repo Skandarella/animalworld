@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:frog", {
 stepheight = 3,
 	type = "animal",
@@ -25,6 +27,7 @@ sounds = {
         runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion", "animalworld:polarbear", "animalworld:leopardseal", "animalworld:stellerseagle", "player", "animalworld:wolf", "animalworld:panda", "animalworld:stingray", "marinaramobs:jellyfish", "marinaramobs:octopus", "livingcavesmobs:biter", "livingcavesmobs:flesheatingbacteria"},
 	jump = true,
 	jump_height = 6,
+        stay_near = {{"naturalbiomes:alderswamp_reed3", "naturalbiomes:alderswamp_reed2", "naturalbiomes:alderswamp_reed", "naturalbiomes:alderswamp_yellowflower", "default:grass", "default:grass_2", "default:grass_3"}, 5},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 	},
@@ -40,6 +43,11 @@ sounds = {
 		walk_end = 200,
 		fly_start = 250, -- swim animation
 		fly_end = 350,
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing"},
 	floats = 0,
@@ -49,7 +57,7 @@ sounds = {
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 15, 25, 0, false, nil) then return end
 	end,
 })
 
@@ -64,9 +72,10 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:frog",
 	nodes = {"default:dirt_with_grass", "default:dirt_with_rainforest_litter", "naturalbiomes:alderswamp_litter", "naturalbiomes:heath_litter"},
+	neighbors = {"naturalbiomes:alderswamp_reed3", "naturalbiomes:alderswamp_reed2", "naturalbiomes:alderswamp_reed", "naturalbiomes:alderswamp_yellowflower", "group:grass", "group:normal_grass"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 1000, -- 15000
 	active_object_count = 2,
 	min_height = -10,
 	max_height = 2,
@@ -74,7 +83,7 @@ mobs:spawn({
 end
 
 
-mobs:register_egg("animalworld:frog", ("Frog"), "afrog.png", 0)
+mobs:register_egg("animalworld:frog", S("Frog"), "afrog.png", 0)
 
 
 mobs:alias_mob("animalworld:frog", "animalworld:frog") -- compatibility

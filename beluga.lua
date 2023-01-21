@@ -1,3 +1,6 @@
+local S = minetest.get_translator("animalworld")
+local random = math.random
+
 mobs:register_mob("animalworld:beluga", {
 	stepheight = 1,
 	type = "animal",
@@ -32,13 +35,14 @@ mobs:register_mob("animalworld:beluga", {
 	fall_speed = 0,
 	jump = true,
 	jump_height = 0,
+        stay_near = {{"default:clay", "marinara:sand_with_seagrass", "marinara:coastrock_with:brownalage", "marinara:sand_with_seagrass2"}, 5},
  runaway = true,
         runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion", "animalworld:polarbear", "animalworld:leopardseal", "animalworld:stellerseagle", "animalworld:wolf", "animalworld:panda", "animalworld:stingray", "marinaramobs:jellyfish", "marinaramobs:octopus", "livingcavesmobs:biter", "livingcavesmobs:flesheatingbacteria"},
 	pushable = true,
 	follow = {
-		"mobs:meat_raw", "animalworld:rawfish", "xocean:fish_edible", "ethereal:fish_raw", "mobs:clownfish_raw", "mobs:bluefish_raw", "fishing:bait_worm", "fishing:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "water_life:meat_raw", "fishing:shark_raw", "fishing:pike_raw", "animalworld:rawmollusk", "nativevillages:catfish_raw"
+		"animalworld:rawmollusk", "marinaramobs:octopus_raw", "marinara:raw_oisters", "marinara:raw_athropod", "animalworld:rawfish", "fishing:fish_raw", "fishing:pike_raw", "marinaramobs:raw_exotic_fish", "nativevillages:catfish_raw", "xocean:fish_edible", "ethereal:fish_raw", "mobs:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "water_life:meat_raw", "fishing:shark_raw", "fishing:pike_raw"
 	},
-	view_range = 15,
+	view_range = 20,
 	drops = {
 		{name = "animalworld:whaleblubber", chance = 1, min = 3, max = 10},
 		{name = "animalworld:whalemeat_raw", chance = 1, min = 3, max = 10},
@@ -56,11 +60,9 @@ mobs:register_mob("animalworld:beluga", {
 		fly_end = 250,
 		fly2_start = 250,
 		fly2_end = 350,
-
-
-		die_start = 1, -- we dont have a specific death animation so we will
-		die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
-		die_speed = 1, -- have mob rotate when dying.
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
 		die_loop = false,
 		die_rotate = true,
 	},
@@ -68,7 +70,7 @@ mobs:register_mob("animalworld:beluga", {
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 0, 25, false, nil) then return end
 	end,
 })
 
@@ -79,14 +81,44 @@ mobs:spawn({
 	neighbors = {"default:ice", "default:snowblock"},
 	min_light = 0,
 	interval = 30,
-	chance = 2, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 3,
-	min_height = -15,
-	max_height = 1,
-})
+	min_height = -20,
+	max_height = 0,
+
+		on_spawn = function(self, pos)
+
+			local nods = minetest.find_nodes_in_area_under_air(
+				{x = pos.x - 4, y = pos.y - 3, z = pos.z - 4},
+				{x = pos.x + 4, y = pos.y + 3, z = pos.z + 4},
+				{"default:water_source"})
+
+			if nods and #nods > 0 then
+
+				-- min herd of 3
+				local iter = math.min(#nods, 3)
+
+-- print("--- beluga at", minetest.pos_to_string(pos), iter)
+
+				for n = 1, iter do
+
+					local pos2 = nods[random(#nods)]
+					local kid = random(4) == 1 and true or nil
+
+					pos2.y = pos2.y + 2
+
+					if minetest.get_node(pos2).name == "air" then
+
+						mobs:add_mob(pos2, {
+							name = "animalworld:beluga", child = kid})
+					end
+				end
+			end
+		end
+	})
 end
 
-mobs:register_egg("animalworld:beluga", ("Beluga Whale"), "abeluga.png")
+mobs:register_egg("animalworld:beluga", S("Beluga Whale"), "abeluga.png")
 
 
 mobs:alias_mob("animalworld:beluga", "animalworld:beluga") -- compatibility
@@ -94,7 +126,7 @@ mobs:alias_mob("animalworld:beluga", "animalworld:beluga") -- compatibility
 
 -- raw whale
 minetest.register_craftitem(":animalworld:whalemeat_raw", {
-	description = ("Raw Whale Meat"),
+	description = S("Raw Whale Meat"),
 	inventory_image = "animalworld_whalemeat_raw.png",
 	on_use = minetest.item_eat(4),
 	groups = {food_meat_raw = 1, flammable = 2},
@@ -102,7 +134,7 @@ minetest.register_craftitem(":animalworld:whalemeat_raw", {
 
 -- cooked whale
 minetest.register_craftitem(":animalworld:whalemeat_cooked", {
-	description = ("Cooked Whale Meat"),
+	description = S("Cooked Whale Meat"),
 	inventory_image = "animalworld_whalemeat_cooked.png",
 	on_use = minetest.item_eat(8),
 	groups = {food_meat = 1, flammable = 2},
@@ -122,6 +154,6 @@ minetest.register_craft({
 })
 
 minetest.register_craftitem("animalworld:whaleblubber", {
-	description = ("Whale Blubber"),
+	description = S("Whale Blubber"),
 	inventory_image = "animalworld_whaleblubber.png",
 })

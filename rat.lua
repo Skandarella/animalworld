@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:rat", {
 	type = "animal",
 	stepheight = 3,
@@ -45,14 +47,13 @@ mobs:register_mob("animalworld:rat", {
 		punch_start = 250,
 		punch_end = 350,
 		punch_speed = 125,
-
-		die_start = 1, -- we dont have a specific death animation so we will
-		die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
-		die_speed = 1, -- have mob rotate when dying.
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
 		die_loop = false,
 		die_rotate = true,
 	},
-	follow = {"farming:wheat", "farming:beans", "farming:barley", "farming:oat", "farming:rye", "mobs:cheese", "farming:bread", "ethereal:banana_bread", "animalworld:cockroach"},
+	follow = {"farming:wheat", "farming:beans", "farming:barley", "farming:oat", "farming:rye", "mobs:cheese", "farming:bread", "ethereal:banana_bread", "animalworld:cockroach", "farming:baked_potato", "farming:sunflower_bread", "farming:pumpkin_bread", "farming:garlic_bread", "farming:tomato_soup", "pie:brpd_0", "farming:bread", "farming:bread_multigrain", "farming:spanish_potatoes", "farming:beetroot_soup", "farming:blueberry_pie", "farming:porridge", "farming:bibimbap", "farming:burger", "farming:paella", "farming:mac_and_cheese", "livingcaves:healingsoup", "farming:spaghetti", "animalworld:escargots", "farming:rhubarb_pie", "farming:potato_omlet", "farming:potato_salad", "farming:corn_cob", "farming:seed_hemp", "farming:seed_barley", "farming:seed_oat", "farming:seed_cotton", "farming:seed_sunflower", "farming:seed_wheat", "farming:seed_rye", "naturalbiomes:coconut", "naturalbiomes:coconut_slice", "naturalbiomes:hazelnut", "naturalbiomes:hazelnut_cracked", "farming:sunflower_seeds_toasted", "livingfloatlands:roasted_pine_nuts", "livingfloatlands:giantforest_oaknut", "livingfloatlands:giantforest_oaknut_cracked", "livingfloatlands:coldsteppe_pine3_pinecone", "livingfloatlands:coldsteppe_pine_pinecone", "livingfloatlands:coldsteppe_pine2_pinecone"},
 	view_range = 10,
 
 })
@@ -76,14 +77,14 @@ mobs:spawn({
 end
 
 
-mobs:register_egg("animalworld:rat", ("Rat"), "arat.png")
+mobs:register_egg("animalworld:rat", S("Rat"), "arat.png")
 
 
 mobs:alias_mob("animalworld:rat", "animalworld:rat") -- compatibility
 
 -- cooked rat, yummy!
 minetest.register_craftitem(":animalworld:rat_cooked", {
-	description = ("Cooked Rodent Meat"),
+	description = S("Cooked Rodent Meat"),
 	inventory_image = "animalworld_cooked_rat.png",
 	on_use = minetest.item_eat(3),
 	groups = {food_rat = 1, flammable = 2},

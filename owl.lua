@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:owl", {
 stepheight = 3,
 	type = "monster",
@@ -48,7 +50,11 @@ stepheight = 3,
 		fly_end = 500,
 		punch_start = 200,
 		punch_end = 300,
-		-- 50-70 is slide/water idle
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 
 fly_in = {"air"},
@@ -57,14 +63,14 @@ fly_in = {"air"},
 		"animalworld:rabbit_raw", "mobs:meat_raw", "animalworld:chicken_raw", "water_life:meat_raw" 
 	},
 	
-view_range = 6,
+view_range = 10,
 
 	on_rightclick = function(self, clicker)
 
 		-- feed or tame
 		if mobs:feed_tame(self, clicker, 4, false, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 25, 0, false, nil) then return end
 	end,
 })
 
@@ -75,14 +81,14 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:owl",
-	nodes = {"default:dirt_with_coniferous_litter"}, {"default:pine_needles"},
+	nodes = {"default:pine_needles"}, {"naturalbiomes:pine_leaves"}, {"naturalbiomes:alppine1_leaves"}, {"naturalbiomes:birch_leaves"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	min_height = 10,
 	max_height = 60,
 	day_toggle = false,
 })
 end
 
-mobs:register_egg("animalworld:owl", ("Owl"), "aowl.png")
+mobs:register_egg("animalworld:owl", S("Owl"), "aowl.png")

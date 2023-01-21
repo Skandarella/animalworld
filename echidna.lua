@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:echidna", {
 	stepheight = 1,
 	type = "animal",
@@ -30,6 +32,7 @@ child_texture = {
 	jump = false,
 	jump_height = 3,
 	pushable = true,
+        stay_near = {{"animalworld:termitemould", "naturalbiomes:outback_grass", "naturalbiomes:outback_grass3", "naturalbiomes:outback_grass2", "naturalbiomes:outback_grass4", "naturalbiomes:outback_grass5", "livingdesert:cactus", "livingdesert:cactus3", "livingdesert:cactus2", "livingdesert:cactus4"}, 6},
 	follow = {"fishing:bait:worm", "bees:frame_full", "ethereal:worm", "animalworld:ant", "animalworld:termite"},
 	view_range = 3,
 	drops = {
@@ -50,10 +53,9 @@ child_texture = {
 		walk_end = 300,
 		punch_start = 300,
 		punch_end = 400,
-
-		die_start = 1, -- we dont have a specific death animation so we will
-		die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
-		die_speed = 1, -- have mob rotate when dying.
+		die_start = 300,
+		die_end = 400,
+		die_speed = 50,
 		die_loop = false,
 		die_rotate = true,
 	},
@@ -61,7 +63,7 @@ child_texture = {
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 15, 25, 0, false, nil) then return end
 	end,
 })
 
@@ -79,9 +81,10 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:echidna",
 	nodes = {"naturalbiomes:outback_litter"},
+	neighbors = {"group:grass", "group:normal_grass", "naturalbiomes:outback_grass", "naturalbiomes:outback_grass3", "naturalbiomes:outback_grass2", "naturalbiomes:outback_grass4", "naturalbiomes:outback_grass5"}, 
 	min_light = 0,
-	interval = 1,
-	chance = 8000, -- 15000
+	interval = 30,
+	chance = 2000, -- 15000
 	active_object_count = 2,
 	min_height = 5,
 	max_height = 50,
@@ -89,7 +92,7 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("animalworld:echidna", ("Echidna"), "aechidna.png")
+mobs:register_egg("animalworld:echidna", S("Echidna"), "aechidna.png")
 
 
 mobs:alias_mob("animalworld:echidna", "animalworld:echidna") -- compatibility

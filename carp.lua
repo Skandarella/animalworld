@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:carp", {
 stepheight = 0.0,
 	type = "animal",
@@ -26,6 +28,7 @@ stepheight = 0.0,
 	runaway = true,
         runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:divingbeetle", "animalworld:scorpion", "animalworld:polarbear", "animalworld:leopardseal", "animalworld:stellerseagle", "player", "animalworld:wolf", "animalworld:panda", "animalworld:stingray", "marinaramobs:jellyfish", "marinaramobs:octopus", "livingcavesmobs:biter", "livingcavesmobs:flesheatingbacteria"},
 	jump = false,
+        stay_near = {{"marinara:sand_with_alage", "marinara:sand_with_seagrass", "default:sand_with_kelp", "marinara:sand_with_kelp", "marinara:reed_root", "flowers:waterlily_waving", "naturalbiomes:waterlily", "default:clay"}, 5},
 	stepheight = 0.0,
 	drops = {
 		{name = "animalworld:rawfish", chance = 1, min = 1, max = 1},
@@ -39,19 +42,21 @@ stepheight = 0.0,
 		speed_normal = 100,
 		stand_start = 0,
 		stand_end = 100,
-		walk_start = 150,
-		walk_end = 250,
 		fly_start = 150, -- swim animation
 		fly_end = 250,
 		punch_start = 100,
 		punch_end = 200,
-		-- 50-70 is slide/water idle
+		die_start = 100,
+		die_end = 200,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing"},
 	floats = 0,
 	follow = {
-		"ethereal:worm", "seaweed", "fishing:bait_worm",
-		"default:grass", "farming:cucumber", "farming:cabbage", "animalworld:ant", "animalworld:termite", "animalworld:fishfood", "animalworld:cockroach"
+		"ethereal:worm", "marinara:sand_with_seagrass", "marinara:sand_with_seagrass2", "seaweed", "fishing:bait_worm",
+		"default:grass", "farming:cucumber", "farming:cabbage", "animalworld:ant", "animalworld:termite", "animalworld:fishfood", "animalworld:cockroach", "animalworld:anteggs_raw", "group:grass", "group:normal_grass"
 	},
 	view_range = 10,
 
@@ -60,7 +65,7 @@ stepheight = 0.0,
 		-- feed or tame
 		if mobs:feed_tame(self, clicker, 4, false, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 5, 25, 0, false, nil) then return end
 	end,
 })
 
@@ -68,21 +73,22 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:carp",
 	nodes = {"default:water_source"}, {"default:river_water_source"},
+	neighbors = {"marinara:sand_with_alage", "marinara:sand_with_seagrass", "default:sand_with_kelp", "marinara:sand_with_kelp", "marinara:reed_root", "flowers:waterlily_waving", "naturalbiomes:waterlily", "default:clay"},
 	min_light = 14,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 3,
-	min_height = 0,
+	min_height = -10,
 	max_height = 30,
 	day_toggle = true,
 })
 end
 
-mobs:register_egg("animalworld:carp", ("Carp"), "acarp.png")
+mobs:register_egg("animalworld:carp", S("Carp"), "acarp.png")
 
 -- raw fish
 minetest.register_craftitem(":animalworld:rawfish", {
-	description = ("Raw Fish"),
+	description = S("Raw Fish"),
 	inventory_image = "animalworld_rawfish.png",
 	on_use = minetest.item_eat(3),
 	groups = {food_meat_raw = 1, flammable = 2},
@@ -90,7 +96,7 @@ minetest.register_craftitem(":animalworld:rawfish", {
 
 -- cooked fish
 minetest.register_craftitem(":animalworld:cookedfish", {
-	description = ("Cooked Fish"),
+	description = S("Cooked Fish"),
 	inventory_image = "animalworld_cookedfish.png",
 	on_use = minetest.item_eat(5),
 	groups = {food_meat = 1, flammable = 2},

@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:lobster", {
 	stepheight = 1,
 	type = "animal",
@@ -11,7 +13,7 @@ mobs:register_mob("animalworld:lobster", {
 	hp_min = 25,
 	hp_max = 70,
 	armor = 100,
-	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.5, 0.6},
+	collisionbox = {-0.5, -0.01, -0.5, 0.5, 0.5, 0.5},
 	visual = "mesh",
 	mesh = "Lobster.b3d",
 	textures = {
@@ -27,8 +29,9 @@ mobs:register_mob("animalworld:lobster", {
 	jump = false,
 	jump_height = 3,
 	pushable = true,
+        stay_near = {{"marinara:sand_with_alage", "marinara:sand_with_seagrass", "default:sand_with_kelp", "marinara:sand_with_kelp", "marinara:reed_root", "flowers:waterlily_waving", "naturalbiomes:waterlily", "default:clay"}, 4},
 	follow = {"animalworld:rawfish", "mobs_fish:tropical", "mobs:clownfish_raw", 
-"mobs:bluefish_raw", "fishing:bait_worm", "fishing:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "water_life:meat_raw", "fishing:shark_raw", "fishing:pike_raw"},
+"mobs:bluefish_raw", "fishing:bait_worm", "fishing:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "water_life:meat_raw", "fishing:shark_raw", "fishing:pike_raw", "animalworld:rawmollusk", "marinaramobs:octopus_raw", "marinara:raw_oisters", "marinara:raw_athropod", "animalworld:rawfish", "fishing:fish_raw", "fishing:pike_raw", "marinaramobs:raw_exotic_fish", "nativevillages:catfish_raw", "xocean:fish_edible", "ethereal:fish_raw", "mobs:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "water_life:meat_raw", "fishing:shark_raw", "fishing:pike_raw"},
 	view_range = 10,
 	drops = {
 		{name = "animalworld:raw_athropod", chance = 1, min = 0, max = 2},
@@ -52,10 +55,9 @@ mobs:register_mob("animalworld:lobster", {
 		walk_end = 200,
 		punch_start = 200,
 		punch_end = 300,
-
-		die_start = 1, -- we dont have a specific death animation so we will
-		die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
-		die_speed = 1, -- have mob rotate when dying.
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
 		die_loop = false,
 		die_rotate = true,
 	},
@@ -63,7 +65,7 @@ mobs:register_mob("animalworld:lobster", {
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 15, 25, 0, false, nil) then return end
 	end,
 })
 
@@ -81,17 +83,18 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:lobster",
 	nodes = {"default:water_source"},
+	neighbors = {"marinara:sand_with_alage", "marinara:sand_with_seagrass", "default:sand_with_kelp", "marinara:sand_with_kelp", "marinara:reed_root", "flowers:waterlily_waving", "naturalbiomes:waterlily", "default:clay"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 2,
-	min_height = 0,
+	min_height = -30,
 	max_height = 10,
 	day_toggle = false,
 })
 end
 
-mobs:register_egg("animalworld:lobster", ("Lobster"), "alobster.png")
+mobs:register_egg("animalworld:lobster", S("Lobster"), "alobster.png")
 
 
 mobs:alias_mob("animalworld:lobster", "animalworld:lobster") -- compatibility

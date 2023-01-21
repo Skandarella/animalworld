@@ -1,3 +1,6 @@
+local S = minetest.get_translator("animalworld")
+local random = math.random
+
 mobs:register_mob("animalworld:boar", {
 	stepheight = 1,
 	type = "animal",
@@ -26,7 +29,8 @@ mobs:register_mob("animalworld:boar", {
 	run_velocity = 2,
 	jump = false,
 	pushable = true,
-	follow = {"default:apple", "farming:potato", "ethereal:banana_bread", "farming:melon_slice", "farming:carrot", "farming:seed_rice", "farming:corn"},
+        stay_near = {{"people:feeder", "default:fern_1", "default:fern_2", "marinara:reed_bundle", "naturalbiomes:reed_bundle", "farming:straw"}, 5},
+	follow = {"default:apple", "farming:potato", "ethereal:banana_bread", "farming:melon_slice", "farming:carrot", "farming:seed_rice", "farming:corn", "naturalbiomes:hazelnut", "livingfloatlands:giantforest_oaknut", "farming:corn_cob", "farming:seed_barley", "farming:seed_oat", "farming:pumpkin_8", "livingfloatlands:giantforest_oaknut", "farming:baked_potato", "farming:sunflower_bread", "farming:pumpkin_bread", "farming:bread_multigrain", "farming:spanish_potatoes"},
 	view_range = 6,
 	replace_rate = 10,
 	replace_what = {"farming:soil", "farming:soil_wet"},
@@ -49,9 +53,9 @@ mobs:register_mob("animalworld:boar", {
 		punch_start = 200,
 		punch_end = 300,
 
-		die_start = 1, -- we dont have a specific death animation so we will
-		die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
-		die_speed = 1, -- have mob rotate when dying.
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
 		die_loop = false,
 		die_rotate = true,
 	},
@@ -59,7 +63,7 @@ mobs:register_mob("animalworld:boar", {
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 15, 25, false, nil) then return end
 	end,
 })
 
@@ -77,17 +81,48 @@ if not mobs.custom_spawn_animal then
 mobs:spawn({
 	name = "animalworld:boar",
 	nodes = {"default:dirt_with_coniferous_litter", "default:dirt_gray"},
-	min_light = 14,
+	neighbors = {"default:fern_1", "default:fern_2"},
+	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 2,
 	min_height = 1,
 	max_height = 80,
 	day_toggle = true,
-})
+
+		on_spawn = function(self, pos)
+
+			local nods = minetest.find_nodes_in_area_under_air(
+				{x = pos.x - 4, y = pos.y - 3, z = pos.z - 4},
+				{x = pos.x + 4, y = pos.y + 3, z = pos.z + 4},
+				{"default:dirt_with_coniferous_litter", "default:dirt_gray"})
+
+			if nods and #nods > 0 then
+
+				-- min herd of 2
+				local iter = math.min(#nods, 2)
+
+-- print("--- boar at", minetest.pos_to_string(pos), iter)
+
+				for n = 1, iter do
+
+					local pos2 = nods[random(#nods)]
+					local kid = random(4) == 1 and true or nil
+
+					pos2.y = pos2.y + 2
+
+					if minetest.get_node(pos2).name == "air" then
+
+						mobs:add_mob(pos2, {
+							name = "animalworld:boar", child = kid})
+					end
+				end
+			end
+		end
+	})
 end
 
-mobs:register_egg("animalworld:boar", ("Boar"), "aboar.png")
+mobs:register_egg("animalworld:boar", S("Boar"), "aboar.png")
 
 
 mobs:alias_mob("animalworld:boar", "animalworld:boar") -- compatibility
@@ -95,7 +130,7 @@ mobs:alias_mob("animalworld:boar", "animalworld:boar") -- compatibility
 
 -- raw porkchop
 minetest.register_craftitem(":animalworld:pork_raw", {
-	description = ("Raw Pork"),
+	description = S("Raw Pork"),
 	inventory_image = "animalworld_pork_raw.png",
 	on_use = minetest.item_eat(4),
 	groups = {food_meat_raw = 1, food_pork_raw = 1, flammable = 2},
@@ -103,7 +138,7 @@ minetest.register_craftitem(":animalworld:pork_raw", {
 
 -- cooked porkchop
 minetest.register_craftitem(":animalworld:pork_cooked", {
-	description = ("Cooked Pork"),
+	description = S("Cooked Pork"),
 	inventory_image = "animalworld_pork_cooked.png",
 	on_use = minetest.item_eat(8),
 	groups = {food_meat = 1, food_pork = 1, flammable = 2},

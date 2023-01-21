@@ -1,3 +1,6 @@
+local S = minetest.get_translator("animalworld")
+local random = math.random
+
 mobs:register_mob("animalworld:wildboar", {
 	stepheight = 2,
 	type = "animal",
@@ -32,7 +35,8 @@ mobs:register_mob("animalworld:wildboar", {
 	jump = true,
 	jump_height = 4,
 	pushable = true,
-	follow = {"default:apple", "farming:potato", "ethereal:banana_bread", "farming:melon_slice", "farming:carrot", "farming:seed_rice", "farming:corn"},
+        stay_near = {{"people:feeder", "default:fern_1", "default:fern_2", "marinara:reed_bundle", "naturalbiomes:reed_bundle", "farming:straw", "naturalbiomes:med_flower2", "naturalbiomes:med_grass1", "naturalbiomes:med_grass2", "naturalbiomes:med_flower3"}, 6},
+	follow = {"default:apple", "farming:potato", "ethereal:banana_bread", "farming:melon_slice", "farming:carrot", "farming:seed_rice", "farming:corn", "naturalbiomes:hazelnut", "livingfloatlands:giantforest_oaknut"},
 	view_range = 10,
 	replace_rate = 10,
 	replace_what = {"farming:soil", "farming:soil_wet"},
@@ -59,10 +63,9 @@ mobs:register_mob("animalworld:wildboar", {
 		jump_end = 400,
 		punch_start = 400,
 		punch_end = 500,
-
-		die_start = 1, -- we dont have a specific death animation so we will
-		die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
-		die_speed = 1, -- have mob rotate when dying.
+		die_start = 400,
+		die_end = 500,
+		die_speed = 50,
 		die_loop = false,
 		die_rotate = true,
 	},
@@ -70,7 +73,7 @@ mobs:register_mob("animalworld:wildboar", {
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 15, 25, false, nil) then return end
 	end,
 })
 
@@ -88,17 +91,48 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:wildboar",
 	nodes = {"default:dirt_with_coniferous_litter", "default:dirt_gray", "naturalbiomes:mediterran_litter"},
-	min_light = 14,
+	neighbors = {"default:fern_1", "default:fern_2", "naturalbiomes:med_flower2", "naturalbiomes:med_grass1", "naturalbiomes:med_grass2", "naturalbiomes:med_flower3"},
+	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 3,
 	min_height = 1,
 	max_height = 80,
 	day_toggle = true,
-})
+
+		on_spawn = function(self, pos)
+
+			local nods = minetest.find_nodes_in_area_under_air(
+				{x = pos.x - 4, y = pos.y - 3, z = pos.z - 4},
+				{x = pos.x + 4, y = pos.y + 3, z = pos.z + 4},
+				{"default:dirt_with_coniferous_litter", "default:dirt_gray", "naturalbiomes:mediterran_litter"})
+
+			if nods and #nods > 0 then
+
+				-- min herd of 3
+				local iter = math.min(#nods, 3)
+
+-- print("--- wildboar at", minetest.pos_to_string(pos), iter)
+
+				for n = 1, iter do
+
+					local pos2 = nods[random(#nods)]
+					local kid = random(4) == 1 and true or nil
+
+					pos2.y = pos2.y + 2
+
+					if minetest.get_node(pos2).name == "air" then
+
+						mobs:add_mob(pos2, {
+							name = "animalworld:wildboar", child = kid})
+					end
+				end
+			end
+		end
+	})
 end
 
-mobs:register_egg("animalworld:wildboar", ("Wild Boar"), "awildboar.png")
+mobs:register_egg("animalworld:wildboar", S("Wild Boar"), "awildboar.png")
 
 
 mobs:alias_mob("animalworld:wildboar", "animalworld:wildboar") -- compatibility

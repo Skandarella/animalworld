@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:polarbear", {
 	type = "monster",
 	passive = false,
@@ -8,7 +10,8 @@ mobs:register_mob("animalworld:polarbear", {
 	hp_min = 25,
 	hp_max = 80,
 	armor = 100,
-	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.95, 0.6},
+        knock_back = false,
+	collisionbox = {-0.5, -0.01, -0.5, 0.5, 1.4, 0.5},
 	visual = "mesh",
 	mesh = "Polarbear.b3d",
 	visual_size = {x = 1.0, y = 1.0},
@@ -25,6 +28,7 @@ mobs:register_mob("animalworld:polarbear", {
 	jump = false,
         jump_height = 6,
 	stepheight = 2,
+        stay_near = {{"default:snow"}, 5},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 		{name = "animalworld:polarbearcorpse", chance = 7, min = 1, max = 1},
@@ -46,12 +50,16 @@ mobs:register_mob("animalworld:polarbear", {
 		fly_end = 500,
 		punch_start = 300,
 		punch_end = 400,
-
+		die_start = 300,
+		die_end = 400,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 
 	follow = {
 		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
-		"mobs:meat_raw", "animalworld:rabbit_raw", "xocean:fish_edible", "farming:melon_slice", "farming:melon_slice", "water_life:meat_raw", "water_life:meat_raw", "fishing:fish_raw", "animalworld:chicken_raw", "nativevillages:catfish_raw", "nativevillages:chicken_raw", "animalworld:whalemeat_raw"
+		"mobs:meat_raw", "animalworld:rabbit_raw", "xocean:fish_edible", "farming:melon_slice", "farming:melon_slice", "water_life:meat_raw", "water_life:meat_raw", "fishing:fish_raw", "animalworld:chicken_raw", "nativevillages:catfish_raw", "nativevillages:chicken_raw", "animalworld:whalemeat_raw", "mobs:meatblock_raw", "animalworld:chicken_raw", "livingfloatlands:ornithischiaraw", "livingfloatlands:largemammalraw", "livingfloatlands:theropodraw", "livingfloatlands:sauropodraw", "animalworld:raw_athropod", "animalworld:whalemeat_raw", "animalworld:rabbit_raw", "nativevillages:chicken_raw", "mobs:meat_raw", "animalworld:pork_raw", "people:mutton:raw", "animalworld:rawmollusk", "marinaramobs:octopus_raw", "marinara:raw_oisters", "marinara:raw_athropod", "animalworld:rawfish", "fishing:fish_raw", "fishing:pike_raw", "marinaramobs:raw_exotic_fish", "nativevillages:catfish_raw", "xocean:fish_edible", "ethereal:fish_raw", "mobs:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "water_life:meat_raw", "fishing:shark_raw", "fishing:pike_raw"
 	},
 	view_range = 12,
 
@@ -60,7 +68,7 @@ mobs:register_mob("animalworld:polarbear", {
 		-- feed or tame
 		if mobs:feed_tame(self, clicker, 4, false, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 0, 25, false, nil) then return end
 	end,
 })
 
@@ -72,7 +80,7 @@ nodes = {"default:ice", "default:snowblock"},
 	neighbors = {"default:water_source"},
 	min_light = 0,
 	interval = 60,
-	chance = 2, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 1,
 	min_height = -10,
 	max_height = 10,
@@ -81,4 +89,4 @@ nodes = {"default:ice", "default:snowblock"},
 })
 end
 
-mobs:register_egg("animalworld:polarbear", ("Polar Bear"), "apolarbear.png")
+mobs:register_egg("animalworld:polarbear", S("Polar Bear"), "apolarbear.png")

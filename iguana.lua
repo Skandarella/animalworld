@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:iguana", {
 	stepheight = 2,
 	type = "animal",
@@ -29,7 +31,7 @@ mobs:register_mob("animalworld:iguana", {
 	jump = false,
 	pushable = true,
 	follow = {"ethereal:banana_single", "farming:corn_cob", "farming:cabbage",
-		"default:apple", "farming:cabbage", "farming:carrot", "farming:cucumber", "farming:grapes", "farming:pineapple", "ethereal:orange", "ethereal:coconut", "ethereal:coconut_slice", "livingdesert:date_palm_fruits", "livingdesert:figcactus_fruit"},
+		"default:apple", "farming:cabbage", "farming:carrot", "farming:cucumber", "farming:grapes", "farming:pineapple", "ethereal:orange", "ethereal:coconut", "ethereal:coconut_slice", "livingdesert:date_palm_fruits", "livingdesert:figcactus_fruit", "farming:melon_8", "farming:pumpkin_8", "ethereal:strawberry", "farming:blackberry", "naturalbiomes:blackberry", "naturalbiomes:cowberry", "naturalbiomes:banana", "naturalbiomes:banana_bunch", "farming:blueberries", "ethereal:orange", "livingdesert:figcactus_fruit", "livingfloatlands:paleojungle_clubmoss_fruit", "ethereal:banana", "livingdesert:date_palm_fruits", "farming:melon_slice", "naturalbiomes:wildrose", "naturalbiomes:banana"},
 	view_range = 10,
 	replace_rate = 10,
 	replace_what = {"farming:soil", "farming:soil_wet"},
@@ -44,6 +46,7 @@ mobs:register_mob("animalworld:iguana", {
 	lava_damage = 5,
 	light_damage = 0,
 	fear_height = 3,
+        stay_near = {{"default:jungletree", "default:junglegrass", "naturalbiomes:bambooforest_groundgrass", "livingjungle::grass2", "livingjungle::grass1", "livingjungle:alocasia", "livingjungle:flamingoflower"}, 5},
 	animation = {
 		speed_normal = 80,
 		stand_speed = 30,
@@ -58,10 +61,9 @@ mobs:register_mob("animalworld:iguana", {
 		punch_end = 420,
 		fly_start = 440,
 		fly_end = 540,
-
-		die_start = 1, -- we dont have a specific death animation so we will
-		die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
-		die_speed = 1, -- have mob rotate when dying.
+		die_start = 300,
+		die_end = 400,
+		die_speed = 50,
 		die_loop = false,
 		die_rotate = true,
 	},
@@ -69,7 +71,7 @@ mobs:register_mob("animalworld:iguana", {
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 15, 25, 0, false, nil) then return end
 	end,
 })
 
@@ -87,9 +89,10 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:iguana",
 	nodes = {"livingjungle:jungleground", "livingjungle:leafyjungleground"},
+	neighbors = {"default:jungletree", "livingjungle:alocasia", "livingjungle:flamingoflower", "livingjungle:samauma_trunk"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 2,
 	min_height = 1,
 	max_height = 31000,
@@ -97,7 +100,7 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("animalworld:iguana", ("Iguana"), "aiguana.png")
+mobs:register_egg("animalworld:iguana", S("Iguana"), "aiguana.png")
 
 
 mobs:alias_mob("animalworld:iguana", "animalworld:iguana") -- compatibility

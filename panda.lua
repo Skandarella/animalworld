@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:panda", {
 stepheight = 1,
 	type = "monster",
@@ -26,6 +28,7 @@ stepheight = 1,
 	jump = false,
         jump_height = 6,
 	stepheight = 6,
+        stay_near = {{"naturalbiomes:bamboo_leaves", "naturalbiomes:bambooforest_groundgrass"}, 5},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 	        {name = "mobs:leather", chance = 1, min = 0, max = 2},
@@ -47,7 +50,11 @@ stepheight = 1,
 		punch_speed = 100,
 		punch_start = 300,
 		punch_end = 400,
-		-- 50-70 is slide/water idle
+		die_start = 300,
+		die_end = 400,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 
 	follow = {
@@ -59,7 +66,7 @@ stepheight = 1,
 		-- feed or tame
 		if mobs:feed_tame(self, clicker, 4, false, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 0, 25, false, nil) then return end
 	end,
 })
 
@@ -69,15 +76,16 @@ end
 
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
-	name = "animalworld:bear",
+	name = "animalworld:panda",
 	nodes = {"naturalbiomes:bambooforest_litter"},
+	neighbors = {"naturalbiomes:bambooforest_groundgrass", "naturalbiomes:bambooforest_groundgrass2", "naturalbiomes:bamboo_leaves"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	min_height = 30,
 	max_height = 1000,
 
 })
 end
 
-mobs:register_egg("animalworld:panda", ("Panda"), "apanda.png")
+mobs:register_egg("animalworld:panda", S("Panda"), "apanda.png")

@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:locust", {
 stepheight = 3,
 	type = "animal",
@@ -29,6 +31,7 @@ stepheight = 3,
 	jump = true,
         jump_height = 6,
 	stepheight = 3,
+        stay_near = {{"default:dry_grass_1", "default:dry_grass_2", "default:dry_grass_3", "default:dry_grass_4", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", "naturalbiomes:bushland_grass4"}, 4},
 	drops = {
 		{name = "animalworld:locust", chance = 1, min = 1, max = 1},
 	
@@ -47,13 +50,17 @@ stepheight = 3,
 		walk_end = 200,
 		fly_start = 250, -- swim animation
 		fly_end = 350,
-
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 
 fly_in = {"air"},
 	floats = 0,
 	follow = {"default:dry_shrub ", "default:grass_1", "ethereal:dry_shrub", "farming:seed_wheat", "farming:seed_rye", "default:junglegrass", "ethereal:banana_single", "farming:corn_cob", "farming:cabbage",
-		"default:apple", "farming:cabbage", "farming:carrot", "farming:cucumber", "farming:grapes", "farming:pineapple", "ethereal:orange", "ethereal:coconut", "ethereal:coconut_slice"},
+		"default:apple", "farming:cabbage", "farming:carrot", "farming:cucumber", "farming:grapes", "farming:pineapple", "ethereal:orange", "ethereal:coconut", "ethereal:coconut_slice", "group:grass", "group:normal_grass"},
 	
 view_range = 4,
 
@@ -62,17 +69,18 @@ view_range = 4,
 		-- feed or tame
 		if mobs:feed_tame(self, clicker, 4, false, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 15, 25, 0, false, nil) then return end
 	end,
 })
 
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:locust",
-	nodes = {"default:dry_dirt_with_dry_grass", "ethereal:prairie_dirt"}, 
+	nodes = {"default:dry_dirt_with_dry_grass", "ethereal:prairie_dirt", "naturalbiomes:bushland_bushlandlitter"}, 
+	neighbors = {"naturalbiomes:heath_grass", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:heatherflower", "naturalbiomes:heatherflower2", "naturalbiomes:heatherflower3", "group:grass", "group:normal_grass", "naturalbiomes:med_flower2", "naturalbiomes:med_grass1", "naturalbiomes:med_grass2", "naturalbiomes:med_flower3", "naturalbiomes:bushland_grass4", "naturalbiomes:bushland_grass5", "naturalbiomes:bushland_grass6", "group:grass", "group:normal_grass"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 2,
 	min_height = 10,
 	max_height = 75,
@@ -80,11 +88,11 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("animalworld:locust", ("Locust"), "alocust.png")
+mobs:register_egg("animalworld:locust", S("Locust"), "alocust.png")
 
 
 minetest.register_craftitem(":animalworld:locust_roasted", {
-	description = ("Roasted Locust"),
+	description = S("Roasted Locust"),
 	inventory_image = "animalworld_locust_roasted.png",
 	on_use = minetest.item_eat(8),
 	groups = {food_meat = 1, flammable = 2},

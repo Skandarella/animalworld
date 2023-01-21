@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:spider", {
 stepheight = 4,
 	type = "monster",
@@ -12,7 +14,7 @@ stepheight = 4,
 	hp_min = 10,
 	hp_max = 35,
 	armor = 100,
-	collisionbox = {-0.5, -0.01, -0.5, 0.5, 0.5, 0.5},
+	collisionbox = {-0.4, -0.01, -0.4, 0.4, 0.4, 0.4},
 	visual = "mesh",
 	mesh = "Spider.b3d",
 	visual_size = {x = 0.3, y = 0.3},
@@ -31,6 +33,7 @@ stepheight = 4,
 	jump = true,
         jump_height = 0,
 	stepheight = 4,
+	stay_near = {{"livingcaves:spiderweb", "livingcaves:spiderweb2", "livingcaves:spiderweb3", "livingcaves:spiderweb4", "livingcaves:spiderweb5", "livingcaves:spiderweb6", "livingcaves:spiderweb7", "livingcaves:spiderweb8", "livingcaves:spiderweb9"}, 3},
 	drops = {
 		{name = "animalworld:raw_athropod", chance = 1, min = 0, max = 2},
 		{name = "wool:white", chance = 1, min = 0, max = 2},
@@ -49,7 +52,11 @@ stepheight = 4,
 		punch_end = 300,
 		shoot_start = 200,
 		shoot_end = 300,
-		-- 50-70 is slide/water idle
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 })
 
@@ -68,14 +75,14 @@ mobs:spawn({
 end
 
 
-mobs:register_egg("animalworld:spider", ("Spider"), "aspider.png")
+mobs:register_egg("animalworld:spider", S("Spider"), "aspider.png")
 
 
 mobs:alias_mob("animalworld:spider", "animalworld:spider") -- compatiblity
 
 -- raw athropod
 minetest.register_craftitem(":animalworld:raw_athropod", {
-	description = ("Raw Athropod"),
+	description = S("Raw Athropod"),
 	inventory_image = "animalworld_raw_athropod.png",
 	on_use = minetest.item_eat(3),
 	groups = {food_meat_raw = 1, flammable = 2},
@@ -111,7 +118,7 @@ mobs:register_arrow("animalworld:silk_arrow", {
 
 -- cooked athropod
 minetest.register_craftitem(":animalworld:cooked_athropod", {
-	description = ("Cooked Athropod"),
+	description = S("Cooked Athropod"),
 	inventory_image = "animalworld_cooked_athropod.png",
 	on_use = minetest.item_eat(5),
 	groups = {food_meat = 1, flammable = 2},

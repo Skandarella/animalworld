@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:puffin", {
 stepheight = 3,
 	type = "animal",
@@ -41,11 +43,13 @@ stepheight = 3,
 		speed_normal = 130,
 		stand_start = 0,
 		stand_end = 100,
-		walk_start = 150,
-		walk_end = 250,
 		fly_start = 150, -- swim animation
 		fly_end = 250,
-		-- 50-70 is slide/water idle
+		die_start = 100,
+		die_end = 200,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 
 fly_in = {"air", "default:water_source", "default:river_water_source"},
@@ -61,7 +65,7 @@ view_range = 4,
 		-- feed or tame
 		if mobs:feed_tame(self, clicker, 4, false, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 25, 0, false, nil) then return end
 	end,
 })
 
@@ -73,14 +77,15 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:puffin",
 	nodes = {"default:snowblock"}, {"default:ice"},
+	neighbors = {"default:water_source"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 2,
-	min_height = 0,
+	min_height = -1,
 	max_height = 10,
 	day_toggle = true,
 })
 end
 
-mobs:register_egg("animalworld:puffin", ("Puffin"), "apuffin.png")
+mobs:register_egg("animalworld:puffin", S("Puffin"), "apuffin.png")

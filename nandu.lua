@@ -1,3 +1,7 @@
+local S = minetest.get_translator("animalworld")
+local random = math.random
+
+
 mobs:register_mob("animalworld:nandu", {
 stepheight = 1,
 	type = "animal",
@@ -25,6 +29,7 @@ stepheight = 1,
 	makes_footstep_sound = true,
 	walk_velocity = 0.7,
 	run_velocity = 3,
+        stay_near = {{"people:feeder", "flowers:tulip_black", "flowers:chrysanthemum_green", "flowers:geranium", "flowers:dandelion_white", "default:grass_1", "marinara:reed_bundle", "naturalbiomes:reed_bundle", "farming:straw", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", "naturalbiomes:bushland_grass4"}, 5},
 	runaway = true,
         runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion", "animalworld:polarbear", "animalworld:leopardseal", "animalworld:stellerseagle", "animalworld:wolf", "animalworld:panda", "animalworld:stingray", "marinaramobs:jellyfish", "marinaramobs:octopus", "livingcavesmobs:biter", "livingcavesmobs:flesheatingbacteria"},
 	drops = {
@@ -41,16 +46,22 @@ stepheight = 1,
 		stand_end = 100,
 		stand1_start = 1,
 		stand1_end = 100,
+		walk_speed = 75,
 		walk_start = 100,
 		walk_end = 200,
+		run_speed = 125,
 		run_start = 100,
 		run_end = 200,
 		punch_start = 200,
 		punch_end = 300,
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 	follow = {
-		"farming:seed_wheat", "farming:seed_cotton", "farming:seed_barley",
-		"farming:seed_oat", "farming:seed_rye"
+		"farming:seed_wheat", "farming:seed_cotton", "farming:seed_barley", "farming:seed_oat", "farming:seed_rye", "farming:corn_cob", "farming:seed_hemp", "farming:seed_barley", "farming:seed_oat", "farming:seed_cotton", "farming:seed_sunflower", "farming:seed_wheat", "farming:seed_rye", "naturalbiomes:hazelnut", "naturalbiomes:hazelnut_cracked", "farming:sunflower_seeds_toasted", "livingfloatlands:roasted_pine_nuts", "livingfloatlands:giantforest_oaknut_cracked", "livingfloatlands:coldsteppe_pine3_pinecone", "livingfloatlands:coldsteppe_pine_pinecone", "livingfloatlands:coldsteppe_pine2_pinecone"
 	},
 	view_range = 10,
 
@@ -58,7 +69,7 @@ stepheight = 1,
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 30, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 5, 25, 0, false, nil) then return end
 	end,
 
 	do_custom = function(self, dtime)
@@ -90,7 +101,7 @@ stepheight = 1,
 local spawn_on = {"default:dirt_with_grass"}
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"ethereal:bamboo_dirt", "ethereal:prairie_dirt", "default:dirt_with_grass"}
+	spawn_on = {"ethereal:bamboo_dirt", "ethereal:prairie_dirt", "default:dirt_with_grass", "naturalbiomes:bushland_bushlandlitter"}
 end
 
 
@@ -98,14 +109,46 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:nandu",
 	nodes = {"default:dirt_with_grass"}, 
+	neighbors = {"group:grass", "group:normal_grass"}, 
 	min_light = 14,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 3,
 	min_height = 10,
 	max_height = 40,
 	day_toggle = true,
-})
+
+
+		on_spawn = function(self, pos)
+
+			local nods = minetest.find_nodes_in_area_under_air(
+				{x = pos.x - 4, y = pos.y - 3, z = pos.z - 4},
+				{x = pos.x + 4, y = pos.y + 3, z = pos.z + 4},
+				{"default:dirt_with_grass"})
+
+			if nods and #nods > 0 then
+
+				-- min herd of 3
+				local iter = math.min(#nods, 3)
+
+-- print("--- nandu at", minetest.pos_to_string(pos), iter)
+
+				for n = 1, iter do
+
+					local pos2 = nods[random(#nods)]
+					local kid = random(4) == 1 and true or nil
+
+					pos2.y = pos2.y + 2
+
+					if minetest.get_node(pos2).name == "air" then
+
+						mobs:add_mob(pos2, {
+							name = "animalworld:nandu", child = kid})
+					end
+				end
+			end
+		end
+	})
 end
 
 
@@ -231,7 +274,7 @@ end
 
 -- egg
 minetest.register_node(":animalworld:egg", {
-	description = ("Bird Egg"),
+	description = S("Bird Egg"),
 	tiles = {"mobs_chicken_egg.png"},
 	inventory_image  = "mobs_chicken_egg.png",
 	visual_scale = 0.7,
@@ -257,7 +300,7 @@ minetest.register_node(":animalworld:egg", {
 
 -- fried egg
 minetest.register_craftitem(":animalworld:chicken_egg_fried", {
-	description = ("Fried Egg"),
+	description = S("Fried Egg"),
 	inventory_image = "animalworld_chicken_egg_fried.png",
 	on_use = minetest.item_eat(2),
 	groups = {food_egg_fried = 1, flammable = 2},
@@ -271,7 +314,7 @@ minetest.register_craft({
 
 -- raw chicken
 minetest.register_craftitem(":animalworld:chicken_raw", {
-description = ("Raw Birdmeat"),
+description = S("Raw Birdmeat"),
 	inventory_image = "animalworld_chicken_raw.png",
 	on_use = minetest.item_eat(2),
 	groups = {food_meat_raw = 1, food_chicken_raw = 1, flammable = 2},
@@ -279,7 +322,7 @@ description = ("Raw Birdmeat"),
 
 -- cooked chicken
 minetest.register_craftitem(":animalworld:chicken_cooked", {
-description = ("Cooked Birdmeat"),
+description = S("Cooked Birdmeat"),
 	inventory_image = "animalworld_chicken_cooked.png",
 	on_use = minetest.item_eat(6),
 	groups = {food_meat = 1, food_chicken = 1, flammable = 2},
@@ -293,7 +336,7 @@ minetest.register_craft({
 
 -- feather
 minetest.register_craftitem(":animalworld:chicken_feather", {
-	description = ("Feather"),
+	description = S("Feather"),
 	inventory_image = "animalworld_chicken_feather.png",
 	groups = {flammable = 2},
 })

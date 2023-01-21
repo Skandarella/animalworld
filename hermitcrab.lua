@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:hermitcrab", {
 	stepheight = 3,
 	type = "animal",
@@ -29,7 +31,7 @@ random = "animalworld_crab",
 	walk_velocity = 0.4,
 	run_velocity = 0.6,
 	runaway = true,
-
+        stay_near = {{"naturalbiomes:palmbeach_grass1", "naturalbiomes:palmbeach_grass2", "naturalbiomes:palm_trunk", "naturalbiomes:beach_bush_leaves"}, 5},
 	jump = false,
 	jump_height = 3,
 	floats = 0,
@@ -55,11 +57,9 @@ random = "animalworld_crab",
 		stand2_end = 400,
 		walk_start = 200,
 		walk_end = 300,
-
-
-		die_start = 1, -- we dont have a specific death animation so we will
-		die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
-		die_speed = 1, -- have mob rotate when dying.
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
 		die_loop = false,
 		die_rotate = true,
 	},
@@ -67,7 +67,7 @@ random = "animalworld_crab",
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 30, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 35, 35, 0, false, nil) then return end
 	end,
 })
 
@@ -76,16 +76,17 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:hermitcrab",
 	nodes = {"naturalbiomes:palmbeach_sand"},
+	neighbors = {"naturalbiomes:palmbeach_grass1", "naturalbiomes:palmbeach_grass2", "naturalbiomes:palmbeach_grass3"},
 	min_light = 0,
 	interval = 30,
-	chance = 1, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 4,
 	min_height = 2,
 	max_height = 6,
 })
 end
 
-mobs:register_egg("animalworld:hermitcrab", ("Hermit Crab"), "ahermitcrab.png")
+mobs:register_egg("animalworld:hermitcrab", S("Hermit Crab"), "ahermitcrab.png")
 
 
 mobs:alias_mob("animalworld:hermitcrab", "animalworld:hermitcrab") -- compatibility

@@ -1,4 +1,6 @@
-walls.register(":animalworld:termiteconcrete_wall", "Termite Concrete Wall", "termiteconcrete.png",
+local S = minetest.get_translator("animalworld")
+
+walls.register(":animalworld:termiteconcrete_wall", S"Termite Concrete Wall", "termiteconcrete.png",
 		"animalworld:termiteconcrete_wall", default.node_sound_stone_defaults())
 
     stairs.register_stair_and_slab(
@@ -6,8 +8,8 @@ walls.register(":animalworld:termiteconcrete_wall", "Termite Concrete Wall", "te
       "animalworld:termiteconcrete",
       {cracky = 1, oddly_breakable_by_hand = 0, flammable = 0},
       {"termiteconcrete.png"},
-      ("Termite Concrete Stair"),
-      ("Termite Concrete Slab"),
+      S("Termite Concrete Stair"),
+      S("Termite Concrete Slab"),
       default.node_sound_stone_defaults()
     )
 
@@ -20,7 +22,7 @@ minetest.register_craft({
 	
 })
 
-walls.register(":animalworld:termiteconcretewhite_wall", "Termite Concrete White Wall", "termiteconcretewhite.png",
+walls.register(":animalworld:termiteconcretewhite_wall", S"Termite Concrete White Wall", "termiteconcretewhite.png",
 		"animalworld:termiteconcretewhite_wall", default.node_sound_stone_defaults())
 
     stairs.register_stair_and_slab(
@@ -28,8 +30,8 @@ walls.register(":animalworld:termiteconcretewhite_wall", "Termite Concrete White
       "animalworld:termiteconcretewhite",
       {cracky = 1, oddly_breakable_by_hand = 0, flammable = 0},
       {"termiteconcretewhite.png"},
-      ("Termite Concrete White Stair"),
-      ("Termite Concrete White Slab"),
+      S("Termite Concrete White Stair"),
+      S("Termite Concrete White Slab"),
       default.node_sound_stone_defaults()
     )
 
@@ -42,7 +44,7 @@ minetest.register_craft({
 	
 })
 
-walls.register(":animalworld:termiteconcretegrey_wall", "Termite Concrete grey Wall", "termiteconcretegrey.png",
+walls.register(":animalworld:termiteconcretegrey_wall", S"Termite Concrete Grey Wall", "termiteconcretegrey.png",
 		"animalworld:termiteconcretegrey_wall", default.node_sound_stone_defaults())
 
     stairs.register_stair_and_slab(
@@ -50,8 +52,8 @@ walls.register(":animalworld:termiteconcretegrey_wall", "Termite Concrete grey W
       "animalworld:termiteconcretegrey",
       {cracky = 1, oddly_breakable_by_hand = 0, flammable = 0},
       {"termiteconcretegrey.png"},
-      ("Termite Concrete Grey Stair"),
-      ("Termite Concrete Grey Slab"),
+      S("Termite Concrete Grey Stair"),
+      S("Termite Concrete Grey Slab"),
       default.node_sound_stone_defaults()
     )
 
@@ -64,7 +66,7 @@ minetest.register_craft({
 	
 })
 
-walls.register(":animalworld:termiteconcreteblack_wall", "Termite Concrete Black Wall", "termiteconcreteblack.png",
+walls.register(":animalworld:termiteconcreteblack_wall", S"Termite Concrete Black Wall", "termiteconcreteblack.png",
 		"animalworld:termiteconcreteblack_wall", default.node_sound_stone_defaults())
 
     stairs.register_stair_and_slab(
@@ -72,8 +74,8 @@ walls.register(":animalworld:termiteconcreteblack_wall", "Termite Concrete Black
       "animalworld:termiteconcreteblack",
       {cracky = 1, oddly_breakable_by_hand = 0, flammable = 0},
       {"termiteconcreteblack.png"},
-      ("Termite Concrete Black Stair"),
-      ("Termite Concrete Black Slab"),
+      S("Termite Concrete Black Stair"),
+     S("Termite Concrete Black Slab"),
       default.node_sound_stone_defaults()
     )
 
@@ -86,7 +88,7 @@ minetest.register_craft({
 	
 })
 
-walls.register(":animalworld:termiteconcreteblue_wall", "Termite Concrete Blaue Wall", "termiteconcreteblue.png",
+walls.register(":animalworld:termiteconcreteblue_wall", S"Termite Concrete Blue Wall", "termiteconcreteblue.png",
 		"animalworld:termiteconcreteblue_wall", default.node_sound_stone_defaults())
 
     stairs.register_stair_and_slab(
@@ -94,8 +96,8 @@ walls.register(":animalworld:termiteconcreteblue_wall", "Termite Concrete Blaue 
       "animalworld:termiteconcreteblue",
       {cracky = 1, oddly_breakable_by_hand = 0, flammable = 0},
       {"termiteconcreteblue.png"},
-      ("Termite Concrete Blue Stair"),
-      ("Termite Concrete Blue Slab"),
+      S("Termite Concrete Blue Stair"),
+      S("Termite Concrete Blue Slab"),
       default.node_sound_stone_defaults()
     )
 
@@ -108,7 +110,7 @@ minetest.register_craft({
 	
 })
 
-walls.register(":animalworld:termiteconcretecyan_wall", "Termite Concrete Cyan Wall", "termiteconcretecyan.png",
+walls.register(":animalworld:termiteconcretecyan_wall", S"Termite Concrete Cyan Wall", "termiteconcretecyan.png",
 		"animalworld:termiteconcretecyan_wall", default.node_sound_stone_defaults())
 
     stairs.register_stair_and_slab(
@@ -116,8 +118,8 @@ walls.register(":animalworld:termiteconcretecyan_wall", "Termite Concrete Cyan W
       "animalworld:termiteconcretecyan",
       {cracky = 1, oddly_breakable_by_hand = 0, flammable = 0},
       {"termiteconcretecyan.png"},
-      ("Termite Concrete Cyan Stair"),
-      ("Termite Concrete Cyan Slab"),
+      S("Termite Concrete Cyan Stair"),
+      S("Termite Concrete Cyan Slab"),
       default.node_sound_stone_defaults()
     )
 
@@ -130,7 +132,7 @@ minetest.register_craft({
 	
 })
 
-walls.register(":animalworld:termiteconcretegreen_wall", "Termite Concrete Green Wall", "termiteconcretegreen.png",
+walls.register(":animalworld:termiteconcretegreen_wall", S"Termite Concrete Green Wall", "termiteconcretegreen.png",
 		"animalworld:termiteconcretegreen_wall", default.node_sound_stone_defaults())
 
     stairs.register_stair_and_slab(
@@ -138,8 +140,8 @@ walls.register(":animalworld:termiteconcretegreen_wall", "Termite Concrete Green
       "animalworld:termiteconcretegreen",
       {cracky = 1, oddly_breakable_by_hand = 0, flammable = 0},
       {"termiteconcretegreen.png"},
-      ("Termite Concrete Green Stair"),
-      ("Termite Concrete Green Slab"),
+      S("Termite Concrete Green Stair"),
+      S("Termite Concrete Green Slab"),
       default.node_sound_stone_defaults()
     )
 
@@ -152,7 +154,7 @@ minetest.register_craft({
 	
 })
 
-walls.register(":animalworld:termiteconcretedarkgreen_wall", "Termite Concrete Dark Green Wall", "termiteconcretedarkgreen.png",
+walls.register(":animalworld:termiteconcretedarkgreen_wall", S"Termite Concrete Dark Green Wall", "termiteconcretedarkgreen.png",
 		"animalworld:termiteconcretedarkgreen_wall", default.node_sound_stone_defaults())
 
     stairs.register_stair_and_slab(
@@ -160,8 +162,8 @@ walls.register(":animalworld:termiteconcretedarkgreen_wall", "Termite Concrete D
       "animalworld:termiteconcretedarkgreen",
       {cracky = 1, oddly_breakable_by_hand = 0, flammable = 0},
       {"termiteconcretedarkgreen.png"},
-      ("Termite Concrete Dark Green Stair"),
-      ("Termite Concrete Dark Green Slab"),
+      S("Termite Concrete Dark Green Stair"),
+      S("Termite Concrete Dark Green Slab"),
       default.node_sound_stone_defaults()
     )
 
@@ -174,7 +176,7 @@ minetest.register_craft({
 	
 })
 
-walls.register(":animalworld:termiteconcreteyellow_wall", "Termite Concrete Yellow Wall", "termiteconcreteyellow.png",
+walls.register(":animalworld:termiteconcreteyellow_wall", S"Termite Concrete Yellow Wall", "termiteconcreteyellow.png",
 		"animalworld:termiteconcreteyellow_wall", default.node_sound_stone_defaults())
 
     stairs.register_stair_and_slab(
@@ -182,8 +184,8 @@ walls.register(":animalworld:termiteconcreteyellow_wall", "Termite Concrete Yell
       "animalworld:termiteconcreteyellow",
       {cracky = 1, oddly_breakable_by_hand = 0, flammable = 0},
       {"termiteconcreteyellow.png"},
-      ("Termite Concrete Yellow Stair"),
-      ("Termite Concrete Yellow Slab"),
+      S("Termite Concrete Yellow Stair"),
+      S("Termite Concrete Yellow Slab"),
       default.node_sound_stone_defaults()
     )
 
@@ -196,7 +198,7 @@ minetest.register_craft({
 	
 })
 
-walls.register(":animalworld:termiteconcreteorange_wall", "Termite Concrete Orange Wall", "termiteconcreteorange.png",
+walls.register(":animalworld:termiteconcreteorange_wall", S"Termite Concrete Orange Wall", "termiteconcreteorange.png",
 		"animalworld:termiteconcreteorange_wall", default.node_sound_stone_defaults())
 
     stairs.register_stair_and_slab(
@@ -204,8 +206,8 @@ walls.register(":animalworld:termiteconcreteorange_wall", "Termite Concrete Oran
       "animalworld:termiteconcreteorange",
       {cracky = 1, oddly_breakable_by_hand = 0, flammable = 0},
       {"termiteconcreteorange.png"},
-      ("Termite Concrete Orange Stair"),
-      ("Termite Concrete Orange Slab"),
+     S("Termite Concrete Orange Stair"),
+      S("Termite Concrete Orange Slab"),
       default.node_sound_stone_defaults()
     )
 
@@ -218,7 +220,7 @@ minetest.register_craft({
 	
 })
 
-walls.register(":animalworld:termiteconcretebrown_wall", "Termite Concrete Brown Wall", "termiteconcretebrown.png",
+walls.register(":animalworld:termiteconcretebrown_wall", S"Termite Concrete Brown Wall", "termiteconcretebrown.png",
 		"animalworld:termiteconcretebrown_wall", default.node_sound_stone_defaults())
 
     stairs.register_stair_and_slab(
@@ -226,8 +228,8 @@ walls.register(":animalworld:termiteconcretebrown_wall", "Termite Concrete Brown
       "animalworld:termiteconcretebrown",
       {cracky = 1, oddly_breakable_by_hand = 0, flammable = 0},
       {"termiteconcretebrown.png"},
-      ("Termite Concrete Brown Stair"),
-      ("Termite Concrete Brown Slab"),
+      S("Termite Concrete Brown Stair"),
+      S("Termite Concrete Brown Slab"),
       default.node_sound_stone_defaults()
     )
 
@@ -240,7 +242,7 @@ minetest.register_craft({
 	
 })
 
-walls.register(":animalworld:termiteconcretered_wall", "Termite Concrete Red Wall", "termiteconcretered.png",
+walls.register(":animalworld:termiteconcretered_wall", S"Termite Concrete Red Wall", "termiteconcretered.png",
 		"animalworld:termiteconcretered_wall", default.node_sound_stone_defaults())
 
     stairs.register_stair_and_slab(
@@ -248,8 +250,8 @@ walls.register(":animalworld:termiteconcretered_wall", "Termite Concrete Red Wal
       "animalworld:termiteconcretered",
       {cracky = 1, oddly_breakable_by_hand = 0, flammable = 0},
       {"termiteconcretered.png"},
-      ("Termite Concrete Red Stair"),
-      ("Termite Concrete Red Slab"),
+      S("Termite Concrete Red Stair"),
+      S("Termite Concrete Red Slab"),
       default.node_sound_stone_defaults()
     )
 
@@ -262,7 +264,7 @@ minetest.register_craft({
 	
 })
 
-walls.register(":animalworld:termiteconcretepink_wall", "Termite Concrete Pink Wall", "termiteconcretepink.png",
+walls.register(":animalworld:termiteconcretepink_wall", S"Termite Concrete Pink Wall", "termiteconcretepink.png",
 		"animalworld:termiteconcretepink_wall", default.node_sound_stone_defaults())
 
     stairs.register_stair_and_slab(
@@ -270,8 +272,8 @@ walls.register(":animalworld:termiteconcretepink_wall", "Termite Concrete Pink W
       "animalworld:termiteconcretepink",
       {cracky = 1, oddly_breakable_by_hand = 0, flammable = 0},
       {"termiteconcretepink.png"},
-      ("Termite Concrete Pink Stair"),
-      ("Termite Concrete Pink Slab"),
+      S("Termite Concrete Pink Stair"),
+      S("Termite Concrete Pink Slab"),
       default.node_sound_stone_defaults()
     )
 
@@ -284,7 +286,7 @@ minetest.register_craft({
 	
 })
 
-walls.register(":animalworld:termiteconcretemagenta_wall", "Termite Concrete Magenta Wall", "termiteconcretemagenta.png",
+walls.register(":animalworld:termiteconcretemagenta_wall", S"Termite Concrete Magenta Wall", "termiteconcretemagenta.png",
 		"animalworld:termiteconcretemagenta_wall", default.node_sound_stone_defaults())
 
     stairs.register_stair_and_slab(
@@ -292,8 +294,8 @@ walls.register(":animalworld:termiteconcretemagenta_wall", "Termite Concrete Mag
       "animalworld:termiteconcretemagenta",
       {cracky = 1, oddly_breakable_by_hand = 0, flammable = 0},
       {"termiteconcretemagenta.png"},
-      ("Termite Concrete Magenta Stair"),
-      ("Termite Concrete Magenta Slab"),
+      S("Termite Concrete Magenta Stair"),
+      S("Termite Concrete Magenta Slab"),
       default.node_sound_stone_defaults()
     )
 
@@ -306,7 +308,7 @@ minetest.register_craft({
 	
 })
 
-walls.register(":animalworld:termiteconcreteviolet_wall", "Termite Concrete Violet Wall", "termiteconcreteviolet.png",
+walls.register(":animalworld:termiteconcreteviolet_wall", S"Termite Concrete Violet Wall", "termiteconcreteviolet.png",
 		"animalworld:termiteconcreteviolet_wall", default.node_sound_stone_defaults())
 
     stairs.register_stair_and_slab(
@@ -314,8 +316,8 @@ walls.register(":animalworld:termiteconcreteviolet_wall", "Termite Concrete Viol
       "animalworld:termiteconcreteviolet",
       {cracky = 1, oddly_breakable_by_hand = 0, flammable = 0},
       {"termiteconcreteviolet.png"},
-      ("Termite Concrete Violet Stair"),
-      ("Termite Concrete Violet Slab"),
+      S("Termite Concrete Violet Stair"),
+      S("Termite Concrete Violet Slab"),
       default.node_sound_stone_defaults()
     )
 

@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:squid", {
 stepheight = 0.0,
 	type = "animal",
@@ -9,7 +11,7 @@ stepheight = 0.0,
 	hp_min = 10,
 	hp_max = 40,
 	armor = 100,
-	collisionbox = {-0.7, -0.01, -0.7, 0.7, 0.6, 0.7},
+	collisionbox = {-0.4, -0.01, -0.4, 0.4, 0.4, 0.4},
 	visual = "mesh",
 	mesh = "Squid.b3d",
 	visual_size = {x = 1.0, y = 1.0},
@@ -20,14 +22,15 @@ stepheight = 0.0,
 	makes_footstep_sound = false,
 	sounds = {
 	},
-	walk_velocity = 2,
-	run_velocity = 4,
+	walk_velocity = 1,
+	run_velocity = 3,
         fly = true,
 	fly_in = "default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing",
 	fall_speed = 0,
 	runaway = false,
 	jump = false,
 	stepheight = 0.0,
+        stay_near = {{"default:sand_with_kelp", "marinara:sand_with_kelp", "default:softcoral_yellow", "marinara:sand_with_seagrass2", "default_clay", "marinara:sand_with_alage"}, 5},
 	drops = {
 		{name = "animalworld:rawmollusk", chance = 1, min = 1, max = 1},
 	},
@@ -46,7 +49,11 @@ stepheight = 0.0,
 		fly_end = 200,
 		punch_start = 270,
 		punch_end = 330,
-		-- 50-70 is slide/water idle
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing"},
 	floats = 0,
@@ -60,7 +67,7 @@ follow = {
 		-- feed or tame
 		if mobs:feed_tame(self, clicker, 4, false, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 25, 0, false, nil) then return end
 	end,
 })
 
@@ -68,21 +75,22 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:squid",
 	nodes = {"default:water_source"},
+	neighbors = {"marinara:sand_with_alage", "marinara:sand_with_seagrass", "default:sand_with_kelp", "marinara:sand_with_kelp", "default:clay"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 4,
-	min_height = 0,
+	min_height = -20,
 	max_height = 10,
 	day_toggle = false,
 })
 end
 
-mobs:register_egg("animalworld:squid", ("Squid"), "asquid.png")
+mobs:register_egg("animalworld:squid", S("Squid"), "asquid.png")
 
 -- raw squid
 minetest.register_craftitem(":animalworld:rawmollusk", {
-	description = ("Raw Mollusk"),
+	description = S("Raw Mollusk"),
 	inventory_image = "animalworld_rawmollusk.png",
 	on_use = minetest.item_eat(3),
 	groups = {food_meat_raw = 1, flammable = 2},
@@ -90,7 +98,7 @@ minetest.register_craftitem(":animalworld:rawmollusk", {
 
 -- cooked fish
 minetest.register_craftitem(":animalworld:cookedmollusk", {
-	description = ("Fried Mollusk"),
+	description = S("Fried Mollusk"),
 	inventory_image = "animalworld_cookedmollusk.png",
 	on_use = minetest.item_eat(5),
 	groups = {food_meat = 1, flammable = 2},

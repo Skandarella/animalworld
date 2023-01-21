@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:viper", {
         stepheight = 3,
 	type = "monster",
@@ -30,6 +32,7 @@ mobs:register_mob("animalworld:viper", {
 	runaway = false,
 	jump = false,
         jump_height = 0,
+        stay_near = {{"naturalbiomes:heath_grass", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:heatherflower", "naturalbiomes:heatherflower2", "naturalbiomes:heatherflower3", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", "naturalbiomes:bushland_grass4"}, 3},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 	        {name = "mobs:leather", chance = 1, min = 0, max = 2},
@@ -49,7 +52,11 @@ mobs:register_mob("animalworld:viper", {
                 punch_speed = 120,
 		punch_start = 200,
 		punch_end = 300,
-		-- 50-70 is slide/water idle
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 
 	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing"},
@@ -63,10 +70,11 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:viper",
-	nodes = {"naturalbiomes:heath_litter"}, 
+	nodes = {"naturalbiomes:heath_litter", "naturalbiomes:bushland_bushlandlitter"}, 
+	neighbors = {"naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", "naturalbiomes:bushland_grass4", "naturalbiomes:heath_grass", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:heatherflower", "naturalbiomes:heatherflower2", "naturalbiomes:heatherflower3"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 2,
 	min_height = 0,
 	max_height = 50,
@@ -75,7 +83,7 @@ mobs:spawn({
 end
 
 
-mobs:register_egg("animalworld:viper", ("Viper"), "aviper.png")
+mobs:register_egg("animalworld:viper", S("Viper"), "aviper.png")
 
 
 mobs:alias_mob("animalworld:viper", "animalworld:viper") -- compatiblity

@@ -1,3 +1,6 @@
+local S = minetest.get_translator("animalworld")
+local random = math.random
+
 mobs:register_mob("animalworld:monkey", {
 	stepheight = 3,
 	type = "animal",
@@ -45,6 +48,7 @@ mobs:register_mob("animalworld:monkey", {
 	replace_rate = 10,
 	replace_what = {"farming:soil", "farming:soil_wet"},
 	replace_with = "default:dirt",
+        stay_near = {{"default:acacia_tree", "default:acacia_leaves", "default:jungleleaves", "naturalbiomes:bamboo_leaves", "naturalbiomes:bambooforest_groundgrass", "livingjungle:samauma_trunk", "livingjungle:samauma_leaves"}, 5},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 3},
 	},
@@ -63,10 +67,9 @@ mobs:register_mob("animalworld:monkey", {
 		punch_end = 200,
                 shoot_start = 200,
 		shoot_end = 300,
-
-		die_start = 1, -- we dont have a specific death animation so we will
-		die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
-		die_speed = 1, -- have mob rotate when dying.
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
 		die_loop = false,
 		die_rotate = true,
 	},
@@ -74,7 +77,7 @@ mobs:register_mob("animalworld:monkey", {
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 25, 0, false, nil) then return end
 	end,
 })
 
@@ -83,17 +86,48 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:monkey",
 	nodes = {"default:dry_dirt_with_dry_grass", "default:dirt_with_rainforest_litter", "default:jungleleaves", "naturalbiomes:bambooforest_litter", "livingjungle:jungleground", "livingjungle:leafyjungleground"},
+	neighbors = {"default:jungletree", "livingjungle:alocasia", "livingjungle:flamingoflower", "livingjungle:samauma_trunk", "group:grass", "group:normal_grass", "naturalbiomes:bambooforest_groundgrass", "naturalbiomes:bambooforest_groundgrass2"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 6,
 	min_height = 30,
 	max_height = 75,
 	day_toggle = true,
-})
+
+		on_spawn = function(self, pos)
+
+			local nods = minetest.find_nodes_in_area_under_air(
+				{x = pos.x - 4, y = pos.y - 3, z = pos.z - 4},
+				{x = pos.x + 4, y = pos.y + 3, z = pos.z + 4},
+				{"default:dry_dirt_with_dry_grass", "default:dirt_with_rainforest_litter", "default:jungleleaves", "naturalbiomes:bambooforest_litter", "livingjungle:jungleground", "livingjungle:leafyjungleground"})
+
+			if nods and #nods > 0 then
+
+				-- min herd of 6
+				local iter = math.min(#nods, 6)
+
+-- print("--- monkey at", minetest.pos_to_string(pos), iter)
+
+				for n = 1, iter do
+
+					local pos2 = nods[random(#nods)]
+					local kid = random(4) == 1 and true or nil
+
+					pos2.y = pos2.y + 2
+
+					if minetest.get_node(pos2).name == "air" then
+
+						mobs:add_mob(pos2, {
+							name = "animalworld:monkey", child = kid})
+					end
+				end
+			end
+		end
+	})
 end
 
-mobs:register_egg("animalworld:monkey", ("Monkey"), "amonkey.png")
+mobs:register_egg("animalworld:monkey", S("Monkey"), "amonkey.png")
 
 mobs:register_arrow("animalworld:pooball", {
 	visual = "sprite",

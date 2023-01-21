@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:tiger", {
 stepheight = 2,
 	type = "monster",
@@ -24,6 +26,7 @@ stepheight = 2,
 	walk_velocity = 2,
 	run_velocity = 4,
 	runaway = false,
+        knock_back = false,
 	jump = true,
         jump_height = 6,
 	stepheight = 2,
@@ -35,6 +38,7 @@ stepheight = 2,
 	lava_damage = 4,
 	light_damage = 0,
 	fear_height = 4,
+        stay_near = {{"default:jungletree", "default:junglegrass", "naturalbiomes:bamboo_leaves", "naturalbiomes:bambooforest_groundgrass", "livingjungle::grass2", "livingjungle::grass1", "livingjungle:alocasia", "livingjungle:flamingoflower"}, 6},
 	animation = {
 		speed_normal = 100,
 		stand_start = 0,
@@ -43,12 +47,15 @@ stepheight = 2,
 		walk_end = 200,
 		punch_start = 200,
 		punch_end = 300,
-		-- 50-70 is slide/water idle
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
-
 	follow = {
 		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
-		"mobs:meat_raw", "animalworld:rabbit_raw", "animalworld:pork_raw", "water_life:meat_raw", "animalworld:chicken_raw"
+		"mobs:meat_raw", "animalworld:rabbit_raw", "animalworld:pork_raw", "water_life:meat_raw", "animalworld:chicken_raw", "mobs:meatblock_raw", "animalworld:chicken_raw", "livingfloatlands:ornithischiaraw", "livingfloatlands:largemammalraw", "livingfloatlands:theropodraw", "livingfloatlands:sauropodraw", "animalworld:raw_athropod", "animalworld:whalemeat_raw", "animalworld:rabbit_raw", "nativevillages:chicken_raw", "mobs:meat_raw", "animalworld:pork_raw", "people:mutton:raw"
 	},
 	view_range = 15,
 
@@ -57,7 +64,7 @@ stepheight = 2,
 		-- feed or tame
 		if mobs:feed_tame(self, clicker, 4, false, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 0, 0, false, nil) then return end
 	end,
 })
 
@@ -69,9 +76,10 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:tiger",
 	nodes = {"default:dirt_with_rainforest_litter", "ethereal:green_dirt", "ethereal:grass_grove", "naturalbiomes:bambooforest_litter"},
+	neighbors = {"default:jungleleaves", "group:grass", "group:normal_grass", "naturalbiomes:bambooforest_groundgrass", "naturalbiomes:bambooforest_groundgrass2"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	min_height = 10,
 	max_height = 50,
 

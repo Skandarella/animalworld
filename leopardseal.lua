@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:leopardseal", {
 stepheight = 1,
 	type = "monster",
@@ -9,7 +11,7 @@ stepheight = 1,
 	hp_min = 20,
 	hp_max = 55,
 	armor = 100,
-	collisionbox = {-0.4, -0.01, -0.4, 0.8, 0.6, 0.4},
+	collisionbox = {-0.5, -0.01, -0.5, 0.5, 0.6, 0.5},
 	visual = "mesh",
 	mesh = "Leopardseal.b3d",
 	visual_size = {x = 1.0, y = 1.0},
@@ -44,13 +46,17 @@ stepheight = 1,
                 fly_speed = 50,
 		fly_start = 350, -- swim animation
 		fly_end = 450,
-		-- 50-70 is slide/water idle
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 	fly_in = {"default:water_source", "default:water_flowing", "default:river_water_flowing", "default:river_water"},
 	floats = 0,
 	follow = {
 		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
-		"mobs_fish:clownfish_set", "mobs_fish:tropical_set", "xocean:fish_edible", "mobs:bluefish_raw", "animalworld:rawmollusk", "nativevillages:catfish_raw"
+		"mobs_fish:clownfish_set", "mobs_fish:tropical_set", "xocean:fish_edible", "mobs:bluefish_raw", "animalworld:rawmollusk", "nativevillages:catfish_raw", "mobs:meatblock_raw", "animalworld:chicken_raw", "livingfloatlands:ornithischiaraw", "livingfloatlands:largemammalraw", "livingfloatlands:theropodraw", "livingfloatlands:sauropodraw", "animalworld:raw_athropod", "animalworld:whalemeat_raw", "animalworld:rabbit_raw", "nativevillages:chicken_raw", "mobs:meat_raw", "animalworld:pork_raw", "people:mutton:raw", "animalworld:rawmollusk", "marinaramobs:octopus_raw", "marinara:raw_oisters", "marinara:raw_athropod", "animalworld:rawfish", "fishing:fish_raw", "fishing:pike_raw", "marinaramobs:raw_exotic_fish", "nativevillages:catfish_raw", "xocean:fish_edible", "ethereal:fish_raw", "mobs:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "water_life:meat_raw", "fishing:shark_raw", "fishing:pike_raw"
 	},
 	view_range = 10,
 
@@ -59,7 +65,7 @@ stepheight = 1,
 		-- feed or tame
 		if mobs:feed_tame(self, clicker, 4, false, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 15, 25, false, nil) then return end
 	end,
 })
 
@@ -71,7 +77,7 @@ mobs:spawn({
 	neighbors = {"default:water_source"},
 	min_light = 0,
 	interval = 60,
-	chance = 2, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 1,
 	min_height = -10,
 	max_height = 10,
@@ -79,4 +85,4 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("animalworld:leopardseal", ("Leopard Seal"), "aleopardseal.png")
+mobs:register_egg("animalworld:leopardseal", S("Leopard Seal"), "aleopardseal.png")

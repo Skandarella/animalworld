@@ -1,3 +1,4 @@
+local S = minetest.get_translator("animalworld")
 
 mobs:register_mob("animalworld:mosquito", {
 	type = "monster",
@@ -48,7 +49,11 @@ mobs:register_mob("animalworld:mosquito", {
 		walk_end = 100,
 		punch_start = 100,
 		punch_end = 200,
-		-- 50-70 is slide/water idle
+		die_start = 100,
+		die_end = 200,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 })
 
@@ -60,7 +65,7 @@ mobs:spawn({
 	neighbors = {"air"},
 	min_light = 0,
 	interval = 30,
-	chance = 1, -- 15000
+	chance = 200, -- 15000
 	active_object_count = 2,
 	min_height = 0,
 	max_height = 50,
@@ -68,7 +73,7 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("animalworld:mosquito", ("Mosquito"), "amosquito.png")
+mobs:register_egg("animalworld:mosquito", S("Mosquito"), "amosquito.png")
 
 mobs:alias_mob("animalworld:mosquito", "animalworld:mosquito")
 

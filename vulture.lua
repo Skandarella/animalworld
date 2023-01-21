@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:vulture", {
 stepheight = 3,
 	type = "animal",
@@ -43,13 +45,14 @@ stepheight = 3,
 		speed_normal = 100,
 		stand_start = 150,
 		stand_end = 250,
-		walk_start = 0,
-		walk_end = 100,
 		fly_start = 0, -- swim animation
 		fly_end = 100,
-		-- 50-70 is slide/water idle
+		die_start = 0,
+		die_end = 100,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
-
 fly_in = {"air"},
 	floats = 0,
 	follow = {
@@ -64,7 +67,7 @@ view_range = 10,
 		-- feed or tame
 		if mobs:feed_tame(self, clicker, 4, false, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 25, 0, false, nil) then return end
 	end,
 })
 
@@ -72,9 +75,10 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:vulture",
 	nodes = {"default:dirt_with_grass"}, {"default:dry_dirt_with_dry_grass"}, {"default:desert_sand"}, {"default:stone"}, {"livingdesert:coldsteppe_ground4"}, {"livingdesert:coldsteppe_ground3"},
+	neighbors = {"group:grass", "group:normal_grass", "livingdesert:coldsteppe_grass1", "livingdesert:coldsteppe_grass2", "livingdesert:coldsteppe_grass3", "livingdesert:coldsteppe_grass4", "default:dry_shrub"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 3,
 	min_height = 50,
 	max_height = 300,
@@ -82,4 +86,4 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("animalworld:vulture", ("Vulture"), "avulture.png")
+mobs:register_egg("animalworld:vulture", S("Vulture"), "avulture.png")

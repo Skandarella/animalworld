@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:tortoise", {
 stepheight = 1,
 	type = "animal",
@@ -26,6 +28,7 @@ stepheight = 1,
         runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion", "animalworld:polarbear", "animalworld:leopardseal", "animalworld:stellerseagle", "player", "animalworld:wolf", "animalworld:panda", "animalworld:stingray", "marinaramobs:jellyfish", "marinaramobs:octopus", "livingcavesmobs:biter", "livingcavesmobs:flesheatingbacteria"},
 	jump = false,
 	jump_height = 6,
+        stay_near = {{"default:marram_grass_1", "default:marram_grass_2", "default:marram_grass_3", "livingdesert:date_palm_leaves", "livingdesert:yucca", "default:dry_shrub", "livingdesert:figcactus_trunk", "livingdesert:coldsteppe_grass1", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", "naturalbiomes:bushland_grass4"}, 6},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 	},
@@ -43,6 +46,11 @@ stepheight = 1,
 		walk_end = 300,
 		punch_start = 300,
 		punch_end = 400,
+		die_start = 300,
+		die_end = 400,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 	follow = {"farming:carrot", "farming_plus:carrot_item", "default:marram_grass_2", "farming:tomato", "farming:lettuce", "farming:cucumber", "farming:cabbage"},
 	view_range = 4,
@@ -53,7 +61,7 @@ stepheight = 1,
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 55, 75, 0, false, nil) then return end
 	end,
 })
 
@@ -67,10 +75,11 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:tortoise",
-	nodes = {"default:sand", "naturalbiomes:mediterran_litter"},
+	nodes = {"default:sand", "naturalbiomes:mediterran_litter", "naturalbiomes:bushland_bushlandlitter"},
+	neighbors = {"naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", "naturalbiomes:bushland_grass4", "livingdesert:date_palm_leaves", "livingdesert:yucca", "default:dry_shrub", "livingdesert:figcactus_trunk", "livingdesert:coldsteppe_grass1", "livingdesert:cactus", "livingdesert:cactus3", "livingdesert:cactus2", "livingdesert:cactus4", "default:cactus", "naturalbiomes:med_flower2", "naturalbiomes:med_grass1", "naturalbiomes:med_grass2", "naturalbiomes:med_flower3", "group:grass", "group:normal_grass"},
 	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	min_height = 5,
 	max_height = 70,
 	day_toggle = true,
@@ -78,7 +87,7 @@ mobs:spawn({
 end
 
 
-mobs:register_egg("animalworld:tortoise", ("Tortoise"), "atortoise.png", 0)
+mobs:register_egg("animalworld:tortoise", S("Tortoise"), "atortoise.png", 0)
 
 
 mobs:alias_mob("animalworld:tortoise", "animalworld:tortoise") -- compatibility

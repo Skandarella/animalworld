@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:monitor", {
 stepheight = 1,
 	type = "monster",
@@ -9,7 +11,7 @@ stepheight = 1,
 	hp_min = 20,
 	hp_max = 55,
 	armor = 100,
-	collisionbox = {-0.6, -0.01, -0.6, 0.6, 0.95, 0.6},
+	collisionbox = {-0.5, -0.01, -0.5, 0.5, 0.95, 0.5},
 	visual = "mesh",
 	mesh = "Monitor.b3d",
 	visual_size = {x = 1.0, y = 1.0},
@@ -27,6 +29,7 @@ stepheight = 1,
 	jump = true,
         jump_height = 0.5,
 	stepheight = 1,
+        stay_near = {{"naturalbiomes:outback_grass", "naturalbiomes:outback_grass3", "naturalbiomes:outback_grass2", "naturalbiomes:outback_grass4", "naturalbiomes:outback_grass5", "livingdesert:cactus", "livingdesert:cactus3", "livingdesert:cactus2", "livingdesert:cactus4"}, 5},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 		{name = "animalworld:monitorcorpse", chance = 7, min = 1, max = 1},
@@ -45,13 +48,17 @@ stepheight = 1,
 		fly_end = 450,
 		punch_start = 200,
 		punch_end = 300,
-		-- 50-70 is slide/water idle
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing"},
 	floats = 0,
 	follow = {
 		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
-		"mobs:meat_raw", "animalworld:rabbit_raw", "xocean:fish_edible", "animalworld:chicken_raw", "water_life:meat_raw", "animalworld:cockroach"
+		"mobs:meat_raw", "animalworld:rabbit_raw", "xocean:fish_edible", "animalworld:chicken_raw", "water_life:meat_raw", "animalworld:cockroach", "mobs:meatblock_raw", "animalworld:chicken_raw", "livingfloatlands:ornithischiaraw", "livingfloatlands:largemammalraw", "livingfloatlands:theropodraw", "livingfloatlands:sauropodraw", "animalworld:raw_athropod", "animalworld:whalemeat_raw", "animalworld:rabbit_raw", "nativevillages:chicken_raw", "mobs:meat_raw", "animalworld:pork_raw", "people:mutton:raw"
 	},
 	view_range = 8,
 
@@ -60,7 +67,7 @@ stepheight = 1,
 		-- feed or tame
 		if mobs:feed_tame(self, clicker, 4, false, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 15, 25, false, nil) then return end
 	end,
 })
 
@@ -72,13 +79,14 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:monitor",
 	nodes = {"default:desert_sand", "default:desert_sandstone", "naturalbiomes:outback_litter"},
-	min_light = 14,
+	neighbors = {"naturalbiomes:outback_rock", "naturalbiomes:outback_trunk", "default:dry_shrub", "livingdesert:cactus", "livingdesert:cactus3", "livingdesert:cactus2", "livingdesert:cactus4", "default:cactus"},
+	min_light = 0,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 500, -- 15000
 	min_height = 20,
 	max_height = 45,
 	day_toggle = true,
 })
 end
 
-mobs:register_egg("animalworld:monitor", ("Monitor Lizard"), "amonitor.png")
+mobs:register_egg("animalworld:monitor", S("Monitor Lizard"), "amonitor.png")

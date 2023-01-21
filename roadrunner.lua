@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:roadrunner", {
 stepheight = 3,
 	type = "animal",
@@ -28,6 +30,7 @@ stepheight = 3,
         runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion", "animalworld:polarbear", "animalworld:leopardseal", "animalworld:stellerseagle", "player", "animalworld:wolf", "animalworld:panda", "animalworld:stingray", "marinaramobs:jellyfish", "marinaramobs:octopus", "livingcavesmobs:biter", "livingcavesmobs:flesheatingbacteria"},
 	jump = true,
         jump_height = 3,
+        stay_near = {{"livingdesert:date_palm_leaves", "livingdesert:yucca", "default:dry_shrub", "livingdesert:figcactus_trunk", "livingdesert:coldsteppe_grass1", "livingdesert:cactus", "livingdesert:cactus3", "livingdesert:cactus2", "livingdesert:cactus4"}, 5},
 	drops = {
 		{name = "animalworld:chicken_raw", chance = 1, min = 1, max = 1},
 	        {name = "animalworld:chicken_feather", chance = 1, min = 1, max = 1},
@@ -49,7 +52,11 @@ stepheight = 3,
 		fly_end = 420,
 		jump_start = 450,
 		jump_end = 550,
-		-- 50-70 is slide/water idle
+		die_start = 450,
+		die_end = 550,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 
 fly_in = {"air"},
@@ -65,7 +72,7 @@ view_range = 7,
 		-- feed or tame
 		if mobs:feed_tame(self, clicker, 4, false, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 5, 25, 0, false, nil) then return end
 	end,
 })
 
@@ -76,7 +83,7 @@ mobs:spawn({
 	neighbors = {"livingdesert:yucca", "default:dry_shrub", "livingdesert:euphoriba_trunk"},
 	min_light = 0,
 	interval = 30,
-	chance = 2, -- 15000
+	chance = 1000, -- 15000
 	active_object_count = 1,
 	min_height = 0,
 	max_height = 100,
@@ -84,4 +91,4 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("animalworld:roadrunner", ("Roadrunner"), "aroadrunner.png")
+mobs:register_egg("animalworld:roadrunner", S("Roadrunner"), "aroadrunner.png")

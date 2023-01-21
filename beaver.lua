@@ -1,9 +1,12 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:beaver", {
 stepheight = 1,
 	type = "monster",
 	passive = false,
         attack_type = "dogfight",
-	attack_animals = true,
+	attack_animals = false,
+	attack_npcs = false,
 	reach = 2,
         damage = 6,
 	hp_min = 35,
@@ -25,6 +28,7 @@ stepheight = 1,
 	jump = true,
         jump_height = 6,
 	stepheight = 2,
+        stay_near = {{"animalworld:beaver_nest"}, 4},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 	},
@@ -35,16 +39,20 @@ stepheight = 1,
 	animation = {
 		speed_normal = 75,
 		stand_start = 0,
-		stand1_end = 100,
+		stand_end = 100,
 		stand1_start = 100,
-		stand_end = 200,
+		stand1_end = 200,
 		walk_start = 200,
 		walk_end = 300,
 		fly_start = 450, -- swim animation
 		fly_end = 550,
 		punch_start = 300,
 		punch_end = 400,
-		-- 50-70 is slide/water idle
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
+		die_loop = false,
+		die_rotate = true,
 	},
 	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing"},
 	floats = 1,
@@ -52,14 +60,14 @@ stepheight = 1,
 		"naturalbiomes:alder_sapling", "naturalbiomes:alppine1_sapling", "naturalbiomes:alppine2_sapling",
 		"naturalbiomes:alpine_bush_sapling", "default:sapling", "default:junglesapling", "default:pine_sapling", "default:acacia_sapling", "default:aspen_sapling", "naturalbiomes:olive_sapling", "naturalbiomes:pine_sapling", "naturalbiomes:acacia_sapling", "naturalbiomes:bamboo_sapling", "ethereal:bamboo_sprout", "ethereal:yellow_tree_sapling", "ethereal:willow_sapling", "ethereal:birch_sapling", "ethereal:olive_tree_sapling"
 	},
-	view_range = 2,
+	view_range = 5,
 
 	on_rightclick = function(self, clicker)
 
 		-- feed or tame
 		if mobs:feed_tame(self, clicker, 4, false, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 5, 50, 80, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 15, 25, 0, false, nil) then return end
 	end,
 })
 
@@ -82,11 +90,11 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("animalworld:beaver", ("Beaver"), "abeaver.png")
+mobs:register_egg("animalworld:beaver", S("Beaver"), "abeaver.png")
 
 -- beaver nest
 minetest.register_node("animalworld:beaver_nest", {
-	description = ("Beaver Nest"),
+	description = S("Beaver Nest"),
 	tiles = {"animalworld_beaver_nest.png"},
 	is_ground_content = false,
 	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},

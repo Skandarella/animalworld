@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:treelobster", {
 	stepheight = 2,
 	type = "animal",
@@ -10,7 +12,7 @@ mobs:register_mob("animalworld:treelobster", {
 	hp_min = 20,
 	hp_max = 35,
 	armor = 100,
-	collisionbox = {-0.3, -0.01, -0.2, 0.3, 0.3, 0.2},
+	collisionbox = {-0.3, -0.01, -0.3, 0.3, 0.3, 0.3},
 	visual = "mesh",
 	mesh = "Treelobster.b3d",
 	textures = {
@@ -26,6 +28,7 @@ mobs:register_mob("animalworld:treelobster", {
 	jump = false,
 	jump_height = 3,
 	pushable = true,
+        stay_near = {{"people:jungleleaves", "people:jungletree", "livingjungle::grass2", "livingjungle::grass1", "livingjungle:alocasia", "livingjungle:flamingoflower"}, 4},
 	follow = {"default:junglegrass", "default:jungleleaves", "default:blueberry_bush_leaves", "default:blueberry_bush_leaves_with_berries"},
 	view_range = 10,
 	drops = {
@@ -45,10 +48,9 @@ mobs:register_mob("animalworld:treelobster", {
 		walk_end = 200,
 		punch_start = 250,
 		punch_end = 350,
-
-		die_start = 1, -- we dont have a specific death animation so we will
-		die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
-		die_speed = 1, -- have mob rotate when dying.
+		die_start = 250,
+		die_end = 350,
+		die_speed = 50,
 		die_loop = false,
 		die_rotate = true,
 	},
@@ -56,7 +58,7 @@ mobs:register_mob("animalworld:treelobster", {
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 25, 55, 0, false, nil) then return end
 	end,
 })
 
@@ -67,7 +69,7 @@ mobs:spawn({
 	neighbors = {"default:junglegrass"},
 	min_light = 0,
 	interval = 30,
-	chance = 1, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 4,
 	min_height = 5,
 	max_height = 40,
@@ -75,7 +77,7 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("animalworld:treelobster", ("Tree Lobster"), "atreelobster.png")
+mobs:register_egg("animalworld:treelobster", S("Tree Lobster"), "atreelobster.png")
 
 
 mobs:alias_mob("animalworld:treelobster", "animalworld:treelobster") -- compatibility

@@ -1,3 +1,5 @@
+local S = minetest.get_translator("animalworld")
+
 mobs:register_mob("animalworld:cockroach", {
 	stepheight = 3,
 	type = "animal",
@@ -31,8 +33,9 @@ textures = {
 	jump = true,
 	jump_height = 8,
 	pushable = true,
-	follow = {"farming:melon_slice", "farming:pineapple", "ethereal:banana", "ethereal:orange", "farming:grapes", "default:apple", "farming:potato", "ethereal:banana_bread", "farming:carrot", "farming:seed_rice", "farming:corn", "farming:wheat", "farming:beans", "farming:barley", "farming:oat", "farming:rye", "mobs:cheese", "farming:bread", "ethereal:banana_bread", "ethereal:banana", "farming:cabbage", "farming:lettuce", "farming:melon_slice", "naturalbiomes:coconut", "naturalbiomes:banana"},
+	follow = {"farming:melon_slice", "farming:pineapple", "ethereal:banana", "ethereal:orange", "farming:grapes", "default:apple", "farming:potato", "ethereal:banana_bread", "farming:carrot", "farming:seed_rice", "farming:corn", "farming:wheat", "farming:beans", "farming:barley", "farming:oat", "farming:rye", "mobs:cheese", "farming:bread", "ethereal:banana_bread", "ethereal:banana", "farming:cabbage", "farming:lettuce", "farming:melon_slice", "naturalbiomes:coconut", "naturalbiomes:banana", "mobs:meatblock_raw", "animalworld:chicken_raw", "livingfloatlands:ornithischiaraw", "livingfloatlands:largemammalraw", "livingfloatlands:theropodraw", "livingfloatlands:sauropodraw", "animalworld:raw_athropod", "animalworld:whalemeat_raw", "animalworld:rabbit_raw", "nativevillages:chicken_raw", "mobs:meat_raw", "animalworld:pork_raw", "people:mutton:raw"},
 	view_range = 2,
+        stay_near = {{"default:jungletree", "default:junglegrass", "livingjungle::grass2", "livingjungle::grass1", "livingjungle:alocasia", "livingjungle:flamingoflower"}, 5},
 	drops = {
 		{name = "animalworld:cockroach", chance = 1, min = 1, max = 1},
 	},
@@ -49,10 +52,9 @@ textures = {
 		walk_end = 200,
 		jump_start = 220,
 		jump_end = 330,
-
-		die_start = 1, -- we dont have a specific death animation so we will
-		die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
-		die_speed = 1, -- have mob rotate when dying.
+		die_start = 200,
+		die_end = 300,
+		die_speed = 50,
 		die_loop = false,
 		die_rotate = true,
 	},
@@ -60,7 +62,7 @@ textures = {
 
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 25, 0, 0, false, nil) then return end
 	end,
 })
 
@@ -68,9 +70,10 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:cockroach",
 	nodes = {"livingjungle:jungleground", "livingjungle:leafyjungleground"},
+	neighbors = {"livingjungle:samauma_trunk", "livingjungle:liana_stem", "livingjungle:alocasia", "livingjungle:flamingoflower"},
 	min_light = 0,
 	interval = 30,
-	chance = 100, -- 15000
+	chance = 1000, -- 15000
 	active_object_count = 3,
 	min_height = 5,
 	max_height = 31000,
@@ -78,13 +81,13 @@ mobs:spawn({
 })
 end
 
-mobs:register_egg("animalworld:cockroach", ("Cockroach"), "acockroach.png")
+mobs:register_egg("animalworld:cockroach", S("Cockroach"), "acockroach.png")
 
 
 mobs:alias_mob("animalworld:cockroach", "animalworld:cockroach") -- compatibility
 
 minetest.register_craftitem(":animalworld:roastroach", {
-	description = ("Roasted Cockroach"),
+	description = S("Roasted Cockroach"),
 	inventory_image = "animalworld_roastroach.png",
 	on_use = minetest.item_eat(2),
 	groups = {food_meat_raw = 1, flammable = 2},

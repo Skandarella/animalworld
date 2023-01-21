@@ -1,3 +1,4 @@
+local S = minetest.get_translator("animalworld")
 
 	minetest.register_decoration({
 		name = "animalworld:animalworld_tundrashrub1",
@@ -19,7 +20,7 @@
 	})
 
 minetest.register_node("animalworld:animalworld_tundrashrub1", {
-	    description = "Tundra Shrub",
+	    description = S"Tundra Shrub",
 	    drawtype = "plantlike",
 	    waving = 1,
 	    visual_scale = 1.5,
@@ -58,7 +59,7 @@ minetest.register_node("animalworld:animalworld_tundrashrub1", {
 	})
 
 minetest.register_node("animalworld:animalworld_tundrashrub2", {
-	    description = "Tundra Shrub",
+	    description = S"Tundra Shrub",
 	    drawtype = "plantlike",
 	    waving = 1,
 	    visual_scale = 1.5,
@@ -97,7 +98,7 @@ minetest.register_node("animalworld:animalworld_tundrashrub2", {
 	})
 
 minetest.register_node("animalworld:animalworld_tundrashrub3", {
-	    description = "Tundra Shrub",
+	    description = S"Tundra Shrub",
 	    drawtype = "plantlike",
 	    waving = 1,
 	    visual_scale = 1.5,
@@ -136,7 +137,7 @@ minetest.register_node("animalworld:animalworld_tundrashrub3", {
 	})
 
 minetest.register_node("animalworld:animalworld_tundrashrub4", {
-	    description = "Tundra Shrub",
+	    description = S"Tundra Shrub",
 	    drawtype = "plantlike",
 	    waving = 1,
 	    visual_scale = 1.5,
@@ -175,7 +176,7 @@ minetest.register_node("animalworld:animalworld_tundrashrub4", {
 	})
 
 minetest.register_node("animalworld:animalworld_tundrashrub5", {
-	    description = "Tundra Shrub",
+	    description = S"Tundra Shrub",
 	    drawtype = "plantlike",
 	    waving = 1,
 	    visual_scale = 1.5,

@@ -1,3 +1,6 @@
+local S = minetest.get_translator("animalworld")
+local random = math.random
+
 mobs:register_mob("animalworld:yak", {
 	type = "animal",
 	passive = false,
@@ -9,7 +12,7 @@ mobs:register_mob("animalworld:yak", {
 	hp_min = 5,
 	hp_max = 55,
 	armor = 100,
-	collisionbox = {-0.6, -0.01, -0.4, 0.6, 1.2, 0.4},
+	collisionbox = {-0.5, -0.01, -0.5, 0.5, 1.0, 0.5},
 	visual = "mesh",
 	mesh = "Yak.b3d",
 	textures = {
@@ -51,17 +54,15 @@ mobs:register_mob("animalworld:yak", {
 		punch_start = 250,
 		punch_end = 350,
 		punch_speed = 75,
-
-
-		die_start = 1, -- we dont have a specific death animation so we will
-		die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
-		die_speed = 1, -- have mob rotate when dying.
+		die_start = 250,
+		die_end = 350,
+		die_speed = 50,
 		die_loop = false,
 		die_rotate = true,
 	},
 	follow = {
 		"farming:wheat", "default:grass_1", "farming:barley",
-		"farming:oat", "farming:rye", "farming:carrot", "farming:beans", "farming:lettuce", "livingdesert:coldsteppe_grass1", "livingdesert:coldsteppe_grass2", "livingdesert:coldsteppe_grass3"},
+		"farming:oat", "farming:rye", "farming:carrot", "farming:beans", "farming:lettuce", "livingdesert:coldsteppe_grass1", "livingdesert:coldsteppe_grass2", "livingdesert:coldsteppe_grass3", "default:dry_grass_1", "default:dry_grass_2", "default:dry_grass_3", "default:grass_1", "default:grass_2", "default:grass_3", "default:grass_4", "default:grass_5", "default:marram_grass_1", "default:marram_grass_2", "default:marram_grass_3", "default:coldsteppe_grass_1", "default:coldsteppe_grass_2", "default:coldsteppe_grass_3", "default:coldsteppe_grass_4", "default:coldsteppe_grass_5", "default:coldsteppe_grass_6", "naturalbiomes:savanna_grass1", "naturalbiomes:savanna_grass2", "naturalbiomes:savanna_grass3", "naturalbiomes:outback_grass1", "naturalbiomes:outback_grass2", "naturalbiomes:outback_grass3", "naturalbiomes:outback_grass4", "naturalbiomes:outback_grass5", "naturalbiomes:outback_grass6", "naturalbiomes:med_grass1", "naturalbiomes:med_grass2", "naturalbiomes:heath_grass1", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:alpine_grass1", "naturalbiomes:alpine_grass2", "naturalbiomes:alpine_grass2", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:", "naturalbiomes:", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", "naturalbiomes:bushland_grass4", "naturalbiomes:bushland_grass5", "naturalbiomes:bushland_grass6", "naturalbiomes:bushland_grass7", "group:grass", "group:normal_grass"},
 	view_range = 8,
 	replace_rate = 10,
 	replace_what = {
@@ -69,7 +70,9 @@ mobs:register_mob("animalworld:yak", {
 		{"default:dirt_with_grass", "default:dirt", -1}
 	},
 --	stay_near = {"farming:straw", "group:grass"}, 10},
-	fear_height = 2,
+        stepheight = 2,
+	fear_height = 3,
+        stay_near = {{"default:tree", "default:leaves", "flowers_dandelion_yellow", "default:bush_leaves", "default:grass_1", "default:grass_2", "default:grass_3", "livingdesert_pine_leaves", "livingdesert_pine_leaves2", "livingdesert_pine_leaves3"}, 5},
 	on_rightclick = function(self, clicker)
 
 		-- feed or tame
@@ -84,7 +87,7 @@ mobs:register_mob("animalworld:yak", {
 		end
 
 		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 0, 5, 60, false, nil) then return end
+		if mobs:capture_mob(self, clicker, 0, 0, 25, false, nil) then return end
 
 		local tool = clicker:get_wielded_item()
 		local name = clicker:get_player_name()
@@ -99,7 +102,7 @@ mobs:register_mob("animalworld:yak", {
 
 			if self.gotten == true then
 				minetest.chat_send_player(name,
-					("Cow already milked!"))
+					S("Yak already milked!"))
 				return
 			end
 
@@ -139,14 +142,45 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:yak",
 	nodes = {"default:dirt_with_grass", "ethereal:green_dirt", "default:dirt_with_snow", "default:permafrost", "livingdesert:coldsteppe_ground2"},
+	neighbors = {"group:grass", "group:normal_grass", "animalworld:animalworld_tundrashrub5", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4", "livingdesert:coldsteppe_grass1", "livingdesert:coldsteppe_grass2", "livingdesert:coldsteppe_grass3"}, 
 	min_light = 14,
 	interval = 60,
-	chance = 8000, -- 15000
+	chance = 2000, -- 15000
 	active_object_count = 3,
 	min_height = 50,
 	max_height = 200,
 	day_toggle = true,
-})
+
+		on_spawn = function(self, pos)
+
+			local nods = minetest.find_nodes_in_area_under_air(
+				{x = pos.x - 4, y = pos.y - 3, z = pos.z - 4},
+				{x = pos.x + 4, y = pos.y + 3, z = pos.z + 4},
+				{"default:dirt_with_grass", "ethereal:green_dirt", "default:dirt_with_snow", "default:permafrost", "livingdesert:coldsteppe_ground2"})
+
+			if nods and #nods > 0 then
+
+				-- min herd of 3
+				local iter = math.min(#nods, 3)
+
+-- print("--- yak at", minetest.pos_to_string(pos), iter)
+
+				for n = 1, iter do
+
+					local pos2 = nods[random(#nods)]
+					local kid = random(4) == 1 and true or nil
+
+					pos2.y = pos2.y + 2
+
+					if minetest.get_node(pos2).name == "air" then
+
+						mobs:add_mob(pos2, {
+							name = "animalworld:yak", child = kid})
+					end
+				end
+			end
+		end
+	})
 end
 
 
@@ -158,7 +192,7 @@ mobs:alias_mob("animalworld:yak", "animalworld:yak") -- compatibility
 
 -- bucket of milk
 minetest.register_craftitem(":animalworld:bucket_milk", {
-	description = ("Bucket of Milk"),
+	description = S("Bucket of Milk"),
 	inventory_image = "animalworld_bucket_milk.png",
 	stack_max = 1,
 	on_use = minetest.item_eat(8, "bucket:bucket_empty"),
@@ -167,7 +201,7 @@ minetest.register_craftitem(":animalworld:bucket_milk", {
 
 -- glass of milk
 minetest.register_craftitem(":mobs:glass_milk", {
-	description = ("Glass of Milk"),
+	description = S("Glass of Milk"),
 	inventory_image = "mobs_glass_milk.png",
 	on_use = minetest.item_eat(2, "vessels:drinking_glass"),
 	groups = {food_milk_glass = 1, flammable = 3, vessel = 1, drink = 1},
@@ -224,7 +258,7 @@ end
 
 -- cheese wedge
 minetest.register_craftitem(":animalworld:cheese", {
-	description = ("Cheese"),
+	description = S("Cheese"),
 	inventory_image = "animalworld_cheese.png",
 	on_use = minetest.item_eat(4),
 	groups = {food_cheese = 1, flammable = 2},
@@ -240,7 +274,7 @@ minetest.register_craft({
 
 -- cheese block
 minetest.register_node(":animalworld:cheeseblock", {
-	description = ("Cheese Block"),
+	description = S("Cheese Block"),
 	tiles = {"animalworld_cheeseblock.png"},
 	is_ground_content = false,
 	groups = {crumbly = 3},
