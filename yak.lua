@@ -244,15 +244,15 @@ if minetest.get_modpath("farming") and farming and farming.mod then
 minetest.register_craft({
 	type = "shapeless",
 	output = "animalworld:butter",
-	recipe = {"animalworld:bucket_milk", "farming:salt"},
-	replacements = {{ "animalworld:bucket_milk", "bucket:bucket_empty"}}
+	recipe = {"group:food_milk", "farming:salt"},
+	replacements = {{ "group:food_milk", "bucket:bucket_empty"}}
 })
 else -- some saplings are high in sodium so makes a good replacement item
 minetest.register_craft({
 	type = "shapeless",
 	output = "animalworld:butter",
-	recipe = {"animalworld:bucket_milk", "default:sapling"},
-	replacements = {{ "animalworld:bucket_milk", "bucket:bucket_empty"}}
+	recipe = {"group:food_milk", "default:sapling"},
+	replacements = {{ "group:food_milk", "bucket:bucket_empty"}}
 })
 end
 
@@ -269,7 +269,7 @@ minetest.register_craft({
 	output = "animalworld:cheese",
 	recipe = "animalworld:bucket_milk",
 	cooktime = 5,
-	replacements = {{ "animalworld:bucket_milk", "bucket:bucket_empty"}}
+	replacements = {{ "group:food_milk", "bucket:bucket_empty"}}
 })
 
 -- cheese block
