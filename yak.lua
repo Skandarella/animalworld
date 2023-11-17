@@ -213,7 +213,7 @@ minetest.register_craft({
 	recipe = {
 		"vessels:drinking_glass", "vessels:drinking_glass",
 		"vessels:drinking_glass", "vessels:drinking_glass",
-		"animalworld:bucket_milk"
+		"group:food_milk"
 	},
 	replacements = { {"animalworld:bucket_milk", "bucket:bucket_empty"} }
 })
@@ -267,7 +267,7 @@ minetest.register_craftitem(":animalworld:cheese", {
 minetest.register_craft({
 	type = "cooking",
 	output = "animalworld:cheese",
-	recipe = "animalworld:bucket_milk",
+	recipe = "group:food_milk",
 	cooktime = 5,
 	replacements = {{ "group:food_milk", "bucket:bucket_empty"}}
 })
