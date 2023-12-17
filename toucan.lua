@@ -78,13 +78,13 @@ view_range = 4,
 
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:dirt_with_rainforest_litter", "ethereal:grove_dirt"}
+	spawn_on = {"mcl_core:podzol", "default:dirt_withforest_litter", "ethereal:grove_dirt"}
 end
 
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:toucan",
-	nodes = {"default:dirt_with_rainforest_litter", "livingjungle:jungleground", "livingjungle:leafyjungleground"},
+	nodes = {"mcl_core:podzol", "default:dirt_with_rainforest_litter", "livingjungle:jungleground", "livingjungle:leafyjungleground"},
 	neighbors = {"default:jungletree", "default:jungleleaves", "livingjungle:alocasia", "livingjungle:flamingoflower", "livingjungle:samauma_trunk"},
 	min_light = 0,
 	interval = 60,

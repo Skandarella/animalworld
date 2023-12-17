@@ -77,7 +77,7 @@ mobs:register_mob("animalworld:beluga", {
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:beluga",
-	nodes = {"default:water_source"},
+	nodes = {"mcl_core:water_source", "default:water_source"},
 	neighbors = {"default:ice", "default:snowblock"},
 	min_light = 0,
 	interval = 30,

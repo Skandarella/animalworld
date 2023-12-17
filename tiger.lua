@@ -69,13 +69,13 @@ stepheight = 2,
 })
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:dirt_with_rainforest_litter", "ethereal:green_dirt", "ethereal:grass_grove"}
+	spawn_on = {"mcl_core:podzol", "default:dirt_withforest_litter", "ethereal:green_dirt", "ethereal:grass_grove"}
 end
 
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:tiger",
-	nodes = {"default:dirt_with_rainforest_litter", "ethereal:green_dirt", "ethereal:grass_grove", "naturalbiomes:bambooforest_litter"},
+	nodes = {"mcl_core:podzol", "default:dirt_with_rainforest_litter", "ethereal:green_dirt", "ethereal:grass_grove", "naturalbiomes:bambooforest_litter"},
 	neighbors = {"default:jungleleaves", "group:grass", "group:normal_grass", "naturalbiomes:bambooforest_groundgrass", "naturalbiomes:bambooforest_groundgrass2"},
 	min_light = 0,
 	interval = 60,

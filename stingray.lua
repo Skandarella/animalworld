@@ -73,7 +73,7 @@ stepheight = 0.0,
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:stingray",
-	nodes = {"default:water_source", "default:river_water_source"},
+	nodes = {"mcl_core:water_source", "default:water_source", "default:river_water_source"},
 	neighbors = {"naturalbiomes:palmbeach_sand"},
 	min_light = 0,
 	interval = 60,

@@ -85,7 +85,7 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:wolf",
-	nodes = {"default:dirt_with_coniferous_litter", "naturalbiomes:alpine_litter", "naturalbiomes:heath_litter"},
+	nodes = {"mcl_core:podzol", "default:dirt_with_conifrous_litter", "naturalbiomes:alpine_litter", "naturalbiomes:heath_litter"},
 	neighbors = {"default:pine_needles", "naturalbiomes:pine_leaves", "heath_juniper_leaves", "naturalbiomes:alppine1_leaves", "naturalbiomes:alppine2_leaves"},
 	min_light = 0,
 	interval = 60,

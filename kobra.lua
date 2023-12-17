@@ -75,7 +75,7 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:kobra",
 	nodes = {"default:desert_sandstone", "default:desert_stone", "default:sandstone", "default:dirt_with_rainforest_litter", "naturalbiomes:bambooforest_litter"}, 
-	neighbors = {"default:junglegrass", "livingdesert:date_palm_leaves", "livingdesert:yucca", "default:dry_shrub", "livingdesert:coldsteppe_grass1", "livingdesert:cactus", "livingdesert:cactus3", "livingdesert:cactus2", "livingdesert:cactus4", "naturalbiomes:bambooforest_groundgrass", "naturalbiomes:bambooforest_groundgrass2"},
+	neighbors = {"mcl_flowers:tallgrass", "default:junglegrass", "livingdesert:date_palm_leaves", "livingdesert:yucca", "default:dry_shrub", "livingdesert:coldsteppe_grass1", "livingdesert:cactus", "livingdesert:cactus3", "livingdesert:cactus2", "livingdesert:cactus4", "naturalbiomes:bambooforest_groundgrass", "naturalbiomes:bambooforest_groundgrass2"},
 	min_light = 0,
 	interval = 60,
 	chance = 1000, -- 15000

@@ -82,7 +82,7 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:lobster",
-	nodes = {"default:water_source"},
+	nodes = {"mcl_core:water_source", "default:water_source"},
 	neighbors = {"marinara:sand_with_alage", "marinara:sand_with_seagrass", "default:sand_with_kelp", "marinara:sand_with_kelp", "marinara:reed_root", "flowers:waterlily_waving", "naturalbiomes:waterlily", "default:clay"},
 	min_light = 0,
 	interval = 60,

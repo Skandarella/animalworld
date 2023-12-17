@@ -78,7 +78,7 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:beaver",
-	nodes = {"default:water_source", "default:river_water_source"},
+	nodes = {"mcl_core:water_source", "default:water_source", "default:river_water_source"},
 	neighbors = {"animalworld:beaver_nest"},
 	min_light = 0,
 	interval = 60,
@@ -97,8 +97,10 @@ minetest.register_node("animalworld:beaver_nest", {
 	description = S("Beaver Nest"),
 	tiles = {"animalworld_beaver_nest.png"},
 	is_ground_content = false,
-	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-	sounds = default.node_sound_wood_defaults(),
+	groups = {wood = 1, choppy = 2, axey = 2, handy = 1, oddly_breakable_by_hand = 1, flammable = 3},
+	_mcl_hardness = 1,
+	_mcl_blast_resistance = 1,
+	sounds = animalworld.sounds.node_sound_wood_defaults(),
 })
 
 	minetest.register_decoration({

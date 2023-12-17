@@ -141,7 +141,7 @@ mobs:register_mob("animalworld:yak", {
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:yak",
-	nodes = {"default:dirt_with_grass", "ethereal:green_dirt", "default:dirt_with_snow", "default:permafrost", "livingdesert:coldsteppe_ground2"},
+	nodes = {"mcl_core:dirt_with_grass", "default:dirt_with_grass", "ethereal:green_dirt", "default:dirt_with_snow", "default:permafrost", "livingdesert:coldsteppe_ground2"},
 	neighbors = {"group:grass", "group:normal_grass", "animalworld:animalworld_tundrashrub5", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4", "livingdesert:coldsteppe_grass1", "livingdesert:coldsteppe_grass2", "livingdesert:coldsteppe_grass3"}, 
 	min_light = 14,
 	interval = 60,
@@ -277,8 +277,10 @@ minetest.register_node(":animalworld:cheeseblock", {
 	description = S("Cheese Block"),
 	tiles = {"animalworld_cheeseblock.png"},
 	is_ground_content = false,
-	groups = {crumbly = 3},
-	sounds = default.node_sound_dirt_defaults()
+	groups = {crumbly = 3, shovely = 1, handy = 1},
+	_mcl_hardness = 0.8,
+	_mcl_blast_resistance = 1,
+	sounds = animalworld.sounds.node_sound_dirt_defaults()
 })
 
 minetest.register_craft({

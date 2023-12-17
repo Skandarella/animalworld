@@ -82,7 +82,7 @@ view_range = 5,
 
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:dirt_with_rainforest_litter", "ethereal:grove_dirt"}
+	spawn_on = {"mcl_core:podzol", "default:dirt_withforest_litter", "ethereal:grove_dirt"}
 end
 
 if not mobs.custom_spawn_animalworld then

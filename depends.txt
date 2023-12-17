@@ -1,6 +1,8 @@
 mobs
-default
-bucket
+default?
+mcl_core?
+mcl_sounds?
+bucket?
 ethereal?
 xocean?
 farming?

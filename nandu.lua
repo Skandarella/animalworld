@@ -98,7 +98,7 @@ stepheight = 1,
 })
 
 
-local spawn_on = {"default:dirt_with_grass"}
+local spawn_on = {"mcl_core:dirt_with_grass", "default:dirt_with_grass"}
 
 if minetest.get_modpath("ethereal") then
 	spawn_on = {"ethereal:bamboo_dirt", "ethereal:prairie_dirt", "default:dirt_with_grass", "naturalbiomes:bushland_bushlandlitter"}
@@ -108,7 +108,7 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:nandu",
-	nodes = {"default:dirt_with_grass"}, 
+	nodes = {"mcl_core:dirt_with_grass", "default:dirt_with_grass"}, 
 	neighbors = {"group:grass", "group:normal_grass"}, 
 	min_light = 14,
 	interval = 60,
@@ -288,7 +288,9 @@ minetest.register_node(":animalworld:egg", {
 		type = "fixed",
 		fixed = {-0.2, -0.5, -0.2, 0.2, 0, 0.2}
 	},
-	groups = {food_egg = 1, snappy = 2, dig_immediate = 3},
+	groups = {food_egg = 1, snappy = 2, swordy = 1, handy = 1, dig_immediate = 3},
+	_mcl_hardness = 0.8,
+	_mcl_blast_resistance = 1,
 	after_place_node = function(pos, placer, itemstack)
 		if placer:is_player() then
 			minetest.set_node(pos, {name = "animalworld:egg", param2 = 1})

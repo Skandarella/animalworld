@@ -75,7 +75,7 @@ view_range = 10,
 })
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:dirt_with_coniferous_litter"}, {"default:pine_needles"}, {"ethereal:mushroom_dirt"}
+	spawn_on = {"mcl_core:dirt_with_grass", "default:dirt_with_coniferous_litter"}, {"default:pine_needles"}, {"ethereal:mushroom_dirt"}
 end
 
 if not mobs.custom_spawn_animalworld then

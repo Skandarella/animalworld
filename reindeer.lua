@@ -67,11 +67,11 @@ mobs:register_mob("animalworld:reindeer", {
 local spawn_on = {"default:permafrost_with_moss", "default:dirt_with_snow"}
 
 if minetest.get_mapgen_setting("mg_name") ~= "v6" then
-	spawn_on = {"default:dirt_with_snow", "default:permafrost_with_moss"}
+	spawn_on = {"mcl_core:dirt_with_grass", "default:dirt_with_snow", "default:permafrost_with_moss"}
 end
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:dirt_with_snow", "default:permafrost_with_moss", "ethereal:crystal_dirt"}
+	spawn_on = {"mcl_core:dirt_with_grass", "default:dirt_with_snow", "default:permafrost_with_moss", "ethereal:crystal_dirt"}
 end
 
 if not mobs.custom_spawn_animalworld then

@@ -65,8 +65,8 @@ mobs:register_mob("animalworld:treelobster", {
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:treelobster",
-	nodes = {"default:dirt_with_rainforest_litter"},
-	neighbors = {"default:junglegrass"},
+	nodes = {"mcl_core:podzol", "default:dirt_with_rainforest_litter"},
+	neighbors = {"mcl_flowers:tallgrass", "default:junglegrass"},
 	min_light = 0,
 	interval = 30,
 	chance = 2000, -- 15000

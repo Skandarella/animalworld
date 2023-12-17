@@ -65,7 +65,7 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:rat",
-	nodes = {"default:stone", "default:mossycobble", "default:dirt"},
+	nodes = {"mcl_core:stone", "default:stone", "default:mossycobble", "default:dirt"},
 	min_light = 0,
 	interval = 60,
 	chance = 2000, -- 15000

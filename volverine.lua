@@ -70,7 +70,7 @@ stepheight = 3,
 })
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:dirt_with_snow"}, {"default:permafrost_with_moss"}, {"default:snowblock"}
+	spawn_on = {"mcl_core:dirt_with_grass", "default:dirt_with_snow"}, {"default:permafrost_with_moss"}, {"default:snowblock"}
 end
 
 if not mobs.custom_spawn_animalworld then

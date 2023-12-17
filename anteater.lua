@@ -65,10 +65,10 @@ mobs:register_mob("animalworld:anteater", {
 	end,
 })
 
-local spawn_on = {"default:dirt_with_rainforest_litter"}
+local spawn_on = {"mcl_core:podzol", "default:dirt_withforest_litter"}
 
 if minetest.get_mapgen_setting("mg_name") ~= "v6" then
-	spawn_on = {"default:dirt_with_rainforest_litter", "default:dry_dirt_with_dry_grass"}
+	spawn_on = {"mcl_core:podzol", "default:dirt_withforest_litter", "default:dry_dirt_with_dry_grass"}
 end
 
 if minetest.get_modpath("ethereal") then
@@ -78,7 +78,7 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:anteater",
-	nodes = {"default:dirt_with_rainforest_litter"},
+	nodes = {"mcl_core:podzol", "default:dirt_with_rainforest_litter"},
 	neighbors = {"default:jungletree"},
 	min_light = 0,
 	interval = 1,

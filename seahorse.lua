@@ -72,7 +72,7 @@ stepheight = 0.0,
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:seahorse",
-	nodes = {"default:water_source"},
+	nodes = {"mcl_core:water_source", "default:water_source"},
 	neighbors = {"default:sand_with_kelp"},
 	min_light = 0,
 	interval = 30,

@@ -81,7 +81,7 @@ mobs:register_mob("animalworld:giraffe", {
 
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:dirt_with_rainforest_litter", "ethereal:green_dirt", "ethereal:grass_grove"}
+	spawn_on = {"mcl_core:podzol", "default:dirt_withforest_litter", "ethereal:green_dirt", "ethereal:grass_grove"}
 end
 
 if not mobs.custom_spawn_animalworld then

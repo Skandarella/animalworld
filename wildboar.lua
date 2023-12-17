@@ -77,10 +77,10 @@ mobs:register_mob("animalworld:wildboar", {
 	end,
 })
 
-local spawn_on = {"default:dirt_with_coniferous_litter"}
+local spawn_on = {"mcl_core:dirt_with_grass", "default:dirt_with_coniferous_litter"}
 
 if minetest.get_mapgen_setting("mg_name") ~= "v6" then
-	spawn_on = {"default:dirt_with_dry_grass", "default:dirt_with_coniferous_litter"}
+	spawn_on = {"mcl_core:dirt_with_grass", "default:dirt_with_dry_grass", "default:dirt_with_coniferous_litter"}
 end
 
 if minetest.get_modpath("ethereal") then
@@ -90,7 +90,7 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:wildboar",
-	nodes = {"default:dirt_with_coniferous_litter", "default:dirt_gray", "naturalbiomes:mediterran_litter"},
+	nodes = {"mcl_core:podzol", "default:dirt_with_conifrous_litter", "default:dirt_gray", "naturalbiomes:mediterran_litter"},
 	neighbors = {"default:fern_1", "default:fern_2", "naturalbiomes:med_flower2", "naturalbiomes:med_grass1", "naturalbiomes:med_grass2", "naturalbiomes:med_flower3"},
 	min_light = 0,
 	interval = 60,

@@ -74,7 +74,7 @@ view_range = 10,
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:vulture",
-	nodes = {"default:dirt_with_grass"}, {"default:dry_dirt_with_dry_grass"}, {"default:desert_sand"}, {"default:stone"}, {"livingdesert:coldsteppe_ground4"}, {"livingdesert:coldsteppe_ground3"},
+	nodes = {"mcl_core:dirt_with_grass", "default:dirt_with_grass"}, {"default:dry_dirt_with_dry_grass"}, {"default:desert_sand"}, {"default:stone"}, {"livingdesert:coldsteppe_ground4"}, {"livingdesert:coldsteppe_ground3"},
 	neighbors = {"group:grass", "group:normal_grass", "livingdesert:coldsteppe_grass1", "livingdesert:coldsteppe_grass2", "livingdesert:coldsteppe_grass3", "livingdesert:coldsteppe_grass4", "default:dry_shrub"},
 	min_light = 0,
 	interval = 60,

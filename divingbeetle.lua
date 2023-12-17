@@ -66,7 +66,7 @@ mobs:register_mob("animalworld:divingbeetle", {
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:divingbeetle",
-	nodes = {"default:water_source", "default:river_water_source"},
+	nodes = {"mcl_core:water_source", "default:water_source", "default:river_water_source"},
 	neighbors = {"default:papyrus"},
 	min_light = 0,
 	interval = 30,

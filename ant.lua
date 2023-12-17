@@ -58,7 +58,7 @@ mobs:register_mob("animalworld:ant", {
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:ant",
-	nodes = {"default:dirt_with_coniferous_litter"},
+	nodes = {"mcl_core:podzol", "default:dirt_with_conifrous_litter"},
 	neighbors = {"animalworld:anthill"},
 	min_light = 0,
 	interval = 30,
@@ -123,7 +123,9 @@ minetest.register_node("animalworld:anthill", {
     paramtype = "light",
     paramtype2 = "facedir",
     walkable = false,
-    groups = {crumbly = 3,  sand = 2},
+    groups = {crumbly = 3, shovely = 1, handy = 1,  sand = 2},
+    _mcl_hardness = 0.8,
+    _mcl_blast_resistance = 1,
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -140,7 +142,7 @@ minetest.register_node("animalworld:anthill", {
         }
     },
 	drop = "animalworld:anteggs_raw",
-	sounds = default.node_sound_dirt_defaults(),
+	sounds = animalworld.sounds.node_sound_dirt_defaults(),
 })
 
 minetest.register_craft({

@@ -68,7 +68,7 @@ mobs:register_mob("animalworld:koala", {
 	end,
 })
 
-local spawn_on = {"default:dirt_with_coniferous_litter"}
+local spawn_on = {"mcl_core:dirt_with_grass", "default:dirt_with_coniferous_litter"}
 
 if minetest.get_mapgen_setting("mg_name") ~= "v6" then
 	spawn_on = {"naturalbiomes:outback_litter"}

@@ -72,7 +72,7 @@ mobs:register_mob("animalworld:otter", {
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:otter",
-	nodes = {"default:water_source", "default:river_water_source"},
+	nodes = {"mcl_core:water_source", "default:water_source", "default:river_water_source"},
 	neighbors = {"flowers:waterlily_waving"},
 	min_light = 0,
 	interval = 60,

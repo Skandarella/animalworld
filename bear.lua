@@ -67,13 +67,13 @@ stepheight = 1,
 })
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:dirt_with_coniferous_litter", "default:permafrost_with_moss", "ethereal:bamboo_dirt", "ethereal:gray_dirt"}
+	spawn_on = {"mcl_core:dirt_with_grass", "default:dirt_with_coniferous_litter", "default:permafrost_with_moss", "ethereal:bamboo_dirt", "ethereal:gray_dirt"}
 end
 
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:bear",
-	nodes = {"default:dirt_with_coniferous_litter"}, {"default:permafrost_with_moss"}, {"livingdesert:coldsteppe_ground3"},
+	nodes = {"mcl_core:podzol", "default:dirt_with_conifrous_litter"}, {"default:permafrost_with_moss"}, {"livingdesert:coldsteppe_ground3"},
 	neighbors = {"livingdesert:pine_leaves", "livingdesert:pine_leaves2", "livingdesert:pine_leaves3", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4", "default:fern_1", "default:fern_2"},
 	min_light = 0,
 	interval = 60,

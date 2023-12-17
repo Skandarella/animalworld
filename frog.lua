@@ -71,7 +71,7 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:frog",
-	nodes = {"default:dirt_with_grass", "default:dirt_with_rainforest_litter", "naturalbiomes:alderswamp_litter", "naturalbiomes:heath_litter"},
+	nodes = {"mcl_core:dirt_with_grass", "default:dirt_with_grass", "default:dirt_with_rainforest_litter", "naturalbiomes:alderswamp_litter", "naturalbiomes:heath_litter"},
 	neighbors = {"naturalbiomes:alderswamp_reed3", "naturalbiomes:alderswamp_reed2", "naturalbiomes:alderswamp_reed", "naturalbiomes:alderswamp_yellowflower", "group:grass", "group:normal_grass"},
 	min_light = 0,
 	interval = 60,

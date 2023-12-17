@@ -1,11 +1,14 @@
 
--- Load support for intllib.
-local path = minetest.get_modpath(minetest.get_current_modname()) .. "/"
+local modname = minetest.get_current_modname()
 
-local S = minetest.get_translator and minetest.get_translator("animalworld") or
+-- Load support for intllib.
+local path = minetest.get_modpath(modname) .. "/"
+
+local S = minetest.get_translator and minetest.get_translator(modname) or
 		dofile(path .. "intllib.lua")
 
 mobs.intllib = S
+animalworld = {}
 
 -- Check for custom mob spawn file
 local input = io.open(path .. "spawn.lua", "r")
@@ -15,6 +18,10 @@ if input then
 	input = nil
 end
 
+-- Sounds
+animalworld.sounds = {}
+if minetest.get_modpath("default") then animalworld.sounds = default end
+if minetest.get_modpath("mcl_sounds") then animalworld.sounds = mcl_sounds end
 
 -- Animals
 dofile(path .. "seal.lua") -- 
@@ -71,8 +78,6 @@ dofile(path .. "goby.lua") --
 dofile(path .. "treelobster.lua") --
 dofile(path .. "notoptera.lua") --
 dofile(path .. "seahorse.lua") --
-dofile(path .. "trophies.lua") --
-dofile(path .. "tundravegetation.lua") --
 dofile(path .. "polarbear.lua") --
 dofile(path .. "muskox.lua") --
 dofile(path .. "fox.lua") --
@@ -107,10 +112,29 @@ dofile(path .. "iguana.lua") --
 dofile(path .. "oryx.lua") --
 dofile(path .. "roadrunner.lua") --
 dofile(path .. "cockroach.lua") --
-dofile(path .. "concretecrafting.lua") --
 dofile(path .. "robin.lua") --
-dofile(path .. "hunger.lua") --
 
+-- Load tundravegetation
+local load_tundra_vegetation = minetest.settings:get_bool("animalworld.tundravegetation") ~= false
+if load_tundra_vegetation then
+	dofile(path .. "tundravegetation.lua") --
+end
+
+-- Load trophies
+local load_trophies = minetest.settings:get_bool("animalworld.trophies") ~= false
+if load_trophies then
+	dofile(path .. "trophies.lua") --
+end
+
+-- Load hunger
+if minetest.get_modpath("hunger_ng") then
+	dofile(path .. "hunger.lua") --
+end
+
+-- Load concretecrafting
+if minetest.get_modpath("default") then
+	dofile(path .. "concretecrafting.lua") --
+end
 
 
 -- Load custom spawning

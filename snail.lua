@@ -63,7 +63,7 @@ mobs:register_mob("animalworld:snail", {
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:snail",
-	nodes = {"default:dirt_with_grass"},
+	nodes = {"mcl_core:dirt_with_grass", "default:dirt_with_grass"},
 	neighbors = {"farming:cucumber", "farming:cabbage_6", "farming:lettuce_5", "farming:beetroot_5", "flowers:dandelion_yellow", "farming:strawberry_7", "farming:parsley_3"},
 	min_light = 0,
 	interval = 30,

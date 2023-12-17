@@ -117,7 +117,7 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:hare",
-	nodes = {"default:dirt_with_grass", "naturalbiomes:mediterran_litter", "naturalbiomes:heath_litter", "naturalbiomes:bushland_bushlandlitter"},
+	nodes = {"mcl_core:dirt_with_grass", "default:dirt_with_grass", "naturalbiomes:mediterran_litter", "naturalbiomes:heath_litter", "naturalbiomes:bushland_bushlandlitter"},
 	neighbors = {"naturalbiomes:heath_grass", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:heatherflower", "naturalbiomes:heatherflower2", "naturalbiomes:heatherflower3", "group:grass", "group:normal_grass", "naturalbiomes:med_flower2", "naturalbiomes:med_grass1", "naturalbiomes:med_grass2", "naturalbiomes:med_flower3", "naturalbiomes:bushland_grass4", "naturalbiomes:bushland_grass5", "naturalbiomes:bushland_grass6"},
 	min_light = 0,
 	interval = 60,

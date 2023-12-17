@@ -110,7 +110,9 @@ minetest.register_node("animalworld:termitemould", {
     paramtype = "light",
     paramtype2 = "facedir",
     walkable = false,
-    groups = {cracky = 3, stone = 2},
+    groups = {cracky = 3, pickaxey = 1, stone = 2},
+    _mcl_hardness = 0.8,
+    _mcl_blast_resistance = 1,
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -127,15 +129,17 @@ minetest.register_node("animalworld:termitemould", {
         }
     },
 	drop = "animalworld:termiteconcrete 16", 
-	sounds = default.node_sound_dirt_defaults(),
+	sounds = animalworld.sounds.node_sound_dirt_defaults(),
 })
 
 minetest.register_node("animalworld:termiteconcrete", {
 	description = S("Termite Concrete"),
 	tiles = {"termiteconcrete.png"},
 	is_ground_content = false,
-	groups = {cracky = 3, stone = 2},
-	sounds = default.node_sound_stone_defaults(),
+	groups = {cracky = 3, pickaxey = 1, stone = 2},
+	_mcl_hardness = 0.8,
+	_mcl_blast_resistance = 1,
+	sounds = animalworld.sounds.node_sound_stone_defaults(),
 })
 
 
@@ -149,8 +153,10 @@ minetest.register_node("animalworld:termiteconcreteblue", {
 	description = S("Termite Concrete Blue"),
 	tiles = {"termiteconcreteblue.png"},
 	is_ground_content = false,
-	groups = {cracky = 3, stone = 2},
-	sounds = default.node_sound_stone_defaults(),
+	groups = {cracky = 3, pickaxey = 1, stone = 2},
+	_mcl_hardness = 0.8,
+	_mcl_blast_resistance = 1,
+	sounds = animalworld.sounds.node_sound_stone_defaults(),
 })
 
 
@@ -167,8 +173,10 @@ minetest.register_node("animalworld:termiteconcretegreen", {
 	description = S("Termite Concrete Green"),
 	tiles = {"termiteconcretegreen.png"},
 	is_ground_content = false,
-	groups = {cracky = 3, stone = 2},
-	sounds = default.node_sound_stone_defaults(),
+	groups = {cracky = 3, pickaxey = 1, stone = 2},
+	_mcl_hardness = 0.8,
+	_mcl_blast_resistance = 1,
+	sounds = animalworld.sounds.node_sound_stone_defaults(),
 })
 
 
@@ -185,8 +193,10 @@ minetest.register_node("animalworld:termiteconcreteyellow", {
 	description = S("Termite Concrete Yellow"),
 	tiles = {"termiteconcreteyellow.png"},
 	is_ground_content = false,
-	groups = {cracky = 3, stone = 2},
-	sounds = default.node_sound_stone_defaults(),
+	groups = {cracky = 3, pickaxey = 1, stone = 2},
+	_mcl_hardness = 0.8,
+	_mcl_blast_resistance = 1,
+	sounds = animalworld.sounds.node_sound_stone_defaults(),
 })
 
 
@@ -203,8 +213,10 @@ minetest.register_node("animalworld:termiteconcretered", {
 	description = S("Termite Concrete Red"),
 	tiles = {"termiteconcretered.png"},
 	is_ground_content = false,
-	groups = {cracky = 3, stone = 2},
-	sounds = default.node_sound_stone_defaults(),
+	groups = {cracky = 3, pickaxey = 1, stone = 2},
+	_mcl_hardness = 0.8,
+	_mcl_blast_resistance = 1,
+	sounds = animalworld.sounds.node_sound_stone_defaults(),
 })
 
 
@@ -221,8 +233,10 @@ minetest.register_node("animalworld:termiteconcreteorange", {
 	description = S("Termite Concrete Orange"),
 	tiles = {"termiteconcreteorange.png"},
 	is_ground_content = false,
-	groups = {cracky = 3, stone = 2},
-	sounds = default.node_sound_stone_defaults(),
+	groups = {cracky = 3, pickaxey = 1, stone = 2},
+	_mcl_hardness = 0.8,
+	_mcl_blast_resistance = 1,
+	sounds = animalworld.sounds.node_sound_stone_defaults(),
 })
 
 
@@ -239,8 +253,10 @@ minetest.register_node("animalworld:termiteconcreteviolet", {
 	description = S("Termite Concrete Violet"),
 	tiles = {"termiteconcreteviolet.png"},
 	is_ground_content = false,
-	groups = {cracky = 3, stone = 2},
-	sounds = default.node_sound_stone_defaults(),
+	groups = {cracky = 3, pickaxey = 1, stone = 2},
+	_mcl_hardness = 0.8,
+	_mcl_blast_resistance = 1,
+	sounds = animalworld.sounds.node_sound_stone_defaults(),
 })
 
 
@@ -257,8 +273,10 @@ minetest.register_node("animalworld:termiteconcretewhite", {
 	description = S("Termite Concrete White"),
 	tiles = {"termiteconcretewhite.png"},
 	is_ground_content = false,
-	groups = {cracky = 3, stone = 2},
-	sounds = default.node_sound_stone_defaults(),
+	groups = {cracky = 3, pickaxey = 1, stone = 2},
+	_mcl_hardness = 0.8,
+	_mcl_blast_resistance = 1,
+	sounds = animalworld.sounds.node_sound_stone_defaults(),
 })
 
 
@@ -275,8 +293,10 @@ minetest.register_node("animalworld:termiteconcreteblack", {
 	description = S("Termite Concrete Black"),
 	tiles = {"termiteconcreteblack.png"},
 	is_ground_content = false,
-	groups = {cracky = 3, stone = 2},
-	sounds = default.node_sound_stone_defaults(),
+	groups = {cracky = 3, pickaxey = 1, stone = 2},
+	_mcl_hardness = 0.8,
+	_mcl_blast_resistance = 1,
+	sounds = animalworld.sounds.node_sound_stone_defaults(),
 })
 
 minetest.register_craft({
@@ -292,8 +312,10 @@ minetest.register_node("animalworld:termiteconcretegrey", {
 	description = S("Termite Concrete Grey"),
 	tiles = {"termiteconcretegrey.png"},
 	is_ground_content = false,
-	groups = {cracky = 3, stone = 2},
-	sounds = default.node_sound_stone_defaults(),
+	groups = {cracky = 3, pickaxey = 1, stone = 2},
+	_mcl_hardness = 0.8,
+	_mcl_blast_resistance = 1,
+	sounds = animalworld.sounds.node_sound_stone_defaults(),
 })
 
 minetest.register_craft({
@@ -309,8 +331,10 @@ minetest.register_node("animalworld:termiteconcretedarkgreen", {
 	description = S("Termite Concrete Dark Green"),
 	tiles = {"termiteconcretedarkgreen.png"},
 	is_ground_content = false,
-	groups = {cracky = 3, stone = 2},
-	sounds = default.node_sound_stone_defaults(),
+	groups = {cracky = 3, pickaxey = 1, stone = 2},
+	_mcl_hardness = 0.8,
+	_mcl_blast_resistance = 1,
+	sounds = animalworld.sounds.node_sound_stone_defaults(),
 })
 
 minetest.register_craft({
@@ -326,8 +350,10 @@ minetest.register_node("animalworld:termiteconcretebrown", {
 	description = S("Termite Concrete Brown"),
 	tiles = {"termiteconcretebrown.png"},
 	is_ground_content = false,
-	groups = {cracky = 3, stone = 2},
-	sounds = default.node_sound_stone_defaults(),
+	groups = {cracky = 3, pickaxey = 1, stone = 2},
+	_mcl_hardness = 0.8,
+	_mcl_blast_resistance = 1,
+	sounds = animalworld.sounds.node_sound_stone_defaults(),
 })
 
 minetest.register_craft({
@@ -343,8 +369,10 @@ minetest.register_node("animalworld:termiteconcretepink", {
 	description = S("Termite Concrete Pink"),
 	tiles = {"termiteconcretepink.png"},
 	is_ground_content = false,
-	groups = {cracky = 3, stone = 2},
-	sounds = default.node_sound_stone_defaults(),
+	groups = {cracky = 3, pickaxey = 1, stone = 2},
+	_mcl_hardness = 0.8,
+	_mcl_blast_resistance = 1,
+	sounds = animalworld.sounds.node_sound_stone_defaults(),
 })
 
 minetest.register_craft({
@@ -360,8 +388,10 @@ minetest.register_node("animalworld:termiteconcretemagenta", {
 	description = S("Termite Concrete Magenta"),
 	tiles = {"termiteconcretemagenta.png"},
 	is_ground_content = false,
-	groups = {cracky = 3, stone = 2},
-	sounds = default.node_sound_stone_defaults(),
+	groups = {cracky = 3, pickaxey = 1, stone = 2},
+	_mcl_hardness = 0.8,
+	_mcl_blast_resistance = 1,
+	sounds = animalworld.sounds.node_sound_stone_defaults(),
 })
 
 minetest.register_craft({
@@ -377,8 +407,10 @@ minetest.register_node("animalworld:termiteconcretecyan", {
 	description = S("Termite Concrete Cyan"),
 	tiles = {"termiteconcretecyan.png"},
 	is_ground_content = false,
-	groups = {cracky = 3, stone = 2},
-	sounds = default.node_sound_stone_defaults(),
+	groups = {cracky = 3, pickaxey = 1, stone = 2},
+	_mcl_hardness = 0.8,
+	_mcl_blast_resistance = 1,
+	sounds = animalworld.sounds.node_sound_stone_defaults(),
 })
 
 minetest.register_craft({
