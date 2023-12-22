@@ -27,7 +27,7 @@ sounds = {
         runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion", "animalworld:polarbear", "animalworld:leopardseal", "animalworld:stellerseagle", "player", "animalworld:wolf", "animalworld:panda", "animalworld:stingray", "marinaramobs:jellyfish", "marinaramobs:octopus", "livingcavesmobs:biter", "livingcavesmobs:flesheatingbacteria"},
 	jump = true,
 	jump_height = 6,
-        stay_near = {{"naturalbiomes:alderswamp_reed3", "naturalbiomes:alderswamp_reed2", "naturalbiomes:alderswamp_reed", "naturalbiomes:alderswamp_yellowflower", "default:grass", "default:grass_2", "default:grass_3"}, 5},
+        stay_near = {{"mcl_flowers:waterlily", "naturalbiomes:alderswamp_reed3", "mcl_core:reeds", "naturalbiomes:alderswamp_reed2", "naturalbiomes:alderswamp_reed", "naturalbiomes:alderswamp_yellowflower", "default:grass", "default:grass_2", "default:grass_3"}, 5},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 	},
@@ -49,7 +49,7 @@ sounds = {
 		die_loop = false,
 		die_rotate = true,
 	},
-	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing"},
+	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing", "mcl_core:water_source", "mcl_core:water_flowing"},
 	floats = 0,
 	follow = {"fishing:bait:worm", "ethereal:worm", "animalworld:ant", "animalworld:termite", "animalworld:cockroach"},
 	view_range = 6,
@@ -71,8 +71,8 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:frog",
-	nodes = {"default:dirt_with_grass", "default:dirt_with_rainforest_litter", "naturalbiomes:alderswamp_litter", "naturalbiomes:heath_litter"},
-	neighbors = {"naturalbiomes:alderswamp_reed3", "naturalbiomes:alderswamp_reed2", "naturalbiomes:alderswamp_reed", "naturalbiomes:alderswamp_yellowflower", "group:grass", "group:normal_grass"},
+	nodes = {"mcl_core:dirt_with_grass", "default:dirt_with_grass", "default:dirt_with_rainforest_litter", "naturalbiomes:alderswamp_litter", "naturalbiomes:heath_litter"},
+	neighbors = {"naturalbiomes:alderswamp_reed3", "naturalbiomes:alderswamp_reed2", "naturalbiomes:alderswamp_reed", "naturalbiomes:alderswamp_yellowflower", "group:grass", "group:normal_grass", "mcl_flowers:tallgrass", "mcl_flowers:tulip_red", "mcl_flowers:sunflower", "mcl_flowers:poppy", "mcl_core:birchtree", "mcl_trees:tree_birch", "mcl_trees:tree_oak", "mcl_trees:tree_dark_oak", "mcl_core:tree", "mcl_trees:leaves_oak", "mcl_trees:leaves_dark_oak", "mcl_core:leaves", "mcl_core:birchleaves", "mcl_core:darkleaves", "mcl_core:spruceleaves"},
 	min_light = 0,
 	interval = 60,
 	chance = 1000, -- 15000

@@ -53,7 +53,7 @@ stepheight = 1,
 
 	follow = {
 		"ethereal:fish_raw", "animalworld:whalemeat_raw", "animalworld:rawfish", "mobs_fish:tropical",
-		"mobs:meat_raw", "animalworld:rabbit_raw", "xocean:fish_edible", "farming:melon_slice", "farming:melon_slice", "water_life:meat_raw", "water_life:meat_raw", "fishing:fish_raw", "animalworld:chicken_raw"
+		"mobs:meat_raw", "animalworld:rabbit_raw", "xocean:fish_edible", "farming:melon_slice", "farming:melon_slice", "water_life:meat_raw", "water_life:meat_raw", "fishing:fish_raw", "mcl_mobitems:chicken", "mcl_fishing:pufferfish_raw", "mcl_mobitems:rotten_flesh", "mcl_mobitems:mutton", "mcl_mobitems:beef", "mcl_mobitems:porkchop", "mcl_mobitems:rabbit", "animalworld:chicken_raw"
 	},
 	view_range = 8,
 
@@ -67,14 +67,14 @@ stepheight = 1,
 })
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:dirt_with_coniferous_litter", "default:permafrost_with_moss", "ethereal:bamboo_dirt", "ethereal:gray_dirt"}
+	spawn_on = {"mcl_core:dirt_with_grass", "default:dirt_with_coniferous_litter", "default:permafrost_with_moss", "ethereal:bamboo_dirt", "ethereal:gray_dirt"}
 end
 
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:bear",
-	nodes = {"default:dirt_with_coniferous_litter"}, {"default:permafrost_with_moss"}, {"livingdesert:coldsteppe_ground3"},
-	neighbors = {"livingdesert:pine_leaves", "livingdesert:pine_leaves2", "livingdesert:pine_leaves3", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4", "default:fern_1", "default:fern_2"},
+	nodes = {"mcl_core:podzol", "mcl_core:dirt_with_grass", "default:dirt_with_conifrous_litter"}, {"default:permafrost_with_moss"}, {"livingdesert:coldsteppe_ground3"},
+	neighbors = {"livingdesert:pine_leaves", "livingdesert:pine_leaves2", "livingdesert:pine_leaves3", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4", "default:fern_1", "default:fern_2", "mcl_core:sprucetree", "mcl_trees:tree_spruce", "mcl_trees:leaves_spruce"},
 	min_light = 0,
 	interval = 60,
 	chance = 1000, -- 15000

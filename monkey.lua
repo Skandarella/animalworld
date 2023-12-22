@@ -43,12 +43,12 @@ mobs:register_mob("animalworld:monkey", {
 	jump = true,
 	jump_height = 8,
 	pushable = true,
-	follow = {"default:apple", "farming:potato", "ethereal:banana_bread", "farming:carrot", "farming:seed_rice", "farming:corn", "farming:wheat", "farming:beans", "farming:barley", "farming:oat", "farming:rye", "mobs:cheese", "farming:bread", "ethereal:banana_bread", "ethereal:banana", "farming:cabbage", "farming:lettuce", "farming:melon_slice", "animalworld:termitequeen", "animalworld:locust_roasted", "livingdesert:date_palm_fruits", "livingdesert:figcactus_fruit"},
+	follow = {"default:apple", "farming:potato", "mcl_farming:beetroot_item", "mcl_farming:carrot_item", "mcl_farming:melon_item", "mcl_farming:potato_item", "mcl_farming:pumpkin_item", "mcl_farming:wheat_item", "mcl_farming:sweet_berry", "ethereal:banana_bread", "farming:carrot", "farming:seed_rice", "farming:corn", "farming:wheat", "farming:beans", "farming:barley", "farming:oat", "farming:rye", "mobs:cheese", "farming:bread", "ethereal:banana_bread", "ethereal:banana", "farming:cabbage", "farming:lettuce", "farming:melon_slice", "animalworld:termitequeen", "animalworld:locust_roasted", "livingdesert:date_palm_fruits", "livingdesert:figcactus_fruit"},
 	view_range = 15,
 	replace_rate = 10,
 	replace_what = {"farming:soil", "farming:soil_wet"},
 	replace_with = "default:dirt",
-        stay_near = {{"default:acacia_tree", "default:acacia_leaves", "default:jungleleaves", "naturalbiomes:bamboo_leaves", "naturalbiomes:bambooforest_groundgrass", "livingjungle:samauma_trunk", "livingjungle:samauma_leaves"}, 5},
+        stay_near = {{"default:acacia_tree", "mcl_core:jungletree", "mcl_core:jungleleaves", "mcl_trees:leaves_jungle", "mcl_trees:leaves_mangrove", "default:acacia_leaves", "default:jungleleaves", "naturalbiomes:bamboo_leaves", "naturalbiomes:bambooforest_groundgrass", "livingjungle:samauma_trunk", "livingjungle:samauma_leaves"}, 5},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 3},
 	},
@@ -85,8 +85,8 @@ mobs:register_mob("animalworld:monkey", {
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:monkey",
-	nodes = {"default:dry_dirt_with_dry_grass", "default:dirt_with_rainforest_litter", "default:jungleleaves", "naturalbiomes:bambooforest_litter", "livingjungle:jungleground", "livingjungle:leafyjungleground"},
-	neighbors = {"default:jungletree", "livingjungle:alocasia", "livingjungle:flamingoflower", "livingjungle:samauma_trunk", "group:grass", "group:normal_grass", "naturalbiomes:bambooforest_groundgrass", "naturalbiomes:bambooforest_groundgrass2"},
+	nodes = {"default:dry_dirt_with_dry_grass", "mcl_core:jungletree", "mcl_core:dirt_with_gras", "default:dirt_with_rainforest_litter", "default:jungleleaves", "naturalbiomes:bambooforest_litter", "livingjungle:jungleground", "livingjungle:leafyjungleground"},
+	neighbors = {"default:jungletree", "mcl_trees:tree_jungle", "mcl_core:jungletree", "mcl_core:jungleleaves", "mcl_trees:leaves_jungle", "mcl_trees:leaves_mangrove", "livingjungle:alocasia", "livingjungle:flamingoflower", "livingjungle:samauma_trunk", "group:grass", "group:normal_grass", "naturalbiomes:bambooforest_groundgrass", "naturalbiomes:bambooforest_groundgrass2"},
 	min_light = 0,
 	interval = 60,
 	chance = 2000, -- 15000

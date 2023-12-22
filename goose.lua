@@ -63,10 +63,10 @@ stepheight = 6,
 		die_rotate = true,
 	},
 
-fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing"},
+fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing", "mcl_core:water_source", "mcl_core:water_flowing"},
 	floats = 1,
 	follow = {
-		"default:dry_dirt_with_dry_grass", "farming:seed_wheat", "default:junglegrass", "farming:seed_oat", "naturalbiomes:savannagrass", "naturalbiomes:savannagrassmall", "naturalbiomes:alderswamp_reed", "naturalbiomes:alderswamp_reed2", "naturalbiomes:alderswamp_reed3", "farming:lettuce", "farming:cabbage", "ethereal:snowygrass", "default:dry_grass_1", "default:dry_grass_2", "default:dry_grass_3", "default:grass_1", "default:grass_2", "default:grass_3", "default:grass_4", "default:grass_5", "default:marram_grass_1", "default:marram_grass_2", "default:marram_grass_3", "default:coldsteppe_grass_1", "default:coldsteppe_grass_2", "default:coldsteppe_grass_3", "default:coldsteppe_grass_4", "default:coldsteppe_grass_5", "default:coldsteppe_grass_6", "naturalbiomes:savanna_grass1", "naturalbiomes:savanna_grass2", "naturalbiomes:savanna_grass3", "naturalbiomes:outback_grass1", "naturalbiomes:outback_grass2", "naturalbiomes:outback_grass3", "naturalbiomes:outback_grass4", "naturalbiomes:outback_grass5", "naturalbiomes:outback_grass6", "naturalbiomes:med_grass1", "naturalbiomes:med_grass2", "naturalbiomes:heath_grass1", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:alpine_grass1", "naturalbiomes:alpine_grass2", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:", "naturalbiomes:", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", "naturalbiomes:bushland_grass4", "naturalbiomes:bushland_grass5", "naturalbiomes:bushland_grass6", "naturalbiomes:bushland_grass7", "group:grass", "group:normal_grass"
+		"default:dry_dirt_with_dry_grass", "mcl_flowers:tallgrass", "mcl_core:deadbush", "mcl_bamboo:bamboo", "farming:seed_wheat", "default:junglegrass", "farming:seed_oat", "naturalbiomes:savannagrass", "naturalbiomes:savannagrassmall", "naturalbiomes:alderswamp_reed", "naturalbiomes:alderswamp_reed2", "naturalbiomes:alderswamp_reed3", "farming:lettuce", "farming:cabbage", "ethereal:snowygrass", "default:dry_grass_1", "default:dry_grass_2", "default:dry_grass_3", "default:grass_1", "default:grass_2", "default:grass_3", "default:grass_4", "default:grass_5", "default:marram_grass_1", "default:marram_grass_2", "default:marram_grass_3", "default:coldsteppe_grass_1", "default:coldsteppe_grass_2", "default:coldsteppe_grass_3", "default:coldsteppe_grass_4", "default:coldsteppe_grass_5", "default:coldsteppe_grass_6", "naturalbiomes:savanna_grass1", "naturalbiomes:savanna_grass2", "naturalbiomes:savanna_grass3", "naturalbiomes:outback_grass1", "naturalbiomes:outback_grass2", "naturalbiomes:outback_grass3", "naturalbiomes:outback_grass4", "naturalbiomes:outback_grass5", "naturalbiomes:outback_grass6", "naturalbiomes:med_grass1", "naturalbiomes:med_grass2", "naturalbiomes:heath_grass1", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:alpine_grass1", "naturalbiomes:alpine_grass2", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:", "naturalbiomes:", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", "naturalbiomes:bushland_grass4", "naturalbiomes:bushland_grass5", "naturalbiomes:bushland_grass6", "naturalbiomes:bushland_grass7", "group:grass", "group:normal_grass"
 	},
 	
 view_range = 5,
@@ -82,14 +82,14 @@ view_range = 5,
 
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:dirt_with_rainforest_litter", "ethereal:grove_dirt"}
+	spawn_on = {"mcl_core:podzol", "default:dirt_withforest_litter", "ethereal:grove_dirt"}
 end
 
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:goose",
-	nodes = {"naturalbiomes:alderswamp_litter", "default:permafrost"},
-	neighbors = {"naturalbiomes:alderswamp_reed3", "naturalbiomes:alderswamp_reed2", "naturalbiomes:alderswamp_reed", "naturalbiomes:alderswamp_yellowflower", "group:grass", "group:normal_grass", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2"},
+	nodes = {"naturalbiomes:alderswamp_litter", "default:permafrost", "mcl_core:dirt_with_grass"},
+	neighbors = {"naturalbiomes:alderswamp_reed3", "naturalbiomes:alderswamp_reed2", "naturalbiomes:alderswamp_reed", "mcl_flowers:waterlily", "mcl_ocean:seagrass:sand", "mcl_core:reeds", "naturalbiomes:alderswamp_yellowflower", "group:grass", "group:normal_grass", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2"},
 	min_light = 0,
 	interval = 60,
 	chance = 1000, -- 15000

@@ -46,7 +46,7 @@ stepheight = 2,
 	lava_damage = 5,
 	light_damage = 0,
 	fear_height = 3,
-        stay_near = {{"naturalbiomes:heath_grass", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:heatherflower", "naturalbiomes:heatherflower2", "naturalbiomes:heatherflower3"}, 5},
+        stay_near = {{"naturalbiomes:heath_grass", "mcl_flowers:double:fern", "mcl_flowers:fern", "mcl_flowers:tallgrass", "mcl_farming:sweet_berry_bush_3", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:heatherflower", "naturalbiomes:heatherflower2", "naturalbiomes:heatherflower3"}, 5},
 	animation = {
 		speed_normal = 75,
 		stand_speed = 40,
@@ -67,7 +67,7 @@ stepheight = 2,
 		die_rotate = true,
 	},
 	follow = {
-		"naturalbiomes:bamboo_sapling", "livingfloatlands:coldsteppe_pine3_sapling", "livingfloatlands:coldsteppe_pine2_sapling", "livingfloatlands:coldsteppe_pine_sapling", "naturalbiomes:alppine1_sapling", "naturalbiomes:alpine_cowberrybush_sapling", "naturalbiomes:alppine2_sapling", "livingfloatlands:giantforest_paleoredwood_sapling", "naturalbiomes:juniper_sapling", "default:pine_sapling", "livingdesert:pine_sapling3", "livingdesert:pine_sapling2", "livingdesert:pine_sapling"
+		"naturalbiomes:bamboo_sapling", "mcl_flowers:tallgrass", "mcl_core:deadbush", "mcl_bamboo:bamboo", "livingfloatlands:coldsteppe_pine3_sapling", "livingfloatlands:coldsteppe_pine2_sapling", "livingfloatlands:coldsteppe_pine_sapling", "naturalbiomes:alppine1_sapling", "naturalbiomes:alpine_cowberrybush_sapling", "naturalbiomes:alppine2_sapling", "livingfloatlands:giantforest_paleoredwood_sapling", "naturalbiomes:juniper_sapling", "default:pine_sapling", "livingdesert:pine_sapling3", "livingdesert:pine_sapling2", "livingdesert:pine_sapling"
 	},
 	view_range = 10,
 
@@ -106,8 +106,8 @@ stepheight = 2,
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:blackgrouse",
-	nodes = {"naturalbiomes:heath_litter"}, 
-	neighbors = {"naturalbiomes:heath_grass", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:heatherflower", "naturalbiomes:heatherflower2", "naturalbiomes:heatherflower3"}, 
+	nodes = {"naturalbiomes:heath_litter", "mcl_core:dirt_with_grass", "mcl_core:podzol"}, 
+	neighbors = {"mcl_flowers:double:fern", "mcl_flowers:fern", "naturalbiomes:heath_grass", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:heatherflower", "naturalbiomes:heatherflower2", "naturalbiomes:heatherflower3"}, 
 	min_light = 0,
 	interval = 60,
 	chance = 2000, -- 15000

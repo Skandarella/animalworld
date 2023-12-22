@@ -59,7 +59,7 @@ mobs:register_mob("animalworld:ibex", {
 		die_rotate = true,
 	},
 
-	follow = {"default:apple", "default:dry_dirt_with_dry_grass", "farming:seed_wheat", "default:junglegrass", "farming:seed_oat", "naturalbiomes:savannagrass", "naturalbiomes:savannagrassmall", "naturalbiomes:savanna_flowergrass", "naturalbiomes:alpine_grass1", "naturalbiomes:alpine_grass2", "naturalbiomes:alpine_grass3", "naturalbiomes:alpine_dandelion", "naturalbiomes:med_flower1", "naturalbiomes:med_flower3", "naturalbiomes:med_flower2", "naturalbiomes:med_grass1", "naturalbiomes:med_grass2"},
+	follow = {"default:apple", "mcl_flowers:tallgrass", "mcl_core:deadbush", "mcl_bamboo:bamboo", "default:dry_dirt_with_dry_grass", "farming:seed_wheat", "default:junglegrass", "farming:seed_oat", "naturalbiomes:savannagrass", "naturalbiomes:savannagrassmall", "naturalbiomes:savanna_flowergrass", "naturalbiomes:alpine_grass1", "naturalbiomes:alpine_grass2", "naturalbiomes:alpine_grass3", "naturalbiomes:alpine_dandelion", "naturalbiomes:med_flower1", "naturalbiomes:med_flower3", "naturalbiomes:med_flower2", "naturalbiomes:med_grass1", "naturalbiomes:med_grass2"},
 	view_range = 10,
 	replace_rate = 10,
 	replace_what = {"farming:soil", "farming:soil_wet"},
@@ -75,14 +75,14 @@ mobs:register_mob("animalworld:ibex", {
 
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:dirt_with_rainforest_litter", "ethereal:green_dirt", "ethereal:grass_grove"}
+	spawn_on = {"mcl_core:podzol", "default:dirt_withforest_litter", "ethereal:green_dirt", "ethereal:grass_grove"}
 end
 
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:ibex",
-	nodes = {"naturalbiomes:alpine_litter", "naturalbiomes:mediterran_litter"},
-	neighbors = {"naturalbiomes:med_grass1", "naturalbiomes:med_grass2", "naturalbiomes:med_grass3", "naturalbiomes:med_grass4", "naturalbiomes:med_flower1", "naturalbiomes:med_flower3", "naturalbiomes:alpine_grass1", "naturalbiomes:alpine_grass2", "naturalbiomes:alpine_grass3"},
+	nodes = {"naturalbiomes:alpine_litter", "naturalbiomes:mediterran_litter", "mcl_core:stone", "mcl_core:granite", "mcl_core:dirt_with_grass"},
+	neighbors = {"naturalbiomes:med_grass1", "mcl_farming:sweet_berry_bush_3", "mcl_core:sprucetree", "mcl_trees:tree_spruce", "mcl_trees:leaves_spruce", "mcl_core:tree", "mcl_trees:leaves_oak", "mcl_trees:leaves_dark_oak", "mcl_core:leaves", "mcl_core:birchleaves", "mcl_core:darkleaves", "mcl_core:spruceleaves", "naturalbiomes:med_grass2", "naturalbiomes:med_grass3", "naturalbiomes:med_grass4", "naturalbiomes:med_flower1", "naturalbiomes:med_flower3", "naturalbiomes:alpine_grass1", "naturalbiomes:alpine_grass2", "naturalbiomes:alpine_grass3"},
 	min_light = 0,
 	interval = 60,
 	chance = 2000, -- 15000

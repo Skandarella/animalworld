@@ -67,10 +67,10 @@ child_texture = {
 	end,
 })
 
-local spawn_on = {"default:dirt_with_rainforest_litter"}
+local spawn_on = {"mcl_core:podzol", "default:dirt_withforest_litter"}
 
 if minetest.get_mapgen_setting("mg_name") ~= "v6" then
-	spawn_on = {"default:dirt_with_rainforest_litter", "default:dry_dirt_with_dry_grass"}
+	spawn_on = {"mcl_core:podzol", "default:dirt_withforest_litter", "default:dry_dirt_with_dry_grass"}
 end
 
 if minetest.get_modpath("ethereal") then
@@ -80,8 +80,8 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:echidna",
-	nodes = {"naturalbiomes:outback_litter"},
-	neighbors = {"group:grass", "group:normal_grass", "naturalbiomes:outback_grass", "naturalbiomes:outback_grass3", "naturalbiomes:outback_grass2", "naturalbiomes:outback_grass4", "naturalbiomes:outback_grass5"}, 
+	nodes = {"naturalbiomes:outback_litter", "mcl_core:sand", "mcl_core:redsand"},
+	neighbors = {"group:grass", "mcl_core:deadbush", "mcl_core:cactus", "group:normal_grass", "naturalbiomes:outback_grass", "naturalbiomes:outback_grass3", "naturalbiomes:outback_grass2", "naturalbiomes:outback_grass4", "naturalbiomes:outback_grass5"}, 
 	min_light = 0,
 	interval = 30,
 	chance = 2000, -- 15000

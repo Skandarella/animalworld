@@ -65,7 +65,7 @@ mobs:register_mob("animalworld:giraffe", {
 		die_rotate = true,
 	},
 
-	follow = {"default:apple", "default:dry_dirt_with_dry_grass", "farming:seed_wheat", "default:junglegrass", "farming:seed_oat", "naturalbiomes:savannagrass", "naturalbiomes:savannagrassmall", "naturalbiomes:savanna_flowergrass", "default:acacia_leaves", "naturalbiomes:acacia_leaves"},
+	follow = {"default:apple", "mcl_trees:leaves_oak", "mcl_trees:leaves_dark_oak", "mcl_core:leaves", "mcl_core:birchleaves", "mcl_core:darkleaves", "mcl_core:spruceleaves", "default:dry_dirt_with_dry_grass", "mcl_trees:leaves_oak", "mcl_trees:leaves_dark_oak", "farming:seed_wheat", "default:junglegrass", "farming:seed_oat", "naturalbiomes:savannagrass", "naturalbiomes:savannagrassmall", "naturalbiomes:savanna_flowergrass", "default:acacia_leaves", "naturalbiomes:acacia_leaves"},
 	view_range = 10,
 	replace_rate = 10,
 	replace_what = {"farming:soil", "farming:soil_wet"},
@@ -81,14 +81,14 @@ mobs:register_mob("animalworld:giraffe", {
 
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:dirt_with_rainforest_litter", "ethereal:green_dirt", "ethereal:grass_grove"}
+	spawn_on = {"mcl_core:podzol", "default:dirt_withforest_litter", "ethereal:green_dirt", "ethereal:grass_grove"}
 end
 
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:giraffe",
-	nodes = {"naturalbiomes:savannalitter"},
-	neighbors = {"naturalbiomes:acacia_trunk"},
+	nodes = {"naturalbiomes:savannalitter", "mcl_core:dirt_with_grass"},
+	neighbors = {"naturalbiomes:acacia_trunk", "mcl_core:acaciatree", "mcl_trees:tree_acacia"},
 	min_light = 0,
 	interval = 60,
 	chance = 2000, -- 15000

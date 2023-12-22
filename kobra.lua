@@ -63,7 +63,7 @@ stepheight = 2,
 		die_rotate = true,
 	},
 
-	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing"},
+	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "mcl_core:water_source", "mcl_core:water_flowing"},
 	floats = 0,
 })
 
@@ -74,8 +74,8 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:kobra",
-	nodes = {"default:desert_sandstone", "default:desert_stone", "default:sandstone", "default:dirt_with_rainforest_litter", "naturalbiomes:bambooforest_litter"}, 
-	neighbors = {"default:junglegrass", "livingdesert:date_palm_leaves", "livingdesert:yucca", "default:dry_shrub", "livingdesert:coldsteppe_grass1", "livingdesert:cactus", "livingdesert:cactus3", "livingdesert:cactus2", "livingdesert:cactus4", "naturalbiomes:bambooforest_groundgrass", "naturalbiomes:bambooforest_groundgrass2"},
+	nodes = {"default:desert_sandstone", "default:desert_stone", "default:sandstone", "default:dirt_with_rainforest_litter", "naturalbiomes:bambooforest_litter", "mcl_core:dirt_with_gras"}, 
+	neighbors = {"mcl_flowers:tallgrass", "mcl_core:jungletree", "mcl_core:jungleleaves", "mcl_trees:leaves_jungle", "mcl_trees:leaves_mangrove", "default:junglegrass", "livingdesert:date_palm_leaves", "livingdesert:yucca", "default:dry_shrub", "livingdesert:coldsteppe_grass1", "livingdesert:cactus", "livingdesert:cactus3", "livingdesert:cactus2", "livingdesert:cactus4", "naturalbiomes:bambooforest_groundgrass", "naturalbiomes:bambooforest_groundgrass2"},
 	min_light = 0,
 	interval = 60,
 	chance = 1000, -- 15000

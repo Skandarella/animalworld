@@ -30,7 +30,7 @@ stepheight = 2,
         jump_height = 0.5,
 	stepheight = 2,
         knock_back = false,
-        stay_near = {{"default:dry_grass_1", "default:dry_grass_2", "default:dry_grass_3", "default:dry_grass_4"}, 6},
+        stay_near = {{"default:dry_grass_1", "default:dry_grass_2", "default:dry_grass_3", "default:dry_grass_4", "mcl_core:dirt_with_grass", "mcl_core:acaciatree", "mcl_trees:tree_acacia"}, 6},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 		{name = "animalworld:hippocorpse", chance = 7, min = 1, max = 1},
@@ -59,10 +59,10 @@ stepheight = 2,
 		die_rotate = true,
 	},
 
-fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing"},
+fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing", "mcl_core:water_source", "mcl_core:water_flowing"},
 	floats = 0,
 	follow = {
-		"ethereal:banana_single", "farming:corn_cob", "farming:cabbage",
+		"ethereal:banana_single", "mcl_farming:beetroot_item", "mcl_farming:carrot_item", "mcl_farming:melon_item", "mcl_farming:potato_item", "mcl_farming:pumpkin_item", "mcl_farming:wheat_item", "mcl_farming:sweet_berry", "farming:corn_cob", "farming:cabbage",
 		"default:apple", "water_life:meat_raw", "xocean:fish_edible", "ethereal:fish_raw", "ethereal:banana", "farming:cabbage", "farming:lettuce", "farming:melon_slice", "group:grass", "group:normal_grass"
 	},
 	
@@ -84,8 +84,8 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:hippo",
-	nodes = {"default:dry_dirt_with_dry_grass"},
-	neighbors = {"group:grass", "group:normal_grass"},
+	nodes = {"default:dry_dirt_with_dry_grass", "mcl_core:dirt_with_grass"},
+	neighbors = {"group:grass", "group:normal_grass", "mcl_trees:leaves_acacia", "mcl_core:acacialeaves", "mcl_core:acaciatree", "mcl_trees:tree_acacia"},
 	min_light = 0,
 	interval = 60,
 	chance = 2000, -- 15000

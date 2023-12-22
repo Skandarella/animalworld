@@ -38,7 +38,7 @@ stepheight = 2,
 	lava_damage = 4,
 	light_damage = 0,
 	fear_height = 4,
-        stay_near = {{"naturalbiomes:savanna_flowergrass", "naturalbiomes:savanna_grass", "naturalbiomes:savanna_grass2", "naturalbiomes:savanna_grass3", "naturalbiomes:savannagrass"}, 6},
+        stay_near = {{"naturalbiomes:savanna_flowergrass", "mcl_trees:leaves_acacia",  "mcl_core:acacialeaves", "naturalbiomes:savanna_grass", "naturalbiomes:savanna_grass2", "naturalbiomes:savanna_grass3", "naturalbiomes:savannagrass"}, 6},
 	animation = {
 		speed_normal = 75,
 		stand_start = 0,
@@ -55,7 +55,7 @@ stepheight = 2,
 	},
 
 	follow = {
-		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
+		"ethereal:fish_raw", "mcl_mobitems:chicken", "mcl_fishing:pufferfish_raw", "mcl_mobitems:rotten_flesh", "mcl_mobitems:mutton", "mcl_mobitems:beef", "mcl_mobitems:porkchop", "mcl_mobitems:rabbit", "animalworld:rawfish", "mobs_fish:tropical",
 		"mobs:meat_raw", "animalworld:rabbit_raw", "animalworld:pork_raw", "water_life:meat_raw", "xocean:fish_edible", "animalworld:chicken_raw", "mobs:meatblock_raw", "animalworld:chicken_raw", "livingfloatlands:ornithischiaraw", "livingfloatlands:largemammalraw", "livingfloatlands:theropodraw", "livingfloatlands:sauropodraw", "animalworld:raw_athropod", "animalworld:whalemeat_raw", "animalworld:rabbit_raw", "nativevillages:chicken_raw", "mobs:meat_raw", "animalworld:pork_raw", "people:mutton:raw"
 	},
 	view_range = 10,
@@ -76,8 +76,8 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:hyena",
-	nodes = {"default:dry_dirt_with_dry_grass", "naturalbiomes:savannalitter"},
-	neighbors = {"group:grass", "group:normal_grass", "naturalbiomes:savanna_grass2", "naturalbiomes:savanna_grass3"},
+	nodes = {"default:dry_dirt_with_dry_grass", "naturalbiomes:savannalitter", "mcl_core:dirt_with_grass"},
+	neighbors = {"group:grass", "group:normal_grass", "naturalbiomes:savanna_grass2", "naturalbiomes:savanna_grass3", "mcl_trees:leaves_acacia", "mcl_core:acacialeaves", "mcl_core:acaciatree", "mcl_trees:tree_acacia"},
 	min_light = 0,
 	interval = 60,
 	chance = 2000, -- 15000

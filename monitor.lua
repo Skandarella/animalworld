@@ -29,7 +29,7 @@ stepheight = 1,
 	jump = true,
         jump_height = 0.5,
 	stepheight = 1,
-        stay_near = {{"naturalbiomes:outback_grass", "naturalbiomes:outback_grass3", "naturalbiomes:outback_grass2", "naturalbiomes:outback_grass4", "naturalbiomes:outback_grass5", "livingdesert:cactus", "livingdesert:cactus3", "livingdesert:cactus2", "livingdesert:cactus4"}, 5},
+        stay_near = {{"naturalbiomes:outback_grass", "mcl_core:deadbush", "mcl_core:cactus", "naturalbiomes:outback_grass3", "naturalbiomes:outback_grass2", "naturalbiomes:outback_grass4", "naturalbiomes:outback_grass5", "livingdesert:cactus", "livingdesert:cactus3", "livingdesert:cactus2", "livingdesert:cactus4"}, 5},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 		{name = "animalworld:monitorcorpse", chance = 7, min = 1, max = 1},
@@ -54,7 +54,7 @@ stepheight = 1,
 		die_loop = false,
 		die_rotate = true,
 	},
-	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing"},
+	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing", "mcl_core:water_source", "mcl_core:water_flowing"},
 	floats = 0,
 	follow = {
 		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
@@ -78,8 +78,8 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:monitor",
-	nodes = {"default:desert_sand", "default:desert_sandstone", "naturalbiomes:outback_litter"},
-	neighbors = {"naturalbiomes:outback_rock", "naturalbiomes:outback_trunk", "default:dry_shrub", "livingdesert:cactus", "livingdesert:cactus3", "livingdesert:cactus2", "livingdesert:cactus4", "default:cactus"},
+	nodes = {"default:desert_sand", "mcl_core:sand", "mcl_core:redsand", "default:desert_sandstone", "naturalbiomes:outback_litter"},
+	neighbors = {"naturalbiomes:outback_rock", "naturalbiomes:outback_trunk", "default:dry_shrub", "mcl_core:deadbush", "mcl_core:cactus", "livingdesert:cactus", "livingdesert:cactus3", "livingdesert:cactus2", "livingdesert:cactus4", "default:cactus"},
 	min_light = 0,
 	interval = 60,
 	chance = 500, -- 15000

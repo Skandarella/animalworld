@@ -55,7 +55,7 @@ stepheight = 3,
 fly_in = {"air"},
 	floats = 0,
 	follow = {
-		"animalworld:rawfish", "ethereal:worm", "ethereal:fish_raw", "fishing:fish_raw", "xocean:fish_edible", "livingdesert:date_palm_fruits", "livingdesert:figcactus_fruit"
+		"animalworld:rawfish", "mcl_fishing:pufferfish_raw", "ethereal:worm", "ethereal:fish_raw", "fishing:fish_raw", "xocean:fish_edible", "livingdesert:date_palm_fruits", "livingdesert:figcactus_fruit"
 	},
 	
 view_range = 4,
@@ -70,13 +70,13 @@ view_range = 4,
 })
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:dirt_with_grass", "default:dry_dirt_with_dry_grass", "default:dirt_with_rainforest_litter", "default:dirt_with_coniferous_litter", "ethereal:gray_dirt", "ethereal:mushroom_dirt", "ethereal:grove_dirt"}
+	spawn_on = {"mcl_core:dirt_with_grass", "default:dirt_with_grass", "default:dry_dirt_with_dry_grass", "default:dirt_with_rainforest_litter", "default:dirt_with_coniferous_litter", "ethereal:gray_dirt", "ethereal:mushroom_dirt", "ethereal:grove_dirt"}
 end
 
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:bat",
-	nodes = {"default:dirt_with_grass", "default:dry_dirt_with_dry_grass", "default:dirt_with_rainforest_litter", "default:dirt_with_coniferous_litter", "naturalbiomes:mediterran_litter", "livingjungle:jungleground", "livingjungle:leafyjungleground", "naturalbiomes:bushland_bushlandlitter"},
+	nodes = {"mcl_core:dirt_with_grass", "default:dirt_with_grass", "default:dry_dirt_with_dry_grass", "default:dirt_with_rainforest_litter", "default:dirt_with_coniferous_litter", "naturalbiomes:mediterran_litter", "livingjungle:jungleground", "livingjungle:leafyjungleground", "naturalbiomes:bushland_bushlandlitter"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000

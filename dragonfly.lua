@@ -31,7 +31,7 @@ stepheight = 3,
         jump_height = 6,
 	stepheight = 3,
 	fly = true,
-        stay_near = {{"naturalbiomes:alderswamp_reed3", "naturalbiomes:alderswamp_reed2", "naturalbiomes:alderswamp_reed", "naturalbiomes:alderswamp_yellowflower", "naturalbiomes:waterlily", "marinara:reed_root"}, 4},
+        stay_near = {{"naturalbiomes:alderswamp_reed3", "mcl_core:reeds", "naturalbiomes:alderswamp_reed2", "naturalbiomes:alderswamp_reed", "naturalbiomes:alderswamp_yellowflower", "naturalbiomes:waterlily", "marinara:reed_root"}, 4},
 	drops = {
 	
 	},
@@ -74,7 +74,7 @@ if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:dragonfly",
 	nodes = {"air"},
-	neighbors = {"flowers:waterlily_waving"},
+	neighbors = {"flowers:waterlily_waving", "mcl_core:reeds", "mcl_flowers:waterlily"},
 	min_light = 0,
 	interval = 30,
 	active_object_count = 2,

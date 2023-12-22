@@ -31,16 +31,16 @@ mobs:register_mob("animalworld:beluga", {
 	walk_velocity = 2,
 	run_velocity = 5,
 	fly = true,
-	fly_in = "default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing",
+	fly_in = "default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing", "mcl_core:water_source", "mcl_core:water_flowing",
 	fall_speed = 0,
 	jump = true,
 	jump_height = 0,
-        stay_near = {{"default:clay", "marinara:sand_with_seagrass", "marinara:coastrock_with:brownalage", "marinara:sand_with_seagrass2"}, 5},
+        stay_near = {{"default:clay", "marinara:sand_with_seagrass", "marinara:coastrock_with:brownalage", "marinara:sand_with_seagrass2", "mcl_ocean:seagrass:sand", "mcl_ocean:tube_coral", "mcl_ocean:fire_coral", "mcl_ocean:brain_coral", "mcl_ocean:seagrass_gravel"}, 5},
  runaway = true,
         runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion", "animalworld:polarbear", "animalworld:leopardseal", "animalworld:stellerseagle", "animalworld:wolf", "animalworld:panda", "animalworld:stingray", "marinaramobs:jellyfish", "marinaramobs:octopus", "livingcavesmobs:biter", "livingcavesmobs:flesheatingbacteria"},
 	pushable = true,
 	follow = {
-		"animalworld:rawmollusk", "marinaramobs:octopus_raw", "marinara:raw_oisters", "marinara:raw_athropod", "animalworld:rawfish", "fishing:fish_raw", "fishing:pike_raw", "marinaramobs:raw_exotic_fish", "nativevillages:catfish_raw", "xocean:fish_edible", "ethereal:fish_raw", "mobs:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "water_life:meat_raw", "fishing:shark_raw", "fishing:pike_raw"
+		"animalworld:rawmollusk", "mcl_fishing:pufferfish_raw", "marinaramobs:octopus_raw", "marinara:raw_oisters", "marinara:raw_athropod", "animalworld:rawfish", "fishing:fish_raw", "fishing:pike_raw", "marinaramobs:raw_exotic_fish", "nativevillages:catfish_raw", "xocean:fish_edible", "ethereal:fish_raw", "mobs:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "water_life:meat_raw", "fishing:shark_raw", "fishing:pike_raw"
 	},
 	view_range = 20,
 	drops = {
@@ -77,8 +77,8 @@ mobs:register_mob("animalworld:beluga", {
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:beluga",
-	nodes = {"default:water_source"},
-	neighbors = {"default:ice", "default:snowblock"},
+	nodes = {"mcl_core:water_source", "default:water_source"},
+	neighbors = {"default:ice", "default:snowblock", "mcl_core:ice", "mcl_core:snow"},
 	min_light = 0,
 	interval = 30,
 	chance = 2000, -- 15000

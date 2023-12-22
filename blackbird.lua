@@ -79,7 +79,7 @@ view_range = 4,
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:blackbird",
-	nodes = {"default:dirt_with_grass", "naturalbiomes:heath_litter"},
+	nodes = {"mcl_core:dirt_with_grass", "default:dirt_with_grass", "naturalbiomes:heath_litter"},
 	neighbors = {"group:grass", "group:normal_grass", "naturalbiomes:heath_grass", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:heatherflower"}, 
 	min_light = 0,
 	interval = 60,

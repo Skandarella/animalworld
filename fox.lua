@@ -73,8 +73,8 @@ mobs:register_mob("animalworld:fox", {
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:fox",
-        nodes = {"default:permafrost", "default:permafrost_with_moss", "default:permafrost_with_stones"},
-	neighbors = {"animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4"},
+        nodes = {"default:permafrost", "mcl_core:snow", "default:permafrost_with_moss", "default:permafrost_with_stones"},
+	neighbors = {"animalworld:animalworld_tundrashrub1", "mcl_core:sprucetree", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4"},
 	min_light = 0,
 	interval = 60,
 	chance = 1000, -- 15000

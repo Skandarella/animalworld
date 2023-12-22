@@ -33,7 +33,7 @@ textures = {
 	jump = true,
 	jump_height = 8,
 	pushable = true,
-	follow = {"farming:melon_slice", "farming:pineapple", "ethereal:banana", "ethereal:orange", "farming:grapes", "default:apple", "farming:potato", "ethereal:banana_bread", "farming:carrot", "farming:seed_rice", "farming:corn", "farming:wheat", "farming:beans", "farming:barley", "farming:oat", "farming:rye", "mobs:cheese", "farming:bread", "ethereal:banana_bread", "ethereal:banana", "farming:cabbage", "farming:lettuce", "farming:melon_slice", "naturalbiomes:coconut", "naturalbiomes:banana", "mobs:meatblock_raw", "animalworld:chicken_raw", "livingfloatlands:ornithischiaraw", "livingfloatlands:largemammalraw", "livingfloatlands:theropodraw", "livingfloatlands:sauropodraw", "animalworld:raw_athropod", "animalworld:whalemeat_raw", "animalworld:rabbit_raw", "nativevillages:chicken_raw", "mobs:meat_raw", "animalworld:pork_raw", "people:mutton:raw"},
+	follow = {"farming:melon_slice", "mcl_farming:beetroot_item", "mcl_farming:carrot_item", "mcl_farming:melon_item", "mcl_farming:potato_item", "mcl_farming:pumpkin_item", "mcl_farming:wheat_item", "mcl_farming:sweet_berry", "farming:pineapple", "ethereal:banana", "ethereal:orange", "farming:grapes", "default:apple", "farming:potato", "ethereal:banana_bread", "farming:carrot", "farming:seed_rice", "farming:corn", "farming:wheat", "farming:beans", "farming:barley", "farming:oat", "farming:rye", "mobs:cheese", "farming:bread", "ethereal:banana_bread", "ethereal:banana", "farming:cabbage", "farming:lettuce", "farming:melon_slice", "naturalbiomes:coconut", "naturalbiomes:banana", "mobs:meatblock_raw", "animalworld:chicken_raw", "livingfloatlands:ornithischiaraw", "livingfloatlands:largemammalraw", "livingfloatlands:theropodraw", "livingfloatlands:sauropodraw", "animalworld:raw_athropod", "animalworld:whalemeat_raw", "animalworld:rabbit_raw", "nativevillages:chicken_raw", "mobs:meat_raw", "animalworld:pork_raw", "people:mutton:raw"},
 	view_range = 2,
         stay_near = {{"default:jungletree", "default:junglegrass", "livingjungle::grass2", "livingjungle::grass1", "livingjungle:alocasia", "livingjungle:flamingoflower"}, 5},
 	drops = {
@@ -69,8 +69,8 @@ textures = {
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:cockroach",
-	nodes = {"livingjungle:jungleground", "livingjungle:leafyjungleground"},
-	neighbors = {"livingjungle:samauma_trunk", "livingjungle:liana_stem", "livingjungle:alocasia", "livingjungle:flamingoflower"},
+	nodes = {"livingjungle:jungleground", "livingjungle:leafyjungleground", "mcl_core:dirt_with_gras"},
+	neighbors = {"livingjungle:samauma_trunk", "mcl_trees:tree_jungle", "livingjungle:liana_stem", "livingjungle:alocasia", "livingjungle:flamingoflower", "mcl_core:jungletree", "mcl_core:jungleleaves", "mcl_trees:leaves_jungle", "mcl_trees:leaves_mangrove"},
 	min_light = 0,
 	interval = 30,
 	chance = 1000, -- 15000

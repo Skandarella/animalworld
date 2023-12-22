@@ -28,7 +28,7 @@ sounds = {
 	jump = true,
 	jump_height = 6,
         stepheight = 5,
-        stay_near = {{"naturalbiomes:outback_rock", "naturalbiomes:outback_trunk", "naturalbiomes:outback_bush_leaves", "livingdesert:cactus", "livingdesert:cactus3", "livingdesert:cactus2", "livingdesert:cactus4"}, 5},
+        stay_near = {{"naturalbiomes:outback_rock", "mcl_core:deadbush", "mcl_core:cactus", "naturalbiomes:outback_trunk", "naturalbiomes:outback_bush_leaves", "livingdesert:cactus", "livingdesert:cactus3", "livingdesert:cactus2", "livingdesert:cactus4"}, 5},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 	        {name = "mobs:leather", chance = 1, min = 0, max = 2},
@@ -54,7 +54,7 @@ sounds = {
 		die_loop = false,
 		die_rotate = true,
 	},
-	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing"},
+	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing", "mcl_core:water_source", "mcl_core:water_flowing"},
 	floats = 0,
 	follow = {"animalworld:cockroach", "bees:frame_full", "animalworld:fishfood", "animalworld:ant", "animalworld:termite", "animalworld:bugice", "animalworld:termitequeen", "animalworld:notoptera", "animalworld:anteggs_raw"},
 	view_range = 6,
@@ -76,8 +76,8 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:clamydosaurus",
-	nodes = {"naturalbiomes:outback_litter"}, 
-	neighbors = {"naturalbiomes:outback_rock", "naturalbiomes:outback_trunk", "naturalbiomes:outback_bush_leaves"},
+	nodes = {"naturalbiomes:outback_litter", "mcl_core:sand", "mcl_core:redsand"}, 
+	neighbors = {"naturalbiomes:outback_rock", "naturalbiomes:outback_trunk", "naturalbiomes:outback_bush_leaves", "mcl_core:deadbush", "mcl_core:cactus"},
 	min_light = 0,
 	interval = 60,
 	chance = 2000, -- 15000

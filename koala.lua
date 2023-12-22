@@ -32,9 +32,9 @@ mobs:register_mob("animalworld:koala", {
 	jump_height = 8,
 	stepheight = 8,
 	pushable = true,
-	follow = {"naturalbiomes:outback_leaves"},
+	follow = {"naturalbiomes:outback_leaves", "mcl_core:leaves"},
 	view_range = 6,
-        stay_near = {{"naturalbiomes:outback_leaves", "naturalbiomes:outback_trunk", "naturalbiomes:outback_bush_leaves"}, 5},
+        stay_near = {{"naturalbiomes:outback_leaves", "naturalbiomes:outback_trunk", "naturalbiomes:outback_bush_leaves", "mcl_trees:leaves_acacia",  "mcl_core:acacialeaves"}, 5},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 	},
@@ -68,7 +68,7 @@ mobs:register_mob("animalworld:koala", {
 	end,
 })
 
-local spawn_on = {"default:dirt_with_coniferous_litter"}
+local spawn_on = {"mcl_core:dirt_with_grass", "default:dirt_with_coniferous_litter"}
 
 if minetest.get_mapgen_setting("mg_name") ~= "v6" then
 	spawn_on = {"naturalbiomes:outback_litter"}
@@ -81,8 +81,8 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:koala",
-	nodes = {"naturalbiomes:outback_litter"},
-	neighbors = {"naturalbiomes:outback_trunk", "naturalbiomes:outback_bush_leaves", "naturalbiomes:outback_leaves"},
+	nodes = {"naturalbiomes:outback_litter", "mcl_core:dirt_with_grass"},
+	neighbors = {"naturalbiomes:outback_trunk", "naturalbiomes:outback_bush_leaves", "naturalbiomes:outback_leaves", "mcl_trees:leaves_acacia",  "mcl_core:acacialeaves"},
 	min_light = 0,
 	interval = 60,
 	chance = 2000, -- 15000

@@ -52,10 +52,10 @@ stepheight = 1,
 		die_loop = false,
 		die_rotate = true,
 	},
-	fly_in = {"default:water_source", "default:water_flowing", "default:river_water_flowing", "default:river_water"},
+	fly_in = {"default:water_source", "default:water_flowing", "default:river_water_flowing", "default:river_water", "mcl_core:water_source", "mcl_core:water_flowing",},
 	floats = 0,
 	follow = {
-		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
+		"ethereal:fish_raw", "mcl_mobitems:chicken", "mcl_fishing:pufferfish_raw", "mcl_mobitems:rotten_flesh", "mcl_mobitems:mutton", "mcl_mobitems:beef", "mcl_mobitems:porkchop", "mcl_mobitems:rabbit", "animalworld:rawfish", "mobs_fish:tropical",
 		"mobs_fish:clownfish_set", "mobs_fish:tropical_set", "xocean:fish_edible", "mobs:bluefish_raw", "animalworld:rawmollusk", "nativevillages:catfish_raw", "mobs:meatblock_raw", "animalworld:chicken_raw", "livingfloatlands:ornithischiaraw", "livingfloatlands:largemammalraw", "livingfloatlands:theropodraw", "livingfloatlands:sauropodraw", "animalworld:raw_athropod", "animalworld:whalemeat_raw", "animalworld:rabbit_raw", "nativevillages:chicken_raw", "mobs:meat_raw", "animalworld:pork_raw", "people:mutton:raw", "animalworld:rawmollusk", "marinaramobs:octopus_raw", "marinara:raw_oisters", "marinara:raw_athropod", "animalworld:rawfish", "fishing:fish_raw", "fishing:pike_raw", "marinaramobs:raw_exotic_fish", "nativevillages:catfish_raw", "xocean:fish_edible", "ethereal:fish_raw", "mobs:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "water_life:meat_raw", "fishing:shark_raw", "fishing:pike_raw"
 	},
 	view_range = 10,
@@ -73,8 +73,8 @@ stepheight = 1,
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:leopardseal",
-        nodes = {"default:ice", "default:snowblock"},
-	neighbors = {"default:water_source"},
+        nodes = {"default:ice", "default:snowblock", "mcl_core:ice", "mcl_core:snow"},
+	neighbors = {"default:water_source", "mcl_core:water_source", "mcl_core:water_flowing"},
 	min_light = 0,
 	interval = 60,
 	chance = 2000, -- 15000
