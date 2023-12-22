@@ -31,7 +31,7 @@ stepheight = 6,
 	jump = true,
         jump_height = 4,
 	stepheight = 6,
-        stay_near = {{"default:acacia_tree", "default:acacia_leaves", "default:jungleleaves", "default:jungletree", "livingjungle:samauma_trunk", "livingjungle:samauma_leaves"}, 5},
+        stay_near = {{"default:acacia_tree", "mcl_core:jungletree", "mcl_core:jungleleaves", "mcl_trees:leaves_jungle", "mcl_trees:leaves_mangrove", "default:acacia_leaves", "default:jungleleaves", "default:jungletree", "livingjungle:samauma_trunk", "livingjungle:samauma_leaves"}, 5},
 	drops = {
 		{name = "animalworld:chicken_raw", chance = 1, min = 1, max = 1},
 	        {name = "animalworld:chicken_feather", chance = 1, min = 1, max = 1},
@@ -62,7 +62,7 @@ stepheight = 6,
 fly_in = {"air"},
 	floats = 0,
 	follow = {
-		"fishing:bait:worm", "ethereal:worm", "farming:melon_slice", "farming:pineapple", "ethereal:banana", "ethereal:orange", "farming:grapes", "livingdesert:date_palm_fruits", "livingdesert:figcactus_fruit", "animalworld:cockroach", "bees:frame_full", "animalworld:fishfood", "animalworld:ant", "animalworld:termite", "animalworld:bugice", "animalworld:termitequeen", "animalworld:notoptera", "animalworld:anteggs_raw"
+		"fishing:bait:worm", "mcl_farming:beetroot_item", "mcl_farming:carrot_item", "mcl_farming:melon_item", "mcl_farming:potato_item", "mcl_farming:pumpkin_item", "mcl_farming:wheat_item", "mcl_farming:sweet_berry", "ethereal:worm", "farming:melon_slice", "farming:pineapple", "ethereal:banana", "ethereal:orange", "farming:grapes", "livingdesert:date_palm_fruits", "livingdesert:figcactus_fruit", "animalworld:cockroach", "bees:frame_full", "animalworld:fishfood", "animalworld:ant", "animalworld:termite", "animalworld:bugice", "animalworld:termitequeen", "animalworld:notoptera", "animalworld:anteggs_raw"
 	},
 	
 view_range = 4,
@@ -78,14 +78,14 @@ view_range = 4,
 
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:dirt_with_rainforest_litter", "ethereal:grove_dirt"}
+	spawn_on = {"mcl_core:podzol", "default:dirt_withforest_litter", "ethereal:grove_dirt"}
 end
 
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:toucan",
-	nodes = {"default:dirt_with_rainforest_litter", "livingjungle:jungleground", "livingjungle:leafyjungleground"},
-	neighbors = {"default:jungletree", "default:jungleleaves", "livingjungle:alocasia", "livingjungle:flamingoflower", "livingjungle:samauma_trunk"},
+	nodes = {"mcl_core:dirt_with_gras", "default:dirt_with_rainforest_litter", "livingjungle:jungleground", "livingjungle:leafyjungleground"},
+	neighbors = {"default:jungletree", "default:jungleleaves", "mcl_core:jungletree", "mcl_core:jungleleaves", "mcl_trees:leaves_jungle", "mcl_trees:leaves_mangrove", "livingjungle:alocasia", "livingjungle:flamingoflower", "livingjungle:samauma_trunk"},
 	min_light = 0,
 	interval = 60,
 	chance = 2000, -- 15000

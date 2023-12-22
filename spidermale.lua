@@ -59,8 +59,8 @@ stepheight = 4,
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:spidermale",
-	nodes = {"default:dry_dirt_with_dry_grass", "default:dirt_with_rainforest_litter"; "naturalbiomes:savannalitter", "livingjungle:jungleground", "livingjungle:leafyjungleground"},
-	neighbors = {"group:grass", "group:normal_grass", "naturalbiomes:savanna_flowergrass", "naturalbiomes:savanna_grass", "naturalbiomes:savanna_grass2", "naturalbiomes:savanna_grass3", "naturalbiomes:savannagrass", "livingjungle::grass2", "livingjungle::grass1", "livingjungle:alocasia", "livingjungle:flamingoflower"}, 
+	nodes = {"default:dry_dirt_with_dry_grass", "mcl_core:dirt_with_grass", "default:dirt_with_rainforest_litter"; "naturalbiomes:savannalitter", "livingjungle:jungleground", "livingjungle:leafyjungleground"},
+	neighbors = {"group:grass", "mcl_flowers:tallgrass", "group:normal_grass", "naturalbiomes:savanna_flowergrass", "naturalbiomes:savanna_grass", "naturalbiomes:savanna_grass2", "naturalbiomes:savanna_grass3", "naturalbiomes:savannagrass", "livingjungle::grass2", "livingjungle::grass1", "livingjungle:alocasia", "livingjungle:flamingoflower"}, 
 	min_light = 0,
 	interval = 60,
 	chance = 1, -- 15000

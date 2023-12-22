@@ -28,8 +28,8 @@ mobs:register_mob("animalworld:treelobster", {
 	jump = false,
 	jump_height = 3,
 	pushable = true,
-        stay_near = {{"people:jungleleaves", "people:jungletree", "livingjungle::grass2", "livingjungle::grass1", "livingjungle:alocasia", "livingjungle:flamingoflower"}, 4},
-	follow = {"default:junglegrass", "default:jungleleaves", "default:blueberry_bush_leaves", "default:blueberry_bush_leaves_with_berries"},
+        stay_near = {{"people:jungleleaves", "mcl_core:jungletree", "mcl_core:jungleleaves", "mcl_trees:leaves_jungle", "people:jungletree", "livingjungle::grass2", "livingjungle::grass1", "livingjungle:alocasia", "livingjungle:flamingoflower"}, 4},
+	follow = {"default:junglegrass", "mcl_core:jungleleaves", "mcl_trees:leaves_jungle", "default:jungleleaves", "default:blueberry_bush_leaves", "default:blueberry_bush_leaves_with_berries"},
 	view_range = 10,
 	drops = {
 		{name = "animalworld:raw_athropod", chance = 1, min = 0, max = 2},
@@ -65,8 +65,8 @@ mobs:register_mob("animalworld:treelobster", {
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:treelobster",
-	nodes = {"default:dirt_with_rainforest_litter"},
-	neighbors = {"default:junglegrass"},
+	nodes = {"default:dirt_with_rainforest_litter", "mcl_core:dirt_with_gras"},
+	neighbors = {"mcl_flowers:tallgrass", "mcl_trees:tree_jungle", "default:junglegrass", "mcl_core:jungletree", "mcl_core:jungleleaves", "mcl_trees:leaves_jungle",},
 	min_light = 0,
 	interval = 30,
 	chance = 2000, -- 15000

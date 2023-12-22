@@ -10,7 +10,7 @@ minetest.register_node("animalworld:anteaterpillow", {
     inventory_image = "aanteaterpillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -26,7 +26,7 @@ minetest.register_node("animalworld:anteaterpillow", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -43,7 +43,7 @@ minetest.register_node("animalworld:anteaterpillowleft", {
     inventory_image = "aanteaterpillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -59,7 +59,7 @@ minetest.register_node("animalworld:anteaterpillowleft", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.4}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -76,7 +76,7 @@ minetest.register_node("animalworld:anteaterpillowright", {
     inventory_image = "aanteaterpillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -92,7 +92,7 @@ minetest.register_node("animalworld:anteaterpillowright", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -143,7 +143,7 @@ minetest.register_node("animalworld:beartrophy", {
     inventory_image = "abeartrophy.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -159,7 +159,7 @@ minetest.register_node("animalworld:beartrophy", {
             {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -176,7 +176,7 @@ minetest.register_node("animalworld:bearpelt", {
     inventory_image = "abearpelt.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -192,7 +192,7 @@ minetest.register_node("animalworld:bearpelt", {
             {-1, -0.5, -1.2, 1, -0.5, 1.2}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -209,7 +209,7 @@ minetest.register_node("animalworld:bearpelthanging", {
     inventory_image = "abearpelt.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -225,7 +225,7 @@ minetest.register_node("animalworld:bearpelthanging", {
             {-0.8, -0.9, 0.4, 0.8, 0.8, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -274,7 +274,7 @@ minetest.register_node("animalworld:bearstool", {
     inventory_image = "abearstool.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -290,7 +290,7 @@ minetest.register_node("animalworld:bearstool", {
             {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -317,7 +317,7 @@ minetest.register_node("animalworld:blackbirdpillow", {
     inventory_image = "ablackbirdpillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -333,7 +333,7 @@ minetest.register_node("animalworld:blackbirdpillow", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -350,7 +350,7 @@ minetest.register_node("animalworld:blackbirdpillowleft", {
     inventory_image = "ablackbirdpillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -366,7 +366,7 @@ minetest.register_node("animalworld:blackbirdpillowleft", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.4}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -383,7 +383,7 @@ minetest.register_node("animalworld:blackbirdpillowright", {
     inventory_image = "ablackbirdpillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -399,7 +399,7 @@ minetest.register_node("animalworld:blackbirdpillowright", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -448,7 +448,7 @@ minetest.register_node("animalworld:blackbirdcurtain", {
     inventory_image = "ablackbirdcurtain.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -464,7 +464,7 @@ minetest.register_node("animalworld:blackbirdcurtain", {
             {-0.7, -0.6, -0.1, 0.7, 0.6, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -493,7 +493,7 @@ minetest.register_node("animalworld:boartrophy", {
     inventory_image = "aboartrophy.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -509,7 +509,7 @@ minetest.register_node("animalworld:boartrophy", {
             {-0.3, -0.3, -0.3, 0.3, 0.3, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -526,7 +526,7 @@ minetest.register_node("animalworld:boarpelt", {
     inventory_image = "aboarpelt.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -542,7 +542,7 @@ minetest.register_node("animalworld:boarpelt", {
             {-0.8, -0.5, -0.9, 0.8, -0.5, 0.9}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -559,7 +559,7 @@ minetest.register_node("animalworld:boarpelthanging", {
     inventory_image = "aboarpelt.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -575,7 +575,7 @@ minetest.register_node("animalworld:boarpelthanging", {
             {-0.8, -0.9, 0.4, 0.8, 0.8, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -626,7 +626,7 @@ minetest.register_node("animalworld:camelpillow", {
     inventory_image = "acamelpillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -642,7 +642,7 @@ minetest.register_node("animalworld:camelpillow", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -659,7 +659,7 @@ minetest.register_node("animalworld:camelpillowleft", {
     inventory_image = "acamelpillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -675,7 +675,7 @@ minetest.register_node("animalworld:camelpillowleft", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.4}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -692,7 +692,7 @@ minetest.register_node("animalworld:camelpillowright", {
     inventory_image = "acamelpillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -708,7 +708,7 @@ minetest.register_node("animalworld:camelpillowright", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -758,7 +758,7 @@ minetest.register_node("animalworld:camelpelt", {
     inventory_image = "acamelpelt.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -774,7 +774,7 @@ minetest.register_node("animalworld:camelpelt", {
             {-1, -0.5, -1.2, 1, -0.5, 1.2}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -791,7 +791,7 @@ minetest.register_node("animalworld:camelpelthanging", {
     inventory_image = "acamelpelt.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -807,7 +807,7 @@ minetest.register_node("animalworld:camelpelthanging", {
             {-0.8, -0.9, 0.4, 0.8, 0.8, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -843,7 +843,7 @@ minetest.register_node("animalworld:camelcurtain", {
     inventory_image = "acamelcurtain.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -859,7 +859,7 @@ minetest.register_node("animalworld:camelcurtain", {
             {-0.7, -0.6, -0.1, 0.7, 0.6, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -888,7 +888,7 @@ minetest.register_node("animalworld:crocodiletrophy", {
     inventory_image = "acrocodiletrophy.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -904,7 +904,7 @@ minetest.register_node("animalworld:crocodiletrophy", {
             {-0.35, -0.3, -0.6, 0.35, 0.3, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -935,7 +935,7 @@ minetest.register_node("animalworld:crocodilestool", {
     inventory_image = "acrocodilestool.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -951,7 +951,7 @@ minetest.register_node("animalworld:crocodilestool", {
             {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -974,7 +974,7 @@ minetest.register_craft({
     inventory_image = "acrocodilestool.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -990,7 +990,7 @@ minetest.register_craft({
             {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1015,7 +1015,7 @@ minetest.register_node("animalworld:crocodilecurtain", {
     inventory_image = "acrocodilecurtain.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -1031,7 +1031,7 @@ minetest.register_node("animalworld:crocodilecurtain", {
             {-0.7, -0.6, -0.1, 0.7, 0.6, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1057,7 +1057,7 @@ minetest.register_node("animalworld:crocodileskin", {
     inventory_image = "acrocodileskin.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -1073,7 +1073,7 @@ minetest.register_node("animalworld:crocodileskin", {
             {-1, -0.5, -1.2, 1, -0.5, 1.2}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1090,7 +1090,7 @@ minetest.register_node("animalworld:crocodileskinhanging", {
     inventory_image = "acrocodileskin.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -1106,7 +1106,7 @@ minetest.register_node("animalworld:crocodileskinhanging", {
             {-0.8, -0.9, 0.4, 0.8, 0.8, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1126,7 +1126,7 @@ minetest.register_node("animalworld:elephanttrophy", {
     inventory_image = "aelephanttrophy.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -1142,7 +1142,7 @@ minetest.register_node("animalworld:elephanttrophy", {
             {-0.8, -0.5, -1.6, 0.8, 0.9, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1173,10 +1173,10 @@ minetest.register_node("animalworld:ivorytable", {
     inventory_image = "aivorytable.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
 		collisionbox = {-0.4, -0.01, -0.4, 0.4, 0.4, 0.4},
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1194,7 +1194,7 @@ minetest.register_node("animalworld:ivorychair", {
     inventory_image = "aivorychair.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -1210,7 +1210,7 @@ minetest.register_node("animalworld:ivorychair", {
             {-0.5, -0.5, -0.5, 0.5, 0.35, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1229,7 +1229,7 @@ minetest.register_node("animalworld:ivoryvase", {
     inventory_image = "aivoryvase.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -1245,7 +1245,7 @@ minetest.register_node("animalworld:ivoryvase", {
             {-0.1, -0.5, -0.1, 0.1, 0.1, 0.1}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1290,7 +1290,7 @@ minetest.register_node("animalworld:elephantstool", {
     inventory_image = "aelephantstool.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -1306,7 +1306,7 @@ minetest.register_node("animalworld:elephantstool", {
             {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1334,7 +1334,7 @@ minetest.register_node("animalworld:gnupelt", {
     inventory_image = "agnupelt.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -1350,7 +1350,7 @@ minetest.register_node("animalworld:gnupelt", {
             {-1, -0.5, -1.2, 1, -0.5, 1.2}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1367,7 +1367,7 @@ minetest.register_node("animalworld:gnupelthanging", {
     inventory_image = "agnupelt.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -1383,7 +1383,7 @@ minetest.register_node("animalworld:gnupelthanging", {
             {-0.8, -0.9, 0.4, 0.8, 0.8, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1423,7 +1423,7 @@ minetest.register_node("animalworld:gnutrophy", {
     inventory_image = "agnutrophy.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -1439,7 +1439,7 @@ minetest.register_node("animalworld:gnutrophy", {
             {-0.4, -0.4, -0.4, 0.4, 0.4, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1465,7 +1465,7 @@ minetest.register_node("animalworld:gnustool", {
     inventory_image = "agnustool.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -1481,7 +1481,7 @@ minetest.register_node("animalworld:gnustool", {
             {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1506,7 +1506,7 @@ minetest.register_node("animalworld:gnucurtain", {
     inventory_image = "agnucurtain.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -1522,7 +1522,7 @@ minetest.register_node("animalworld:gnucurtain", {
             {-0.7, -0.6, -0.1, 0.7, 0.6, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1550,7 +1550,7 @@ minetest.register_node("animalworld:hippostool", {
     inventory_image = "ahippostool.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -1566,7 +1566,7 @@ minetest.register_node("animalworld:hippostool", {
             {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1596,7 +1596,7 @@ minetest.register_node("animalworld:hippocurtain", {
     inventory_image = "ahippocurtain.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -1612,7 +1612,7 @@ minetest.register_node("animalworld:hippocurtain", {
             {-0.7, -0.6, -0.1, 0.7, 0.6, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1640,7 +1640,7 @@ minetest.register_node("animalworld:hyenatrophy", {
     inventory_image = "ahyenatrophy.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -1656,7 +1656,7 @@ minetest.register_node("animalworld:hyenatrophy", {
             {-0.25, -0.25, -0.35, 0.25, 0.25, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1687,7 +1687,7 @@ minetest.register_node("animalworld:hyenapillow", {
     inventory_image = "ahyenapillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -1703,7 +1703,7 @@ minetest.register_node("animalworld:hyenapillow", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1720,7 +1720,7 @@ minetest.register_node("animalworld:hyenapillowleft", {
     inventory_image = "ahyenapillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -1736,7 +1736,7 @@ minetest.register_node("animalworld:hyenapillowleft", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.4}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1753,7 +1753,7 @@ minetest.register_node("animalworld:hyenapillowright", {
     inventory_image = "ahyenapillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -1769,7 +1769,7 @@ minetest.register_node("animalworld:hyenapillowright", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1822,7 +1822,7 @@ minetest.register_node("animalworld:kangaroopillow", {
     inventory_image = "akangaroopillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -1838,7 +1838,7 @@ minetest.register_node("animalworld:kangaroopillow", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1855,7 +1855,7 @@ minetest.register_node("animalworld:kangaroopillowleft", {
     inventory_image = "akangaroopillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -1871,7 +1871,7 @@ minetest.register_node("animalworld:kangaroopillowleft", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.4}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1888,7 +1888,7 @@ minetest.register_node("animalworld:kangaroopillowright", {
     inventory_image = "akangaroopillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -1904,7 +1904,7 @@ minetest.register_node("animalworld:kangaroopillowright", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1949,7 +1949,7 @@ minetest.register_node("animalworld:kangaroocurtain", {
     inventory_image = "akangaroocurtain.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -1965,7 +1965,7 @@ minetest.register_node("animalworld:kangaroocurtain", {
             {-0.7, -0.6, -0.1, 0.7, 0.6, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -1993,7 +1993,7 @@ minetest.register_node("animalworld:monitortrophy", {
     inventory_image = "amonitortrophy.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2009,7 +2009,7 @@ minetest.register_node("animalworld:monitortrophy", {
             {-0.25, -0.25, -0.5, 0.25, 0.25, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2040,7 +2040,7 @@ minetest.register_node("animalworld:monitorstool", {
     inventory_image = "amonitorstool.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2056,7 +2056,7 @@ minetest.register_node("animalworld:monitorstool", {
             {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2081,7 +2081,7 @@ minetest.register_node("animalworld:monitorcurtain", {
     inventory_image = "amonitorcurtain.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2097,7 +2097,7 @@ minetest.register_node("animalworld:monitorcurtain", {
             {-0.7, -0.6, -0.1, 0.7, 0.6, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2125,7 +2125,7 @@ minetest.register_node("animalworld:moosetrophy", {
     inventory_image = "amoosetrophy.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2141,7 +2141,7 @@ minetest.register_node("animalworld:moosetrophy", {
             {-0.5, -0.5, -0.7, 0.5, 0.5, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2158,7 +2158,7 @@ minetest.register_node("animalworld:moosepelt", {
     inventory_image = "amoosepelt.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2174,7 +2174,7 @@ minetest.register_node("animalworld:moosepelt", {
             {-1, -0.5, -1.2, 1, -0.5, 1.2}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2191,7 +2191,7 @@ minetest.register_node("animalworld:moosepelthanging", {
     inventory_image = "amoosepelt.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2207,7 +2207,7 @@ minetest.register_node("animalworld:moosepelthanging", {
             {-0.8, -0.9, 0.4, 0.8, 0.8, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2258,7 +2258,7 @@ minetest.register_node("animalworld:owltrophy", {
     inventory_image = "aowltrophy.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2274,7 +2274,7 @@ minetest.register_node("animalworld:owltrophy", {
             {-0.5, -0.5, -0.3, 0.5, 0.4, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2307,7 +2307,7 @@ minetest.register_node("animalworld:reindeertrophy", {
     inventory_image = "areindeertrophy.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2323,7 +2323,7 @@ minetest.register_node("animalworld:reindeertrophy", {
             {-0.3, -0.3, -0.3, 0.3, 0.3, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2340,7 +2340,7 @@ minetest.register_node("animalworld:reindeerpelt", {
     inventory_image = "areindeerpelt.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2356,7 +2356,7 @@ minetest.register_node("animalworld:reindeerpelt", {
             {-0.8, -0.5, -0.9, 0.8, -0.5, 0.9}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2373,7 +2373,7 @@ minetest.register_node("animalworld:reindeerpelthanging", {
     inventory_image = "areindeerpelt.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2389,7 +2389,7 @@ minetest.register_node("animalworld:reindeerpelthanging", {
             {-0.8, -0.9, 0.4, 0.8, 0.8, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2440,7 +2440,7 @@ minetest.register_node("animalworld:sealpillow", {
     inventory_image = "asealpillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2456,7 +2456,7 @@ minetest.register_node("animalworld:sealpillow", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2473,7 +2473,7 @@ minetest.register_node("animalworld:sealpillowleft", {
     inventory_image = "asealpillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2489,7 +2489,7 @@ minetest.register_node("animalworld:sealpillowleft", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.4}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2506,7 +2506,7 @@ minetest.register_node("animalworld:sealpillowright", {
     inventory_image = "asealpillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2522,7 +2522,7 @@ minetest.register_node("animalworld:sealpillowright", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2571,7 +2571,7 @@ minetest.register_node("animalworld:sealstool", {
     inventory_image = "asealstool.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2587,7 +2587,7 @@ minetest.register_node("animalworld:sealstool", {
             {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2612,7 +2612,7 @@ minetest.register_node("animalworld:sealcurtain", {
     inventory_image = "asealcurtain.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2628,7 +2628,7 @@ minetest.register_node("animalworld:sealcurtain", {
             {-0.7, -0.6, -0.1, 0.7, 0.6, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2656,7 +2656,7 @@ minetest.register_node("animalworld:sharktrophy", {
     inventory_image = "asharktrophy.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2672,7 +2672,7 @@ minetest.register_node("animalworld:sharktrophy", {
             {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2705,7 +2705,7 @@ minetest.register_node("animalworld:vulturepillow", {
     inventory_image = "avulturepillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2721,7 +2721,7 @@ minetest.register_node("animalworld:vulturepillow", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2738,7 +2738,7 @@ minetest.register_node("animalworld:vulturepillowleft", {
     inventory_image = "avulturepillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2754,7 +2754,7 @@ minetest.register_node("animalworld:vulturepillowleft", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.4}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2771,7 +2771,7 @@ minetest.register_node("animalworld:vulturepillowright", {
     inventory_image = "avulturepillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2787,7 +2787,7 @@ minetest.register_node("animalworld:vulturepillowright", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2820,7 +2820,7 @@ minetest.register_node("animalworld:yaktrophy", {
     inventory_image = "ayaktrophy.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2836,7 +2836,7 @@ minetest.register_node("animalworld:yaktrophy", {
             {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2853,7 +2853,7 @@ minetest.register_node("animalworld:yakpelt", {
     inventory_image = "ayakpelt.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2869,7 +2869,7 @@ minetest.register_node("animalworld:yakpelt", {
             {-1, -0.5, -1.2, 1, -0.5, 1.2}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2886,7 +2886,7 @@ minetest.register_node("animalworld:yakpelthanging", {
     inventory_image = "ayakpelt.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2902,7 +2902,7 @@ minetest.register_node("animalworld:yakpelthanging", {
             {-0.8, -0.9, 0.4, 0.8, 0.8, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2952,7 +2952,7 @@ minetest.register_node("animalworld:yakstool", {
     inventory_image = "ayakstool.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -2968,7 +2968,7 @@ minetest.register_node("animalworld:yakstool", {
             {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -2993,7 +2993,7 @@ minetest.register_node("animalworld:yakcurtain", {
     inventory_image = "ayakcurtain.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -3009,7 +3009,7 @@ minetest.register_node("animalworld:yakcurtain", {
             {-0.7, -0.6, -0.1, 0.7, 0.6, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -3037,7 +3037,7 @@ minetest.register_node("animalworld:snowleopardtrophy", {
     inventory_image = "asnowleopardtrophy.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -3053,7 +3053,7 @@ minetest.register_node("animalworld:snowleopardtrophy", {
             {-0.2, -0.15, -0.2, 0.2, 0.4, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -3079,7 +3079,7 @@ minetest.register_node("animalworld:snowleopardpillow", {
     inventory_image = "asnowleopardpillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -3095,7 +3095,7 @@ minetest.register_node("animalworld:snowleopardpillow", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -3112,7 +3112,7 @@ minetest.register_node("animalworld:snowleopardpillowleft", {
     inventory_image = "asnowleopardpillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -3128,7 +3128,7 @@ minetest.register_node("animalworld:snowleopardpillowleft", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.4}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -3145,7 +3145,7 @@ minetest.register_node("animalworld:snowleopardpillowright", {
     inventory_image = "asnowleopardpillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -3161,7 +3161,7 @@ minetest.register_node("animalworld:snowleopardpillowright", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -3215,7 +3215,7 @@ minetest.register_node("animalworld:tigertrophy", {
     inventory_image = "atigertrophy.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -3231,7 +3231,7 @@ minetest.register_node("animalworld:tigertrophy", {
             {-0.5, -0.4, -0.2, 0.5, 0.45, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -3257,7 +3257,7 @@ minetest.register_node("animalworld:tigerpillow", {
     inventory_image = "atigerpillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -3273,7 +3273,7 @@ minetest.register_node("animalworld:tigerpillow", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -3290,7 +3290,7 @@ minetest.register_node("animalworld:tigerpillowleft", {
     inventory_image = "atigerpillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -3306,7 +3306,7 @@ minetest.register_node("animalworld:tigerpillowleft", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.4}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -3323,7 +3323,7 @@ minetest.register_node("animalworld:tigerpillowright", {
     inventory_image = "atigerpillow.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -3339,7 +3339,7 @@ minetest.register_node("animalworld:tigerpillowright", {
             {-0.5, -0.5, -0.0, 0.5, 0.2, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -3389,7 +3389,7 @@ minetest.register_node("animalworld:tigerstool", {
     inventory_image = "atigerstool.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -3405,7 +3405,7 @@ minetest.register_node("animalworld:tigerstool", {
             {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -3430,7 +3430,7 @@ minetest.register_node("animalworld:tigercurtain", {
     inventory_image = "atigercurtain.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -3446,7 +3446,7 @@ minetest.register_node("animalworld:tigercurtain", {
             {-0.7, -0.6, -0.1, 0.7, 0.6, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -3472,7 +3472,7 @@ minetest.register_node("animalworld:tigerpelt", {
     inventory_image = "atigerpelt.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -3488,7 +3488,7 @@ minetest.register_node("animalworld:tigerpelt", {
             {-1, -0.5, -1.2, 1, -0.5, 1.2}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -3505,7 +3505,7 @@ minetest.register_node("animalworld:tigerpelthanging", {
     inventory_image = "atigerpelt.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -3521,7 +3521,7 @@ minetest.register_node("animalworld:tigerpelthanging", {
             {-0.8, -0.9, 0.4, 0.8, 0.8, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -3560,7 +3560,7 @@ minetest.register_node("animalworld:wolverinetrophy", {
     inventory_image = "awolverinetrophy.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -3576,7 +3576,7 @@ minetest.register_node("animalworld:wolverinetrophy", {
             {-0.25, -0.25, -0.2, 0.25, 0.25, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -3610,7 +3610,7 @@ minetest.register_node("animalworld:polarbeartrophy", {
     inventory_image = "apolarbeartrophy.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -3626,7 +3626,7 @@ minetest.register_node("animalworld:polarbeartrophy", {
             {-0.4, -0.5, -0.8, 0.4, 0.4, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -3651,7 +3651,7 @@ minetest.register_node("animalworld:polarbearpelt", {
     inventory_image = "apolarbearpelt.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -3667,7 +3667,7 @@ minetest.register_node("animalworld:polarbearpelt", {
             {-1, -0.5, -1.2, 1, -0.5, 1.2}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -3684,7 +3684,7 @@ minetest.register_node("animalworld:polarbearpelthanging", {
     inventory_image = "apolarbearpelt.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -3700,7 +3700,7 @@ minetest.register_node("animalworld:polarbearpelthanging", {
             {-0.8, -0.9, 0.4, 0.8, 0.8, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -3743,7 +3743,7 @@ minetest.register_node("animalworld:muskoxtrophy", {
     inventory_image = "amuskoxtrophy.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -3759,7 +3759,7 @@ minetest.register_node("animalworld:muskoxtrophy", {
             {-0.5, -0.5, -0.7, 0.5, 0.8, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -3776,7 +3776,7 @@ minetest.register_node("animalworld:muskoxpelt", {
     inventory_image = "amuskoxpelt.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -3792,7 +3792,7 @@ minetest.register_node("animalworld:muskoxpelt", {
             {-1, -0.5, -1.2, 1, -0.5, 1.2}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -3809,7 +3809,7 @@ minetest.register_node("animalworld:muskoxpelthanging", {
     inventory_image = "amuskoxpelt.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -3825,7 +3825,7 @@ minetest.register_node("animalworld:muskoxpelthanging", {
             {-0.8, -0.9, 0.4, 0.8, 0.8, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({
@@ -3874,7 +3874,7 @@ minetest.register_node("animalworld:muskoxstool", {
     inventory_image = "amuskoxstool.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -3890,7 +3890,7 @@ minetest.register_node("animalworld:muskoxstool", {
             {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}
         }
     },
-    sounds = default.node_sound_wood_defaults()
+    sounds = animalworld.sounds.node_sound_wood_defaults()
 })
 
 minetest.register_craft({

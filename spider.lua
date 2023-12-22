@@ -64,7 +64,7 @@ stepheight = 4,
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:spider",
-	nodes = {"default:stone", "default:desert_stone", "default:sandstone"},
+	nodes = {"default:stone", "default:desert_stone", "default:sandstone", "mcl_core:stone", "mcl_core:granite"},
 	min_light = 0,
 	interval = 60,
 	chance = 8000, -- 15000

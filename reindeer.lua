@@ -31,8 +31,8 @@ mobs:register_mob("animalworld:reindeer", {
 	jump = false,
 	jump_height = 3,
 	pushable = true,
-        stay_near = {{"default:pine_needles", "animalworld:animalworld_tundrashrub5", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4"}, 6},
-	follow = {"default:apple", "default:permafrost_with_moss", "ethereal:snowygrass", "ethereal:crystalgrass", "livingdesert:coldsteppe_grass1"},
+        stay_near = {{"default:pine_needles", "mcl_flowers:double:fern", "mcl_flowers:fern", "mcl_flowers:tallgrass", "mcl_farming:sweet_berry_bush_3", "mcl_core:sprucetree", "mcl_trees:tree_spruce", "mcl_trees:leaves_spruce", "animalworld:animalworld_tundrashrub5", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4"}, 6},
+	follow = {"default:apple", "mcl_flowers:tallgrass", "mcl_core:deadbush", "mcl_bamboo:bamboo", "default:permafrost_with_moss", "ethereal:snowygrass", "ethereal:crystalgrass", "livingdesert:coldsteppe_grass1"},
 	view_range = 10,
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
@@ -67,18 +67,18 @@ mobs:register_mob("animalworld:reindeer", {
 local spawn_on = {"default:permafrost_with_moss", "default:dirt_with_snow"}
 
 if minetest.get_mapgen_setting("mg_name") ~= "v6" then
-	spawn_on = {"default:dirt_with_snow", "default:permafrost_with_moss"}
+	spawn_on = {"mcl_core:dirt_with_grass", "default:dirt_with_snow", "default:permafrost_with_moss"}
 end
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:dirt_with_snow", "default:permafrost_with_moss", "ethereal:crystal_dirt"}
+	spawn_on = {"mcl_core:dirt_with_grass", "default:dirt_with_snow", "default:permafrost_with_moss", "ethereal:crystal_dirt"}
 end
 
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:reindeer",
-	nodes = {"default:dirt_with_snow", "default:permafrost_with_moss", "ethereal:crystal_dirt", "livingdesert:coldsteppe_ground3", "livingdesert:coldsteppe_ground4"},
-	neighbors = {"default:pine_tree", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4"},
+	nodes = {"default:dirt_with_snow", "mcl_core:snow", "default:permafrost_with_moss", "ethereal:crystal_dirt", "livingdesert:coldsteppe_ground3", "livingdesert:coldsteppe_ground4"},
+	neighbors = {"default:pine_tree", "mcl_core:sprucetree", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4"},
 	min_light = 0,
 	interval = 30,
 	chance = 1000, -- 15000

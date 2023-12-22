@@ -30,7 +30,7 @@ stepheight = 3,
         runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion", "animalworld:polarbear", "animalworld:leopardseal", "animalworld:stellerseagle", "player", "animalworld:wolf", "animalworld:panda", "animalworld:stingray", "marinaramobs:jellyfish", "marinaramobs:octopus", "livingcavesmobs:biter", "livingcavesmobs:flesheatingbacteria"},
 	jump = true,
         jump_height = 3,
-        stay_near = {{"livingdesert:date_palm_leaves", "livingdesert:yucca", "default:dry_shrub", "livingdesert:figcactus_trunk", "livingdesert:coldsteppe_grass1", "livingdesert:cactus", "livingdesert:cactus3", "livingdesert:cactus2", "livingdesert:cactus4"}, 5},
+        stay_near = {{"livingdesert:date_palm_leaves", "mcl_core:deadbush", "mcl_core:cactus", "livingdesert:yucca", "default:dry_shrub", "livingdesert:figcactus_trunk", "livingdesert:coldsteppe_grass1", "livingdesert:cactus", "livingdesert:cactus3", "livingdesert:cactus2", "livingdesert:cactus4"}, 5},
 	drops = {
 		{name = "animalworld:chicken_raw", chance = 1, min = 1, max = 1},
 	        {name = "animalworld:chicken_feather", chance = 1, min = 1, max = 1},
@@ -79,8 +79,8 @@ view_range = 7,
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:roadrunner",
-	nodes = {"default:sand"}, 
-	neighbors = {"livingdesert:yucca", "default:dry_shrub", "livingdesert:euphoriba_trunk"},
+	nodes = {"default:sand", "mcl_core:sand", "mcl_core:redsand"}, 
+	neighbors = {"livingdesert:yucca", "default:dry_shrub", "livingdesert:euphoriba_trunk", "mcl_core:deadbush", "mcl_core:cactus"},
 	min_light = 0,
 	interval = 30,
 	chance = 1000, -- 15000

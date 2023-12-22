@@ -35,8 +35,8 @@ mobs:register_mob("animalworld:wildboar", {
 	jump = true,
 	jump_height = 4,
 	pushable = true,
-        stay_near = {{"people:feeder", "default:fern_1", "default:fern_2", "marinara:reed_bundle", "naturalbiomes:reed_bundle", "farming:straw", "naturalbiomes:med_flower2", "naturalbiomes:med_grass1", "naturalbiomes:med_grass2", "naturalbiomes:med_flower3"}, 6},
-	follow = {"default:apple", "farming:potato", "ethereal:banana_bread", "farming:melon_slice", "farming:carrot", "farming:seed_rice", "farming:corn", "naturalbiomes:hazelnut", "livingfloatlands:giantforest_oaknut"},
+        stay_near = {{"people:feeder", "mcl_flowers:double:fern", "mcl_flowers:fern", "mcl_flowers:tallgrass", "mcl_farming:sweet_berry_bush_3", "mcl_core:sprucetree", "mcl_trees:tree_spruce", "mcl_trees:leaves_spruce", "default:fern_1", "default:fern_2", "marinara:reed_bundle", "naturalbiomes:reed_bundle", "farming:straw", "naturalbiomes:med_flower2", "naturalbiomes:med_grass1", "naturalbiomes:med_grass2", "naturalbiomes:med_flower3"}, 6},
+	follow = {"default:apple", "mcl_farming:beetroot_item", "mcl_farming:mushroom_red", "mcl_farming:mushroom_brown", "mcl_farming:carrot_item", "mcl_farming:melon_item", "mcl_farming:potato_item", "mcl_farming:pumpkin_item", "mcl_farming:wheat_item", "mcl_farming:sweet_berry", "farming:potato", "ethereal:banana_bread", "farming:melon_slice", "farming:carrot", "farming:seed_rice", "farming:corn", "naturalbiomes:hazelnut", "livingfloatlands:giantforest_oaknut"},
 	view_range = 10,
 	replace_rate = 10,
 	replace_what = {"farming:soil", "farming:soil_wet"},
@@ -77,10 +77,10 @@ mobs:register_mob("animalworld:wildboar", {
 	end,
 })
 
-local spawn_on = {"default:dirt_with_coniferous_litter"}
+local spawn_on = {"mcl_core:dirt_with_grass", "default:dirt_with_coniferous_litter"}
 
 if minetest.get_mapgen_setting("mg_name") ~= "v6" then
-	spawn_on = {"default:dirt_with_dry_grass", "default:dirt_with_coniferous_litter"}
+	spawn_on = {"mcl_core:dirt_with_grass", "default:dirt_with_dry_grass", "default:dirt_with_coniferous_litter"}
 end
 
 if minetest.get_modpath("ethereal") then
@@ -90,8 +90,8 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:wildboar",
-	nodes = {"default:dirt_with_coniferous_litter", "default:dirt_gray", "naturalbiomes:mediterran_litter"},
-	neighbors = {"default:fern_1", "default:fern_2", "naturalbiomes:med_flower2", "naturalbiomes:med_grass1", "naturalbiomes:med_grass2", "naturalbiomes:med_flower3"},
+	nodes = {"mcl_core:podzol", "default:dirt_with_conifrous_litter", "default:dirt_gray", "naturalbiomes:mediterran_litter", "mcl_core:dirt_with_grass", "mcl_core:podzol"},
+	neighbors = {"default:fern_1", "mcl_flowers:double:fern", "mcl_flowers:fern", "mcl_flowers:tallgrass", "mcl_farming:sweet_berry_bush_3", "mcl_core:sprucetree", "mcl_trees:tree_spruce", "mcl_trees:leaves_spruce", "default:fern_2", "naturalbiomes:med_flower2", "naturalbiomes:med_grass1", "naturalbiomes:med_grass2", "naturalbiomes:med_flower3"},
 	min_light = 0,
 	interval = 60,
 	chance = 2000, -- 15000

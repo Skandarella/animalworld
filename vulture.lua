@@ -56,7 +56,7 @@ stepheight = 3,
 fly_in = {"air"},
 	floats = 0,
 	follow = {
-		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
+		"ethereal:fish_raw", "animalworld:rawfish",  "mcl_mobitems:chicken", "mcl_fishing:pufferfish_raw", "mcl_mobitems:rotten_flesh", "mcl_mobitems:mutton", "mcl_mobitems:beef", "mcl_mobitems:porkchop", "mcl_mobitems:rabbit", "mobs_fish:tropical",
 		"mobs:meat_raw", "animalworld:rabbit_raw", "animalworld:pork_raw", "water_life:meat_raw"
 	},
 	
@@ -74,8 +74,8 @@ view_range = 10,
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:vulture",
-	nodes = {"default:dirt_with_grass"}, {"default:dry_dirt_with_dry_grass"}, {"default:desert_sand"}, {"default:stone"}, {"livingdesert:coldsteppe_ground4"}, {"livingdesert:coldsteppe_ground3"},
-	neighbors = {"group:grass", "group:normal_grass", "livingdesert:coldsteppe_grass1", "livingdesert:coldsteppe_grass2", "livingdesert:coldsteppe_grass3", "livingdesert:coldsteppe_grass4", "default:dry_shrub"},
+	nodes = {"mcl_core:dirt_with_grass", "mcl_core:dirt_with_grass", "default:dirt_with_grass"}, {"default:dry_dirt_with_dry_grass"}, {"default:desert_sand"}, {"default:stone"}, {"livingdesert:coldsteppe_ground4"}, {"livingdesert:coldsteppe_ground3"}, {"default:stone"}, {"livingdesert:coldsteppe_ground4"}, {"livingdesert:coldsteppe_ground3"},
+	neighbors = {"group:grass", "mcl_flowers:tallgrass", "mcl_flowers:tulip_red", "mcl_flowers:sunflower", "mcl_flowers:poppy", "mcl_core:birchtree", "mcl_trees:tree_birch", "mcl_trees:tree_oak", "mcl_trees:tree_dark_oak", "mcl_core:tree", "mcl_trees:leaves_oak", "mcl_trees:leaves_dark_oak", "mcl_core:leaves", "mcl_core:birchleaves", "mcl_core:darkleaves", "mcl_core:spruceleaves", "group:normal_grass", "livingdesert:coldsteppe_grass1", "livingdesert:coldsteppe_grass2", "livingdesert:coldsteppe_grass3", "livingdesert:coldsteppe_grass4", "default:dry_shrub"},
 	min_light = 0,
 	interval = 60,
 	chance = 2000, -- 15000

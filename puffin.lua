@@ -52,10 +52,10 @@ stepheight = 3,
 		die_rotate = true,
 	},
 
-fly_in = {"air", "default:water_source", "default:river_water_source"},
+fly_in = {"air", "default:water_source", "default:river_water_source", "mcl_core:water_source", "mcl_core:water_flowing"},
 	floats = 0,
 	follow = {
-		"animalworld:rawfish", "mobs:clownfish_raw", "mobs:bluefish_raw", "fishing:bait_worm", "fishing:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "xocean:fish_edible"
+		"animalworld:rawfish", "mcl_fishing:pufferfish_raw", "mobs:clownfish_raw", "mobs:bluefish_raw", "fishing:bait_worm", "fishing:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "xocean:fish_edible"
 	},
 	
 view_range = 4,
@@ -76,8 +76,8 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:puffin",
-	nodes = {"default:snowblock"}, {"default:ice"},
-	neighbors = {"default:water_source"},
+	nodes = {"default:snowblock"}, {"default:ice"}, {"mcl_core:ice"}, {"mcl_core:snow"},
+	neighbors = {"default:water_source", "mcl_core:water_source", "mcl_core:water_flowing"},
 	min_light = 0,
 	interval = 60,
 	chance = 2000, -- 15000

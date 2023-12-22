@@ -37,7 +37,7 @@ child_texture = {
 	pushable = true,
 	follow = {"default:apple", "default:dry_dirt_with_dry_grass", "farming:seed_wheat", "default:junglegrass", "farming:seed_oat", "naturalbiomes:savannagrass", "naturalbiomes:savannagrassmall", "naturalbiomes:savanna_flowergrass", "default:grass_3", "default:dry_grass_3", "ethereal:dry_shrub"},
 	view_range = 10,
-        stay_near = {{"default:jungletree", "default:junglegrass", "naturalbiomes:bamboo_leaves", "naturalbiomes:bambooforest_groundgrass", "livingjungle::grass2", "livingjungle::grass1", "livingjungle:alocasia", "livingjungle:flamingoflower"}, 5},
+        stay_near = {{"default:jungletree", "mcl_core:jungletree", "mcl_core:jungleleaves", "mcl_trees:leaves_jungle", "mcl_trees:leaves_mangrove", "default:junglegrass", "naturalbiomes:bamboo_leaves", "naturalbiomes:bambooforest_groundgrass", "livingjungle::grass2", "livingjungle::grass1", "livingjungle:alocasia", "livingjungle:flamingoflower"}, 5},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 	        {name = "mobs:leather", chance = 1, min = 0, max = 2},
@@ -84,8 +84,8 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:tapir",
-	nodes = {"livingjungle:jungleground", "livingjungle:leafyjungleground"},
-	neighbors = {"default:jungletree", "livingjungle:alocasia", "livingjungle:flamingoflower", "livingjungle:samauma_trunk"},
+	nodes = {"livingjungle:jungleground", "livingjungle:leafyjungleground", "mcl_core:dirt_with_gras"},
+	neighbors = {"default:jungletree", "mcl_trees:tree_jungle", "livingjungle:alocasia", "livingjungle:flamingoflower", "livingjungle:samauma_trunk", "mcl_core:jungletree", "mcl_core:jungleleaves", "mcl_trees:leaves_jungle", "mcl_trees:leaves_mangrove"},
 	min_light = 0,
 	interval = 60,
 	chance = 2000, -- 15000

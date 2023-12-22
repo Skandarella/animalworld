@@ -25,12 +25,12 @@ mobs:register_mob("animalworld:snail", {
 	walk_velocity = 0.2,
 	run_velocity = 0.4,
 	runaway = false,
-        stay_near = {{"farming:cabbage6", "farming:carrot8", "farming:raspberry_4", "farming:cucumber_4", "farming:lettuce_5", "farming:beetroot_5", "flowers:dandelion_yellow"}, 6},
+        stay_near = {{"farming:cabbage6", "farming:carrot8", "farming:raspberry_4", "farming:cucumber_4", "farming:lettuce_5", "farming:beetroot_5", "flowers:dandelion_yellow", "mcl_flowers:tallgrass", "mcl_flowers:tulip_red", "mcl_flowers:sunflower", "mcl_flowers:poppy"}, 6},
 	jump = false,
 	jump_height = 3,
 	pushable = true,
 	follow = {"default:apple", "default:dry_dirt_with_dry_grass", "farming:seed_wheat", "default:junglegrass", "farming:seed_oat", "default:kelp", "seaweed", "xocean:kelp",
-		"default:grass", "farming:cucumber", "farming:cabbage", "xocean:seagrass", "farming:lettuce", "default:junglegrass"},
+		"default:grass", "farming:cucumber", "farming:cabbage", "mcl_farming:beetroot_item", "mcl_farming:carrot_item", "mcl_farming:melon_item", "mcl_farming:potato_item", "mcl_farming:pumpkin_item", "mcl_farming:sweet_berry", "xocean:seagrass", "farming:lettuce", "default:junglegrass"},
 	view_range = 5,
 	drops = {
 		{name = "animalworld:snail", chance = 3, min = 1, max = 1},
@@ -63,8 +63,8 @@ mobs:register_mob("animalworld:snail", {
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:snail",
-	nodes = {"default:dirt_with_grass"},
-	neighbors = {"farming:cucumber", "farming:cabbage_6", "farming:lettuce_5", "farming:beetroot_5", "flowers:dandelion_yellow", "farming:strawberry_7", "farming:parsley_3"},
+	nodes = {"mcl_core:dirt_with_grass", "default:dirt_with_grass", "mcl_core:dirt_with_grass"},
+	neighbors = {"mcl_flowers:tallgrass", "mcl_flowers:tulip_red", "mcl_flowers:sunflower", "mcl_flowers:poppy", "farming:cucumber", "farming:cabbage_6", "farming:lettuce_5", "farming:beetroot_5", "flowers:dandelion_yellow", "farming:strawberry_7", "farming:parsley_3"},
 	min_light = 0,
 	interval = 30,
 	chance = 800, -- 15000

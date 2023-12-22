@@ -28,7 +28,7 @@ stepheight = 1,
 	jump = false,
         jump_height = 6,
 	stepheight = 6,
-        stay_near = {{"naturalbiomes:bamboo_leaves", "naturalbiomes:bambooforest_groundgrass"}, 5},
+        stay_near = {{"naturalbiomes:bamboo_leaves", "naturalbiomes:bambooforest_groundgrass", "mcl_bamboo:bamboo", "mcl_trees:tree_cherry_blossom"}, 5},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 	        {name = "mobs:leather", chance = 1, min = 0, max = 2},
@@ -58,7 +58,7 @@ stepheight = 1,
 	},
 
 	follow = {
-		"naturalbiomes:bamboo_leaves", "naturalbiomes:bamboo_sapling"},
+		"naturalbiomes:bamboo_leaves", "naturalbiomes:bamboo_sapling", "mcl_bamboo:bamboo", "mcl_trees:tree_cherry_blossom"},
 	view_range = 4,
 
 	on_rightclick = function(self, clicker)
@@ -77,8 +77,8 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:panda",
-	nodes = {"naturalbiomes:bambooforest_litter"},
-	neighbors = {"naturalbiomes:bambooforest_groundgrass", "naturalbiomes:bambooforest_groundgrass2", "naturalbiomes:bamboo_leaves"},
+	nodes = {"naturalbiomes:bambooforest_litter", "mcl_core:dirt_with_gras"},
+	neighbors = {"naturalbiomes:bambooforest_groundgrass", "mcl_bamboo:bamboo", "mcl_trees:tree_jungle", "mcl_trees:tree_cherry_blossom", "naturalbiomes:bambooforest_groundgrass2", "naturalbiomes:bamboo_leaves"},
 	min_light = 0,
 	interval = 60,
 	chance = 2000, -- 15000

@@ -29,7 +29,7 @@ stepheight = 1,
 	makes_footstep_sound = true,
 	walk_velocity = 0.7,
 	run_velocity = 3,
-        stay_near = {{"people:feeder", "flowers:tulip_black", "flowers:chrysanthemum_green", "flowers:geranium", "flowers:dandelion_white", "default:grass_1", "marinara:reed_bundle", "naturalbiomes:reed_bundle", "farming:straw", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", "naturalbiomes:bushland_grass4"}, 5},
+        stay_near = {{"people:feeder", "mcl_flowers:tallgrass", "mcl_flowers:tulip_red", "mcl_flowers:sunflower", "mcl_flowers:poppy", "flowers:tulip_black", "flowers:chrysanthemum_green", "flowers:geranium", "flowers:dandelion_white", "default:grass_1", "marinara:reed_bundle", "naturalbiomes:reed_bundle", "farming:straw", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", "naturalbiomes:bushland_grass4"}, 5},
 	runaway = true,
         runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion", "animalworld:polarbear", "animalworld:leopardseal", "animalworld:stellerseagle", "animalworld:wolf", "animalworld:panda", "animalworld:stingray", "marinaramobs:jellyfish", "marinaramobs:octopus", "livingcavesmobs:biter", "livingcavesmobs:flesheatingbacteria"},
 	drops = {
@@ -61,7 +61,7 @@ stepheight = 1,
 		die_rotate = true,
 	},
 	follow = {
-		"farming:seed_wheat", "farming:seed_cotton", "farming:seed_barley", "farming:seed_oat", "farming:seed_rye", "farming:corn_cob", "farming:seed_hemp", "farming:seed_barley", "farming:seed_oat", "farming:seed_cotton", "farming:seed_sunflower", "farming:seed_wheat", "farming:seed_rye", "naturalbiomes:hazelnut", "naturalbiomes:hazelnut_cracked", "farming:sunflower_seeds_toasted", "livingfloatlands:roasted_pine_nuts", "livingfloatlands:giantforest_oaknut_cracked", "livingfloatlands:coldsteppe_pine3_pinecone", "livingfloatlands:coldsteppe_pine_pinecone", "livingfloatlands:coldsteppe_pine2_pinecone"
+		"farming:seed_wheat", "mcl_farming:wheat_seeds", "farming:seed_cotton", "farming:seed_barley", "farming:seed_oat", "farming:seed_rye", "farming:corn_cob", "farming:seed_hemp", "farming:seed_barley", "farming:seed_oat", "farming:seed_cotton", "farming:seed_sunflower", "farming:seed_wheat", "farming:seed_rye", "naturalbiomes:hazelnut", "naturalbiomes:hazelnut_cracked", "farming:sunflower_seeds_toasted", "livingfloatlands:roasted_pine_nuts", "livingfloatlands:giantforest_oaknut_cracked", "livingfloatlands:coldsteppe_pine3_pinecone", "livingfloatlands:coldsteppe_pine_pinecone", "livingfloatlands:coldsteppe_pine2_pinecone"
 	},
 	view_range = 10,
 
@@ -98,7 +98,7 @@ stepheight = 1,
 })
 
 
-local spawn_on = {"default:dirt_with_grass"}
+local spawn_on = {"mcl_core:dirt_with_grass", "default:dirt_with_grass"}
 
 if minetest.get_modpath("ethereal") then
 	spawn_on = {"ethereal:bamboo_dirt", "ethereal:prairie_dirt", "default:dirt_with_grass", "naturalbiomes:bushland_bushlandlitter"}
@@ -108,8 +108,8 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:nandu",
-	nodes = {"default:dirt_with_grass"}, 
-	neighbors = {"group:grass", "group:normal_grass"}, 
+	nodes = {"mcl_core:dirt_with_grass", "default:dirt_with_grass"}, 
+	neighbors = {"group:grass", "group:normal_grass", "mcl_flowers:tallgrass", "mcl_flowers:tulip_red", "mcl_flowers:sunflower", "mcl_flowers:poppy"}, 
 	min_light = 14,
 	interval = 60,
 	chance = 2000, -- 15000
@@ -288,7 +288,9 @@ minetest.register_node(":animalworld:egg", {
 		type = "fixed",
 		fixed = {-0.2, -0.5, -0.2, 0.2, 0, 0.2}
 	},
-	groups = {food_egg = 1, snappy = 2, dig_immediate = 3},
+	groups = {food_egg = 1, snappy = 2, swordy = 1, handy = 1, dig_immediate = 3},
+	_mcl_hardness = 0.8,
+	_mcl_blast_resistance = 1,
 	after_place_node = function(pos, placer, itemstack)
 		if placer:is_player() then
 			minetest.set_node(pos, {name = "animalworld:egg", param2 = 1})

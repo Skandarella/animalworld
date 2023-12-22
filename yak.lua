@@ -61,7 +61,7 @@ mobs:register_mob("animalworld:yak", {
 		die_rotate = true,
 	},
 	follow = {
-		"farming:wheat", "default:grass_1", "farming:barley",
+		"farming:wheat", "default:grass_1", "mcl_flowers:tallgrass", "mcl_core:deadbush", "mcl_bamboo:bamboo", "farming:barley",
 		"farming:oat", "farming:rye", "farming:carrot", "farming:beans", "farming:lettuce", "livingdesert:coldsteppe_grass1", "livingdesert:coldsteppe_grass2", "livingdesert:coldsteppe_grass3", "default:dry_grass_1", "default:dry_grass_2", "default:dry_grass_3", "default:grass_1", "default:grass_2", "default:grass_3", "default:grass_4", "default:grass_5", "default:marram_grass_1", "default:marram_grass_2", "default:marram_grass_3", "default:coldsteppe_grass_1", "default:coldsteppe_grass_2", "default:coldsteppe_grass_3", "default:coldsteppe_grass_4", "default:coldsteppe_grass_5", "default:coldsteppe_grass_6", "naturalbiomes:savanna_grass1", "naturalbiomes:savanna_grass2", "naturalbiomes:savanna_grass3", "naturalbiomes:outback_grass1", "naturalbiomes:outback_grass2", "naturalbiomes:outback_grass3", "naturalbiomes:outback_grass4", "naturalbiomes:outback_grass5", "naturalbiomes:outback_grass6", "naturalbiomes:med_grass1", "naturalbiomes:med_grass2", "naturalbiomes:heath_grass1", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:alpine_grass1", "naturalbiomes:alpine_grass2", "naturalbiomes:alpine_grass2", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:", "naturalbiomes:", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", "naturalbiomes:bushland_grass4", "naturalbiomes:bushland_grass5", "naturalbiomes:bushland_grass6", "naturalbiomes:bushland_grass7", "group:grass", "group:normal_grass"},
 	view_range = 8,
 	replace_rate = 10,
@@ -72,7 +72,7 @@ mobs:register_mob("animalworld:yak", {
 --	stay_near = {"farming:straw", "group:grass"}, 10},
         stepheight = 2,
 	fear_height = 3,
-        stay_near = {{"default:tree", "default:leaves", "flowers_dandelion_yellow", "default:bush_leaves", "default:grass_1", "default:grass_2", "default:grass_3", "livingdesert_pine_leaves", "livingdesert_pine_leaves2", "livingdesert_pine_leaves3"}, 5},
+        stay_near = {{"default:tree", "mcl_flowers:tallgrass", "mcl_flowers:tulip_red", "mcl_flowers:sunflower", "mcl_flowers:poppy", "default:leaves", "flowers_dandelion_yellow", "default:bush_leaves", "default:grass_1", "default:grass_2", "default:grass_3", "livingdesert_pine_leaves", "livingdesert_pine_leaves2", "livingdesert_pine_leaves3"}, 5},
 	on_rightclick = function(self, clicker)
 
 		-- feed or tame
@@ -141,8 +141,8 @@ mobs:register_mob("animalworld:yak", {
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:yak",
-	nodes = {"default:dirt_with_grass", "ethereal:green_dirt", "default:dirt_with_snow", "default:permafrost", "livingdesert:coldsteppe_ground2"},
-	neighbors = {"group:grass", "group:normal_grass", "animalworld:animalworld_tundrashrub5", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4", "livingdesert:coldsteppe_grass1", "livingdesert:coldsteppe_grass2", "livingdesert:coldsteppe_grass3"}, 
+	nodes = {"mcl_core:dirt_with_grass", "mcl_core:dirt_with_grass", "default:dirt_with_grass", "ethereal:green_dirt", "default:dirt_with_snow", "default:permafrost", "livingdesert:coldsteppe_ground2"},
+	neighbors = {"group:grass", "group:normal_grass", "mcl_flowers:tallgrass", "mcl_flowers:tulip_red", "mcl_flowers:sunflower", "mcl_flowers:poppy", "animalworld:animalworld_tundrashrub5", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4", "livingdesert:coldsteppe_grass1", "livingdesert:coldsteppe_grass2", "livingdesert:coldsteppe_grass3"}, 
 	min_light = 14,
 	interval = 60,
 	chance = 2000, -- 15000
@@ -277,8 +277,10 @@ minetest.register_node(":animalworld:cheeseblock", {
 	description = S("Cheese Block"),
 	tiles = {"animalworld_cheeseblock.png"},
 	is_ground_content = false,
-	groups = {crumbly = 3},
-	sounds = default.node_sound_dirt_defaults()
+	groups = {crumbly = 3, shovely = 1, handy = 1},
+	_mcl_hardness = 0.8,
+	_mcl_blast_resistance = 1,
+	sounds = animalworld.sounds.node_sound_dirt_defaults()
 })
 
 minetest.register_craft({

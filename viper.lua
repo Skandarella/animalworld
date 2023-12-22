@@ -32,7 +32,7 @@ mobs:register_mob("animalworld:viper", {
 	runaway = false,
 	jump = false,
         jump_height = 0,
-        stay_near = {{"naturalbiomes:heath_grass", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:heatherflower", "naturalbiomes:heatherflower2", "naturalbiomes:heatherflower3", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", "naturalbiomes:bushland_grass4"}, 3},
+        stay_near = {{"naturalbiomes:heath_grass", "naturalbiomes:heath_grass2", "mcl_flowers:tallgrass", "mcl_flowers:tulip_red", "mcl_flowers:sunflower", "mcl_flowers:poppy", "naturalbiomes:heath_grass3", "naturalbiomes:heatherflower", "naturalbiomes:heatherflower2", "naturalbiomes:heatherflower3", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", "naturalbiomes:bushland_grass4"}, 3},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 	        {name = "mobs:leather", chance = 1, min = 0, max = 2},
@@ -59,7 +59,7 @@ mobs:register_mob("animalworld:viper", {
 		die_rotate = true,
 	},
 
-	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing"},
+	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "mcl_core:water_source", "mcl_core:water_flowing"},
 	floats = 0,
 })
 
@@ -70,8 +70,8 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:viper",
-	nodes = {"naturalbiomes:heath_litter", "naturalbiomes:bushland_bushlandlitter"}, 
-	neighbors = {"naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", "naturalbiomes:bushland_grass4", "naturalbiomes:heath_grass", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:heatherflower", "naturalbiomes:heatherflower2", "naturalbiomes:heatherflower3"},
+	nodes = {"naturalbiomes:heath_litter", "naturalbiomes:bushland_bushlandlitter", "mcl_core:dirt_with_grass"}, 
+	neighbors = {"mcl_flowers:tulip_red", "mcl_flowers:sunflower", "mcl_flowers:poppy", "naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", "naturalbiomes:bushland_grass4", "naturalbiomes:heath_grass", "naturalbiomes:heath_grass2", "naturalbiomes:heath_grass3", "naturalbiomes:heatherflower", "naturalbiomes:heatherflower2", "naturalbiomes:heatherflower3"},
 	min_light = 0,
 	interval = 60,
 	chance = 2000, -- 15000

@@ -25,12 +25,12 @@ stepheight = 0.0,
 	walk_velocity = 1,
 	run_velocity = 3,
         fly = true,
-	fly_in = "default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing",
+	fly_in = "default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing", "mcl_core:water_source", "mcl_core:water_flowing",
 	fall_speed = 0,
 	runaway = false,
 	jump = false,
 	stepheight = 0.0,
-        stay_near = {{"default:sand_with_kelp", "marinara:sand_with_kelp", "default:softcoral_yellow", "marinara:sand_with_seagrass2", "default_clay", "marinara:sand_with_alage"}, 5},
+        stay_near = {{"default:sand_with_kelp", "mcl_ocean:bubble_coral", "mcl_ocean:tube_coral", "mcl_ocean:fire_coral", "mcl_ocean:brain_coral", "mcl_ocean:seagrass_gravel", "mcl_ocean:seagrass:sand", "marinara:sand_with_kelp", "default:softcoral_yellow", "marinara:sand_with_seagrass2", "default_clay", "marinara:sand_with_alage"}, 5},
 	drops = {
 		{name = "animalworld:rawmollusk", chance = 1, min = 1, max = 1},
 	},
@@ -55,10 +55,10 @@ stepheight = 0.0,
 		die_loop = false,
 		die_rotate = true,
 	},
-	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing"},
+	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "mcl_core:water_source", "mcl_core:water_flowing"},
 	floats = 0,
 follow = {
-		"mobs:meat_raw", "xocean:fish_edible", "ethereal:fish_raw", "mobs:clownfish_raw", "mobs:bluefish_raw", "fishing:bait_worm", "fishing:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "water_life:meat_raw", "fishing:shark_raw", "fishing:pike_raw"
+		"mobs:meat_raw", "xocean:fish_edible", "mcl_fishing:pufferfish_raw", "ethereal:fish_raw", "mobs:clownfish_raw", "mobs:bluefish_raw", "fishing:bait_worm", "fishing:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "water_life:meat_raw", "fishing:shark_raw", "fishing:pike_raw"
 	},
 	view_range = 6,
 
@@ -74,8 +74,8 @@ follow = {
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:squid",
-	nodes = {"default:water_source"},
-	neighbors = {"marinara:sand_with_alage", "marinara:sand_with_seagrass", "default:sand_with_kelp", "marinara:sand_with_kelp", "default:clay"},
+	nodes = {"mcl_core:water_source", "default:water_source", "mcl_core:water_source", "mcl_core:water_flowing"},
+	neighbors = {"marinara:sand_with_alage", "marinara:sand_with_seagrass", "default:sand_with_kelp", "marinara:sand_with_kelp", "default:clay", "mcl_ocean:seagrass:sand", "mcl_ocean:tube_coral", "mcl_ocean:fire_coral", "mcl_ocean:brain_coral", "mcl_ocean:seagrass_gravel"},
 	min_light = 0,
 	interval = 60,
 	chance = 2000, -- 15000

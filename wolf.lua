@@ -36,7 +36,7 @@ stepheight = 2,
 	jump = true,
         jump_height = 6,
 	stepheight = 2,
-        stay_near = {{"default:fern_1", "default:fern_2", "naturalbiomes:alpine_grass1", "naturalbiomes:alpine_grass2", "naturalbiomes:alpine_grass3", "naturalbiomes:alpine_dandelion", "naturalbiomes:alpine_edelweiss"}, 6},
+        stay_near = {{"default:fern_1", "default:fern_2", "mcl_flowers:double:fern", "mcl_flowers:fern", "mcl_flowers:tallgrass", "mcl_farming:sweet_berry_bush_3", "mcl_core:sprucetree", "mcl_trees:tree_spruce", "mcl_trees:leaves_spruce", "naturalbiomes:alpine_grass1", "naturalbiomes:alpine_grass2", "naturalbiomes:alpine_grass3", "naturalbiomes:alpine_dandelion", "naturalbiomes:alpine_edelweiss"}, 6},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 	        {name = "mobs:leather", chance = 1, min = 0, max = 2},
@@ -65,7 +65,7 @@ stepheight = 2,
 
 	follow = {
 		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
-		"mobs:meat_raw", "animalworld:rabbit_raw", "animalworld:pork_raw", "water_life:meat_raw", "xocean:fish_edible", "animalworld:chicken_raw", "mobs:meatblock_raw", "animalworld:chicken_raw", "livingfloatlands:ornithischiaraw", "livingfloatlands:largemammalraw", "livingfloatlands:theropodraw", "livingfloatlands:sauropodraw", "animalworld:raw_athropod", "animalworld:whalemeat_raw", "animalworld:rabbit_raw", "nativevillages:chicken_raw", "mobs:meat_raw", "animalworld:pork_raw", "people:mutton:raw"
+		"mobs:meat_raw", "mcl_mobitems:chicken", "mcl_fishing:pufferfish_raw", "mcl_mobitems:rotten_flesh", "mcl_mobitems:mutton", "mcl_mobitems:beef", "mcl_mobitems:porkchop", "mcl_mobitems:rabbit", "animalworld:rabbit_raw", "animalworld:pork_raw", "water_life:meat_raw", "xocean:fish_edible", "animalworld:chicken_raw", "mobs:meatblock_raw", "animalworld:chicken_raw", "livingfloatlands:ornithischiaraw", "livingfloatlands:largemammalraw", "livingfloatlands:theropodraw", "livingfloatlands:sauropodraw", "animalworld:raw_athropod", "animalworld:whalemeat_raw", "animalworld:rabbit_raw", "nativevillages:chicken_raw", "mobs:meat_raw", "animalworld:pork_raw", "people:mutton:raw"
 	},
 	view_range = 10,
 
@@ -85,8 +85,8 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:wolf",
-	nodes = {"default:dirt_with_coniferous_litter", "naturalbiomes:alpine_litter", "naturalbiomes:heath_litter"},
-	neighbors = {"default:pine_needles", "naturalbiomes:pine_leaves", "heath_juniper_leaves", "naturalbiomes:alppine1_leaves", "naturalbiomes:alppine2_leaves"},
+	nodes = {"mcl_core:podzol", "default:dirt_with_conifrous_litter", "naturalbiomes:alpine_litter", "naturalbiomes:heath_litter"},
+	neighbors = {"default:pine_needles", "mcl_flowers:double:fern", "mcl_flowers:fern", "mcl_flowers:tallgrass", "mcl_farming:sweet_berry_bush_3", "mcl_core:sprucetree", "mcl_trees:tree_spruce", "mcl_trees:leaves_spruce", "naturalbiomes:pine_leaves", "heath_juniper_leaves", "naturalbiomes:alppine1_leaves", "naturalbiomes:alppine2_leaves"},
 	min_light = 0,
 	interval = 60,
 	chance = 500, -- 15000

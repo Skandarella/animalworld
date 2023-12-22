@@ -59,7 +59,7 @@ fly_in = {"air"},
 	floats = 0,
 	follow = {
 		"animalworld:rabbit_raw", "mobs:meat_raw", "animalworld:chicken_raw", "water_life:meat_raw", "ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
-		"mobs_fish:clownfish_set", "mobs_fish:tropical_set", "xocean:fish_edible", "mobs:bluefish_raw", "animalworld:rawmollusk", "nativevillages:catfish_raw"
+		"mobs_fish:clownfish_set", "mcl_mobitems:chicken", "mcl_fishing:pufferfish_raw", "mcl_mobitems:rotten_flesh", "mcl_mobitems:mutton", "mcl_mobitems:beef", "mcl_mobitems:porkchop", "mcl_mobitems:rabbit", "mobs_fish:tropical_set", "xocean:fish_edible", "mobs:bluefish_raw", "animalworld:rawmollusk", "nativevillages:catfish_raw"
 	},
 	
 view_range = 16,
@@ -76,8 +76,8 @@ view_range = 16,
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:stellerseagle",
-	nodes = {"default:permafrost", "default:permafrost_with_moss", "default:permafrost_with_stones"},
-	neighbors = {"default:pine_tree", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4"},
+	nodes = {"default:permafrost", "mcl_core:ice", "mcl_core:snow", "default:permafrost_with_moss", "default:permafrost_with_stones"},
+	neighbors = {"default:pine_tree", "mcl_core:sprucetree", "mcl_trees:tree_spruce", "mcl_trees:leaves_spruce", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4"},
 	min_light = 0,
 	interval = 60,
 	chance = 800, -- 15000

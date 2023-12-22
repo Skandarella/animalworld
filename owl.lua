@@ -60,7 +60,7 @@ stepheight = 3,
 fly_in = {"air"},
 	floats = 0,
 	follow = {
-		"animalworld:rabbit_raw", "mobs:meat_raw", "animalworld:chicken_raw", "water_life:meat_raw" 
+		"animalworld:rabbit_raw", "mcl_mobitems:chicken", "mobs:meat_raw", "animalworld:chicken_raw", "water_life:meat_raw" 
 	},
 	
 view_range = 10,
@@ -75,13 +75,13 @@ view_range = 10,
 })
 
 if minetest.get_modpath("ethereal") then
-	spawn_on = {"default:dirt_with_coniferous_litter"}, {"default:pine_needles"}, {"ethereal:mushroom_dirt"}
+	spawn_on = {"mcl_core:dirt_with_grass", "default:dirt_with_coniferous_litter"}, {"default:pine_needles"}, {"ethereal:mushroom_dirt"}
 end
 
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:owl",
-	nodes = {"default:pine_needles"}, {"naturalbiomes:pine_leaves"}, {"naturalbiomes:alppine1_leaves"}, {"naturalbiomes:birch_leaves"},
+	nodes = {"default:pine_needles"}, {"naturalbiomes:pine_leaves"}, {"naturalbiomes:alppine1_leaves"}, {"naturalbiomes:birch_leaves"}, {"mcl_core:podzol"},
 	min_light = 0,
 	interval = 60,
 	chance = 2000, -- 15000

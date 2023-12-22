@@ -66,7 +66,7 @@ stepheight = 5,
 fly_in = {"air"},
 	floats = 0,
 	follow = {
-		"fishing:bait:worm", "farming:seed_wheat", "farming:seed_rice", "farming:seed_oat", "ethereal:pine_nuts", "ethereal:worm", "naturalbiomes:blackberry", "naturalbiomes:wildrose"
+		"fishing:bait:worm", "farming:seed_wheat", "mcl_farming:wheat_seeds", "farming:seed_rice", "farming:seed_oat", "ethereal:pine_nuts", "ethereal:worm", "naturalbiomes:blackberry", "naturalbiomes:wildrose"
 	},
 	
 view_range = 4,
@@ -83,8 +83,8 @@ view_range = 4,
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:robin",
-	nodes = {"naturalbiomes:bushland_bushlandlitter"}, 
-	neighbors = {"naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", "naturalbiomes:bushland_grass4", "naturalbiomes:bushland_wildrose_leaves", "naturalbiomes:bushland_wildrose_leaves2", "naturalbiomes:bushland_hazelnut_leaves", "naturalbiomes:bushland_hazelnut_leaves2"},
+	nodes = {"naturalbiomes:bushland_bushlandlitter", "mcl_core:dirt_with_grass"}, 
+	neighbors = {"naturalbiomes:bushland_grass", "naturalbiomes:bushland_grass2", "naturalbiomes:bushland_grass3", "naturalbiomes:bushland_grass4", "naturalbiomes:bushland_wildrose_leaves", "naturalbiomes:bushland_wildrose_leaves2", "naturalbiomes:bushland_hazelnut_leaves", "naturalbiomes:bushland_hazelnut_leaves2", "mcl_flowers:tallgrass", "mcl_flowers:tulip_red", "mcl_flowers:sunflower", "mcl_flowers:poppy", "mcl_core:birchtree", "mcl_trees:tree_birch", "mcl_trees:tree_oak", "mcl_trees:tree_dark_oak", "mcl_core:tree", "mcl_trees:leaves_oak", "mcl_trees:leaves_dark_oak", "mcl_core:leaves", "mcl_core:birchleaves", "mcl_core:darkleaves", "mcl_core:spruceleaves"},
 	min_light = 0,
 	interval = 60,
 	chance = 2000, -- 15000

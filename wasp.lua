@@ -82,7 +82,7 @@ mobs:alias_mob("animalworld:wasp", "animalworld:wasp")
 
 	minetest.register_decoration({
 		deco_type = "simple",
-		place_on = {"default:aspen_leaves"},
+		place_on = {"default:aspen_leaves", "mcl_trees:tree_birch", "mcl_core:birchleaves", "mcl_trees:leaves_birch"},
 	        neighbors = {"animalworld:waspnest"},
 		sidelen = 16,
 		noise_params = {
@@ -106,7 +106,9 @@ minetest.register_node("animalworld:waspnest", {
     inventory_image = "awaspnest.png",
     paramtype = "light",
     paramtype2 = "facedir",
-    groups = {choppy = 3},
+    groups = {choppy = 3, axey = 1, handy = 1},
+    _mcl_hardness = 0.8,
+    _mcl_blast_resistance = 1,
     drawtype = "mesh",
     collision_box = {
         type = "fixed",
@@ -123,7 +125,7 @@ minetest.register_node("animalworld:waspnest", {
         }
     },
 	drop = "default:paper",
-	sounds = default.node_sound_dirt_defaults(),
+	sounds = animalworld.sounds.node_sound_dirt_defaults(),
 })
 
 minetest.register_craft({

@@ -33,7 +33,7 @@ mobs:register_mob("animalworld:polarbear", {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 		{name = "animalworld:polarbearcorpse", chance = 7, min = 1, max = 1},
 	},
-        fly_in = {"default:water_source", "default:water_flowing", "default:river_water_flowing", "default:river_water"},
+        fly_in = {"default:water_source", "default:water_flowing", "default:river_water_flowing", "default:river_water",  "mcl_core:water_source", "mcl_core:water_flowing"},
 	water_damage = 0,
 	lava_damage = 4,
 	light_damage = 0,
@@ -59,7 +59,7 @@ mobs:register_mob("animalworld:polarbear", {
 
 	follow = {
 		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
-		"mobs:meat_raw", "animalworld:rabbit_raw", "xocean:fish_edible", "farming:melon_slice", "farming:melon_slice", "water_life:meat_raw", "water_life:meat_raw", "fishing:fish_raw", "animalworld:chicken_raw", "nativevillages:catfish_raw", "nativevillages:chicken_raw", "animalworld:whalemeat_raw", "mobs:meatblock_raw", "animalworld:chicken_raw", "livingfloatlands:ornithischiaraw", "livingfloatlands:largemammalraw", "livingfloatlands:theropodraw", "livingfloatlands:sauropodraw", "animalworld:raw_athropod", "animalworld:whalemeat_raw", "animalworld:rabbit_raw", "nativevillages:chicken_raw", "mobs:meat_raw", "animalworld:pork_raw", "people:mutton:raw", "animalworld:rawmollusk", "marinaramobs:octopus_raw", "marinara:raw_oisters", "marinara:raw_athropod", "animalworld:rawfish", "fishing:fish_raw", "fishing:pike_raw", "marinaramobs:raw_exotic_fish", "nativevillages:catfish_raw", "xocean:fish_edible", "ethereal:fish_raw", "mobs:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "water_life:meat_raw", "fishing:shark_raw", "fishing:pike_raw"
+		"mobs:meat_raw", "animalworld:rabbit_raw", "xocean:fish_edible", "farming:melon_slice", "farming:melon_slice", "water_life:meat_raw", "water_life:meat_raw", "fishing:fish_raw", "animalworld:chicken_raw", "nativevillages:catfish_raw", "nativevillages:chicken_raw", "animalworld:whalemeat_raw", "mobs:meatblock_raw", "animalworld:chicken_raw", "livingfloatlands:ornithischiaraw", "livingfloatlands:largemammalraw", "livingfloatlands:theropodraw", "livingfloatlands:sauropodraw", "animalworld:raw_athropod", "animalworld:whalemeat_raw", "animalworld:rabbit_raw", "nativevillages:chicken_raw", "mobs:meat_raw", "animalworld:pork_raw", "people:mutton:raw", "animalworld:rawmollusk", "marinaramobs:octopus_raw", "marinara:raw_oisters", "marinara:raw_athropod", "animalworld:rawfish", "fishing:fish_raw", "fishing:pike_raw", "marinaramobs:raw_exotic_fish", "nativevillages:catfish_raw", "xocean:fish_edible", "ethereal:fish_raw", "mobs:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "water_life:meat_raw", "fishing:shark_raw", "mcl_mobitems:chicken", "mcl_fishing:pufferfish_raw", "mcl_mobitems:rotten_flesh", "mcl_mobitems:mutton", "mcl_mobitems:beef", "mcl_mobitems:porkchop", "mcl_mobitems:rabbit", "fishing:pike_raw"
 	},
 	view_range = 12,
 
@@ -76,8 +76,8 @@ mobs:register_mob("animalworld:polarbear", {
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:polarbear",
-nodes = {"default:ice", "default:snowblock"},
-	neighbors = {"default:water_source"},
+nodes = {"default:ice", "default:snowblock", "mcl_core:ice", "mcl_core:snow"},
+	neighbors = {"default:water_source", "mcl_core:water_source", "mcl_core:water_flowing"},
 	min_light = 0,
 	interval = 60,
 	chance = 2000, -- 15000

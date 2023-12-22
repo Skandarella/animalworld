@@ -51,11 +51,11 @@ mobs:register_mob("animalworld:otter", {
 		die_loop = false,
 		die_rotate = true,
 	},
-	fly_in = {"default:water_source", "default:water_flowing", "default:river_water_flowing", "default:river_water"},
+	fly_in = {"default:water_source", "default:water_flowing", "default:river_water_flowing", "default:river_water", "mcl_core:water_source", "mcl_core:water_flowing"},
 	floats = 0,
 	follow = {
 		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
-		"mobs_fish:clownfish_set", "mobs_fish:tropical_set", "xocean:fish_edible", "mobs:bluefish_raw", "nativevillages:catfish_raw", "animalworld:rawmollusk", "marinaramobs:octopus_raw", "marinara:raw_oisters", "marinara:raw_athropod", "animalworld:rawfish", "fishing:fish_raw", "fishing:pike_raw", "marinaramobs:raw_exotic_fish", "nativevillages:catfish_raw", "xocean:fish_edible", "ethereal:fish_raw", "mobs:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "water_life:meat_raw", "fishing:shark_raw", "fishing:pike_raw"
+		"mobs_fish:clownfish_set", "mcl_fishing:pufferfish_raw", "mobs_fish:tropical_set", "xocean:fish_edible", "mobs:bluefish_raw", "nativevillages:catfish_raw", "animalworld:rawmollusk", "marinaramobs:octopus_raw", "marinara:raw_oisters", "marinara:raw_athropod", "animalworld:rawfish", "fishing:fish_raw", "fishing:pike_raw", "marinaramobs:raw_exotic_fish", "nativevillages:catfish_raw", "xocean:fish_edible", "ethereal:fish_raw", "mobs:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "water_life:meat_raw", "fishing:shark_raw", "fishing:pike_raw"
 	},
 	view_range = 10,
 
@@ -72,8 +72,8 @@ mobs:register_mob("animalworld:otter", {
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:otter",
-	nodes = {"default:water_source", "default:river_water_source"},
-	neighbors = {"flowers:waterlily_waving"},
+	nodes = {"mcl_core:water_source", "default:water_source", "default:river_water_source", "mcl_core:water_source", "mcl_core:water_flowing"},
+	neighbors = {"flowers:waterlily_waving", "mcl_flowers:waterlily"},
 	min_light = 0,
 	interval = 60,
 	chance = 500, -- 15000

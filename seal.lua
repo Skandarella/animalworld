@@ -28,7 +28,7 @@ stepheight = 0.6,
         runaway_from = {"animalworld:bear", "animalworld:crocodile", "animalworld:tiger", "animalworld:spider", "animalworld:spidermale", "animalworld:shark", "animalworld:hyena", "animalworld:kobra", "animalworld:monitor", "animalworld:snowleopard", "animalworld:volverine", "livingfloatlands:deinotherium", "livingfloatlands:carnotaurus", "livingfloatlands:lycaenops", "livingfloatlands:smilodon", "livingfloatlands:tyrannosaurus", "livingfloatlands:velociraptor", "animalworld:divingbeetle", "animalworld:scorpion", "animalworld:polarbear", "animalworld:leopardseal", "animalworld:stellerseagle", "animalworld:wolf", "animalworld:panda", "animalworld:stingray", "marinaramobs:jellyfish", "marinaramobs:octopus", "livingcavesmobs:biter", "livingcavesmobs:flesheatingbacteria"},
 	jump = false,
 	stepheight = 1.1,
-        stay_near = {{"default:snow", "default:gravel"}, 5},
+        stay_near = {{"default:snow", "default:gravel", "mcl_core:snow", "mcl_core:gravel"}, 5},
 	drops = {
 		{name = "mobs:meat_raw", chance = 1, min = 1, max = 1},
 		{name = "animalworld:sealcorpse", chance = 7, min = 1, max = 1},
@@ -51,11 +51,11 @@ stepheight = 0.6,
 		die_loop = false,
 		die_rotate = true,
 	},
-	fly_in = {"default:water_source", "default:water_flowing", "default:river_water_flowing", "default:river_water"},
+	fly_in = {"default:water_source", "default:water_flowing", "default:river_water_flowing", "default:river_water", "mcl_core:water_source", "mcl_core:water_flowing"},
 	floats = 0,
 	follow = {
 		"ethereal:fish_raw", "animalworld:rawfish", "mobs_fish:tropical",
-		"mobs_fish:clownfish_set", "mobs_fish:tropical_set", "xocean:fish_edible", "mobs:bluefish_raw", "nativevillages:catfish_raw", "animalworld:rawmollusk", "marinaramobs:octopus_raw", "marinara:raw_oisters", "marinara:raw_athropod", "animalworld:rawfish", "fishing:fish_raw", "fishing:pike_raw", "marinaramobs:raw_exotic_fish", "nativevillages:catfish_raw", "xocean:fish_edible", "ethereal:fish_raw", "mobs:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "water_life:meat_raw", "fishing:shark_raw", "fishing:pike_raw"
+		"mobs_fish:clownfish_set", "mcl_fishing:pufferfish_raw", "mobs_fish:tropical_set", "xocean:fish_edible", "mobs:bluefish_raw", "nativevillages:catfish_raw", "animalworld:rawmollusk", "marinaramobs:octopus_raw", "marinara:raw_oisters", "marinara:raw_athropod", "animalworld:rawfish", "fishing:fish_raw", "fishing:pike_raw", "marinaramobs:raw_exotic_fish", "nativevillages:catfish_raw", "xocean:fish_edible", "ethereal:fish_raw", "mobs:clownfish_raw", "fishing:bluewhite_raw", "fishing:exoticfish_raw", "fishing:fish_raw", "fishing:carp_raw", "fishing:perch_raw", "water_life:meat_raw", "fishing:shark_raw", "fishing:pike_raw"
 	},
 	view_range = 10,
 
@@ -75,8 +75,8 @@ end
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:seal",
-	nodes = {"default:snowblock", "default_ice"},
-	neighbors = {"default:water_source"},
+	nodes = {"default:snowblock", "default_ice", "mcl_core:ice", "mcl_core:snow"},
+	neighbors = {"default:water_source", "mcl_core:water_source"},
 	min_light = 14,
 	interval = 60,
 	chance = 2000, -- 15000

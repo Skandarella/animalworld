@@ -29,8 +29,8 @@ mobs:register_mob("animalworld:notoptera", {
 	jump = true,
 	jump_height = 6,
 	pushable = true,
-        stay_near = {{"default:pine_needles", "animalworld:animalworld_tundrashrub5", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4"}, 4},
-	follow = {"default:junglegrass", "default:dry_shrub", "default:blueberry_bush_leaves", "default:grass", "farming:cabbage_6", "farming:lettuce_5", "farming:beetroot_5", "flowers:dandelion_yellow"},
+        stay_near = {{"default:pine_needles", "mcl_flowers:double:fern", "mcl_flowers:tallgrass", "animalworld:animalworld_tundrashrub5", "animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4"}, 4},
+	follow = {"default:junglegrass", "mcl_flowers:tallgrass", "default:dry_shrub", "default:blueberry_bush_leaves", "default:grass", "farming:cabbage_6", "farming:lettuce_5", "farming:beetroot_5", "flowers:dandelion_yellow"},
 	view_range = 5,
 	drops = {
 		{name = "animalworld:notoptera", chance = 1, min = 1, max = 1},
@@ -66,8 +66,8 @@ mobs:register_mob("animalworld:notoptera", {
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:notoptera",
-	nodes = {"default:permafrost", "default:permafrost_with_moss"},
-	neighbors = {"animalworld:animalworld_tundrashrub1", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4"},
+	nodes = {"default:permafrost", "default:permafrost_with_moss", "mcl_core:snow"},
+	neighbors = {"animalworld:animalworld_tundrashrub1", "mcl_core:sprucetree", "animalworld:animalworld_tundrashrub2", "animalworld:animalworld_tundrashrub3", "animalworld:animalworld_tundrashrub4"},
 	min_light = 0,
 	interval = 30,
 	chance = 1000, -- 15000

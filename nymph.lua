@@ -30,11 +30,11 @@ mobs:register_mob("animalworld:nymph", {
 	jump_height = 3,
 	pushable = true,
 	view_range = 6,
-        stay_near = {{"marinara:sand_with_alage", "marinara:sand_with_seagrass", "default:sand_with_kelp", "marinara:sand_with_kelp", "marinara:reed_root", "flowers:waterlily_waving", "naturalbiomes:waterlily", "default:clay"}, 4},
+        stay_near = {{"marinara:sand_with_alage", "mcl_flowers:waterlily", "mcl_ocean:seagrass:sand", "mcl_core:reeds", "marinara:sand_with_seagrass", "default:sand_with_kelp", "marinara:sand_with_kelp", "marinara:reed_root", "flowers:waterlily_waving", "naturalbiomes:waterlily", "default:clay"}, 4},
 	drops = {
 		{name = "animalworld:fishfood", chance = 1, min = 0, max = 2},
 	},
-	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing"},
+	fly_in = {"default:water_source", "default:river_water_source", "default:water_flowing", "default:river_water_flowing", "mcl_core:water_source", "mcl_core:water_flowing"},
 	floats = 0,
 	fly = true,
 	follow = {
@@ -68,8 +68,8 @@ mobs:register_mob("animalworld:nymph", {
 if not mobs.custom_spawn_animalworld then
 mobs:spawn({
 	name = "animalworld:nymph",
-	nodes = {"default:water_source", "default:river_water_source"},
-	neighbors = {"flowers:waterlily_waving"},
+	nodes = {"mcl_core:water_source", "default:water_source", "default:river_water_source", "mcl_core:water_source", "mcl_core:water_flowing"},
+	neighbors = {"flowers:waterlily_waving", "mcl_flowers:waterlily"},
 	min_light = 0,
 	interval = 30,
 	active_object_count = 2,
